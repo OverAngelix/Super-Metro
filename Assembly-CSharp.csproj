@@ -48,9 +48,13 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.55f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/PathFinder.cs" />
     <Compile Include="Assets/Scripts/PersonController.cs" />
+    <Compile Include="Assets/Scripts/ConnectStations.cs" />
     <Compile Include="Assets/Scripts/SuperGlobal.cs" />
     <Compile Include="Assets/Scripts/SpawnPersons.cs" />
+    <Compile Include="Assets/Scripts/SpawnLocations.cs" />
+    <Compile Include="Assets/Scripts/StationMarker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
