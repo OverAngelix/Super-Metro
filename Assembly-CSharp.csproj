@@ -52,10 +52,13 @@
     <Compile Include="Assets\Scripts\StationTextManager.cs" />
     <Compile Include="Assets\Scripts\OSMTileManager.cs" />
     <Compile Include="Assets\Scripts\PersonController.cs" />
+    <Compile Include="Assets\Scripts\SpawnLocationsDEPRECATED.cs" />
     <Compile Include="Assets\Scripts\ConnectStations.cs" />
+    <Compile Include="Assets\Scripts\MovementsUtils.cs" />
     <Compile Include="Assets\Scripts\SuperGlobal.cs" />
+    <Compile Include="Assets\Scripts\TrainController.cs" />
+    <Compile Include="Assets\Scripts\StationController.cs" />
     <Compile Include="Assets\Scripts\SpawnPersons.cs" />
-    <Compile Include="Assets\Scripts\SpawnLocations.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\StationMarker.cs" />
   </ItemGroup>
