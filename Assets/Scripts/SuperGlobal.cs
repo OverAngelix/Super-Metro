@@ -24,12 +24,15 @@ public class SuperGlobal : MonoBehaviour
     {
         public int lineNumber;
         public int index;
+        public List<PersonController> waitingPeople = new List<PersonController>();
+
 
         public Station(string name, float lat, float lon, int lineNumber, int index)
             : base(name, lat, lon)
         {
             this.lineNumber = lineNumber;
             this.index = index;
+
         }
     }
 

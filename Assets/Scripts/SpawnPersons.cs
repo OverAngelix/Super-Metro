@@ -7,6 +7,9 @@ public class SpawnPersons : MonoBehaviour
     public float spawnInterval = 60f;
     private float timer = 0f;
 
+    // private void Start() {
+        // SpawnPerson();
+    // }
     void Update()
     {
         timer += Time.deltaTime * SuperGlobal.timeSpeed;
