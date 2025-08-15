@@ -17,8 +17,10 @@ public class StationTextManager : MonoBehaviour
 
     void Start()
     {
-        stationName.text = gameObject.name;
-        stationNameUI.text = gameObject.name;
+        StationController stationControllerscript = GetComponent<StationController>();
+        SuperGlobal.Station station = stationControllerscript.station;
+        stationName.text = station.name;
+        stationNameUI.text = station.name;
         niveauUI.text = "Niveau " + "2";
         personnesEnAttenteUI.text = "Personne en attente : " + "50";
         CapaciteMaxUI.text = "Capacité maximum : " + "100";

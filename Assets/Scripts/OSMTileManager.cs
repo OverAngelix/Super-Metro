@@ -43,6 +43,7 @@ public class OSMTileManager : MonoBehaviour
         {
             var sta = SuperGlobal.stations[i];
             GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
+            obj.name = sta.name;
 
             stationObjects.Add(obj);
             sta.obj = obj;
