@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PathFinder.cs" />
     <Compile Include="Assets\Scripts\StationTextManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
     <Compile Include="Assets\Scripts\OSMTileManager.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\PersonController.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Assets\Scripts\SuperGlobal.cs" />
     <Compile Include="Assets\Scripts\TrainController.cs" />
     <Compile Include="Assets\Scripts\StationController.cs" />
+    <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\SpawnPersons.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\StationMarker.cs" />
