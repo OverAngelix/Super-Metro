@@ -4,13 +4,16 @@ using System.Collections.Generic;
 public class SuperGlobal : MonoBehaviour
 {
     public static float timeSpeed = 5f;
-    public static float money = 100f;
+    public static float money = 1500f;
+    public static float ticketPrice = 1.8f;
+    public static float fees = 250f;
+    public static int happiness;
     public class Location
     {
         public string name;
         public float lat;
         public float lon;
-        public GameObject obj; 
+        public GameObject obj;
 
         public Location(string name, float lat, float lon)
         {
@@ -24,6 +27,8 @@ public class SuperGlobal : MonoBehaviour
     {
         public int lineNumber;
         public int index;
+        public int level;
+        public int capacity;
         public List<PersonController> waitingPeople = new List<PersonController>();
 
 
@@ -32,12 +37,13 @@ public class SuperGlobal : MonoBehaviour
         {
             this.lineNumber = lineNumber;
             this.index = index;
-
+            this.level = 1;
+            this.capacity = 50;
         }
     }
 
 
-public static List<Location> spots = new List<Location>
+    public static List<Location> spots = new List<Location>
     {
      new Location("Parc de la Canteraine", 50.6234f, 3.0295f),
      new Location("Place du Général de Gaulle", 50.6336f, 3.0659f),
@@ -58,5 +64,6 @@ public static List<Location> spots = new List<Location>
         new Station("Portes des Postes", 50.618803f, 3.0475242f, 1, 1),
         new Station("Gare Lille Flandres", 50.638047f, 3.0700097f, 1, 2),
         new Station("Wasquehal Hôtel de Ville", 50.6697318f, 3.1264094f, 1, 3),
+        new Station("Centre Roubaix", 50.6897318f, 3.1464094f, 1, 4),
     };
 }

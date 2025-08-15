@@ -15,26 +15,45 @@ public class StationTextManager : MonoBehaviour
     public Button closeButtonUI;
     public Button upgradeButtonUI;
 
+    private SuperGlobal.Station station;
+
+
     void Start()
     {
         StationController stationControllerscript = GetComponent<StationController>();
-        SuperGlobal.Station station = stationControllerscript.station;
+        station = stationControllerscript.station;
         stationName.text = station.name;
         stationNameUI.text = station.name;
-        niveauUI.text = "Niveau " + "2";
-        personnesEnAttenteUI.text = "Personne en attente : " + "50";
-        CapaciteMaxUI.text = "Capacité maximum : " + "100";
         closeButtonUI.onClick.AddListener(closeUI);
+        upgradeButtonUI.onClick.AddListener(upgradeStation);
+    }
+
+    void Update()
+    {
+        niveauUI.text = "Niveau " + station.level;
+        personnesEnAttenteUI.text = "Personne en attente : " + station.waitingPeople.Count;
+        CapaciteMaxUI.text = "Capacité maximum : " + station.capacity;
     }
 
     private void OnMouseDown()
     {
         CanvasUI.enabled = true;
     }
-
+    
+    #region ACTIONS BUTTONS
     void closeUI()
     {
         CanvasUI.enabled = false;
     }
 
+    void upgradeStation()
+    {
+        if (SuperGlobal.money - 150 >= 0)
+        {
+            station.capacity += 50;
+            station.level += 1;
+            SuperGlobal.money -= 150;
+        }
+    }
+    #endregion
 }

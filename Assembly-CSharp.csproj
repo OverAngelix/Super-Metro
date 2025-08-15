@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\PathFinder.cs" />
     <Compile Include="Assets\Scripts\StationTextManager.cs" />
     <Compile Include="Assets\Scripts\OSMTileManager.cs" />
+    <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\PersonController.cs" />
     <Compile Include="Assets\Scripts\SpawnLocationsDEPRECATED.cs" />
     <Compile Include="Assets\Scripts\ConnectStations.cs" />

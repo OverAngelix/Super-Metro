@@ -75,7 +75,11 @@ public class PersonController : MonoBehaviour
             transform.position = targetObj.transform.position;
 
             if (!station.waitingPeople.Contains(this))
+            {
                 station.waitingPeople.Add(this);
+                //GERER SURPLUS avec du mecontentement
+            }
+                
 
             waitingForTrain = true;
             return; // stop mouvement tant qu'on attend le train

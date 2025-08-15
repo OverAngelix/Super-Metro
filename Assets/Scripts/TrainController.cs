@@ -53,6 +53,12 @@ public class TrainController : MonoBehaviour
             while (Vector3.Distance(transform.position, targetObj.transform.position) > 0.05f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, targetObj.transform.position, Time.deltaTime * speed);
+
+                // Étape 2 : Rotation vers la cible (nouvelle partie)
+                Vector3 direction = targetObj.transform.position - transform.position;
+                Quaternion toRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, toRotation * Quaternion.Euler(0, 90, 0), Time.deltaTime * speed);
+
                 yield return null;
             }
 
@@ -98,7 +104,7 @@ public class TrainController : MonoBehaviour
 
             // Déplacer la personne vers le train
             Debug.Log("Quelqu'un monte dans le train");
-
+            SuperGlobal.money += SuperGlobal.ticketPrice;
             // On récupère la station où la personne veut descendre
             Node stationToGo = person.GetNextTarget();
             Debug.Log("Il va à la station");
