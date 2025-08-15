@@ -73,3 +73,7 @@ crashlytics-build.properties
 [Aa]ssets[Ss]treamingAssetsaa
 
 # End of httpswww.toptal.comdevelopersgitignoreapiunity
+
+*.csproj
+*.sln
+URPProjectSettings.asset
