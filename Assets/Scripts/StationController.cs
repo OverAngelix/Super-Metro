@@ -1,0 +1,55 @@
+using UnityEngine;
+using System.Collections.Generic;
+
+public class StationController : MonoBehaviour
+{
+    public SuperGlobal.Station station;
+    private GameObject trainPrefab;
+
+    void Awake()
+    {
+        trainPrefab = Resources.Load<GameObject>("Prefabs/Train");
+    }
+    void Start()
+    {
+        if (station.index == 0)
+        {
+            RunTrain();
+        }   
+    }
+
+    // void Update()
+    // {
+    //     if (station.index == 1)
+    //     {
+    //         // Debug.Log(station.index);
+    //         // Debug.Log(station.name);
+    //         // Debug.Log(station);
+    //         // Debug.Log(station.waitingPeople);
+    //     }
+    // }
+
+    void RunTrain()
+    {
+        GameObject obj = Instantiate(trainPrefab);
+        obj.transform.position = station.obj.transform.position;
+
+        // Filtrer les stations de la même ligne et créer des Nodes
+        List<Node> path = new List<Node>();
+        foreach (var st in SuperGlobal.stations)
+        {
+            if (st.lineNumber == station.lineNumber)
+                path.Add(new Node { name = st.name });
+        }
+
+        // Pour que le train fasse un aller-retour infini
+        List<Node> fullPath = new List<Node>(path);
+        path.Reverse();
+        fullPath.AddRange(path);
+
+        // Donner le chemin au train
+        TrainController train = obj.GetComponent<TrainController>();
+        train.SetPath(fullPath);
+    }
+
+}

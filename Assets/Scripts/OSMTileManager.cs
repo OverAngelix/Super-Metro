@@ -10,9 +10,9 @@ public class OSMTileManager : MonoBehaviour
     public int zoomLevel = 12;
     public double centerLat = 48.8566; // Paris latitude
     public double centerLon = 2.3522;  // Paris longitude
-    public int tileRadius = 3; // Réduire le nombre de tuiles pour débugger
+    public int tileRadius = 3; // Rï¿½duire le nombre de tuiles pour dï¿½bugger
 
-    [Header("Paramètres Visuels")]
+    [Header("Paramï¿½tres Visuels")]
     public Material tileMaterial;
     public float tileSize = 10f; // Taille d'une tuile dans Unity (doit correspondre aux dimensions du Plane)
 
@@ -20,7 +20,7 @@ public class OSMTileManager : MonoBehaviour
     private Queue<string> tileLoadQueue = new Queue<string>();
     private bool isLoadingTile = false;
 
-    // Cache des textures pour éviter les rechargements
+    // Cache des textures pour ï¿½viter les rechargements
     private Dictionary<string, Texture2D> textureCache = new Dictionary<string, Texture2D>();
 
     public GameObject spotPrefab;
@@ -43,8 +43,12 @@ public class OSMTileManager : MonoBehaviour
         {
             var sta = SuperGlobal.stations[i];
             GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
+
             stationObjects.Add(obj);
             sta.obj = obj;
+
+            StationController controller = obj.GetComponent<StationController>();
+            controller.station = sta;
         }
 
         // Relier les stations
@@ -52,7 +56,7 @@ public class OSMTileManager : MonoBehaviour
         connect.CreateLines(stationObjects);
     }
 
-    [ContextMenu("Générer les tuiles")]
+    [ContextMenu("Gï¿½nï¿½rer les tuiles")]
     public void GenerateTilesManually()
     {
         // Supprimer tous les enfants du manager
@@ -61,14 +65,14 @@ public class OSMTileManager : MonoBehaviour
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
 
-        // Réinitialiser le dictionnaire et la queue
+        // Rï¿½initialiser le dictionnaire et la queue
         loadedTiles.Clear();
         tileLoadQueue.Clear();
         isLoadingTile = false;
 
-        // Générer les nouvelles tuiles
+        // Gï¿½nï¿½rer les nouvelles tuiles
         LoadTilesAroundCenter();
-        Debug.Log("Tuiles générées manuellement !");
+        Debug.Log("Tuiles gï¿½nï¿½rï¿½es manuellement !");
     }
 
 
@@ -76,7 +80,7 @@ public class OSMTileManager : MonoBehaviour
     public void LoadTilesAroundCenter()
     {
 
-        // Convertir les coordonnées GPS en coordonnées de tuile
+        // Convertir les coordonnï¿½es GPS en coordonnï¿½es de tuile
         var centerTile = LatLonToTile(centerLat, centerLon, zoomLevel);
 
         // Charger les tuiles dans un rayon autour du centre
@@ -120,7 +124,7 @@ public class OSMTileManager : MonoBehaviour
         // URL OpenStreetMap
         string url = $"https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-        // Vérifier le cache d'abord
+        // Vï¿½rifier le cache d'abord
         if (textureCache.ContainsKey(tileKey))
         {
             CreateTileGameObject(tileKey, x, y, textureCache[tileKey]);
@@ -128,7 +132,7 @@ public class OSMTileManager : MonoBehaviour
             yield break;
         }
 
-        // Télécharger la tuile
+        // Tï¿½lï¿½charger la tuile
         using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(url))
         {
             // Ajouter un User-Agent pour respecter la politique OSM
@@ -144,28 +148,28 @@ public class OSMTileManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"Erreur de téléchargement pour la tuile {tileKey}: {www.error}");
+                Debug.LogError($"Erreur de tï¿½lï¿½chargement pour la tuile {tileKey}: {www.error}");
             }
         }
 
         isLoadingTile = false;
 
-        // Petite pause pour éviter de surcharger les serveurs OSM
+        // Petite pause pour ï¿½viter de surcharger les serveurs OSM
         yield return new WaitForSeconds(0.1f);
     }
 
     void CreateTileGameObject(string tileKey, int tileX, int tileY, Texture2D texture)
     {
-        // Créer un GameObject pour la tuile
+        // Crï¿½er un GameObject pour la tuile
         GameObject tileObj = GameObject.CreatePrimitive(PrimitiveType.Plane);
         tileObj.name = $"Tile_{tileKey}";
         tileObj.transform.parent = this.transform;
 
-        // Utiliser les coordonnées précises de la tuile pour la positionner
+        // Utiliser les coordonnï¿½es prï¿½cises de la tuile pour la positionner
         double lat = TileToLat(tileY + 0.5, zoomLevel); // Ajouter 0.5 pour le centre de la tuile
         double lon = TileToLon(tileX + 0.5, zoomLevel); // Ajouter 0.5 pour le centre de la tuile
 
-        // Utiliser la même méthode que pour les points pour garantir l'alignement
+        // Utiliser la mï¿½me mï¿½thode que pour les points pour garantir l'alignement
         Vector3 position = LatLonToUnityPosition(lat, lon, zoomLevel);
 
         tileObj.transform.localPosition = position;
@@ -186,7 +190,7 @@ public class OSMTileManager : MonoBehaviour
     }
 
 
-    // Convertir latitude/longitude en coordonnées de tuile
+    // Convertir latitude/longitude en coordonnï¿½es de tuile
     public static Vector2Int LatLonToTile(double lat, double lon, int zoom)
     {
         double latRad = lat * Math.PI / 180.0;

@@ -37,7 +37,7 @@ public class Node
     public float lon;
     public bool isStation;
     public List<Edge> edges = new List<Edge>();
-    
+
     public Node(string name, float lat, float lon, bool isStation)
     {
         this.name = name;
@@ -45,6 +45,8 @@ public class Node
         this.lon = lon;
         this.isStation = isStation;
     }
+    public Node() { } // constructeur vide ajouté
+
 }
 
 public class Edge
