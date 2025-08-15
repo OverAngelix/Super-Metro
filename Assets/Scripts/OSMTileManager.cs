@@ -23,6 +23,35 @@ public class OSMTileManager : MonoBehaviour
     // Cache des textures pour éviter les rechargements
     private Dictionary<string, Texture2D> textureCache = new Dictionary<string, Texture2D>();
 
+    public GameObject spotPrefab;
+    public GameObject stationPrefab;
+
+
+    void Awake()
+    {
+        // Instancier toutes les locations
+        for (int i = 0; i < SuperGlobal.spots.Count; i++)
+        {
+            var spot = SuperGlobal.spots[i];
+            GameObject obj = PlacePoint(spot.lat, spot.lon, spotPrefab);
+            spot.obj = obj;
+        }
+
+        // Instancier toutes les stations et les stocker
+        List<GameObject> stationObjects = new List<GameObject>();
+        for (int i = 0; i < SuperGlobal.stations.Count; i++)
+        {
+            var sta = SuperGlobal.stations[i];
+            GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
+            stationObjects.Add(obj);
+            sta.obj = obj;
+        }
+
+        // Relier les stations
+        ConnectStations connect = FindFirstObjectByType<ConnectStations>();
+        connect.CreateLines(stationObjects);
+    }
+
     [ContextMenu("Générer les tuiles")]
     public void GenerateTilesManually()
     {
@@ -42,9 +71,10 @@ public class OSMTileManager : MonoBehaviour
         Debug.Log("Tuiles générées manuellement !");
     }
 
+
+
     public void LoadTilesAroundCenter()
     {
-        Debug.Log("Generation des tuiles manuellement !");
 
         // Convertir les coordonnées GPS en coordonnées de tuile
         var centerTile = LatLonToTile(centerLat, centerLon, zoomLevel);
@@ -131,17 +161,16 @@ public class OSMTileManager : MonoBehaviour
         tileObj.name = $"Tile_{tileKey}";
         tileObj.transform.parent = this.transform;
 
-        // Calculer la tuile du centre une seule fois pour référence
-        var centerTile = LatLonToTile(centerLat, centerLon, zoomLevel);
+        // Utiliser les coordonnées précises de la tuile pour la positionner
+        double lat = TileToLat(tileY + 0.5, zoomLevel); // Ajouter 0.5 pour le centre de la tuile
+        double lon = TileToLon(tileX + 0.5, zoomLevel); // Ajouter 0.5 pour le centre de la tuile
 
-        Vector3 position = new Vector3(
-            -(tileX - centerTile.x) * tileSize,  // Inverse X pour l'ordre correct
-            0,
-            (tileY - centerTile.y) * tileSize   //  Y pour l'ordre correct
-        );
+        // Utiliser la même méthode que pour les points pour garantir l'alignement
+        Vector3 position = LatLonToUnityPosition(lat, lon, zoomLevel);
+
         tileObj.transform.localPosition = position;
 
-        
+
         tileObj.transform.localScale = new Vector3(tileSize * 0.1f, 1, tileSize * 0.1f);
 
         Renderer renderer = tileObj.GetComponent<Renderer>();
@@ -169,37 +198,52 @@ public class OSMTileManager : MonoBehaviour
         return new Vector2Int(x, y);
     }
 
-    // Convertir coordonnées de tuile en latitude/longitude
-    public static Vector2 TileToLatLon(int x, int y, int zoom)
+    // Place this inside your OSMTileManager class
+    public GameObject PlacePoint(double lat, double lon, GameObject typePoint)
+    {
+        Vector3 pointPosition = LatLonToUnityPosition(lat, lon, zoomLevel);
+        GameObject point = Instantiate(typePoint, this.transform);
+        point.transform.localPosition = pointPosition;
+        return point;
+    }
+
+
+    public Vector3 LatLonToUnityPosition(double lat, double lon, int zoom)
+    {
+        double centerTileX = LonToTileX(centerLon, zoom);
+        double centerTileY = LatToTileY(centerLat, zoom);
+
+        double pointTileX = LonToTileX(lon, zoom);
+        double pointTileY = LatToTileY(lat, zoom);
+
+        double dx = pointTileX - centerTileX;
+        double dy = pointTileY - centerTileY;
+
+        return new Vector3(-(float)(dx * tileSize), 0, (float)(dy * tileSize));
+    }
+
+    private double LonToTileX(double lon, int zoom)
+    {
+        return (lon + 180.0) / 360.0 * Math.Pow(2.0, zoom);
+    }
+
+    private double LatToTileY(double lat, int zoom)
+    {
+        double latRad = lat * Math.PI / 180.0;
+        return (1.0 - Math.Asinh(Math.Tan(latRad)) / Math.PI) / 2.0 * Math.Pow(2.0, zoom);
+    }
+
+    private double TileToLon(double x, int zoom)
     {
         double n = Math.Pow(2.0, zoom);
-        double lon = x / n * 360.0 - 180.0;
-        double latRad = Math.Atan(Math.Sinh(Math.PI * (1 - 2 * y / n)));
-        double lat = latRad * 180.0 / Math.PI;
-
-        return new Vector2((float)lat, (float)lon);
+        return x / n * 360.0 - 180.0;
     }
 
-    // Nettoyer les tuiles trop éloignées (optionnel)
-    public void CleanupDistantTiles(Vector3 playerPosition, float maxDistance)
+    private double TileToLat(double y, int zoom)
     {
-        List<string> tilesToRemove = new List<string>();
-
-        foreach (var kvp in loadedTiles)
-        {
-            if (Vector3.Distance(kvp.Value.transform.position, playerPosition) > maxDistance)
-            {
-                tilesToRemove.Add(kvp.Key);
-            }
-        }
-
-        foreach (string tileKey in tilesToRemove)
-        {
-            if (loadedTiles.ContainsKey(tileKey))
-            {
-                DestroyImmediate(loadedTiles[tileKey]);
-                loadedTiles.Remove(tileKey);
-            }
-        }
+        double n = Math.Pow(2.0, zoom);
+        double latRad = Math.Atan(Math.Sinh(Math.PI * (1 - 2 * y / n)));
+        return latRad * 180.0 / Math.PI;
     }
+
 }
