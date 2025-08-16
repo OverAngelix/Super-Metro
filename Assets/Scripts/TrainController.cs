@@ -17,8 +17,9 @@ public class TrainController : MonoBehaviour
     public void SetPath(List<Node> newPath)
     {
         path = newPath;
-        currentTargetIndex = 0;
         forward = true;
+
+        StopAllCoroutines();
 
         // Positionner le train sur le premier node
         if (path.Count > 0)
@@ -26,7 +27,7 @@ public class TrainController : MonoBehaviour
             string firstName = path[0].name;
             GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstName)?.obj
                                 ?? SuperGlobal.stations.Find(st => st.name == firstName)?.obj;
-            if (firstObj != null)
+            if (firstObj != null && currentTargetIndex == 0)
                 transform.position = firstObj.transform.position;
         }
 

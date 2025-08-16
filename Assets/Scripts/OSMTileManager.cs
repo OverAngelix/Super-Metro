@@ -98,6 +98,15 @@ public class OSMTileManager : MonoBehaviour
 
             StationController controller = obj.GetComponent<StationController>();
             controller.station = newStation;
+            foreach (SuperGlobal.Line line in SuperGlobal.lines)
+            {
+                foreach (var train in line.trainsList)
+                {
+                    controller.UpdateTrainPath(train.gameObject);
+                }
+            }
+
+            
             connect.CreateLines(SuperGlobal.stations);
             SuperGlobal.money -= 500;
             panelStation.SetActive(false);

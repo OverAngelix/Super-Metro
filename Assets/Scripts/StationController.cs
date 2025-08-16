@@ -37,7 +37,7 @@ public class StationController : MonoBehaviour
         return obj;
     }
 
-    private TrainController UpdateTrainPath(GameObject obj)
+    public TrainController UpdateTrainPath(GameObject obj)
     {
         // Filtrer les stations de la même ligne et créer des Nodes
         List<Node> path = new List<Node>();
