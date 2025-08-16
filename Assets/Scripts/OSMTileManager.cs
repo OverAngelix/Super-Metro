@@ -89,7 +89,7 @@ public class OSMTileManager : MonoBehaviour
     {
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
         {
-            SuperGlobal.Station newStation = new SuperGlobal.Station(stationName.text, newLat, newLon, 1, 5);
+            SuperGlobal.Station newStation = new SuperGlobal.Station(stationName.text, newLat, newLon, 1, SuperGlobal.stations.Count);
             SuperGlobal.stations.Add(newStation);
 
             GameObject obj = PlacePoint(newLat, newLon, stationPrefab);
