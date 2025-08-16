@@ -103,12 +103,8 @@ public class TrainController : MonoBehaviour
             passengers.Add(person.gameObject); // on ajoute le GameObject dans le train
 
             // Déplacer la personne vers le train
-            Debug.Log("Quelqu'un monte dans le train");
-            SuperGlobal.money += SuperGlobal.ticketPrice;
             // On récupère la station où la personne veut descendre
             Node stationToGo = person.GetNextTarget();
-            Debug.Log("Il va à la station");
-            Debug.Log(stationToGo.name);
             person.BoardTrain(this, stationToGo); // mise à jour pour inclure la station de descente
 
             yield return new WaitForSeconds(0.2f); // petit délai entre chaque embarquement

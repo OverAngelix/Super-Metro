@@ -15,25 +15,30 @@ public class StationController : MonoBehaviour
         if (station.index == 0)
         {
             RunTrain();
-        }   
+        }
     }
 
     // void Update()
     // {
     //     if (station.index == 1)
     //     {
-    //         // Debug.Log(station.index);
-    //         // Debug.Log(station.name);
-    //         // Debug.Log(station);
-    //         // Debug.Log(station.waitingPeople);
     //     }
     // }
 
-    void RunTrain()
+    private GameObject RunTrain()
     {
         GameObject obj = Instantiate(trainPrefab);
         obj.transform.position = station.obj.transform.position;
 
+        UpdateTrainPath(obj);
+
+        SuperGlobal.lines[station.lineNumber - 1].trainsList.Add(train);
+
+        return obj;
+    }
+
+    private void UpdateTrainPath(GameObject obj)
+    {
         // Filtrer les stations de la même ligne et créer des Nodes
         List<Node> path = new List<Node>();
         foreach (var st in SuperGlobal.stations)
@@ -51,5 +56,6 @@ public class StationController : MonoBehaviour
         TrainController train = obj.GetComponent<TrainController>();
         train.SetPath(fullPath);
     }
+
 
 }

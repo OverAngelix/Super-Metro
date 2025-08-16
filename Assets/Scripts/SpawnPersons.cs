@@ -72,6 +72,5 @@ public class SpawnPersons : MonoBehaviour
 
         // Passer le chemin au contrôleur
         controller.SetPath(path);
-        Debug.Log($"Personne spawnée de {startSpot.name} à {endSpot.name}");
     }
 }

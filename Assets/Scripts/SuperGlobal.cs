@@ -31,7 +31,6 @@ public class SuperGlobal : MonoBehaviour
         public int capacity;
         public List<PersonController> waitingPeople = new List<PersonController>();
 
-
         public Station(string name, float lat, float lon, int lineNumber, int index)
             : base(name, lat, lon)
         {
@@ -42,6 +41,24 @@ public class SuperGlobal : MonoBehaviour
         }
     }
 
+    public class Line
+    {
+        public string name;
+        public int lineNumber;
+        public List<TrainController> trainsList = new List<TrainController>();
+
+        public GameObject ticketUIObject;
+        public Line(string name, int lineNumber)
+        {
+            this.lineNumber = lineNumber;
+            this.name = name;
+        }
+    }
+
+    public static List<Line> lines = new List<Line>
+    {
+        new Line("Super ligne", 1)
+    };
 
     public static List<Location> spots = new List<Location>
     {
@@ -66,4 +83,19 @@ public class SuperGlobal : MonoBehaviour
         new Station("Wasquehal Hôtel de Ville", 50.6697318f, 3.1264094f, 1, 3),
         new Station("Centre Roubaix", 50.6897318f, 3.1464094f, 1, 4),
     };
+
+
+    public static GameObject upgradeUI;
+
+    public static void upgradeTrain(int lineNumber, int trainIndex)
+    {
+        upgradeUI = GameObject.Find("UpgradeUI");
+        upgradeUI.GetComponent<Canvas>().enabled = true;
+        UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
+        upgradeUIController.updateUI(lineNumber, trainIndex);
+        Debug.Log("upgrade train");
+        
+    }
+
+
 }
