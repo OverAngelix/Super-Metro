@@ -30,14 +30,14 @@ public class StationController : MonoBehaviour
         GameObject obj = Instantiate(trainPrefab);
         obj.transform.position = station.obj.transform.position;
 
-        UpdateTrainPath(obj);
+        TrainController train = UpdateTrainPath(obj);
 
         SuperGlobal.lines[station.lineNumber - 1].trainsList.Add(train);
 
         return obj;
     }
 
-    private void UpdateTrainPath(GameObject obj)
+    private TrainController UpdateTrainPath(GameObject obj)
     {
         // Filtrer les stations de la même ligne et créer des Nodes
         List<Node> path = new List<Node>();
@@ -55,6 +55,8 @@ public class StationController : MonoBehaviour
         // Donner le chemin au train
         TrainController train = obj.GetComponent<TrainController>();
         train.SetPath(fullPath);
+
+        return train;
     }
 
 
