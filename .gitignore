@@ -78,3 +78,4 @@ crashlytics-build.properties
 *.sln
 URPProjectSettings.asset
 .DS_Store
+settings.json
