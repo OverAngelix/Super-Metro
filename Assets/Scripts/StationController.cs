@@ -29,6 +29,7 @@ public class StationController : MonoBehaviour
     {
         GameObject obj = Instantiate(trainPrefab);
         obj.transform.position = station.obj.transform.position;
+        obj.transform.rotation = Quaternion.Euler(270, 90, 0);
 
         TrainController train = UpdateTrainPath(obj);
 

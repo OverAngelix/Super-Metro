@@ -58,7 +58,7 @@ public class TrainController : MonoBehaviour
                 // Étape 2 : Rotation vers la cible (nouvelle partie)
                 Vector3 direction = targetObj.transform.position - transform.position;
                 Quaternion toRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, toRotation * Quaternion.Euler(0, 90, 0), Time.deltaTime * speed);
+                transform.rotation = Quaternion.Slerp(transform.rotation, toRotation * Quaternion.Euler(270, 90, 0), Time.deltaTime * speed);
 
                 yield return null;
             }
@@ -104,7 +104,7 @@ public class TrainController : MonoBehaviour
             passengers.Add(person.gameObject); // on ajoute le GameObject dans le train
             
             SuperGlobal.money += SuperGlobal.ticketPrice;
-            
+
             // Déplacer la personne vers le train
             // On récupère la station où la personne veut descendre
             Node stationToGo = person.GetNextTarget();
