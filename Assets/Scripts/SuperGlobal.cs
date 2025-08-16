@@ -8,6 +8,8 @@ public class SuperGlobal : MonoBehaviour
     public static float ticketPrice = 1.8f;
     public static float fees = 250f;
     public static int happiness;
+
+    public static bool isUIOpen = false;
     public class Location
     {
         public string name;

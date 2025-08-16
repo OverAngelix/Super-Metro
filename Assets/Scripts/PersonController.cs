@@ -10,13 +10,13 @@ public class PersonController : MonoBehaviour
     private bool onTrain = false;
     private TrainController currentTrain;
 
-    private bool waitingForTrain = false;
-
     private Node targetStationNode; // la station où la personne doit descendre
 
-    private void Start() {
-        Debug.Log("Spawn de perso");
+    private void Start()
+    {
+        //Debug.Log("Spawn de perso");
     }
+    
     public void SetPath(List<Node> newPath)
     {
         path = newPath;
@@ -48,10 +48,10 @@ public class PersonController : MonoBehaviour
             // Debug.Log(currentTrain);
             // Debug.Log(targetStationNode);
             // Debug.Log(currentTrain.currentStation);
-            Debug.Log("current");
-            Debug.Log(currentTrain.currentStation?.name);
-            Debug.Log("target");
-            Debug.Log(targetStationNode.name);
+            //Debug.Log("current");
+            //Debug.Log(currentTrain.currentStation?.name);
+            //Debug.Log("target");
+            //Debug.Log(targetStationNode.name);
             if (currentTrain != null && targetStationNode != null && currentTrain.currentStation?.name == targetStationNode.name)
             {
                 LeaveTrain(targetStationNode);
@@ -79,14 +79,8 @@ public class PersonController : MonoBehaviour
                 station.waitingPeople.Add(this);
                 //GERER SURPLUS avec du mecontentement
             }
-                
 
-            waitingForTrain = true;
             return; // stop mouvement tant qu'on attend le train
-        }
-        else
-        {
-            waitingForTrain = false;
         }
 
         // Mouvement vers le prochain node
@@ -115,13 +109,12 @@ public class PersonController : MonoBehaviour
     // La personne monte dans le train en indiquant sa station de descente
     public void BoardTrain(TrainController train, Node stationNode)
     {
-        Debug.Log(stationNode);
+        //Debug.Log(stationNode);
         currentTrain = train;
         targetStationNode = stationNode;
         onTrain = true;
-        waitingForTrain = false;
-        Debug.Log("person va à la station");
-        Debug.Log(stationNode.name);
+        //Debug.Log("person va à la station");
+        //Debug.Log(stationNode.name);
         GetComponent<Renderer>().enabled = false;
 
     }
@@ -151,8 +144,6 @@ public class PersonController : MonoBehaviour
                 break;
             }
         }
-
-        waitingForTrain = false; // reprendre le mouvement
     }
 
 }

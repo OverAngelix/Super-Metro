@@ -54,7 +54,6 @@
     <Compile Include="Assets\Scripts\OSMTileManager.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\PersonController.cs" />
-    <Compile Include="Assets\Scripts\SpawnLocationsDEPRECATED.cs" />
     <Compile Include="Assets\Scripts\ConnectStations.cs" />
     <Compile Include="Assets\Scripts\MovementsUtils.cs" />
     <Compile Include="Assets\Scripts\SuperGlobal.cs" />
