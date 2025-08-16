@@ -39,7 +39,7 @@ public class StationTextManager : MonoBehaviour
     {
         CanvasUI.enabled = true;
     }
-    
+
     #region ACTIONS BUTTONS
     void closeUI()
     {
@@ -53,6 +53,8 @@ public class StationTextManager : MonoBehaviour
             station.capacity += 50;
             station.level += 1;
             SuperGlobal.money -= 150;
+            SuperGlobal.nbUpgrade += 1;
+
         }
     }
     #endregion

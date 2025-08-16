@@ -43,6 +43,8 @@ public class UpgradeLineUIController : MonoBehaviour
                 {
                     SuperGlobal.lines[lineNumber - 1].trainsList[trainIndex].speed += 1f;
                     SuperGlobal.money -= price;
+                    SuperGlobal.nbUpgrade += 1;
+
                 }
                 ;
                 break;
@@ -52,6 +54,8 @@ public class UpgradeLineUIController : MonoBehaviour
                 {
                     SuperGlobal.lines[lineNumber - 1].trainsList[trainIndex].maxPassengers += 1;
                     SuperGlobal.money -= price;
+                    SuperGlobal.nbUpgrade += 1;
+
                 }
                 ;
                 break;

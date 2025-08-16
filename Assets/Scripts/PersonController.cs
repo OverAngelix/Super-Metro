@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class PersonController : MonoBehaviour
 {
@@ -16,8 +17,6 @@ public class PersonController : MonoBehaviour
     private float travelTime = 0f;       // temps passé en mouvement
     private float waitTime = 0f;         // temps passé à attendre aux stations
     private float happiness = 1f;        // entre 0 et 1
-
-    private bool isWaiting = false;      // savoir si la personne attend actuellement
 
     private void Start() { }
 
@@ -74,14 +73,8 @@ public class PersonController : MonoBehaviour
             if (!station.waitingPeople.Contains(this))
                 station.waitingPeople.Add(this);
 
-            isWaiting = true;
             waitTime += Time.deltaTime; // incrémente le temps d'attente
             return; // stop mouvement tant qu'on attend le train
-        }
-        else
-        {
-            // On n'attend plus
-            isWaiting = false;
         }
 
         // Mouvement vers le prochain node
@@ -155,8 +148,17 @@ public class PersonController : MonoBehaviour
         float total = travel + wait;
 
         // Ajuster maxTime selon ce que tu juges "long"
-        float maxTime = 10f; // 1 minute pour exemple
+        Node startNode = path[0];
+        Node lastNode = path[path.Count - 1];
+        Vector2 start = new Vector2(startNode.lat, startNode.lon);
+        Vector2 last = new Vector2(lastNode.lat, lastNode.lon);
+        float distance = Vector2.Distance(start, last);
+
+        float maxTime = Mathf.Max(10, 500f * distance / speed);
+        Debug.Log("TIME : " + maxTime);
+        ; // 1 minute pour exemple
         float score = 1f - Mathf.Clamp01(total / maxTime); // 1 si rapide, 0 si trop long
+        Debug.Log("SCORE : " + score);
         return score;
     }
 }

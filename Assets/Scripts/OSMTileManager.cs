@@ -106,11 +106,14 @@ public class OSMTileManager : MonoBehaviour
                 }
             }
 
-            
+
             connect.CreateLines(SuperGlobal.stations);
             SuperGlobal.money -= 500;
+            SuperGlobal.nbStation += 1;
             panelStation.SetActive(false);
             SuperGlobal.isUIOpen = false;
+            isEditMode = false;
+            editionModeUI.enabled = false;
             stationName.text = "";
 
         }

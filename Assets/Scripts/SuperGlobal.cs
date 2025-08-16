@@ -8,11 +8,14 @@ public class SuperGlobal : MonoBehaviour
     public static float ticketPrice = 1.8f;
     public static float fees = 250f;
 
+    public static int nbUpgrade = 0;
+    public static int nbStation = 4;
+
     public static List<float> peopleHappiness = new List<float>();
 
-    public static float computeHappiness() 
+    public static float computeHappiness()
     {
-        if (peopleHappiness.Count == 0) 
+        if (peopleHappiness.Count == 0)
             return 0f; // éviter la division par zéro
 
         float sum = 0f;
@@ -97,7 +100,6 @@ public class SuperGlobal : MonoBehaviour
         new Station("Portes des Postes", 50.618803f, 3.0475242f, 1, 1),
         new Station("Gare Lille Flandres", 50.638047f, 3.0700097f, 1, 2),
         new Station("Wasquehal Hôtel de Ville", 50.6697318f, 3.1264094f, 1, 3),
-        new Station("Centre Roubaix", 50.6897318f, 3.1464094f, 1, 4),
     };
 
 
@@ -110,7 +112,7 @@ public class SuperGlobal : MonoBehaviour
         UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
         upgradeUIController.updateUI(lineNumber, trainIndex);
         Debug.Log("upgrade train");
-        
+
     }
 
 

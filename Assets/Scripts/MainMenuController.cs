@@ -18,7 +18,6 @@ public class MainMenuController : MonoBehaviour
     public AudioSource mainMusic;
     private void Start()
     {
-        Debug.Log("COUSJFJDFS");
         startButton.onClick.AddListener(StartTutorial);
         optionsButton.onClick.AddListener(Options);
         quitButton.onClick.AddListener(Quit);
@@ -29,12 +28,11 @@ public class MainMenuController : MonoBehaviour
     }
     public void StartTutorial()
     {
-        SceneManager.LoadScene("StationManagement");
+        SceneManager.LoadScene("MapManagement");
     }
 
     public void Options()
     {
-        Debug.Log("COUCU");
         MainMenu.SetActive(false);
         OptionsMenu.SetActive(true);
     }
