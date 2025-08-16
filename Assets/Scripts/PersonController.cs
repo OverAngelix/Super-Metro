@@ -10,12 +10,11 @@ public class PersonController : MonoBehaviour
     private bool onTrain = false;
     private TrainController currentTrain;
 
-    private bool waitingForTrain = false;
-
     private Node targetStationNode; // la station où la personne doit descendre
 
     private void Start() {
     }
+    
     public void SetPath(List<Node> newPath)
     {
         path = newPath;
@@ -71,14 +70,8 @@ public class PersonController : MonoBehaviour
                 station.waitingPeople.Add(this);
                 //GERER SURPLUS avec du mecontentement
             }
-                
 
-            waitingForTrain = true;
             return; // stop mouvement tant qu'on attend le train
-        }
-        else
-        {
-            waitingForTrain = false;
         }
 
         // Mouvement vers le prochain node
@@ -110,7 +103,6 @@ public class PersonController : MonoBehaviour
         currentTrain = train;
         targetStationNode = stationNode;
         onTrain = true;
-        waitingForTrain = false;
         GetComponent<Renderer>().enabled = false;
 
     }
@@ -140,8 +132,6 @@ public class PersonController : MonoBehaviour
                 break;
             }
         }
-
-        waitingForTrain = false; // reprendre le mouvement
     }
 
 }
