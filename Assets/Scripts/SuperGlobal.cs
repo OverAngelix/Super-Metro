@@ -9,6 +9,8 @@ public class SuperGlobal : MonoBehaviour
     public static float fees = 250f;
     public static int happiness;
 
+    public static List<float> peopleHappiness = new List<float>();
+
     public static bool isUIOpen = false;
     public class Location
     {
