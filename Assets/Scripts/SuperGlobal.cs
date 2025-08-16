@@ -7,9 +7,21 @@ public class SuperGlobal : MonoBehaviour
     public static float money = 1500f;
     public static float ticketPrice = 1.8f;
     public static float fees = 250f;
-    public static int happiness;
 
     public static List<float> peopleHappiness = new List<float>();
+
+    public static float computeHappiness() 
+    {
+        if (peopleHappiness.Count == 0) 
+            return 0f; // éviter la division par zéro
+
+        float sum = 0f;
+        foreach (float h in peopleHappiness)
+            sum += h;
+
+        return sum / peopleHappiness.Count;
+    }
+
 
     public static bool isUIOpen = false;
     public class Location

@@ -102,7 +102,9 @@ public class TrainController : MonoBehaviour
             station.waitingPeople.RemoveAt(0);
 
             passengers.Add(person.gameObject); // on ajoute le GameObject dans le train
-
+            
+            SuperGlobal.money += SuperGlobal.ticketPrice;
+            
             // Déplacer la personne vers le train
             // On récupère la station où la personne veut descendre
             Node stationToGo = person.GetNextTarget();
