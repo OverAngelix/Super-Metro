@@ -10,6 +10,7 @@ public class PersonController : MonoBehaviour
 
     private bool onTrain = false;
     private TrainController currentTrain;
+    private bool happinessSent = false;
 
     private Node targetStationNode; // la station où la personne doit descendre
 
@@ -44,10 +45,20 @@ public class PersonController : MonoBehaviour
 
     void Update()
     {
-        // Si la personne est dans le train, vérifier si elle doit descendre
+        // Si la personne est dans le train
         if (onTrain)
         {
-            travelTime += Time.deltaTime; // temps en train considéré comme déplacement
+            travelTime += Time.deltaTime; 
+
+            // 🔹 Vérifier happiness même en train
+            float currentHappiness = CalculateHappiness(travelTime, waitTime);
+            if (currentHappiness <= 0f && !happinessSent)
+            {
+                SuperGlobal.peopleHappiness.Add(0f);
+                happinessSent = true;
+            }
+
+            // Vérifier si elle doit descendre
             if (currentTrain != null && targetStationNode != null && currentTrain.currentStation?.name == targetStationNode.name)
             {
                 LeaveTrain(targetStationNode);
@@ -55,6 +66,7 @@ public class PersonController : MonoBehaviour
             return;
         }
 
+        // Pas dans le train : marcher ou attendre
         if (path == null || currentTargetIndex >= path.Count) return;
 
         string targetName = path[currentTargetIndex].name;
@@ -73,7 +85,16 @@ public class PersonController : MonoBehaviour
             if (!station.waitingPeople.Contains(this))
                 station.waitingPeople.Add(this);
 
-            waitTime += Time.deltaTime; // incrémente le temps d'attente
+            waitTime += Time.deltaTime;
+
+            // 🔹 Vérifier happiness en temps réel
+            float currentHappiness = CalculateHappiness(travelTime, waitTime);
+            if (currentHappiness <= 0f && !happinessSent)
+            {
+                SuperGlobal.peopleHappiness.Add(0f);
+                happinessSent = true;
+            }
+
             return; // stop mouvement tant qu'on attend le train
         }
 
@@ -93,18 +114,23 @@ public class PersonController : MonoBehaviour
         // Compter le temps de déplacement
         travelTime += Time.deltaTime;
 
+        // 🔹 Vérifier happiness en temps réel même en marchant
+        float h = CalculateHappiness(travelTime, waitTime);
+        if (h <= 0f)
+        {
+            SuperGlobal.peopleHappiness.Add(0f);
+            Destroy(gameObject);
+            return;
+        }
+
         if (Vector3.Distance(transform.position, targetObj.transform.position) < 0.1f)
         {
             currentTargetIndex++;
-            if (currentTargetIndex >= path.Count)
+            if (currentTargetIndex >= path.Count && !happinessSent)
             {
-                // Calculer la happiness finale
                 happiness = CalculateHappiness(travelTime, waitTime);
-
-                // Stocker dans SuperGlobal
                 SuperGlobal.peopleHappiness.Add(happiness);
-
-                Destroy(gameObject);
+                happinessSent = true;
             }
         }
     }

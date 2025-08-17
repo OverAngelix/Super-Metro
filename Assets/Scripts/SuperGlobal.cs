@@ -16,13 +16,15 @@ public class SuperGlobal : MonoBehaviour
     public static float computeHappiness()
     {
         if (peopleHappiness.Count == 0)
-            return 0f; // éviter la division par zéro
+            return 0.5f;
 
         float sum = 0f;
-        foreach (float h in peopleHappiness)
+        int count = 100;
+        int start = Mathf.Max(0, peopleHappiness.Count - count);
+        foreach (float h in peopleHappiness.GetRange(start, peopleHappiness.Count - start))
             sum += h;
 
-        return sum / peopleHappiness.Count;
+        return sum / count;
     }
 
 

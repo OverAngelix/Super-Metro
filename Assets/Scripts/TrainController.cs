@@ -6,6 +6,8 @@ public class TrainController : MonoBehaviour
 {
     public float speed = 20f;
     public int maxPassengers = 5; // capacité max du train
+    public float timeToEnter = 0.2f;
+    public float timeToWaitAtStation = 2f;
     public List<GameObject> passengers = new List<GameObject>();
 
     private List<Node> path;
@@ -17,7 +19,6 @@ public class TrainController : MonoBehaviour
     public void SetPath(List<Node> newPath)
     {
         path = newPath;
-        forward = true;
 
         StopAllCoroutines();
 
@@ -95,25 +96,28 @@ public class TrainController : MonoBehaviour
 
     private IEnumerator HandlePassengersAtStation(SuperGlobal.Station station)
     {
-        // Tant qu'il y a de la place et des personnes qui attendent
-        while (passengers.Count < maxPassengers && station.waitingPeople.Count > 0)
+        float endTime = Time.time + timeToWaitAtStation;
+
+        while (passengers.Count < maxPassengers && station.waitingPeople.Count > 0 && Time.time < endTime)
         {
-            PersonController person = station.waitingPeople[0]; // maintenant c'est un PersonController
+            PersonController person = station.waitingPeople[0];
             station.waitingPeople.RemoveAt(0);
 
-            passengers.Add(person.gameObject); // on ajoute le GameObject dans le train
-            
+            passengers.Add(person.gameObject);
             SuperGlobal.money += SuperGlobal.ticketPrice;
 
-            // Déplacer la personne vers le train
-            // On récupère la station où la personne veut descendre
             Node stationToGo = person.GetNextTarget();
-            person.BoardTrain(this, stationToGo); // mise à jour pour inclure la station de descente
+            person.BoardTrain(this, stationToGo);
 
-            yield return new WaitForSeconds(0.2f); // petit délai entre chaque embarquement
+            if (Time.time + timeToEnter < endTime)
+                yield return new WaitForSeconds(timeToEnter);
+            else
+                break;
         }
 
-        // Temps d'arrêt à la station
-        yield return new WaitForSeconds(1f);
+        float remaining = endTime - Time.time;
+        if (remaining > 0)
+            yield return new WaitForSeconds(remaining);
     }
+
 }

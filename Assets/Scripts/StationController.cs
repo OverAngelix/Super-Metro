@@ -48,14 +48,14 @@ public class StationController : MonoBehaviour
                 path.Add(new Node { name = st.name });
         }
 
-        // Pour que le train fasse un aller-retour infini
-        List<Node> fullPath = new List<Node>(path);
-        path.Reverse();
-        fullPath.AddRange(path);
+        // // Pour que le train fasse un aller-retour infini
+        // List<Node> fullPath = new List<Node>(path);
+        // path.Reverse();
+        // fullPath.AddRange(path);
 
         // Donner le chemin au train
         TrainController train = obj.GetComponent<TrainController>();
-        train.SetPath(fullPath);
+        train.SetPath(path);
 
         return train;
     }
