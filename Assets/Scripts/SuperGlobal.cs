@@ -29,52 +29,6 @@ public class SuperGlobal : MonoBehaviour
 
 
     public static bool isUIOpen = false;
-    public class Location
-    {
-        public string name;
-        public float lat;
-        public float lon;
-        public GameObject obj;
-
-        public Location(string name, float lat, float lon)
-        {
-            this.name = name;
-            this.lat = lat;
-            this.lon = lon;
-        }
-    }
-
-    public class Station : Location
-    {
-        public int lineNumber;
-        public int index;
-        public int level;
-        public int capacity;
-        public List<PersonController> waitingPeople = new List<PersonController>();
-
-        public Station(string name, float lat, float lon, int lineNumber, int index)
-            : base(name, lat, lon)
-        {
-            this.lineNumber = lineNumber;
-            this.index = index;
-            this.level = 1;
-            this.capacity = 50;
-        }
-    }
-
-    public class Line
-    {
-        public string name;
-        public int lineNumber;
-        public List<TrainController> trainsList = new List<TrainController>();
-
-        public GameObject ticketUIObject;
-        public Line(string name, int lineNumber)
-        {
-            this.lineNumber = lineNumber;
-            this.name = name;
-        }
-    }
 
     public static List<Line> lines = new List<Line>
     {

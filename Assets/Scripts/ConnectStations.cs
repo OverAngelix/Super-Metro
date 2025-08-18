@@ -18,7 +18,7 @@ public class ConnectStations : MonoBehaviour
     }
 
 
-    public void CreateLines(List<SuperGlobal.Station> stationObjects)
+    public void CreateLines(List<Station> stationObjects)
     {
         // ClearLines();
 

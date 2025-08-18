@@ -210,7 +210,7 @@ public class OSMTileManager : MonoBehaviour
         public Dictionary<string, string> tags;
     }
 
-    /*#region FONCTIONNALITE POUR LES ROUTES
+    #region FONCTIONNALITE POUR LES ROUTES
     IEnumerator FetchAndDrawRoads()
     {
         // 1. Définir le périmètre de recherche (bounding box)
@@ -302,11 +302,11 @@ public class OSMTileManager : MonoBehaviour
             }
         }
     }
-    #endregion*/
+    #endregion
 
-#region FONCTIONNALITE POUR LES ROUTES
+    /*#region FONCTIONNALITE POUR LES ROUTES
     // Étape 1: Récupérer toutes les données de routes dans le périmètre
-    IEnumerator FetchRoadsData()
+    IEnumerator FetchAndDrawRoads()
     {
         double minLat = TileYToLat(LatToTileY(centerLat, zoomLevel) + roadFetchRadius, zoomLevel);
         double maxLat = TileYToLat(LatToTileY(centerLat, zoomLevel) - roadFetchRadius, zoomLevel);
@@ -347,26 +347,26 @@ public class OSMTileManager : MonoBehaviour
             }
         }
     }
-    
+
     // Étape 2: Générer un mesh de routes pour une tuile spécifique
     void CreateRoadsMeshForTile(int tileX, int tileY)
     {
         // Créer un GameObject pour ce mesh de routes
         GameObject roadsMeshObject = new GameObject($"Roads_Mesh_{tileX}_{tileY}");
         roadsMeshObject.transform.parent = this.transform;
-        
+
         MeshFilter meshFilter = roadsMeshObject.AddComponent<MeshFilter>();
         MeshRenderer meshRenderer = roadsMeshObject.AddComponent<MeshRenderer>();
-        
+
         meshRenderer.material = roadMaterial;
-        
+
         // Listes pour stocker les donnees du mesh
         List<Vector3> allVertices = new List<Vector3>();
         List<int> allTriangles = new List<int>();
-        
+
         float roadWidth = 0.5f;
         int vertexIndexOffset = 0;
-        
+
         Vector3 tileUnityPos = LatLonToUnityPosition(TileToLat(tileY + 0.5, zoomLevel), TileToLon(tileX + 0.5, zoomLevel), zoomLevel);
 
         foreach (var element in cachedRoadsData.elements)
@@ -388,22 +388,22 @@ public class OSMTileManager : MonoBehaviour
                         }
                     }
                 }
-                
+
                 if (roadInTile)
                 {
                     for (int i = 0; i < element.nodes.Count - 1; i++)
                     {
                         long nodeId1 = element.nodes[i];
-                        long nodeId2 = element.nodes[i+1];
+                        long nodeId2 = element.nodes[i + 1];
 
                         if (cachedNodesDict.ContainsKey(nodeId1) && cachedNodesDict.ContainsKey(nodeId2))
                         {
                             Element node1 = cachedNodesDict[nodeId1];
                             Element node2 = cachedNodesDict[nodeId2];
-                            
+
                             Vector3 pos1 = LatLonToUnityPosition(node1.lat, node1.lon, zoomLevel) + new Vector3(transform.position.x, 0.1f, transform.position.z);
                             Vector3 pos2 = LatLonToUnityPosition(node2.lat, node2.lon, zoomLevel) + new Vector3(transform.position.x, 0.1f, transform.position.z);
-                            
+
                             Vector3 direction = (pos2 - pos1).normalized;
                             Vector3 normal = Vector3.Cross(direction, Vector3.up).normalized;
 
@@ -419,14 +419,14 @@ public class OSMTileManager : MonoBehaviour
                             allTriangles.Add(vertexIndexOffset + 2);
                             allTriangles.Add(vertexIndexOffset + 3);
                             allTriangles.Add(vertexIndexOffset + 1);
-                            
+
                             vertexIndexOffset += 4;
                         }
                     }
                 }
             }
         }
-        
+
         if (allVertices.Count > 0)
         {
             Mesh mesh = new Mesh();
@@ -441,7 +441,7 @@ public class OSMTileManager : MonoBehaviour
             Destroy(roadsMeshObject);
         }
     }
-    #endregion
+    #endregion*/
 
     void Awake()
     {
@@ -490,7 +490,7 @@ public class OSMTileManager : MonoBehaviour
     {
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
         {
-            SuperGlobal.Station newStation = new SuperGlobal.Station(stationName.text, newLat, newLon, 1, SuperGlobal.stations.Count);
+            Station newStation = new Station(stationName.text, newLat, newLon, 1, SuperGlobal.stations.Count);
             SuperGlobal.stations.Add(newStation);
 
             GameObject obj = PlacePoint(newLat, newLon, stationPrefab);
@@ -499,7 +499,7 @@ public class OSMTileManager : MonoBehaviour
 
             StationController controller = obj.GetComponent<StationController>();
             controller.station = newStation;
-            foreach (SuperGlobal.Line line in SuperGlobal.lines)
+            foreach (Line line in SuperGlobal.lines)
             {
                 foreach (var train in line.trainsList)
                 {
@@ -616,7 +616,7 @@ public class OSMTileManager : MonoBehaviour
     public void GetLesRoutes()
     {
 
-        StartCoroutine(FetchRoadsData());
+        StartCoroutine(FetchAndDrawRoads());
     }
 
 

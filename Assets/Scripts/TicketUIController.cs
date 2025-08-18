@@ -19,7 +19,7 @@ public class TicketUIController : MonoBehaviour
 
     void Update()
     {
-        foreach (SuperGlobal.Line line in SuperGlobal.lines)
+        foreach (Line line in SuperGlobal.lines)
         {
             if (!line.ticketUIObject)
             {

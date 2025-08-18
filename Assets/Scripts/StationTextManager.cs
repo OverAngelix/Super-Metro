@@ -15,7 +15,7 @@ public class StationTextManager : MonoBehaviour
     public Button closeButtonUI;
     public Button upgradeButtonUI;
 
-    private SuperGlobal.Station station;
+    private Station station;
 
 
     void Start()

@@ -65,7 +65,7 @@ public class TrainController : MonoBehaviour
             }
 
             // Si on est sur une station, gérer les passagers
-            SuperGlobal.Station station = SuperGlobal.stations.Find(st => st.name == targetName);
+            Station station = SuperGlobal.stations.Find(st => st.name == targetName);
             if (station != null)
             {
                 currentStation = path[currentTargetIndex]; // mise à jour de la station actuelle
@@ -94,7 +94,7 @@ public class TrainController : MonoBehaviour
         }
     }
 
-    private IEnumerator HandlePassengersAtStation(SuperGlobal.Station station)
+    private IEnumerator HandlePassengersAtStation(Station station)
     {
         float endTime = Time.time + timeToWaitAtStation;
 

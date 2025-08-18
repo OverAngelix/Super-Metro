@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class StationController : MonoBehaviour
 {
-    public SuperGlobal.Station station;
+    public Station station;
     private GameObject trainPrefab;
 
     void Awake()
