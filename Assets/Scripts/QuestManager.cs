@@ -1,73 +1,96 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
-    public RawImage happinessCheck;
-    public TextMeshProUGUI happinessValue;
-    public RawImage moneyCheck;
-    public TextMeshProUGUI moneyValue;
-    public RawImage upgradeCheck;
-    public TextMeshProUGUI upgradeValue;
-    public int nbUpgradesObjectif = 10;
-    public RawImage stationCheck;
-    public TextMeshProUGUI stationValue;
-    public int nbStationsObjectif = 6;
+    public static QuestManager Instance;
 
+    [Header("UI Prefab")]
+    public GameObject questLineUIPrefab; // ton QuestLineUI
+    public Transform questsParent;        // parent où les lignes vont être créées
 
+    [Header("Textures")]
     public Texture2D checkTexture;
     public Texture2D uncheckTexture;
-    private void Start()
+
+    public List<Quest> quests = new List<Quest>();
+
+    private void Awake()
     {
-        happinessCheck.texture = uncheckTexture;
-        moneyCheck.texture = uncheckTexture;
-        upgradeCheck.texture = uncheckTexture;
-        stationCheck.texture = uncheckTexture;
-        happinessValue.text = "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80";
-        moneyValue.text = "Argent : " + SuperGlobal.money + " / 5000";
-        upgradeValue.text = "Ameliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif;
-        stationValue.text = "Nouvelles Stations : " + SuperGlobal.nbStation + " / " + nbStationsObjectif;
-
-
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        happinessCheck.texture = uncheckTexture;
-        moneyCheck.texture = uncheckTexture;
-        upgradeCheck.texture = uncheckTexture;
-        stationCheck.texture = uncheckTexture;
-        happinessValue.text = "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80";
-        moneyValue.text = "Argent : " + SuperGlobal.money.ToString("F1") + " / 5000";
-        upgradeValue.text = "Ameliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif;
-        stationValue.text = "Nouvelles Stations : " + SuperGlobal.nbStation + " / " + nbStationsObjectif;
+        InitializeQuests();
+    }
+
+    void InitializeQuests()
+    {
+        // Exemple d'une quête "appuyez sur le menu d'amélioration"
 
 
-        if ((SuperGlobal.computeHappiness() * 100) == 80 && SuperGlobal.peopleHappiness.Count > 100)
+        AddQuest(
+            "Cliquez sur le menu d'amélioration",
+            () => "Cliquez sur le menu d'amélioration", // getCurrentValue
+            () => false                                // isCompleted (sera géré via trigger)
+        );
+        
+        AddQuest(
+            "Bonheur",
+            () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
+            () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
+        );
+
+        AddQuest(
+            "Argent",
+            () => "Argent : " + SuperGlobal.money.ToString("F1") + " / 5000",
+            () => SuperGlobal.money >= 5000
+        );
+
+        int nbUpgradesObjectif = 10;
+        AddQuest(
+            "Améliorations",
+            () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
+            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif
+        );
+
+        int nbStationsObjectif = 6;
+        AddQuest(
+            "Stations",
+            () => "Nouvelles Stations : " + SuperGlobal.nbStation + " / " + nbStationsObjectif,
+            () => SuperGlobal.nbStation >= nbStationsObjectif
+        );
+
+        // Tu peux ajouter ici les 4 autres quêtes dynamiquement de la même façon
+    }
+
+    public void AddQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted)
+    {
+        // Instancie la ligne UI
+        GameObject go = Instantiate(questLineUIPrefab, questsParent);
+        QuestLineUIController qlUIController = go.GetComponent<QuestLineUIController>();
+
+        // Crée la quête
+        Quest newQuest = new Quest(
+            name,
+            qlUIController.checkImage,
+            qlUIController.valueText,
+            getCurrentValue,
+            isCompleted,
+            checkTexture,
+            uncheckTexture
+        );
+
+        quests.Add(newQuest);
+    }
+
+    private void Update()
+    {
+        foreach (var quest in quests)
         {
-            happinessCheck.texture = checkTexture;
-        }
-
-        if (SuperGlobal.money >= 5000)
-        {
-            moneyCheck.texture = checkTexture;
-        }
-
-        if (SuperGlobal.nbUpgrade >= nbUpgradesObjectif)
-        {
-            upgradeCheck.texture = checkTexture;
-        }
-
-        if (SuperGlobal.nbStation >= nbStationsObjectif)
-        {
-            stationCheck.texture = checkTexture;
-        }
-
-        if ((SuperGlobal.computeHappiness() * 100) == 80 && SuperGlobal.peopleHappiness.Count > 100 && SuperGlobal.money >= 5000 && SuperGlobal.nbUpgrade >= nbUpgradesObjectif && SuperGlobal.nbStation >= nbStationsObjectif)
-        {
-            Debug.Log("BRAVO TU AS REUSSI ! ");
+            quest.UpdateQuest();
         }
     }
 }
