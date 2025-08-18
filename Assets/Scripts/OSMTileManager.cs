@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
+using System.Globalization;
 
 public class OSMTileManager : MonoBehaviour
 {
@@ -41,6 +43,405 @@ public class OSMTileManager : MonoBehaviour
 
     public float newLat;
     public float newLon;
+
+
+    //public GameObject trainStationPrefab; // Préfabriqué pour les gares
+
+    // Classes pour désérialiser la réponse JSON de l'API Overpass (MAISONS ET GARES)
+    /*[Serializable]
+    public class OverpassResponse
+    {
+        public Element[] elements;
+    }
+
+    [Serializable]
+    public class Element
+    {
+        public long id;
+        public string type;
+        public double lat;
+        public double lon;
+        public Dictionary<string, string> tags;
+    }*/
+
+    #region FONCTIONNALITE POUR LES MAISONS
+    IEnumerator FetchAndPlaceHouses()
+    {
+        // 1. Définir le périmètre de recherche (bounding box)
+        double minLat = TileYToLat(LatToTileY(centerLat, zoomLevel) + tileRadius, zoomLevel);
+        double maxLat = TileYToLat(LatToTileY(centerLat, zoomLevel) - tileRadius, zoomLevel);
+        double minLon = TileXToLon(LonToTileX(centerLon, zoomLevel) - tileRadius, zoomLevel);
+        double maxLon = TileXToLon(LonToTileX(centerLon, zoomLevel) + tileRadius, zoomLevel);
+
+        string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
+
+        // 2. Construire la requête pour l'API Overpass
+        // La requête demande tous les "nodes" (points) avec le tag "railway=station"
+        //string query = $"[out:json];node[railway=station]({bbox});out;";
+
+        // La requête demande les "nodes", "ways", et "relations" avec le tag "building=house"
+        string query = $"[out:json];(node[building=house]({bbox});way[building=house]({bbox});relation[building=house]({bbox}););out center;";
+
+        // Nouvelle URL correcte
+        string url = "http://overpass-api.de/api/interpreter";
+
+        // Créer un objet WWWForm pour envoyer les données correctement
+        WWWForm form = new WWWForm();
+        form.AddField("data", query);
+        // http://overpass-turbo.eu/ pour tester la query 
+        Debug.Log("Requête Overpass : " + query);
+
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            // Ajouter un User-Agent pour respecter la politique OSM
+            www.SetRequestHeader("User-Agent", "Unity-OSM-App/1.0");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                // 3. Traiter la réponse JSON
+                string jsonResponse = www.downloadHandler.text;
+                OverpassResponse response = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
+                Debug.Log(response.elements.Count());
+                // 4. Placer un préfabriqué pour chaque gare trouvée
+                if (response != null && response.elements != null)
+                {
+                    /*foreach (var element in response.elements)
+                    {
+                        if (trainStationPrefab != null)
+                        {
+                            PlacePoint(element.lat, element.lon, trainStationPrefab);
+                        }
+                    }*/
+                    Debug.Log($"Gares trouvées et placées : {response.elements.Length}");
+                }
+            }
+            else
+            {
+                Debug.LogError($"Erreur de requête Overpass : {www.error}");
+            }
+        }
+    }
+    #endregion
+
+    #region FONCTIONNALITE POUR LES GARES
+    IEnumerator FetchAndPlaceStations()
+    {
+        // 1. Définir le périmètre de recherche (bounding box)
+        double minLat = TileYToLat(LatToTileY(centerLat, zoomLevel) + tileRadius, zoomLevel);
+        double maxLat = TileYToLat(LatToTileY(centerLat, zoomLevel) - tileRadius, zoomLevel);
+        double minLon = TileXToLon(LonToTileX(centerLon, zoomLevel) - tileRadius, zoomLevel);
+        double maxLon = TileXToLon(LonToTileX(centerLon, zoomLevel) + tileRadius, zoomLevel);
+
+        string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
+
+        // 2. Construire la requête pour l'API Overpass
+        // La requête demande tous les "nodes" (points) avec le tag "railway=station"
+        //string query = $"[out:json];node[railway=station]({bbox});out;";
+
+        // La requête demande les "nodes", "ways", et "relations" avec le tag "building=house"
+        string query = $"[out:json];node[railway=station]({bbox});out;";
+
+        // Nouvelle URL correcte
+        string url = "http://overpass-api.de/api/interpreter";
+
+        // Créer un objet WWWForm pour envoyer les données correctement
+        WWWForm form = new WWWForm();
+        form.AddField("data", query);
+        // http://overpass-turbo.eu/ pour tester la query 
+        Debug.Log("Requête Overpass : " + query);
+
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            // Ajouter un User-Agent pour respecter la politique OSM
+            www.SetRequestHeader("User-Agent", "Unity-OSM-App/1.0");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                // 3. Traiter la réponse JSON
+                string jsonResponse = www.downloadHandler.text;
+                OverpassResponse response = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
+                Debug.Log(response.elements.Count());
+                // 4. Placer un préfabriqué pour chaque gare trouvée
+                if (response != null && response.elements != null)
+                {
+                    /*foreach (var element in response.elements)
+                    {
+                        if (trainStationPrefab != null)
+                        {
+                            PlacePoint(element.lat, element.lon, trainStationPrefab);
+                        }
+                    }*/
+                    Debug.Log($"Gares trouvées et placées : {response.elements.Length}");
+                }
+            }
+            else
+            {
+                Debug.LogError($"Erreur de requête Overpass : {www.error}");
+            }
+        }
+    }
+    #endregion
+
+    [Header("Parametres de generation")]
+    public int roadFetchRadius = 5; // Rayon de recherche pour les routes
+    public Material roadMaterial; // Matériel pour les lignes des routes
+    private OverpassResponse cachedRoadsData;
+    private Dictionary<long, Element> cachedNodesDict;
+    [Serializable]
+    public class OverpassResponse
+    {
+        public Element[] elements;
+    }
+
+    [Serializable]
+    public class Element
+    {
+        public long id;
+        public string type;
+        public double lat;
+        public double lon;
+        public List<long> nodes; // Ajout pour les "ways" et "relations"
+        public Dictionary<string, string> tags;
+    }
+
+    /*#region FONCTIONNALITE POUR LES ROUTES
+    IEnumerator FetchAndDrawRoads()
+    {
+        // 1. Définir le périmètre de recherche (bounding box)
+        double minLat = TileYToLat(LatToTileY(centerLat, zoomLevel) + roadFetchRadius, zoomLevel);
+        double maxLat = TileYToLat(LatToTileY(centerLat, zoomLevel) - roadFetchRadius, zoomLevel);
+        double minLon = TileXToLon(LonToTileX(centerLon, zoomLevel) - roadFetchRadius, zoomLevel);
+        double maxLon = TileXToLon(LonToTileX(centerLon, zoomLevel) + roadFetchRadius, zoomLevel);
+
+        // On formate les nombres en utilisant la culture invariante pour garantir l'utilisation du point
+        string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
+
+        // 2. Construire la requête pour l'API Overpass
+        // La requête demande les 'ways' (routes) avec la balise 'highway' et leurs 'nodes' constitutifs
+        string query = $"[out:json];way[highway]({bbox});(._;>;);out;";
+
+        string url = "http://overpass-api.de/api/interpreter";
+
+        WWWForm form = new WWWForm();
+        form.AddField("data", query);
+
+        Debug.Log("Requête Overpass : " + query);
+        Debug.Log("URL Overpass : " + url);
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            www.SetRequestHeader("User-Agent", "Unity-OSM-App/1.0");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                // 3. Traiter la réponse JSON
+                string jsonResponse = www.downloadHandler.text;
+                OverpassResponse response = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
+
+                // Dictionnaire pour stocker les nodes par ID
+                Dictionary<long, Element> nodesDict = new Dictionary<long, Element>();
+                foreach (var element in response.elements)
+                {
+                    if (element.type == "node")
+                    {
+                        nodesDict[element.id] = element;
+                    }
+                }
+
+                int roadCount = 0;
+                // 4. Parcourir les 'ways' et dessiner les lignes
+                foreach (var element in response.elements)
+                {
+                    if (element.type == "way" && element.nodes != null)
+                    {
+                        // Créer un nouvel objet pour la route
+                        GameObject roadObject = new GameObject($"Road_{element.id}");
+                        roadObject.transform.parent = this.transform;
+
+                        // Ajouter le composant LineRenderer
+                        LineRenderer lineRenderer = roadObject.AddComponent<LineRenderer>();
+                        lineRenderer.material = roadMaterial;
+                        lineRenderer.startWidth = 0.5f; // Largeur de la ligne
+                        lineRenderer.endWidth = 0.5f;
+
+                        // Utiliser l'espace monde pour que les points soient positionnés correctement
+                        // par rapport à l'objet parent, même s'il n'est pas à (0,0,0).
+                        lineRenderer.useWorldSpace = true;
+
+                        lineRenderer.positionCount = element.nodes.Count;
+
+                        // Créer un tableau de positions
+                        Vector3[] positions = new Vector3[element.nodes.Count];
+                        for (int i = 0; i < element.nodes.Count; i++)
+                        {
+                            long nodeId = element.nodes[i];
+                            if (nodesDict.ContainsKey(nodeId))
+                            {
+                                Element node = nodesDict[nodeId];
+                                // Appliquer la position du parent (le manager) pour corriger le décalage
+                                positions[i] = LatLonToUnityPosition(node.lat, node.lon, zoomLevel) + new Vector3(transform.position.x, 0, transform.position.z);
+                            }
+                        }
+                        lineRenderer.SetPositions(positions);
+                        roadCount++;
+                    }
+                }
+                Debug.Log($"Routes trouvées et tracées : {roadCount}");
+            }
+            else
+            {
+                Debug.LogError($"Erreur de requête Overpass : {www.error}");
+            }
+        }
+    }
+    #endregion*/
+
+#region FONCTIONNALITE POUR LES ROUTES
+    // Étape 1: Récupérer toutes les données de routes dans le périmètre
+    IEnumerator FetchRoadsData()
+    {
+        double minLat = TileYToLat(LatToTileY(centerLat, zoomLevel) + roadFetchRadius, zoomLevel);
+        double maxLat = TileYToLat(LatToTileY(centerLat, zoomLevel) - roadFetchRadius, zoomLevel);
+        double minLon = TileXToLon(LonToTileX(centerLon, zoomLevel) - roadFetchRadius, zoomLevel);
+        double maxLon = TileXToLon(LonToTileX(centerLon, zoomLevel) + roadFetchRadius, zoomLevel);
+
+        string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
+
+        string query = $"[out:json];way[highway]({bbox});(._;>;);out;";
+        string url = "http://overpass-api.de/api/interpreter";
+        WWWForm form = new WWWForm();
+        form.AddField("data", query);
+
+        Debug.Log("Requête Overpass : " + query);
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            www.SetRequestHeader("User-Agent", "Unity-OSM-App/1.0");
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                string jsonResponse = www.downloadHandler.text;
+                cachedRoadsData = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
+
+                cachedNodesDict = new Dictionary<long, Element>();
+                foreach (var element in cachedRoadsData.elements)
+                {
+                    if (element.type == "node")
+                    {
+                        cachedNodesDict[element.id] = element;
+                    }
+                }
+            }
+            else
+            {
+                Debug.LogError($"Erreur de requête Overpass : {www.error}");
+            }
+        }
+    }
+    
+    // Étape 2: Générer un mesh de routes pour une tuile spécifique
+    void CreateRoadsMeshForTile(int tileX, int tileY)
+    {
+        // Créer un GameObject pour ce mesh de routes
+        GameObject roadsMeshObject = new GameObject($"Roads_Mesh_{tileX}_{tileY}");
+        roadsMeshObject.transform.parent = this.transform;
+        
+        MeshFilter meshFilter = roadsMeshObject.AddComponent<MeshFilter>();
+        MeshRenderer meshRenderer = roadsMeshObject.AddComponent<MeshRenderer>();
+        
+        meshRenderer.material = roadMaterial;
+        
+        // Listes pour stocker les donnees du mesh
+        List<Vector3> allVertices = new List<Vector3>();
+        List<int> allTriangles = new List<int>();
+        
+        float roadWidth = 0.5f;
+        int vertexIndexOffset = 0;
+        
+        Vector3 tileUnityPos = LatLonToUnityPosition(TileToLat(tileY + 0.5, zoomLevel), TileToLon(tileX + 0.5, zoomLevel), zoomLevel);
+
+        foreach (var element in cachedRoadsData.elements)
+        {
+            if (element.type == "way" && element.nodes != null && element.nodes.Count >= 2)
+            {
+                // Vérifier si la route passe par la tuile
+                bool roadInTile = false;
+                foreach (long nodeId in element.nodes)
+                {
+                    if (cachedNodesDict.ContainsKey(nodeId))
+                    {
+                        Element node = cachedNodesDict[nodeId];
+                        Vector3 nodeUnityPos = LatLonToUnityPosition(node.lat, node.lon, zoomLevel) + new Vector3(transform.position.x, 0, transform.position.z);
+                        if (Mathf.Abs(nodeUnityPos.x - tileUnityPos.x) <= tileSize / 2f && Mathf.Abs(nodeUnityPos.z - tileUnityPos.z) <= tileSize / 2f)
+                        {
+                            roadInTile = true;
+                            break;
+                        }
+                    }
+                }
+                
+                if (roadInTile)
+                {
+                    for (int i = 0; i < element.nodes.Count - 1; i++)
+                    {
+                        long nodeId1 = element.nodes[i];
+                        long nodeId2 = element.nodes[i+1];
+
+                        if (cachedNodesDict.ContainsKey(nodeId1) && cachedNodesDict.ContainsKey(nodeId2))
+                        {
+                            Element node1 = cachedNodesDict[nodeId1];
+                            Element node2 = cachedNodesDict[nodeId2];
+                            
+                            Vector3 pos1 = LatLonToUnityPosition(node1.lat, node1.lon, zoomLevel) + new Vector3(transform.position.x, 0.1f, transform.position.z);
+                            Vector3 pos2 = LatLonToUnityPosition(node2.lat, node2.lon, zoomLevel) + new Vector3(transform.position.x, 0.1f, transform.position.z);
+                            
+                            Vector3 direction = (pos2 - pos1).normalized;
+                            Vector3 normal = Vector3.Cross(direction, Vector3.up).normalized;
+
+                            allVertices.Add(pos1 + normal * roadWidth / 2f);
+                            allVertices.Add(pos1 - normal * roadWidth / 2f);
+                            allVertices.Add(pos2 + normal * roadWidth / 2f);
+                            allVertices.Add(pos2 - normal * roadWidth / 2f);
+
+                            allTriangles.Add(vertexIndexOffset + 0);
+                            allTriangles.Add(vertexIndexOffset + 2);
+                            allTriangles.Add(vertexIndexOffset + 1);
+
+                            allTriangles.Add(vertexIndexOffset + 2);
+                            allTriangles.Add(vertexIndexOffset + 3);
+                            allTriangles.Add(vertexIndexOffset + 1);
+                            
+                            vertexIndexOffset += 4;
+                        }
+                    }
+                }
+            }
+        }
+        
+        if (allVertices.Count > 0)
+        {
+            Mesh mesh = new Mesh();
+            mesh.vertices = allVertices.ToArray();
+            mesh.triangles = allTriangles.ToArray();
+            mesh.RecalculateNormals();
+            meshFilter.mesh = mesh;
+            Debug.Log($"Routes fusionnées en un seul mesh pour la tuile ({tileX},{tileY}) avec {allVertices.Count} sommets.");
+        }
+        else
+        {
+            Destroy(roadsMeshObject);
+        }
+    }
+    #endregion
 
     void Awake()
     {
@@ -209,6 +610,13 @@ public class OSMTileManager : MonoBehaviour
         // Generer les nouvelles tuiles
         LoadTilesAroundCenter();
         Debug.Log("Tuiles generees manuellement !");
+    }
+
+    [ContextMenu("Get les routes")]
+    public void GetLesRoutes()
+    {
+
+        StartCoroutine(FetchRoadsData());
     }
 
 
