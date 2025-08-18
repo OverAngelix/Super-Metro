@@ -18,13 +18,6 @@ public class StationController : MonoBehaviour
         }
     }
 
-    // void Update()
-    // {
-    //     if (station.index == 1)
-    //     {
-    //     }
-    // }
-
     private GameObject RunTrain()
     {
         GameObject obj = Instantiate(trainPrefab);
@@ -42,7 +35,7 @@ public class StationController : MonoBehaviour
     {
         // Filtrer les stations de la même ligne et créer des Nodes
         List<Node> path = new List<Node>();
-        foreach (var st in SuperGlobal.stations)
+        foreach (var st in SuperGlobal.trainlines[0].stations)
         {
             if (st.lineNumber == station.lineNumber)
                 path.Add(new Node { name = st.name });

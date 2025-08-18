@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 using System.Globalization;
+using Unity.VisualScripting;
 
 public class OSMTileManager : MonoBehaviour
 {
@@ -450,6 +451,7 @@ public class OSMTileManager : MonoBehaviour
         {
             connect.Init();
         }
+        SuperGlobal.SetStations();
         InitGame();
     }
 
@@ -470,18 +472,22 @@ public class OSMTileManager : MonoBehaviour
     // Instancier toutes les stations et les stocker
     private void InitStations()
     {
-        for (int i = 0; i < SuperGlobal.stations.Count; i++)
+        foreach (TrainLine line in SuperGlobal.trainlines)
         {
-            var sta = SuperGlobal.stations[i];
-            GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
-            obj.name = sta.name;
-            sta.obj = obj;
-            StationController controller = obj.GetComponent<StationController>();
-            controller.station = sta;
+            foreach (Station station in line.stations)
+            {
+                var sta = station;
+                GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
+                obj.name = sta.name;
+                sta.obj = obj;
+                StationController controller = obj.GetComponent<StationController>();
+                controller.station = sta;
+            }
+
+            // Relier les stations
+            connect.CreateLines(line.stations, line.lineColor);
         }
 
-        // Relier les stations
-        connect.CreateLines(SuperGlobal.stations);
     }
 
 
@@ -490,8 +496,8 @@ public class OSMTileManager : MonoBehaviour
     {
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
         {
-            Station newStation = new Station(stationName.text, newLat, newLon, 1, SuperGlobal.stations.Count);
-            SuperGlobal.stations.Add(newStation);
+            Station newStation = new Station(stationName.text, newLat, newLon, 1, SuperGlobal.trainlines[0].stations.Count);
+            SuperGlobal.trainlines[0].stations.Add(newStation);
 
             GameObject obj = PlacePoint(newLat, newLon, stationPrefab);
             obj.name = stationName.text;
@@ -508,7 +514,7 @@ public class OSMTileManager : MonoBehaviour
             }
 
 
-            connect.CreateLines(SuperGlobal.stations);
+            connect.CreateLines(SuperGlobal.trainlines[0].stations, SuperGlobal.trainlines[0].lineColor);
             SuperGlobal.money -= 500;
             SuperGlobal.nbStation += 1;
             panelStation.SetActive(false);

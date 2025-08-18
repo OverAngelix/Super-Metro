@@ -6,7 +6,6 @@ public class SuperGlobal : MonoBehaviour
     public static float timeSpeed = 5f;
     public static float money = 1500f;
     public static float ticketPrice = 1.8f;
-    public static float fees = 250f;
 
     public static int nbUpgrade = 0;
     public static int nbStation = 4;
@@ -50,13 +49,52 @@ public class SuperGlobal : MonoBehaviour
      new Location("Lidl Wavrin", 50.56581f, 2.9261697f),
      new Location("Kinepolis Lomme", 50.6526513f, 2.9800662f),
     };
-    public static List<Station> stations = new List<Station>
+
+
+    private static List<Station> stations = new List<Station>
     {
         new Station("Gare de Wavrin", 50.574449f, 2.9341066f, 1, 0),
         new Station("Portes des Postes", 50.618803f, 3.0475242f, 1, 1),
         new Station("Gare Lille Flandres", 50.638047f, 3.0700097f, 1, 2),
         new Station("Wasquehal Hôtel de Ville", 50.6697318f, 3.1264094f, 1, 3),
     };
+
+    private static List<Station> stations2 = new List<Station>
+    {
+        new Station("Gare de Wavrin", 50.564449f, 2.9341066f, 2, 0),
+        new Station("Portes des Postes", 50.658803f, 3.0475242f, 2, 1),
+        new Station("Gare Lille Flandres", 50.698047f, 3.0700097f, 2, 2),
+        new Station("Wasquehal Hôtel de Ville", 50.7197318f, 3.1264094f, 2, 3),
+    };
+
+
+    public static List<TrainLine> trainlines = new List<TrainLine>
+    {
+        new TrainLine // Première ligne (Rouge)
+        {
+            lineNumber = 1,
+            maintenance = 250f,
+            lineColor = Color.red,
+            stations = new List<Station>(),
+           // trains = new List<TrainController>() // Initialisation de la liste de trains.
+        },
+        new TrainLine // Seconde ligne (Jaune)
+        {
+            lineNumber = 2,
+            maintenance = 250f,
+            lineColor = Color.yellow, // Note : Changement de la couleur à jaune pour la ligne 2.
+            stations = new List<Station>(),
+            //trains = new List<TrainController>() // Initialisation de la liste de trains.
+        }
+    };
+
+    public static void SetStations()
+    {
+        trainlines[0].stations = stations;
+        trainlines[1].stations = stations2;
+    }
+
+
 
 
     public static GameObject upgradeUI;
@@ -70,6 +108,5 @@ public class SuperGlobal : MonoBehaviour
         Debug.Log("upgrade train");
 
     }
-
 
 }

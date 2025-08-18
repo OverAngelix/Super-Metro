@@ -35,12 +35,12 @@ public class Quest
 
    public void UpdateQuest()
 {
-    Debug.Log($"Updating quest {questName}");
+    //Debug.Log($"Updating quest {questName}");
     
     if (getCurrentValue != null)
     {
         var val = getCurrentValue();
-        Debug.Log($"getCurrentValue returned: {val}");
+        //Debug.Log($"getCurrentValue returned: {val}");
         valueText.text = val; // questName n'est pas encore utilisée pour l'instant
     }
     else
@@ -49,7 +49,7 @@ public class Quest
     if (isCompleted != null)
     {
         var completedStatus = isCompleted();
-        Debug.Log($"isCompleted returned: {completedStatus}");
+        //Debug.Log($"isCompleted returned: {completedStatus}");
         checkImage.texture = completedStatus ? checkTexture : uncheckTexture;
     }
     else

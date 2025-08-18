@@ -4,8 +4,8 @@ using System.Collections.Generic; // pour List
 
 public class ConnectStations : MonoBehaviour
 {
-    public Material lineMaterial;
     private Transform linesContainer;
+    public Material lineMaterial;
 
 
     public void Init()
@@ -18,25 +18,22 @@ public class ConnectStations : MonoBehaviour
     }
 
 
-    public void CreateLines(List<Station> stationObjects)
+    public void CreateLines(List<Station> stationObjects, Color colorLine)
     {
-        // ClearLines();
-
+        lineMaterial.SetColor("_BaseColor", colorLine);
+        Material colorMat = new Material(lineMaterial);
         for (int i = 0; i < stationObjects.Count - 1; i++)
         {
-            CreateLine(stationObjects[i].obj.transform.position, stationObjects[i + 1].obj.transform.position);
+            CreateLine(stationObjects[i].obj.transform.position, stationObjects[i + 1].obj.transform.position, colorMat);
         }
     }
 
-    void CreateLine(Vector3 start, Vector3 end)
+    void CreateLine(Vector3 start, Vector3 end, Material material)
     {
         GameObject lineObj = new GameObject("Line");
         lineObj.transform.parent = linesContainer;
-
         LineRenderer lr = lineObj.AddComponent<LineRenderer>();
-        lr.material = lineMaterial;
-        lr.startColor = Color.red;
-        lr.endColor = Color.red;
+        lr.material = material;
         lr.startWidth = 0.5f;
         lr.endWidth = 0.5f;
         lr.positionCount = 2;

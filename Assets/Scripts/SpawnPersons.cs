@@ -44,7 +44,7 @@ public class SpawnPersons : MonoBehaviour
             allNodes.Add(new Node(spot.name, spot.lat, spot.lon, false));
 
         // Ajouter toutes les stations comme nodes
-        foreach (var station in SuperGlobal.stations)
+        foreach (var station in SuperGlobal.trainlines[0].stations)
             allNodes.Add(new Node(station.name, station.lat, station.lon, true));
 
         // Créer les edges entre tous les nodes

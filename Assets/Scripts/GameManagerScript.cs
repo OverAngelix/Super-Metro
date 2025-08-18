@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            SuperGlobal.money -= SuperGlobal.fees;
+            SuperGlobal.money -= SuperGlobal.trainlines[0].maintenance;
             timer = 0f;
         }
     }
