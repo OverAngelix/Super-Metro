@@ -26,7 +26,7 @@ public class UpgradeUIController : MonoBehaviour
 
     void exit()
     {
-        upgradeLineUI.GetComponent<Canvas>().enabled = false;
+        UpgradeUIController.Instance.GetComponent<Canvas>().enabled = false;
     }
 
     public void updateUI(int lineNumber, int trainIndex)
