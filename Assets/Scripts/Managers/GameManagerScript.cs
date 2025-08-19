@@ -5,7 +5,7 @@ public class GameManagerScript : MonoBehaviour
 {
     public TextMeshProUGUI money;
 
-    public float spawnInterval = 20f;
+    public float spawnInterval = 60f;
     private float timer = 0f;
 
     // Update is called once per frame
@@ -16,7 +16,10 @@ public class GameManagerScript : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            SuperGlobal.money -= SuperGlobal.trainlines[0].maintenance;
+            foreach (TrainLine trainline in SuperGlobal.trainlines)
+            {
+                SuperGlobal.money -= trainline.maintenance;
+            }
             timer = 0f;
         }
     }

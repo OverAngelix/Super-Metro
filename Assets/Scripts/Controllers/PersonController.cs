@@ -30,7 +30,7 @@ public class PersonController : MonoBehaviour
         {
             string firstName = path[0].name;
             GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstName)?.obj
-                                ?? SuperGlobal.trainlines[0].stations.Find(st => st.name == firstName)?.obj;
+                                ?? SuperGlobal.GetStation(firstName)?.obj;
             if (firstObj != null)
                 transform.position = firstObj.transform.position;
         }
@@ -48,7 +48,7 @@ public class PersonController : MonoBehaviour
         // Si la personne est dans le train
         if (onTrain)
         {
-            travelTime += Time.deltaTime; 
+            travelTime += Time.deltaTime;
 
             // 🔹 Vérifier happiness même en train
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
@@ -71,12 +71,14 @@ public class PersonController : MonoBehaviour
 
         string targetName = path[currentTargetIndex].name;
         GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetName)?.obj
-                            ?? SuperGlobal.trainlines[0].stations.Find(st => st.name == targetName)?.obj;
+                            ?? SuperGlobal.GetStation(targetName)?.obj;
 
         if (targetObj == null) return;
 
         // Vérifier si le node est une station
-        Station station = SuperGlobal.trainlines[0].stations.Find(st => st.name == targetName);
+
+        Station station = SuperGlobal.GetStation(targetName);
+
         if (station != null)
         {
             // Arrivé à la station
@@ -104,7 +106,7 @@ public class PersonController : MonoBehaviour
         if (currentTargetIndex > 0)
         {
             string prevName = path[currentTargetIndex - 1].name;
-            bool prevIsStation = SuperGlobal.trainlines[0].stations.Exists(st => st.name == prevName);
+            bool prevIsStation = SuperGlobal.ExistStation(prevName);
             bool targetIsStation = station != null;
             if (prevIsStation && targetIsStation) currentSpeed *= 4f;
         }
@@ -147,7 +149,7 @@ public class PersonController : MonoBehaviour
     {
         if (stationNode == null) return;
 
-        GameObject stationObj = SuperGlobal.trainlines[0].stations.Find(st => st.name == stationNode.name)?.obj;
+        GameObject stationObj = SuperGlobal.GetStation(stationNode.name)?.obj;
         if (stationObj != null)
             transform.position = stationObj.transform.position;
 

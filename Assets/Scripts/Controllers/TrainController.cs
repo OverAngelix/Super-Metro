@@ -27,7 +27,7 @@ public class TrainController : MonoBehaviour
         {
             string firstName = path[0].name;
             GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstName)?.obj
-                                ?? SuperGlobal.trainlines[0].stations.Find(st => st.name == firstName)?.obj;
+                                ?? SuperGlobal.GetStation(firstName)?.obj;
             if (firstObj != null && currentTargetIndex == 0)
                 transform.position = firstObj.transform.position;
         }
@@ -38,13 +38,14 @@ public class TrainController : MonoBehaviour
 
     private IEnumerator MoveAlongPath()
     {
+
         while (true)
         {
             if (path == null || path.Count == 0) yield break;
 
             string targetName = path[currentTargetIndex].name;
             GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetName)?.obj
-                                ?? SuperGlobal.trainlines[0].stations.Find(st => st.name == targetName)?.obj;
+                                ?? SuperGlobal.GetStation(targetName)?.obj;
             if (targetObj == null)
             {
                 yield return null;
@@ -65,7 +66,8 @@ public class TrainController : MonoBehaviour
             }
 
             // Si on est sur une station, gérer les passagers
-            Station station = SuperGlobal.trainlines[0].stations.Find(st => st.name == targetName);
+            Station station = SuperGlobal.GetStation(targetName);
+
             if (station != null)
             {
                 currentStation = path[currentTargetIndex]; // mise à jour de la station actuelle

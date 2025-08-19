@@ -8,8 +8,7 @@ public class TrainLine
     public Color lineColor;
     public List<Station> stations;
     public List<TrainController> trains;
-
-    
+    public GameObject ticketUIObject;
 
     public int NumberStations()
     {

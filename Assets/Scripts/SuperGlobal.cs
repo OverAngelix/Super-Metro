@@ -29,11 +29,6 @@ public class SuperGlobal : MonoBehaviour
 
     public static bool isUIOpen = false;
 
-    public static List<Line> lines = new List<Line>
-    {
-        new Line("Super ligne", 1)
-    };
-
     public static List<Location> spots = new List<Location>
     {
      new Location("Parc de la Canteraine", 50.6234f, 3.0295f),
@@ -61,10 +56,10 @@ public class SuperGlobal : MonoBehaviour
 
     private static List<Station> stations2 = new List<Station>
     {
-        new Station("Gare de Wavrin", 50.564449f, 2.9341066f, 2, 0),
-        new Station("Portes des Postes", 50.658803f, 3.0475242f, 2, 1),
-        new Station("Gare Lille Flandres", 50.698047f, 3.0700097f, 2, 2),
-        new Station("Wasquehal Hôtel de Ville", 50.7197318f, 3.1264094f, 2, 3),
+        new Station("Station Kinépolis", 50.654449f, 2.9541066f, 2, 0),
+        new Station("Portes des PUTES", 50.658803f, 3.0475242f, 2, 1),
+        new Station("Gare Lille EUROPE", 50.698047f, 3.0700097f, 2, 2),
+        new Station("Wasquehal Hôtel de FILLE", 50.7197318f, 3.1264094f, 2, 3),
     };
 
 
@@ -76,16 +71,16 @@ public class SuperGlobal : MonoBehaviour
             maintenance = 250f,
             lineColor = Color.red,
             stations = new List<Station>(),
-            trains = new List<TrainController>() // Initialisation de la liste de trains.
+            trains = new List<TrainController>()
         },
         new TrainLine // Seconde ligne (Jaune)
         {
             lineNumber = 2,
             maintenance = 250f,
-            lineColor = Color.yellow, // Note : Changement de la couleur à jaune pour la ligne 2.
+            lineColor = Color.yellow,
             stations = new List<Station>(),
-            trains = new List<TrainController>() // Initialisation de la liste de trains.
-        }
+            trains = new List<TrainController>()
+        },
     };
 
     public static void SetStations()
@@ -94,7 +89,44 @@ public class SuperGlobal : MonoBehaviour
         trainlines[1].stations = stations2;
     }
 
+    public static Station GetStation(string targetName)
+    {
+        Station station = null;
+        foreach (TrainLine trainline in trainlines)
+        {
+            station = trainline.stations.Find(st => st.name == targetName);
+            if (station != null)
+                break;
+        }
+        return station;
+    }
 
+    public static TrainLine GetTrainLineOfLineStation(int stationLine)
+    {
+        foreach (TrainLine trainline in trainlines)
+        {
+            Station station = trainline.stations.Find(st => st.lineNumber == stationLine);
+            if (station != null)
+            {
+                return trainline;
+            }
+        }
+        return null;
+    }
+
+    public static bool ExistStation(string targetName)
+    {
+        foreach (TrainLine trainline in trainlines)
+        {
+            Station station = trainline.stations.Find(st => st.name == targetName);
+            if (station != null)
+            {
+                return true;
+            }
+
+        }
+        return false;
+    }
 
 
     public static GameObject upgradeUI;
@@ -106,5 +138,7 @@ public class SuperGlobal : MonoBehaviour
         UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
         upgradeUIController.updateUI(lineNumber, trainIndex);
     }
+
+
 
 }
