@@ -4,12 +4,8 @@ using System.Collections.Generic;
 public class StationController : MonoBehaviour
 {
     public Station station;
-    private GameObject trainPrefab;
+    public GameObject trainPrefab;
 
-    void Awake()
-    {
-        trainPrefab = Resources.Load<GameObject>("Prefabs/Train");
-    }
     void Start()
     {
         if (station.index == 0)

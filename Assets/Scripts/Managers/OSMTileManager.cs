@@ -39,8 +39,7 @@ public class OSMTileManager : MonoBehaviour
     public TMP_InputField stationName;
     public Button validationButtonUI;
     public Button closeButtonUI;
-
-
+    public GameObject trainPrefab;
 
     public float newLat;
     public float newLon;
@@ -755,6 +754,12 @@ public class OSMTileManager : MonoBehaviour
     {
         Vector3 pointPosition = LatLonToUnityPosition(lat, lon, zoomLevel);
         GameObject point = Instantiate(typePoint, this.transform);
+        if (typePoint == stationPrefab)
+        {
+            StationController stationController = stationPrefab.GetComponent<StationController>();
+            stationController.trainPrefab = trainPrefab;
+
+        }
         point.transform.localPosition = pointPosition;
         return point;
     }
