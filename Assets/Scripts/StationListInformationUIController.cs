@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class StationListInformationUIController : MonoBehaviour
 {
-    public static StationListInformationUIController Instance { get; private set; }
+    public static StationListInformationUIController Instance;
 
     public GameObject ticketUIPrefab;
     public Transform canvasParent;

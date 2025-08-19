@@ -38,17 +38,19 @@ public class QuestManager : MonoBehaviour
         Button upgradeBtn = stationListInformationUIController.ticketUIControllers[0].upgradeButton;
         AddButtonClickQuest(
             "Cliquez sur le menu d'amélioration",
-            upgradeBtn
+            upgradeBtn,
+            "Bonjour, il faut que tu améliores",
+            "Bravo tu as amélioré"
         );
 
         /////////////////////////////
 
 
-        AddConditionQuest(
-            "Bonheur",
-            () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
-            () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
-        );
+        // AddConditionQuest(
+        //     "Bonheur",
+        //     () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
+        //     () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
+        // );
 
         // AddQuest(
         //     "Argent",
@@ -56,12 +58,14 @@ public class QuestManager : MonoBehaviour
         //     () => SuperGlobal.money >= 5000
         // );
 
-        int nbUpgradesObjectif = 10;
-        AddConditionQuest(
-            "Améliorations",
-            () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
-            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif
-        );
+        // int nbUpgradesObjectif = 10;
+        // AddConditionQuest(
+        //     "Améliorations",
+        //     () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
+        //     () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
+        //     "Test debut quete",
+        //     "Test fin quete"
+        // );
 
         // int nbStationsObjectif = 6;
         // AddQuest(
@@ -94,25 +98,24 @@ public class QuestManager : MonoBehaviour
     //     quests.Add(newQuest);
     // }
 
-    public void AddConditionQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted)
+    public void AddConditionQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted, string startDialog = null, string completeDialog = null)
     {
         GameObject go = Instantiate(questLineUIPrefab, questsParent);
         QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
 
         BaseQuest quest = new ConditionQuest(name, ql.checkImage, ql.valueText,
                                             getCurrentValue, isCompleted,
-                                            checkTexture, uncheckTexture);
+                                            checkTexture, uncheckTexture, startDialog, completeDialog);
         quests.Add(quest);
     }
 
-    public void AddButtonClickQuest(string name, Button button)
+    public void AddButtonClickQuest(string name, Button button, string startDialog = null, string completeDialog = null)
     {
         GameObject go = Instantiate(questLineUIPrefab, questsParent);
         QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
-
-        BaseQuest quest = new ClickButtonQuest(name, ql.checkImage, ql.valueText,
+        BaseQuest quest = new ButtonClickQuest(name, ql.checkImage, ql.valueText,
                                             button,
-                                            checkTexture, uncheckTexture);
+                                            checkTexture, uncheckTexture, startDialog, completeDialog);
         quests.Add(quest);
     }
 

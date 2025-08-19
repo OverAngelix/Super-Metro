@@ -3,16 +3,16 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
-public class ClickButtonQuest : BaseQuest
+public class ButtonClickQuest : BaseQuest
 {
     private Button button;
     private bool clicked = false;
     private UnityAction action;
 
-    public ClickButtonQuest(string name, RawImage img, TextMeshProUGUI txt,
+    public ButtonClickQuest(string name, RawImage img, TextMeshProUGUI txt,
                             Button btn,
-                            Texture2D check, Texture2D uncheck)
-        : base(name, img, txt, check, uncheck)
+                            Texture2D check, Texture2D uncheck, string startDialog = null, string completeDialog = null)
+        : base(name, img, txt, null, null, check, uncheck, startDialog, completeDialog)
     {
         button = btn;
 
@@ -28,15 +28,6 @@ public class ClickButtonQuest : BaseQuest
 
     public override void UpdateQuest()
     {
-        valueText.text = questName;
-        if (clicked)
-        {
-            completed = true;
-            checkImage.texture = checkTexture;
-        }
-        else
-        {
-            checkImage.texture = uncheckTexture;
-        }
+        UpdateQuestWithBool(clicked);
     }
 }
