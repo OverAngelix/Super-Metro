@@ -10,6 +10,7 @@ public class StationController : MonoBehaviour
     {
         if (station.index == 0)
         {
+            Debug.Log(station.lineNumber);
             RunTrain();
         }
     }
@@ -20,28 +21,27 @@ public class StationController : MonoBehaviour
         obj.transform.position = station.obj.transform.position;
         obj.transform.rotation = Quaternion.Euler(270, 90, 0);
 
-        TrainController train = UpdateTrainPath(obj);
+        TrainLine trainLine = SuperGlobal.GetTrainLineOfLineStation(station.lineNumber);
+        TrainController train = UpdateTrainPath(obj, trainLine);
+        if (trainLine.lineNumber == 2)
+        {
+            train.speed = 100f;
+        }
+        trainLine.trains.Add(train);
 
-        Debug.Log(SuperGlobal.trainlines[station.lineNumber - 1].trains);
-        SuperGlobal.trainlines[station.lineNumber - 1].trains.Add(train);
 
         return obj;
     }
 
-    public TrainController UpdateTrainPath(GameObject obj)
+    public TrainController UpdateTrainPath(GameObject obj, TrainLine trainLine)
     {
         // Filtrer les stations de la même ligne et créer des Nodes
-        List<Node> path = new List<Node>();
-        foreach (var st in SuperGlobal.trainlines[0].stations)
+        List<Node> path = new();
+        foreach (var st in trainLine.stations)
         {
             if (st.lineNumber == station.lineNumber)
                 path.Add(new Node { name = st.name });
         }
-
-        // // Pour que le train fasse un aller-retour infini
-        // List<Node> fullPath = new List<Node>(path);
-        // path.Reverse();
-        // fullPath.AddRange(path);
 
         // Donner le chemin au train
         TrainController train = obj.GetComponent<TrainController>();

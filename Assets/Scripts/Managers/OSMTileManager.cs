@@ -44,6 +44,8 @@ public class OSMTileManager : MonoBehaviour
     public float newLat;
     public float newLon;
 
+    private TrainLine trainLine;
+
 
     //public GameObject trainStationPrefab; // Préfabriqué pour les gares
 
@@ -491,10 +493,11 @@ public class OSMTileManager : MonoBehaviour
 
     private void AddStation()
     {
+        TrainLine trainLine = SuperGlobal.trainlines[0];
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
         {
-            Station newStation = new Station(stationName.text, newLat, newLon, 1, SuperGlobal.trainlines[0].stations.Count);
-            SuperGlobal.trainlines[0].stations.Add(newStation);
+            Station newStation = new Station(stationName.text, newLat, newLon, 1, trainLine.stations.Count);
+            trainLine.stations.Add(newStation);
 
             GameObject obj = PlacePoint(newLat, newLon, stationPrefab);
             obj.name = stationName.text;
@@ -506,12 +509,12 @@ public class OSMTileManager : MonoBehaviour
             {
                 foreach (var train in trailLine.trains)
                 {
-                    controller.UpdateTrainPath(train.gameObject);
+                    controller.UpdateTrainPath(train.gameObject, trailLine);
                 }
             }
 
 
-            connect.CreateLines(SuperGlobal.trainlines[0].stations, SuperGlobal.trainlines[0].lineColor);
+            connect.CreateLines(trainLine.stations, trainLine.lineColor);
             SuperGlobal.money -= 500;
             SuperGlobal.nbStation += 1;
             panelStation.SetActive(false);
