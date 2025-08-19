@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     [Header("Textures")]
     public Texture2D checkTexture;
     public Texture2D uncheckTexture;
-
+    public bool skipTutorial;
     public List<BaseQuest> quests = new List<BaseQuest>();
 
     private void Awake()
@@ -39,49 +39,52 @@ public class QuestManager : MonoBehaviour
     {
 
         /////////Exemple d'une quête "appuyez sur le menu d'amélioration"//////////////////////////
-        
-        StationListInformationUIController stationListInformationUIController = StationListInformationUIController.Instance;
-        Button upgradeBtn = stationListInformationUIController.ticketUIControllers[0].upgradeButton;
-        AddButtonClickQuest(
-            "Cliquez sur le menu d'amélioration",
-            upgradeBtn,
-            new List<Dialog>() { new Dialog("", "Bonjour, il faut que tu améliores"), new Dialog("", "Pour ça, clique sur le menu dans le ticket rouge en haut à gauche.") },
-            new List<Dialog>() { new Dialog("", "Bravo tu as amélioré") }
-        );
 
-        /////////////////////////////
+        if (!skipTutorial)
+        {
+            StationListInformationUIController stationListInformationUIController = StationListInformationUIController.Instance;
+            Button upgradeBtn = stationListInformationUIController.ticketUIControllers[0].upgradeButton;
+            AddButtonClickQuest(
+                "Cliquez sur le menu d'amélioration",
+                upgradeBtn,
+                new List<Dialog>() { new Dialog("", "Bonjour, il faut que tu améliores"), new Dialog("", "Pour ça, clique sur le menu dans le ticket rouge en haut à gauche.") },
+                new List<Dialog>() { new Dialog("", "Bravo tu as amélioré") }
+            );
+
+            /////////////////////////////
 
 
-        // AddConditionQuest(
-        //     "Bonheur",
-        //     () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
-        //     () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
-        // );
+            // AddConditionQuest(
+            //     "Bonheur",
+            //     () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
+            //     () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
+            // );
 
-        // AddConditionQuest(
-        //     "Argent",
-        //     () => "Argent : " + SuperGlobal.money.ToString("F1") + " / 5000",
-        //     () => SuperGlobal.money >= 5000
-        // );
+            // AddConditionQuest(
+            //     "Argent",
+            //     () => "Argent : " + SuperGlobal.money.ToString("F1") + " / 5000",
+            //     () => SuperGlobal.money >= 5000
+            // );
 
-        int nbUpgradesObjectif = 10;
-        AddConditionQuest(
-            "Améliorations",
-            () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
-            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
-            new List<Dialog>() { new Dialog("", "Test debut quete") },
-            new List<Dialog>() { new Dialog("", "Test fin quete") },
-            () => GetQuestByName("Cliquez sur le menu d'amélioration").completed == true
-        );
-        
-        // int nbStationsObjectif = 6;
-        // AddQuest(
-        //     "Stations",
-        //     () => "Nouvelles Stations : " + SuperGlobal.nbStation + " / " + nbStationsObjectif,
-        //     () => SuperGlobal.nbStation >= nbStationsObjectif
-        // );
+            int nbUpgradesObjectif = 10;
+            AddConditionQuest(
+                "Améliorations",
+                () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
+                () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
+                new List<Dialog>() { new Dialog("", "Test debut quete") },
+                new List<Dialog>() { new Dialog("", "Test fin quete") },
+                () => GetQuestByName("Cliquez sur le menu d'amélioration").completed == true
+            );
 
-        // Tu peux ajouter ici les 4 autres quêtes dynamiquement de la même façon
+            // int nbStationsObjectif = 6;
+            // AddQuest(
+            //     "Stations",
+            //     () => "Nouvelles Stations : " + SuperGlobal.nbStation + " / " + nbStationsObjectif,
+            //     () => SuperGlobal.nbStation >= nbStationsObjectif
+            // );
+
+            // Tu peux ajouter ici les 4 autres quêtes dynamiquement de la même façon
+        }
     }
 
     // DEPRECATED
