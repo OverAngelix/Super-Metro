@@ -105,8 +105,6 @@ public class SuperGlobal : MonoBehaviour
         upgradeUI.GetComponent<Canvas>().enabled = true;
         UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
         upgradeUIController.updateUI(lineNumber, trainIndex);
-        Debug.Log("upgrade train");
-
     }
 
 }

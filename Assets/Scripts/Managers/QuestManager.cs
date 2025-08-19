@@ -131,7 +131,6 @@ public class QuestManager : MonoBehaviour
                                             button,
                                             checkTexture, uncheckTexture, startDialogs, completeDialogs, activationCondition);
         quests.Add(quest);
-        Debug.Log(quest.startDialogs[0].text);
     }
 
 
