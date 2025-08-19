@@ -101,7 +101,7 @@ public class SuperGlobal : MonoBehaviour
 
     public static void upgradeTrain(int lineNumber, int trainIndex)
     {
-        upgradeUI = GameObject.Find("UpgradeUI");
+        upgradeUI = UpgradeUIController.Instance.gameObject;
         upgradeUI.GetComponent<Canvas>().enabled = true;
         UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
         upgradeUIController.updateUI(lineNumber, trainIndex);

@@ -6,14 +6,19 @@ public class UpgradeUIController : MonoBehaviour
 {
     public Button exitButton;
 
-    public GameObject upgradeUI;
+    public GameObject upgradeLineUI;
+    public static UpgradeUIController Instance;
     void Start()
     {
-        exitButton = transform.Find("Panel/Vertical Box/ButtonExit").GetComponent<Button>();
         exitButton.onClick.AddListener(exit);
     }
 
     // Update is called once per frame
+
+    void Awake()
+    {
+        Instance = this;
+    }
     void Update()
     {
 
@@ -21,8 +26,7 @@ public class UpgradeUIController : MonoBehaviour
 
     void exit()
     {
-        upgradeUI = GameObject.Find("UpgradeUI");
-        upgradeUI.GetComponent<Canvas>().enabled = false;
+        upgradeLineUI.GetComponent<Canvas>().enabled = false;
     }
 
     public void updateUI(int lineNumber, int trainIndex)
