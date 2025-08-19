@@ -18,7 +18,7 @@ public abstract class BaseQuest
     protected Texture2D uncheckTexture;
 
     // État
-    protected bool completed = false;
+    public bool completed = false;
     private bool started = false;
 
     // Fonctions de progression
@@ -28,11 +28,21 @@ public abstract class BaseQuest
     // Dialogues optionnels
     public List<Dialog> startDialogs;
     public List<Dialog> completeDialogs;
-
-    public BaseQuest(string name, RawImage img, TextMeshProUGUI txt,
-                 Func<string> getVal, Func<bool> completedCondition,
-                 Texture2D check, Texture2D uncheck,
-                 List<Dialog> startDialogsValue = null, List<Dialog> completeDialogsValue = null)
+    public Func<bool> canActivate; 
+    public bool IsActive { get; private set; } = false;
+    public GameObject questLineUI;
+    public BaseQuest(
+        string name,
+        RawImage img,
+        TextMeshProUGUI txt,
+        Func<string> getVal,
+        Func<bool> completedCondition,
+        Texture2D check,
+        Texture2D uncheck,
+        List<Dialog> startDialogsValue = null,
+        List<Dialog> completeDialogsValue = null,
+        Func<bool> activationCondition = null
+        )
     {
         questName = name;
         checkImage = img;
@@ -46,21 +56,58 @@ public abstract class BaseQuest
 
         startDialogs = startDialogsValue ?? new List<Dialog>();
         completeDialogs = completeDialogsValue ?? new List<Dialog>();
+        canActivate = activationCondition ?? (() => true); 
+    }
 
+    public override string ToString()
+    {
+        string value = getCurrentValue != null ? getCurrentValue() : "N/A";
+        return $"[BaseQuest] Name: {questName}, Completed: {isCompleted}, Value: {value}";
     }
 
     public virtual void UpdateQuest()
     {
         UpdateQuestWithBool(completed);
     }
+    
+    public void TryActivate()
+    {
+        if (!IsActive && canActivate())
+        {
+            IsActive = true;
+            CreateUI();
+            OnActivated();
+        }
+    }
+
+    private void CreateUI()
+    {
+        if (questLineUI != null) return;
+
+        GameObject go = GameObject.Instantiate(QuestManager.Instance.questLineUIPrefab, QuestManager.Instance.questsParent);
+        QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
+        checkImage = ql.checkImage;
+        valueText = ql.valueText;
+
+        questLineUI = go;
+        UpdateQuest();
+    }
+
+    protected virtual void OnActivated()
+    {
+        Debug.Log($"Quête {questName} activée !");
+    }
 
     public void UpdateQuestWithBool(bool currentCondition)
     {
+        if (!IsActive) return;
         if (!started)
         {
             TryStartQuest();
             return;
         }
+
+        if (valueText == null || checkTexture == null) return;
 
         valueText.text = getCurrentValue?.Invoke() ?? questName;
 
@@ -115,8 +162,8 @@ public abstract class BaseQuest
             return;
 
         DialogUIController dialogUIController = DialogUIController.Instance;
-        dialogUIController.title = questName;
-        dialogUIController.StartDialogSequence(dialogs);
+        dialogUIController.EnqueueDialogSequence(dialogs, questName);
     }
+
 
 }

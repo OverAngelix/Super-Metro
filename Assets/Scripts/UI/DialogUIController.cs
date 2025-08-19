@@ -17,7 +17,11 @@ public class DialogUIController : MonoBehaviour
     private CanvasGroup canvasGroup;
 
     private Queue<Dialog> dialogQueue = new Queue<Dialog>();
+    private Queue<(List<Dialog> dialogs, string dialogTitle)> questDialogQueue 
+        = new Queue<(List<Dialog>, string)>();
+
     private bool isDialogOpen = false;
+    private bool isSequenceRunning = false;
 
     public static DialogUIController Instance;
 
@@ -41,7 +45,6 @@ public class DialogUIController : MonoBehaviour
         UpdateContent();
     }
 
-    // Met à jour le contenu avec les variables actuelles
     public void UpdateContent()
     {
         if (imageObject != null) imageObject.texture = image;
@@ -49,27 +52,44 @@ public class DialogUIController : MonoBehaviour
         if (textObject != null) textObject.text = text;
     }
 
-    // Lance une séquence de dialogues
-    public void StartDialogSequence(List<Dialog> dialogs, string dialogTitle = null)
+    // Ajoute une séquence de dialogues à la file d'attente globale
+    public void EnqueueDialogSequence(List<Dialog> dialogs, string dialogTitle = null)
     {
         if (dialogs == null || dialogs.Count == 0) return;
 
+        questDialogQueue.Enqueue((dialogs, dialogTitle));
+
+        if (!isSequenceRunning)
+            RunNextSequence();
+    }
+
+    // Lance la prochaine séquence dans la file
+    private void RunNextSequence()
+    {
+        if (questDialogQueue.Count == 0)
+        {
+            isSequenceRunning = false;
+            return;
+        }
+
+        isSequenceRunning = true;
+        var next = questDialogQueue.Dequeue();
+
         dialogQueue.Clear();
-        foreach (var d in dialogs)
+        foreach (var d in next.dialogs)
             dialogQueue.Enqueue(d);
 
-        if (!string.IsNullOrEmpty(dialogTitle))
-            title = dialogTitle;
+        title = next.dialogTitle ?? "";
 
         ShowNextDialog();
     }
 
-    // Passe au dialogue suivant dans la queue
     private void ShowNextDialog()
     {
         if (dialogQueue.Count == 0)
         {
             HideDialog();
+            RunNextSequence(); // Passe à la prochaine séquence si elle existe
             return;
         }
 
