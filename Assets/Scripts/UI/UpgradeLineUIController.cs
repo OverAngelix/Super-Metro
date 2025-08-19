@@ -7,13 +7,13 @@ public class UpgradeLineUIController : MonoBehaviour
 
     public Button button;
     public string upgradeName;
+    public TMP_Text upgradeTextObject;
     public int lineNumber = 1; // temporaire
     public int trainIndex = 0; // temporaire
     void Start()
     {
-        button = transform.Find("Button").GetComponent<Button>();
         button.onClick.AddListener(upgrade);
-        TMP_Text text = transform.Find("Text").GetComponent<TMP_Text>();
+        TMP_Text text = upgradeTextObject;
         switch (upgradeName)
         {
             case "speed":
