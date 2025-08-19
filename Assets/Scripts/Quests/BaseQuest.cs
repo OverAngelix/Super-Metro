@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.Collections.Generic;
 
 public abstract class BaseQuest
 {
@@ -25,13 +26,13 @@ public abstract class BaseQuest
     protected Func<bool> isCompleted;
 
     // Dialogues optionnels
-    public string startDialog;
-    public string completeDialog;
+    public List<Dialog> startDialogs;
+    public List<Dialog> completeDialogs;
 
     public BaseQuest(string name, RawImage img, TextMeshProUGUI txt,
                  Func<string> getVal, Func<bool> completedCondition,
                  Texture2D check, Texture2D uncheck,
-                 string startDialogValue = null, string completeDialogValue = null)
+                 List<Dialog> startDialogsValue = null, List<Dialog> completeDialogsValue = null)
     {
         questName = name;
         checkImage = img;
@@ -43,12 +44,13 @@ public abstract class BaseQuest
         checkTexture = check;
         uncheckTexture = uncheck;
 
-        startDialog = startDialogValue;
-        completeDialog = completeDialogValue;
+        startDialogs = startDialogsValue ?? new List<Dialog>();
+        completeDialogs = completeDialogsValue ?? new List<Dialog>();
 
     }
 
-    public virtual void UpdateQuest() {
+    public virtual void UpdateQuest()
+    {
         UpdateQuestWithBool(completed);
     }
 
@@ -92,16 +94,9 @@ public abstract class BaseQuest
 
         started = true;
 
-        if (!string.IsNullOrEmpty(startDialog))
-        {
-            DialogUIController dialogUIController = DialogUIController.Instance;
-            dialogUIController.gameObject.SetActive(true);
-            dialogUIController.text = startDialog;
-            dialogUIController.title = questName;
-            dialogUIController.UpdateContent();
-            Debug.Log($"[Dialogue début] {questName} : {startDialog}");
-        }
+        ShowDialogSequence(startDialogs);
     }
+
 
     // Méthode virtuelle pour ajouter des conditions d’apparition
     public virtual bool CanBeAccepted()
@@ -111,15 +106,17 @@ public abstract class BaseQuest
 
     // Peut être overriden dans les classes filles
     protected virtual void OnCompleted()
-    {   
-        if (!string.IsNullOrEmpty(completeDialog))
-        {
-            DialogUIController dialogUIController = DialogUIController.Instance;
-            dialogUIController.gameObject.SetActive(true);
-            dialogUIController.text = completeDialog;
-            dialogUIController.title = questName;
-            dialogUIController.UpdateContent();
-            Debug.Log($"[Dialogue fin] {questName} : {completeDialog}");
-        }
+    {
+        ShowDialogSequence(completeDialogs);
     }
+    private void ShowDialogSequence(List<Dialog> dialogs)
+    {
+        if (dialogs == null || dialogs.Count == 0)
+            return;
+
+        DialogUIController dialogUIController = DialogUIController.Instance;
+        dialogUIController.title = questName;
+        dialogUIController.StartDialogSequence(dialogs);
+    }
+
 }

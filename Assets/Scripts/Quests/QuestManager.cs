@@ -39,8 +39,8 @@ public class QuestManager : MonoBehaviour
         AddButtonClickQuest(
             "Cliquez sur le menu d'amélioration",
             upgradeBtn,
-            "Bonjour, il faut que tu améliores",
-            "Bravo tu as amélioré"
+            new List<Dialog>() { new Dialog("", "Bonjour, il faut que tu améliores"), new Dialog("", "Pour ça, clique sur le menu dans le ticket rouge en haut à gauche.")},
+            new List<Dialog>() { new Dialog("", "Bravo tu as amélioré")}
         );
 
         /////////////////////////////
@@ -58,14 +58,14 @@ public class QuestManager : MonoBehaviour
         //     () => SuperGlobal.money >= 5000
         // );
 
-        // int nbUpgradesObjectif = 10;
-        // AddConditionQuest(
-        //     "Améliorations",
-        //     () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
-        //     () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
-        //     "Test debut quete",
-        //     "Test fin quete"
-        // );
+        int nbUpgradesObjectif = 10;
+        AddConditionQuest(
+            "Améliorations",
+            () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
+            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
+            new List<Dialog>() { new Dialog("", "Test debut quete") },
+            new List<Dialog>() { new Dialog("", "Test fin quete") }
+        );
 
         // int nbStationsObjectif = 6;
         // AddQuest(
@@ -98,24 +98,24 @@ public class QuestManager : MonoBehaviour
     //     quests.Add(newQuest);
     // }
 
-    public void AddConditionQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted, string startDialog = null, string completeDialog = null)
+    public void AddConditionQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted, List<Dialog> startDialogs = null, List<Dialog> completeDialogs = null)
     {
         GameObject go = Instantiate(questLineUIPrefab, questsParent);
         QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
 
         BaseQuest quest = new ConditionQuest(name, ql.checkImage, ql.valueText,
                                             getCurrentValue, isCompleted,
-                                            checkTexture, uncheckTexture, startDialog, completeDialog);
+                                            checkTexture, uncheckTexture, startDialogs, completeDialogs);
         quests.Add(quest);
     }
 
-    public void AddButtonClickQuest(string name, Button button, string startDialog = null, string completeDialog = null)
+    public void AddButtonClickQuest(string name, Button button, List<Dialog> startDialogs = null, List<Dialog> completeDialogs = null)
     {
         GameObject go = Instantiate(questLineUIPrefab, questsParent);
         QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
         BaseQuest quest = new ButtonClickQuest(name, ql.checkImage, ql.valueText,
                                             button,
-                                            checkTexture, uncheckTexture, startDialog, completeDialog);
+                                            checkTexture, uncheckTexture, startDialogs, completeDialogs);
         quests.Add(quest);
     }
 

@@ -2,6 +2,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ButtonClickQuest : BaseQuest
 {
@@ -11,8 +12,8 @@ public class ButtonClickQuest : BaseQuest
 
     public ButtonClickQuest(string name, RawImage img, TextMeshProUGUI txt,
                             Button btn,
-                            Texture2D check, Texture2D uncheck, string startDialog = null, string completeDialog = null)
-        : base(name, img, txt, null, null, check, uncheck, startDialog, completeDialog)
+                            Texture2D check, Texture2D uncheck, List<Dialog> startDialogs = null, List<Dialog> completeDialogs = null)
+        : base(name, img, txt, null, null, check, uncheck, startDialogs, completeDialogs)
     {
         button = btn;
 
