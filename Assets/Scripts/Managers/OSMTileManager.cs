@@ -458,7 +458,7 @@ public class OSMTileManager : MonoBehaviour
     {
 
         validationButtonUI.onClick.AddListener(AddStation);
-        closeButtonUI.onClick.AddListener(closeUI);
+        closeButtonUI.onClick.AddListener(CloseUI);
 
     }
 
@@ -489,8 +489,6 @@ public class OSMTileManager : MonoBehaviour
 
     }
 
-
-
     private void AddStation()
     {
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
@@ -504,9 +502,9 @@ public class OSMTileManager : MonoBehaviour
 
             StationController controller = obj.GetComponent<StationController>();
             controller.station = newStation;
-            foreach (Line line in SuperGlobal.lines)
+            foreach (TrainLine trailLine in SuperGlobal.trainlines)
             {
-                foreach (var train in line.trainsList)
+                foreach (var train in trailLine.trains)
                 {
                     controller.UpdateTrainPath(train.gameObject);
                 }
@@ -533,7 +531,7 @@ public class OSMTileManager : MonoBehaviour
         }
     }
 
-    private void closeUI()
+    private void CloseUI()
     {
         panelStation.SetActive(false);
         SuperGlobal.isUIOpen = false;

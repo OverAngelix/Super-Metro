@@ -41,7 +41,7 @@ public class UpgradeLineUIController : MonoBehaviour
                 price = 100f;
                 if (SuperGlobal.money - price >= 0)
                 {
-                    SuperGlobal.lines[lineNumber - 1].trainsList[trainIndex].speed += 1f;
+                    SuperGlobal.trainlines[lineNumber - 1].trains[trainIndex].speed += 1f;
                     SuperGlobal.money -= price;
                     SuperGlobal.nbUpgrade += 1;
 
@@ -52,7 +52,7 @@ public class UpgradeLineUIController : MonoBehaviour
                 price = 50f;
                 if (SuperGlobal.money - price >= 0)
                 {
-                    SuperGlobal.lines[lineNumber - 1].trainsList[trainIndex].maxPassengers += 1;
+                    SuperGlobal.trainlines[lineNumber - 1].trains[trainIndex].maxPassengers += 1;
                     SuperGlobal.money -= price;
                     SuperGlobal.nbUpgrade += 1;
 

@@ -29,11 +29,6 @@ public class SuperGlobal : MonoBehaviour
 
     public static bool isUIOpen = false;
 
-    public static List<Line> lines = new List<Line>
-    {
-        new Line("Super ligne", 1)
-    };
-
     public static List<Location> spots = new List<Location>
     {
      new Location("Parc de la Canteraine", 50.6234f, 3.0295f),
@@ -76,15 +71,15 @@ public class SuperGlobal : MonoBehaviour
             maintenance = 250f,
             lineColor = Color.red,
             stations = new List<Station>(),
-            trains = new List<TrainController>() // Initialisation de la liste de trains.
+            trains = new List<TrainController>() 
         },
         new TrainLine // Seconde ligne (Jaune)
         {
             lineNumber = 2,
             maintenance = 250f,
-            lineColor = Color.yellow, // Note : Changement de la couleur à jaune pour la ligne 2.
+            lineColor = Color.yellow,
             stations = new List<Station>(),
-            trains = new List<TrainController>() // Initialisation de la liste de trains.
+            trains = new List<TrainController>()
         }
     };
 

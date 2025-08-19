@@ -22,7 +22,8 @@ public class StationController : MonoBehaviour
 
         TrainController train = UpdateTrainPath(obj);
 
-        SuperGlobal.lines[station.lineNumber - 1].trainsList.Add(train);
+        Debug.Log(SuperGlobal.trainlines[station.lineNumber - 1].trains);
+        SuperGlobal.trainlines[station.lineNumber - 1].trains.Add(train);
 
         return obj;
     }

@@ -23,10 +23,10 @@ public class StationListInformationUIController : MonoBehaviour
 
     void Update()
     {
-        foreach (Line line in SuperGlobal.lines)
+        foreach (TrainLine trailLine in SuperGlobal.trainlines)
         {
             TicketUIController ticketUIController;
-            if (!line.ticketUIObject)
+            if (!trailLine.ticketUIObject)
             {
                 GameObject obj = Instantiate(ticketUIPrefab, canvasParent);
                 ticketUIController = obj.GetComponent<TicketUIController>();
@@ -38,29 +38,29 @@ public class StationListInformationUIController : MonoBehaviour
                 rt.anchoredPosition = new Vector2(-200, -150); // offset
 
                 // Stocker la référence
-                line.ticketUIObject = obj;
+                trailLine.ticketUIObject = obj;
 
                 upgradeButton = ticketUIController.upgradeButton;
-                upgradeButton.onClick.AddListener(() => SuperGlobal.upgradeTrain(line.lineNumber, 0));
+                upgradeButton.onClick.AddListener(() => SuperGlobal.upgradeTrain(trailLine.lineNumber, 0));
 
             }
 
             else
             {
-                ticketUIController = line.ticketUIObject.GetComponent<TicketUIController>();
+                ticketUIController = trailLine.ticketUIObject.GetComponent<TicketUIController>();
             }
 
             TMP_Text trainText = ticketUIController.trainText;
             trainText.text = "Train 1"; // Pour l'instant on prend que le premier train
 
             TMP_Text lineText = ticketUIController.lineText;
-            lineText.text = "Ligne " + line.lineNumber.ToString();
+            lineText.text = "Ligne " + trailLine.lineNumber.ToString();
 
             TMP_Text passengersText = ticketUIController.passengersText;
-            passengersText.text = "Passagers : " + line.trainsList[0].passengers.Count.ToString() + " / " + line.trainsList[0].maxPassengers.ToString(); // Pour l'instant on prend que le premier train
+            passengersText.text = "Passagers : " + trailLine.trains[0].passengers.Count.ToString() + " / " + trailLine.trains[0].maxPassengers.ToString(); // Pour l'instant on prend que le premier train
             
             TMP_Text speedText = ticketUIController.speedText;
-            speedText.text = "Vitesse : " + line.trainsList[0].speed.ToString() + " km / h"; // Pour l'instant on prend que le premier train
+            speedText.text = "Vitesse : " + trailLine.trains[0].speed.ToString() + " km / h"; // Pour l'instant on prend que le premier train
         }
     }
 
