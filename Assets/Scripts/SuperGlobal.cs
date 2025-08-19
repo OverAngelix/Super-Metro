@@ -76,7 +76,7 @@ public class SuperGlobal : MonoBehaviour
             maintenance = 250f,
             lineColor = Color.red,
             stations = new List<Station>(),
-           // trains = new List<TrainController>() // Initialisation de la liste de trains.
+            trains = new List<TrainController>() // Initialisation de la liste de trains.
         },
         new TrainLine // Seconde ligne (Jaune)
         {
@@ -84,7 +84,7 @@ public class SuperGlobal : MonoBehaviour
             maintenance = 250f,
             lineColor = Color.yellow, // Note : Changement de la couleur à jaune pour la ligne 2.
             stations = new List<Station>(),
-            //trains = new List<TrainController>() // Initialisation de la liste de trains.
+            trains = new List<TrainController>() // Initialisation de la liste de trains.
         }
     };
 
