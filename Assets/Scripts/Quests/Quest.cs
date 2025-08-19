@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+// CLASS DEPRECATED
 public class Quest
 {
     public string questName;

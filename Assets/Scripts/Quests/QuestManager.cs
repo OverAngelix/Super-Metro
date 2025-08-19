@@ -29,6 +29,12 @@ public class QuestManager : MonoBehaviour
         InitializeQuests();
     }
 
+    public BaseQuest GetQuestByName(string name) // suppose que les quetes ont des noms uniques !
+    {
+        return quests.Find(q => q.questName == name);
+
+    }
+
     void InitializeQuests()
     {
 
@@ -38,19 +44,21 @@ public class QuestManager : MonoBehaviour
         Button upgradeBtn = stationListInformationUIController.ticketUIControllers[0].upgradeButton;
         AddButtonClickQuest(
             "Cliquez sur le menu d'amélioration",
-            upgradeBtn
+            upgradeBtn,
+            new List<Dialog>() { new Dialog("", "Bonjour, il faut que tu améliores"), new Dialog("", "Pour ça, clique sur le menu dans le ticket rouge en haut à gauche.") },
+            new List<Dialog>() { new Dialog("", "Bravo tu as amélioré") }
         );
 
         /////////////////////////////
 
 
-        AddConditionQuest(
-            "Bonheur",
-            () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
-            () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
-        );
+        // AddConditionQuest(
+        //     "Bonheur",
+        //     () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
+        //     () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
+        // );
 
-        // AddQuest(
+        // AddConditionQuest(
         //     "Argent",
         //     () => "Argent : " + SuperGlobal.money.ToString("F1") + " / 5000",
         //     () => SuperGlobal.money >= 5000
@@ -60,9 +68,12 @@ public class QuestManager : MonoBehaviour
         AddConditionQuest(
             "Améliorations",
             () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
-            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif
+            () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
+            new List<Dialog>() { new Dialog("", "Test debut quete") },
+            new List<Dialog>() { new Dialog("", "Test fin quete") },
+            () => GetQuestByName("Cliquez sur le menu d'amélioration").completed == true
         );
-
+        
         // int nbStationsObjectif = 6;
         // AddQuest(
         //     "Stations",
@@ -94,25 +105,31 @@ public class QuestManager : MonoBehaviour
     //     quests.Add(newQuest);
     // }
 
-    public void AddConditionQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted)
+    public void AddConditionQuest(
+        string name,
+        Func<string> getCurrentValue,
+        Func<bool> isCompleted,
+        List<Dialog> startDialogs = null,
+        List<Dialog> completeDialogs = null,
+        Func<bool> activationCondition = null
+        )
     {
-        GameObject go = Instantiate(questLineUIPrefab, questsParent);
-        QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
-
-        BaseQuest quest = new ConditionQuest(name, ql.checkImage, ql.valueText,
+        BaseQuest quest = new ConditionQuest(name, null, null,
                                             getCurrentValue, isCompleted,
-                                            checkTexture, uncheckTexture);
+                                            checkTexture, uncheckTexture, startDialogs, completeDialogs, activationCondition);
         quests.Add(quest);
     }
 
-    public void AddButtonClickQuest(string name, Button button)
+    public void AddButtonClickQuest(
+        string name, Button button,
+        List<Dialog> startDialogs = null,
+        List<Dialog> completeDialogs = null,
+        Func<bool> activationCondition = null
+        )
     {
-        GameObject go = Instantiate(questLineUIPrefab, questsParent);
-        QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
-
-        BaseQuest quest = new ClickButtonQuest(name, ql.checkImage, ql.valueText,
+        BaseQuest quest = new ButtonClickQuest(name, null, null,
                                             button,
-                                            checkTexture, uncheckTexture);
+                                            checkTexture, uncheckTexture, startDialogs, completeDialogs, activationCondition);
         quests.Add(quest);
     }
 
@@ -121,6 +138,7 @@ public class QuestManager : MonoBehaviour
     {
         foreach (var quest in quests)
         {
+            quest.TryActivate();
             quest.UpdateQuest();
         }
     }

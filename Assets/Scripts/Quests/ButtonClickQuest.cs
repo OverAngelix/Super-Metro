@@ -2,20 +2,28 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
-
-public class ClickButtonQuest : BaseQuest
+using System.Collections.Generic;
+using System;
+public class ButtonClickQuest : BaseQuest
 {
     private Button button;
     private bool clicked = false;
     private UnityAction action;
 
-    public ClickButtonQuest(string name, RawImage img, TextMeshProUGUI txt,
-                            Button btn,
-                            Texture2D check, Texture2D uncheck)
-        : base(name, img, txt, check, uncheck)
+    public ButtonClickQuest(
+        string name,
+        RawImage img,
+        TextMeshProUGUI txt,
+        Button btn,
+        Texture2D check,
+        Texture2D uncheck,
+        List<Dialog> startDialogs = null,
+        List<Dialog> completeDialogs = null,
+        Func<bool> activationCondition = null
+        )
+        : base(name, img, txt, null, null, check, uncheck, startDialogs, completeDialogs, activationCondition)
     {
         button = btn;
-
         // Création de l'action
         action = () =>
         {
@@ -28,15 +36,6 @@ public class ClickButtonQuest : BaseQuest
 
     public override void UpdateQuest()
     {
-        valueText.text = questName;
-        if (clicked)
-        {
-            completed = true;
-            checkImage.texture = checkTexture;
-        }
-        else
-        {
-            checkImage.texture = uncheckTexture;
-        }
+        UpdateQuestWithBool(clicked);
     }
 }

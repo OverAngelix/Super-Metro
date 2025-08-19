@@ -1,29 +1,32 @@
-using System; 
+using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; 
+using TMPro;
+using System.Collections.Generic;
 
 public class ConditionQuest : BaseQuest
 {
-    private Func<string> getCurrentValue;
-    private Func<bool> isCompleted;
-
-    public ConditionQuest(string name, RawImage img, TextMeshProUGUI txt,
-                          Func<string> getVal, Func<bool> completed,
-                          Texture2D check, Texture2D uncheck)
-        : base(name, img, txt, check, uncheck)
+    public ConditionQuest(
+        string name,
+        RawImage img,
+        TextMeshProUGUI txt,
+        Func<string> getVal,
+        Func<bool> completed,
+        Texture2D check,
+        Texture2D uncheck,
+        List<Dialog> startDialogs = null,
+        List<Dialog> completeDialogs = null,
+        Func<bool> activationCondition = null
+        )
+        : base(name, img, txt, getVal, completed, check, uncheck, startDialogs, completeDialogs, activationCondition)
     {
-        getCurrentValue = getVal;
-        isCompleted = completed;
     }
 
     public override void UpdateQuest()
     {
-        valueText.text = getCurrentValue?.Invoke() ?? questName;
-        if (isCompleted != null)
-        {
-            completed = isCompleted();
-            checkImage.texture = completed ? checkTexture : uncheckTexture;
-        }
+        // Ici on évalue la condition réelle de complétion
+        bool currentCondition = isCompleted?.Invoke() ?? false;
+        UpdateQuestWithBool(currentCondition);
     }
+
 }
