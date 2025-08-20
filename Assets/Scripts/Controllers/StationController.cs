@@ -20,7 +20,7 @@ public class StationController : MonoBehaviour
         obj.transform.position = station.obj.transform.position;
         obj.transform.rotation = Quaternion.Euler(270, 90, 0);
 
-        TrainLine trainLine = SuperGlobal.GetTrainLineOfLineStation(station.lineNumber);
+        TrainLine trainLine = SuperGlobal.GetTrainLineOfLineStation(station.line);
         TrainController train = UpdateTrainPath(obj, trainLine);
         if (trainLine.lineNumber == 2)
         {
@@ -38,7 +38,7 @@ public class StationController : MonoBehaviour
         List<Node> path = new();
         foreach (var st in trainLine.stations)
         {
-            if (st.lineNumber == station.lineNumber)
+            if (st.line == station.line)
                 path.Add(new Node { name = st.name });
         }
 

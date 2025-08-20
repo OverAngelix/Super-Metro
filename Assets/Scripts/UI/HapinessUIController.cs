@@ -8,7 +8,7 @@ public class HappinessUIController : MonoBehaviour
 
     void Update()
     {
-        float happiness = SuperGlobal.computeHappiness();
+        float happiness = SuperGlobal.ComputeHappiness();
 
         // Mettre à jour la valeur du slider
         happinessSlider.value = happiness;

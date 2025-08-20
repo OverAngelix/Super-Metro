@@ -40,11 +40,4 @@ public class ConnectStations : MonoBehaviour
         lr.SetPosition(0, start + Vector3.up * 0.5f);
         lr.SetPosition(1, end + Vector3.up * 0.5f);
     }
-    private void ClearLines()
-    {
-        foreach (Transform child in linesContainer)
-        {
-            Destroy(child.gameObject);
-        }
-    }
 }

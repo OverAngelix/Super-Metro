@@ -170,6 +170,7 @@ public class OSMTileManager : MonoBehaviour
     // Instancier toutes les locations
     private void InitLocation()
     {
+        SuperGlobal.Log("Nb : " + SuperGlobal.spots.Count);
         for (int i = 0; i < SuperGlobal.spots.Count; i++)
         {
             var spot = SuperGlobal.spots[i];

@@ -1,0 +1,64 @@
+{
+  "spots": [
+    {
+      "name": "Parc de la Canteraine",
+      "lat": 50.6234,
+      "lon": 3.0295
+    },
+    {
+      "name": "Place du Général de Gaulle",
+      "lat": 50.6336,
+      "lon": 3.0659
+    },
+    {
+      "name": "Cathédrale Notre-Dame de la Treille",
+      "lat": 50.6397,
+      "lon": 3.0632
+    },
+    {
+      "name": "Parc Barbieux",
+      "lat": 50.6881,
+      "lon": 3.1675
+    },
+    {
+      "name": "Musée d'Art et d'Industrie André Diligent",
+      "lat": 50.6944,
+      "lon": 3.1681
+    },
+    {
+      "name": "LaM - Lille Métropole Musée d'art moderne",
+      "lat": 50.6443,
+      "lon": 3.1289
+    },
+    {
+      "name": "Villa Cavrois",
+      "lat": 50.6886,
+      "lon": 3.1611
+    },
+    {
+      "name": "Vélodrome de Roubaix",
+      "lat": 50.6941,
+      "lon": 3.1744
+    },
+    {
+      "name": "Port de Wambrechies",
+      "lat": 50.6825,
+      "lon": 3.1806
+    },
+    {
+      "name": "Lidl Wasquehal",
+      "lat": 50.6782699,
+      "lon": 3.1309419
+    },
+    {
+      "name": "Lidl Wavrin",
+      "lat": 50.56581,
+      "lon": 2.9261697
+    },
+    {
+      "name": "Kinepolis Lomme",
+      "lat": 50.6526513,
+      "lon": 2.9800662
+    }
+  ]
+}

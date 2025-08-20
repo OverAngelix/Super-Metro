@@ -56,8 +56,8 @@ public class QuestManager : MonoBehaviour
 
             // AddConditionQuest(
             //     "Bonheur",
-            //     () => "Bonheur : " + (SuperGlobal.computeHappiness() * 100).ToString("F1") + " / 80",
-            //     () => (SuperGlobal.computeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
+            //     () => "Bonheur : " + (SuperGlobal.ComputeHappiness() * 100).ToString("F1") + " / 80",
+            //     () => (SuperGlobal.ComputeHappiness() * 100) >= 80 && SuperGlobal.peopleHappiness.Count > 100
             // );
 
             // AddConditionQuest(

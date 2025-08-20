@@ -5,11 +5,13 @@ public class SpawnPersons : MonoBehaviour
 {
     public GameObject personPrefab;
     public float spawnInterval = 60f;
+    public float spawnSpeed = 5f;
+
     private float timer = 0f;
 
     void Update()
     {
-        timer += Time.deltaTime * SuperGlobal.timeSpeed;
+        timer += Time.deltaTime * spawnSpeed;
         if (timer >= spawnInterval)
         {
             SpawnPerson();

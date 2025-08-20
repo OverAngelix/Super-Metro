@@ -1,0 +1,60 @@
+{
+  "stations": [
+    {
+      "name": "Gare de Wavrin",
+      "lat": 50.574449,
+      "lon": 2.9341066,
+      "line": 1,
+      "index": 0
+    },
+    {
+      "name": "Portes des Postes",
+      "lat": 50.618803,
+      "lon": 3.0475242,
+      "line": 1,
+      "index": 1
+    },
+    {
+      "name": "Gare Lille Flandres",
+      "lat": 50.638047,
+      "lon": 3.0700097,
+      "line": 1,
+      "index": 2
+    },
+    {
+      "name": "Wasquehal Hôtel de Ville",
+      "lat": 50.6697318,
+      "lon": 3.1264094,
+      "line": 1,
+      "index": 3
+    },
+    {
+      "name": "Station Kinépolis",
+      "lat": 50.654449,
+      "lon": 2.9541066,
+      "line": 2,
+      "index": 0
+    },
+    {
+      "name": "Portes des PUTES",
+      "lat": 50.658803,
+      "lon": 3.0475242,
+      "line": 2,
+      "index": 1
+    },
+    {
+      "name": "Gare Lille EUROPE",
+      "lat": 50.698047,
+      "lon": 3.0700097,
+      "line": 2,
+      "index": 2
+    },
+    {
+      "name": "Wasquehal Hôtel de FILLE",
+      "lat": 50.7197318,
+      "lon": 3.1264094,
+      "line": 2,
+      "index": 3
+    }
+  ]
+}
