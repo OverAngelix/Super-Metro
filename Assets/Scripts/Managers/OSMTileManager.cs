@@ -562,10 +562,12 @@ public class OSMTileManager : MonoBehaviour
             if (isEditMode)
             {
                 editionModeUI.enabled = true;
+                Time.timeScale = 0f;
             }
             else
             {
                 editionModeUI.enabled = false;
+                Time.timeScale = 1f;
             }
         }
 
