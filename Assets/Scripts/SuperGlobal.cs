@@ -3,9 +3,16 @@ using System.Collections.Generic;
 
 public class SuperGlobal : MonoBehaviour
 {
+
+    // FAIRE UI DES SPOTS
+    // CHARGER LES SPOTS / GARE DEPUIS UN JSON
+    // UI addStation responsive
+
     public static float timeSpeed = 5f;
     public static float money = 1500f;
     public static float ticketPrice = 1.8f;
+
+    private static readonly bool isDebug = true;
 
     public static int nbUpgrade = 0;
     public static int nbStation = 4;
@@ -126,6 +133,14 @@ public class SuperGlobal : MonoBehaviour
 
         }
         return false;
+    }
+
+    public static void Log(string text)
+    {
+        if (isDebug)
+        {
+            Debug.Log(text);
+        }
     }
 
 }

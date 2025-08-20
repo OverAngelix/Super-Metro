@@ -59,7 +59,7 @@ public class Quest
     public void ForceComplete()
     {
         completed = true;
-        Debug.Log($"{questName} complétée !");
+        SuperGlobal.Log($"{questName} complétée !");
     }
 
 }

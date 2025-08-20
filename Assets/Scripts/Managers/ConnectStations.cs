@@ -20,8 +20,8 @@ public class ConnectStations : MonoBehaviour
 
     public void CreateLines(List<Station> stationObjects, Color colorLine)
     {
-        lineMaterial.SetColor("_BaseColor", colorLine);
         Material colorMat = new Material(lineMaterial);
+        colorMat.SetColor("_BaseColor", colorLine);
         for (int i = 0; i < stationObjects.Count - 1; i++)
         {
             CreateLine(stationObjects[i].obj.transform.position, stationObjects[i + 1].obj.transform.position, colorMat);

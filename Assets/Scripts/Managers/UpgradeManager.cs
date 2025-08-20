@@ -21,7 +21,7 @@ public class UpgradeManager : MonoBehaviour
 
         if (SuperGlobal.money < upgrade.Price)
         {
-            Debug.Log("Not enough money!");
+            SuperGlobal.Log("Not enough money!");
             return;
         }
 

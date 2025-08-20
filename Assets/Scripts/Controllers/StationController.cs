@@ -10,7 +10,6 @@ public class StationController : MonoBehaviour
     {
         if (station.index == 0)
         {
-            Debug.Log(station.lineNumber);
             RunTrain();
         }
     }

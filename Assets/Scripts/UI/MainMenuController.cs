@@ -51,7 +51,7 @@ public class MainMenuController : MonoBehaviour
 
     public void Quit()
     {
-        Debug.Log("Quitter le jeu");
+        SuperGlobal.Log("Quitter le jeu");
         Application.Quit();
     }
 }

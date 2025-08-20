@@ -95,7 +95,7 @@ public abstract class BaseQuest
 
     protected virtual void OnActivated()
     {
-        Debug.Log($"Quête {questName} activée !");
+        SuperGlobal.Log($"Quête {questName} activée !");
     }
 
     public void UpdateQuestWithBool(bool currentCondition)
@@ -115,7 +115,7 @@ public abstract class BaseQuest
         {
             completed = true;
             checkImage.texture = checkTexture;
-            Debug.Log($"Quête terminée : {questName}");
+            SuperGlobal.Log($"Quête terminée : {questName}");
             OnCompleted();
         }
         else if (!completed)
@@ -129,7 +129,7 @@ public abstract class BaseQuest
     {
         completed = true;
         checkImage.texture = checkTexture;
-        Debug.Log($"{questName} complétée (forcée) !");
+        SuperGlobal.Log($"{questName} complétée (forcée) !");
         OnCompleted();
     }
 

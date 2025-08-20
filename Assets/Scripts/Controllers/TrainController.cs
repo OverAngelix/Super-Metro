@@ -56,12 +56,13 @@ public class TrainController : MonoBehaviour
             while (Vector3.Distance(transform.position, targetObj.transform.position) > 0.05f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, targetObj.transform.position, Time.deltaTime * speed);
-
                 // Étape 2 : Rotation vers la cible (nouvelle partie)
                 Vector3 direction = targetObj.transform.position - transform.position;
-                Quaternion toRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, toRotation * Quaternion.Euler(270, 90, 0), Time.deltaTime * speed);
-
+                if (direction != Vector3.zero)
+                {
+                    Quaternion toRotation = Quaternion.LookRotation(direction);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, toRotation * Quaternion.Euler(270, 90, 0), Time.deltaTime * speed);
+                }
                 yield return null;
             }
 

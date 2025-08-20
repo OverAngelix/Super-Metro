@@ -183,9 +183,9 @@ public class PersonController : MonoBehaviour
         float distance = Vector2.Distance(start, last);
 
         float maxTime = Mathf.Max(10, 500f * distance / speed);
-        //Debug.Log("TIME : " + maxTime);
+        //SuperGlobal.Log("TIME : " + maxTime);
         float score = 1f - Mathf.Clamp01(total / maxTime); // 1 si rapide, 0 si trop long
-        //Debug.Log("SCORE : " + score);
+        //SuperGlobal.Log("SCORE : " + score);
         return score;
     }
 }
