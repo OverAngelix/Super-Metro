@@ -23,13 +23,14 @@ public class StationListInformationUIController : MonoBehaviour
 
     void Update()
     {
-        foreach (TrainLine trailLine in SuperGlobal.trainlines)
+        foreach (TrainLine trainLine in SuperGlobal.trainLines)
         {
             TicketUIController ticketUIController;
-            if (!trailLine.ticketUIObject)
+            if (!trainLine.ticketUIObject)
             {
                 GameObject obj = Instantiate(ticketUIPrefab, canvasParent);
                 ticketUIController = obj.GetComponent<TicketUIController>();
+                ticketUIController.trainLine = trainLine;
                 ticketUIControllers.Add(ticketUIController);
                 // Position offset depuis top right
                 RectTransform rt = obj.GetComponent<RectTransform>();
@@ -38,29 +39,29 @@ public class StationListInformationUIController : MonoBehaviour
                 rt.anchoredPosition = new Vector2(-200, -150); // offset
 
                 // Stocker la référence
-                trailLine.ticketUIObject = obj;
+                trainLine.ticketUIObject = obj;
 
-                upgradeButton = ticketUIController.upgradeButton;
-                upgradeButton.onClick.AddListener(() => SuperGlobal.upgradeTrain(trailLine.lineNumber, 0));
+                // upgradeButton = ticketUIController.upgradeButton;
+                // upgradeButton.onClick.AddListener(() => SuperGlobal.upgradeTrain(trainLine.lineNumber, 0));
 
             }
 
             else
             {
-                ticketUIController = trailLine.ticketUIObject.GetComponent<TicketUIController>();
+                ticketUIController = trainLine.ticketUIObject.GetComponent<TicketUIController>();
             }
 
-            TMP_Text trainText = ticketUIController.trainText;
-            trainText.text = "Train 1"; // Pour l'instant on prend que le premier train
+            // TMP_Text trainText = ticketUIController.trainText;
+            // trainText.text = "Train 1"; // Pour l'instant on prend que le premier train
 
-            TMP_Text lineText = ticketUIController.lineText;
-            lineText.text = "Ligne " + trailLine.lineNumber.ToString();
+            // TMP_Text lineText = ticketUIController.lineText;
+            // lineText.text = "Ligne " + trainLine.lineNumber.ToString();
 
-            TMP_Text passengersText = ticketUIController.passengersText;
-            passengersText.text = "Passagers : " + trailLine.trains[0].passengers.Count.ToString() + " / " + trailLine.trains[0].maxPassengers.ToString(); // Pour l'instant on prend que le premier train
+            // TMP_Text passengersText = ticketUIController.passengersText;
+            // passengersText.text = "Passagers : " + trainLine.trains[0].passengers.Count.ToString() + " / " + trainLine.trains[0].maxPassengers.ToString(); // Pour l'instant on prend que le premier train
             
-            TMP_Text speedText = ticketUIController.speedText;
-            speedText.text = "Vitesse : " + trailLine.trains[0].speed.ToString() + " km / h"; // Pour l'instant on prend que le premier train
+            // TMP_Text speedText = ticketUIController.speedText;
+            // speedText.text = "Vitesse : " + trainLine.trains[0].speed.ToString() + " km / h"; // Pour l'instant on prend que le premier train
         }
     }
 

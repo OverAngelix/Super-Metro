@@ -4,63 +4,40 @@ using TMPro;
 
 public class UpgradeLineUIController : MonoBehaviour
 {
-
     public Button button;
-    public string upgradeName;
     public TMP_Text upgradeTextObject;
-    public int lineNumber = 1; // temporaire
-    public int trainIndex = 0; // temporaire
-    void Start()
+
+    private string upgradeName;
+    private TrainController train;
+
+    // Appelée depuis l'UpgradeUIController pour initialiser la ligne
+    public void Init(string upgradeName, TrainController train)
     {
-        button.onClick.AddListener(upgrade);
-        TMP_Text text = upgradeTextObject;
+        this.upgradeName = upgradeName;
+        this.train = train;
+
+        // Mettre à jour le texte en fonction du type d'upgrade
         switch (upgradeName)
         {
             case "speed":
-                text.text = "Vitesse de la rame";
+                upgradeTextObject.text = $"Vitesse ({train.speed}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}";
                 break;
             case "maxPassengers":
-                text.text = "Capacité maximale de la rame";
+                upgradeTextObject.text = $"Capacité ({train.maxPassengers}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}";
                 break;
             default:
+                upgradeTextObject.text = upgradeName;
                 break;
         }
+
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(OnClick);
     }
 
-    void Update()
+    private void OnClick()
     {
-
-    }
-
-    public void upgrade()
-    {
-        float price = 0f;
-        switch (upgradeName)
-        {
-            case "speed":
-                price = 100f;
-                if (SuperGlobal.money - price >= 0)
-                {
-                    SuperGlobal.trainlines[lineNumber - 1].trains[trainIndex].speed += 1f;
-                    SuperGlobal.money -= price;
-                    SuperGlobal.nbUpgrade += 1;
-
-                }
-                ;
-                break;
-            case "maxPassengers":
-                price = 50f;
-                if (SuperGlobal.money - price >= 0)
-                {
-                    SuperGlobal.trainlines[lineNumber - 1].trains[trainIndex].maxPassengers += 1;
-                    SuperGlobal.money -= price;
-                    SuperGlobal.nbUpgrade += 1;
-
-                }
-                ;
-                break;
-            default:
-                break;
-        }
+        UpgradeManager.Upgrade(upgradeName, train);
+        // Mettre à jour le texte après upgrade
+        Init(upgradeName, train);
     }
 }

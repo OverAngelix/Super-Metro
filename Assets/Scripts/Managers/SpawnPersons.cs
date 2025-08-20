@@ -43,7 +43,7 @@ public class SpawnPersons : MonoBehaviour
         }
 
         // Ajouter toutes les stations comme nodes
-        foreach (TrainLine trainline in SuperGlobal.trainlines)
+        foreach (TrainLine trainline in SuperGlobal.trainLines)
         {
             foreach (Station station in trainline.stations)
             {

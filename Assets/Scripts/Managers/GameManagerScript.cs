@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            foreach (TrainLine trainline in SuperGlobal.trainlines)
+            foreach (TrainLine trainline in SuperGlobal.trainLines)
             {
                 SuperGlobal.money -= trainline.maintenance;
             }

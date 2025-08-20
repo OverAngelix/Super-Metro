@@ -63,7 +63,7 @@ public class SuperGlobal : MonoBehaviour
     };
 
 
-    public static List<TrainLine> trainlines = new List<TrainLine>
+    public static List<TrainLine> trainLines = new List<TrainLine>
     {
         new TrainLine // Première ligne (Rouge)
         {
@@ -85,14 +85,14 @@ public class SuperGlobal : MonoBehaviour
 
     public static void SetStations()
     {
-        trainlines[0].stations = stations;
-        trainlines[1].stations = stations2;
+        trainLines[0].stations = stations;
+        trainLines[1].stations = stations2;
     }
 
     public static Station GetStation(string targetName)
     {
         Station station = null;
-        foreach (TrainLine trainline in trainlines)
+        foreach (TrainLine trainline in trainLines)
         {
             station = trainline.stations.Find(st => st.name == targetName);
             if (station != null)
@@ -103,7 +103,7 @@ public class SuperGlobal : MonoBehaviour
 
     public static TrainLine GetTrainLineOfLineStation(int stationLine)
     {
-        foreach (TrainLine trainline in trainlines)
+        foreach (TrainLine trainline in trainLines)
         {
             Station station = trainline.stations.Find(st => st.lineNumber == stationLine);
             if (station != null)
@@ -116,7 +116,7 @@ public class SuperGlobal : MonoBehaviour
 
     public static bool ExistStation(string targetName)
     {
-        foreach (TrainLine trainline in trainlines)
+        foreach (TrainLine trainline in trainLines)
         {
             Station station = trainline.stations.Find(st => st.name == targetName);
             if (station != null)
@@ -127,18 +127,5 @@ public class SuperGlobal : MonoBehaviour
         }
         return false;
     }
-
-
-    public static GameObject upgradeUI;
-
-    public static void upgradeTrain(int lineNumber, int trainIndex)
-    {
-        upgradeUI = UpgradeUIController.Instance.gameObject;
-        upgradeUI.GetComponent<Canvas>().enabled = true;
-        UpgradeUIController upgradeUIController = upgradeUI.GetComponent<UpgradeUIController>();
-        upgradeUIController.updateUI(lineNumber, trainIndex);
-    }
-
-
 
 }

@@ -473,7 +473,7 @@ public class OSMTileManager : MonoBehaviour
     // Instancier toutes les stations et les stocker
     private void InitStations()
     {
-        foreach (TrainLine line in SuperGlobal.trainlines)
+        foreach (TrainLine line in SuperGlobal.trainLines)
         {
             foreach (Station station in line.stations)
             {
@@ -493,7 +493,7 @@ public class OSMTileManager : MonoBehaviour
 
     private void AddStation()
     {
-        TrainLine trainLine = SuperGlobal.trainlines[0];
+        TrainLine trainLine = SuperGlobal.trainLines[0];
         if (SuperGlobal.money - 500 >= 0 && !string.IsNullOrEmpty(stationName.text))
         {
             Station newStation = new Station(stationName.text, newLat, newLon, 1, trainLine.stations.Count);
@@ -505,11 +505,11 @@ public class OSMTileManager : MonoBehaviour
 
             StationController controller = obj.GetComponent<StationController>();
             controller.station = newStation;
-            foreach (TrainLine trailLine in SuperGlobal.trainlines)
+            foreach (TrainLine tl in SuperGlobal.trainLines)
             {
-                foreach (var train in trailLine.trains)
+                foreach (var train in tl.trains)
                 {
-                    controller.UpdateTrainPath(train.gameObject, trailLine);
+                    controller.UpdateTrainPath(train.gameObject, tl);
                 }
             }
 

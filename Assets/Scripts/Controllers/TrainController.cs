@@ -122,4 +122,9 @@ public class TrainController : MonoBehaviour
             yield return new WaitForSeconds(remaining);
     }
 
+    public void Upgrade(string upgradeName)
+    {
+        UpgradeManager.Upgrade(upgradeName, this);
+    }
+
 }
