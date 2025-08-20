@@ -41,11 +41,9 @@ public class StationController : MonoBehaviour
             if (st.line == station.line)
                 path.Add(new Node { name = st.name });
         }
-
         // Donner le chemin au train
         TrainController train = obj.GetComponent<TrainController>();
         train.SetPath(path);
-
         return train;
     }
 

@@ -42,7 +42,6 @@ public class TrainController : MonoBehaviour
         while (true)
         {
             if (path == null || path.Count == 0) yield break;
-
             string targetName = path[currentTargetIndex].name;
             GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetName)?.obj
                                 ?? SuperGlobal.GetStation(targetName)?.obj;

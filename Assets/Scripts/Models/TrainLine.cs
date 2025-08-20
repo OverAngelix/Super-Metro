@@ -25,7 +25,7 @@ public class TrainLine
     {
         if (SuperGlobal.money - stationPrice >= 0 && !string.IsNullOrEmpty(name))
         {
-            Station newStation = new(name, lat, lon, 1, NumberStations());
+            Station newStation = new(name, lat, lon, lineNumber, NumberStations());
             stations.Add(newStation);
             return newStation;
         }

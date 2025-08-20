@@ -7,7 +7,7 @@ public class SuperGlobal : MonoBehaviour
     // FAIRE UI DES SPOTS
     // UI addStation responsive
 
-    public static float money = 1500f;
+    public static float money = 15000f;
     public static float ticketPrice = 1.8f;
 
     private static readonly bool isDebug = true;

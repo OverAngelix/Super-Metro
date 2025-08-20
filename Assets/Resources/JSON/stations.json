@@ -29,6 +29,13 @@
       "index": 3
     },
     {
+      "name": "ROUBAIX",
+      "lat": 50.8097318,
+      "lon": 3.1564094,
+      "line": 1,
+      "index": 4
+    },
+    {
       "name": "Station Kinépolis",
       "lat": 50.654449,
       "lon": 2.9541066,
@@ -36,7 +43,7 @@
       "index": 0
     },
     {
-      "name": "Portes des PUTES",
+      "name": "Portes des TRUCS",
       "lat": 50.658803,
       "lon": 3.0475242,
       "line": 2,

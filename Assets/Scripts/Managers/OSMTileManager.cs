@@ -2,23 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using System;
-using UnityEngine.UI;
-using TMPro;
-using System.Linq;
-using System.Globalization;
 
 public class OSMTileManager : MonoBehaviour
 {
+    public static OSMTileManager Instance { get; private set; }
+
     [Header("Configuration Carte")]
     public int zoomLevel = 12;
-    public double centerLat = 48.8566; // Paris latitude
-    public double centerLon = 2.3522;  // Paris longitude
-    public int tileRadius = 3; // Reduire le nombre de tuiles pour debugger
-
-    [Header("Parametres Visuels")]
-    public Material tileMaterial;
+    public double centerLat = 48.8566;
+    public double centerLon = 2.3522;
+    public int tileRadius = 3;
     public int tileSize = 10;
+    public Material tileMaterial;
 
     private Dictionary<string, GameObject> loadedTiles = new Dictionary<string, GameObject>();
     private Queue<string> tileLoadQueue = new Queue<string>();
@@ -32,72 +27,28 @@ public class OSMTileManager : MonoBehaviour
 
     private ConnectStations connect;
 
-    public bool isEditMode = false;
-    public RawImage editionModeUI;
-    public GameObject panelStation;
-    public TMP_InputField stationName;
-
-    public Button nextLineButton;
-    public TMP_Text lineText;
-    public Button previousLineButton;
-    private int currentLineIndex = 0;
-
-    public Button validationButtonUI;
-    public Button closeButtonUI;
     public GameObject trainPrefab;
-    public float newLat;
-    public float newLon;
 
     void Awake()
     {
-        connect = GetComponent<ConnectStations>();
-        if (connect != null)
         {
-            connect.Init();
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            connect = GetComponent<ConnectStations>();
+            if (connect != null)
+            {
+                connect.Init();
+            }
+            SuperGlobal.SetStations();
+            InitGame();
         }
-        SuperGlobal.SetStations();
-        InitGame();
-
-        nextLineButton.onClick.AddListener(ShowNextLine);
-        previousLineButton.onClick.AddListener(ShowPreviousLine);
-        RefreshUI();
-    }
-
-    private void ShowNextLine()
-    {
-        if (currentLineIndex < SuperGlobal.trainLines.Count - 1)
-        {
-            currentLineIndex++;
-            RefreshUI();
-        }
-    }
-
-    private void ShowPreviousLine()
-    {
-        if (currentLineIndex > 0)
-        {
-            currentLineIndex--;
-            RefreshUI();
-        }
-    }
-
-    private void RefreshUI()
-    {
-        currentLineIndex = Mathf.Clamp(currentLineIndex, 0, SuperGlobal.trainLines.Count - 1);
-
-        lineText.text = $"Line {SuperGlobal.trainLines[currentLineIndex].lineNumber}";
-        SuperGlobal.Log(lineText.text);
-        // Active/désactive navigation selon index
-        previousLineButton.interactable = currentLineIndex > 0;
-        nextLineButton.interactable = currentLineIndex < SuperGlobal.trainLines.Count - 1;
-    }
-
-    void Start()
-    {
-
-        validationButtonUI.onClick.AddListener(AddStationOnMap);
-        closeButtonUI.onClick.AddListener(CloseUI);
-
     }
 
     private void InitGame()
@@ -127,103 +78,15 @@ public class OSMTileManager : MonoBehaviour
 
     }
 
-    private void AddStationOnMap()
-    {
-        TrainLine trainLine = SuperGlobal.trainLines[currentLineIndex];
-        Station newStation = trainLine.AddStation(stationName.text, newLat, newLon);
-        if (newStation != null)
-        {
-
-            GameObject obj = PlacePoint(newLat, newLon, stationPrefab);
-            obj.name = stationName.text;
-            newStation.obj = obj;
-
-            StationController controller = obj.GetComponent<StationController>();
-            controller.station = newStation;
-            foreach (TrainLine tl in SuperGlobal.trainLines)
-            {
-                foreach (var train in tl.trains)
-                {
-                    controller.UpdateTrainPath(train.gameObject, tl);
-                }
-            }
-            connect.CreateLines(trainLine.stations, trainLine.lineColor);
-            SuperGlobal.money -= 500;
-            SuperGlobal.nbStation += 1;
-            panelStation.SetActive(false);
-            SuperGlobal.isUIOpen = false;
-            isEditMode = false;
-            editionModeUI.enabled = false;
-            stationName.text = "";
-        }
-    }
-
-    private void CloseUI()
-    {
-        panelStation.SetActive(false);
-        SuperGlobal.isUIOpen = false;
-        stationName.text = "";
-        newLat = 0f;
-        newLon = 0f;
-    }
-
     // Instancier toutes les locations
     private void InitLocation()
     {
-        SuperGlobal.Log("Nb : " + SuperGlobal.spots.Count);
         for (int i = 0; i < SuperGlobal.spots.Count; i++)
         {
             var spot = SuperGlobal.spots[i];
             GameObject obj = PlacePoint(spot.lat, spot.lon, spotPrefab);
             spot.obj = obj;
         }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            isEditMode = !isEditMode;
-            if (isEditMode)
-            {
-                editionModeUI.enabled = true;
-                // Time.timeScale = 0f;
-            }
-            else
-            {
-                editionModeUI.enabled = false;
-                // Time.timeScale = 1f;
-            }
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (isEditMode && !SuperGlobal.isUIOpen)
-            {
-                HandleMapClick();
-            }
-        }
-    }
-
-    void HandleMapClick()
-    {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            Vector3 unityClickPosition = hit.point;
-
-            unityClickPosition.x -= gameObject.transform.position.x;
-            unityClickPosition.z -= gameObject.transform.position.z;
-
-            Vector2 latLon = GeoUtils.UnityPositionToLatLon(centerLat,centerLon,unityClickPosition, zoomLevel,tileSize);
-            newLat = latLon.x;
-            newLon = latLon.y;
-            panelStation.SetActive(true);
-            SuperGlobal.isUIOpen = true;
-        }
-
     }
 
     [ContextMenu("Generer les tuiles")]
@@ -244,10 +107,6 @@ public class OSMTileManager : MonoBehaviour
         LoadTilesAroundCenter();
         SuperGlobal.Log("Tuiles generees manuellement !");
     }
-
-
-
-
 
     public void LoadTilesAroundCenter()
     {
@@ -342,7 +201,7 @@ public class OSMTileManager : MonoBehaviour
         double lon = GeoUtils.TileToLon(tileX + 0.5, zoomLevel); // Ajouter 0.5 pour le centre de la tuile
 
         // Utiliser la meme methode que pour les points pour garantir l'alignement
-        Vector3 position = GeoUtils.LatLonToUnityPosition(centerLat,centerLon,lat, lon, zoomLevel,tileSize);
+        Vector3 position = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, lat, lon, zoomLevel, tileSize);
 
         tileObj.transform.localPosition = position;
 
@@ -362,7 +221,7 @@ public class OSMTileManager : MonoBehaviour
     // Place this inside your OSMTileManager class
     public GameObject PlacePoint(double lat, double lon, GameObject typePoint)
     {
-        Vector3 pointPosition = GeoUtils.LatLonToUnityPosition(centerLat,centerLon,lat, lon, zoomLevel,tileSize);
+        Vector3 pointPosition = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, lat, lon, zoomLevel, tileSize);
         GameObject point = Instantiate(typePoint, this.transform);
         if (typePoint == stationPrefab)
         {
@@ -372,5 +231,21 @@ public class OSMTileManager : MonoBehaviour
         }
         point.transform.localPosition = pointPosition;
         return point;
+    }
+
+    public void AddStationOnMap(TrainLine trainLine, Station station)
+    {
+        GameObject obj = PlacePoint(station.lat, station.lon, stationPrefab);
+        obj.name = station.name;
+        station.obj = obj;
+
+        StationController controller = obj.GetComponent<StationController>();
+        controller.station = station;
+        foreach (var train in trainLine.trains)
+        {
+            controller.UpdateTrainPath(train.gameObject, trainLine);
+        }
+
+        connect.CreateLines(trainLine.stations, trainLine.lineColor);
     }
 }
