@@ -18,7 +18,6 @@ public class TicketUIController : MonoBehaviour
 
     private void Awake()
     {
-        // Sécurise les listeners pour éviter les accumulations
         nextTrainButton.onClick.AddListener(ShowNextTrain);
         previousTrainButton.onClick.AddListener(ShowPreviousTrain);
         upgradeButton.onClick.AddListener(OpenUpgradeUI);
@@ -31,7 +30,6 @@ public class TicketUIController : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Toujours nettoyer pour éviter les fuites
         nextTrainButton.onClick.RemoveListener(ShowNextTrain);
         previousTrainButton.onClick.RemoveListener(ShowPreviousTrain);
         upgradeButton.onClick.RemoveListener(OpenUpgradeUI);
@@ -61,7 +59,6 @@ public class TicketUIController : MonoBehaviour
         passengersText.text = $"Passagers : {currentTrain.passengers.Count} / {currentTrain.maxPassengers}";
         speedText.text = $"Vitesse : {currentTrain.speed} km/h";
 
-        // Active/désactive navigation selon index
         previousTrainButton.interactable = currentTrainIndex > 0;
         nextTrainButton.interactable = currentTrainIndex < trainLine.trains.Count - 1;
         upgradeButton.interactable = true;

@@ -8,7 +8,7 @@ public class Station : Location
     public int index;
     public int level;
     public int capacity;
-    public List<PersonController> waitingPeople = new List<PersonController>();
+    public List<PersonController> waitingPeople = new();
 
     public Station(string name, float lat, float lon, int line, int index)
         : base(name, lat, lon)

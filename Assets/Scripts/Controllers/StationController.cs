@@ -28,7 +28,6 @@ public class StationController : MonoBehaviour
         }
         trainLine.trains.Add(train);
 
-
         return obj;
     }
 
@@ -46,6 +45,5 @@ public class StationController : MonoBehaviour
         train.SetPath(path);
         return train;
     }
-
 
 }

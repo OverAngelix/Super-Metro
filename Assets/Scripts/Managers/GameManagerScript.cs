@@ -4,11 +4,9 @@ using TMPro;
 public class GameManagerScript : MonoBehaviour
 {
     public TextMeshProUGUI money;
-
     public float spawnInterval = 60f;
     private float timer = 0f;
 
-    // Update is called once per frame
     void Update()
     {
         money.text = SuperGlobal.money.ToString("F1") + "€";

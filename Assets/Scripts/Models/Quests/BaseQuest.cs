@@ -6,26 +6,20 @@ using System.Collections.Generic;
 
 public abstract class BaseQuest
 {
-    // Nom de la quête
     public string questName;
 
-    // UI
     public RawImage checkImage;
     public TextMeshProUGUI valueText;
 
-    // Textures
     protected Texture2D checkTexture;
     protected Texture2D uncheckTexture;
 
-    // État
     public bool completed = false;
     private bool started = false;
 
-    // Fonctions de progression
     protected Func<string> getCurrentValue;
     protected Func<bool> isCompleted;
 
-    // Dialogues optionnels
     public List<Dialog> startDialogs;
     public List<Dialog> completeDialogs;
     public Func<bool> canActivate; 
@@ -33,8 +27,6 @@ public abstract class BaseQuest
     public GameObject questLineUI;
     public BaseQuest(
         string name,
-        RawImage img,
-        TextMeshProUGUI txt,
         Func<string> getVal,
         Func<bool> completedCondition,
         Texture2D check,
@@ -45,8 +37,6 @@ public abstract class BaseQuest
         )
     {
         questName = name;
-        checkImage = img;
-        valueText = txt;
 
         getCurrentValue = getVal;
         isCompleted = completedCondition;
@@ -83,8 +73,7 @@ public abstract class BaseQuest
     private void CreateUI()
     {
         if (questLineUI != null) return;
-
-        GameObject go = GameObject.Instantiate(QuestManager.Instance.questLineUIPrefab, QuestManager.Instance.questsParent);
+        GameObject go = GameObject.Instantiate(QuestManager.Instance.questLineUIPrefab, QuestManager.Instance.questsParentTransform);
         QuestLineUIController ql = go.GetComponent<QuestLineUIController>();
         checkImage = ql.checkImage;
         valueText = ql.valueText;
@@ -133,7 +122,6 @@ public abstract class BaseQuest
         OnCompleted();
     }
 
-    // Appelé automatiquement dans UpdateQuest si la quête n’a pas commencé
     public virtual void TryStartQuest()
     {
         if (started || !CanBeAccepted())
@@ -145,13 +133,11 @@ public abstract class BaseQuest
     }
 
 
-    // Méthode virtuelle pour ajouter des conditions d’apparition
     public virtual bool CanBeAccepted()
     {
-        return true; // Par défaut, toujours acceptée
+        return true;
     }
 
-    // Peut être overriden dans les classes filles
     protected virtual void OnCompleted()
     {
         ShowDialogSequence(completeDialogs);

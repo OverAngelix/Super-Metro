@@ -16,9 +16,9 @@ public class DialogUIController : MonoBehaviour
     public Image overlay;
     private CanvasGroup canvasGroup;
 
-    private Queue<Dialog> dialogQueue = new Queue<Dialog>();
+    private Queue<Dialog> dialogQueue = new();
     private Queue<(List<Dialog> dialogs, string dialogTitle)> questDialogQueue 
-        = new Queue<(List<Dialog>, string)>();
+        = new();
 
     private bool isDialogOpen = false;
     private bool isSequenceRunning = false;

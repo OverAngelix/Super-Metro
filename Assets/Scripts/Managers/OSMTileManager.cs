@@ -7,7 +7,7 @@ public class OSMTileManager : MonoBehaviour
 {
     public static OSMTileManager Instance { get; private set; }
 
-    [Header("Configuration Carte")]
+    [Header("Map configuration")]
     public int zoomLevel = 12;
     public double centerLat = 48.8566;
     public double centerLon = 2.3522;
@@ -15,12 +15,12 @@ public class OSMTileManager : MonoBehaviour
     public int tileSize = 10;
     public Material tileMaterial;
 
-    private Dictionary<string, GameObject> loadedTiles = new Dictionary<string, GameObject>();
-    private Queue<string> tileLoadQueue = new Queue<string>();
+    private Dictionary<string, GameObject> loadedTiles = new();
+    private Queue<string> tileLoadQueue = new();
     private bool isLoadingTile = false;
 
     // Cache des textures pour eviter les rechargements
-    private Dictionary<string, Texture2D> textureCache = new Dictionary<string, Texture2D>();
+    private Dictionary<string, Texture2D> textureCache = new();
 
     public GameObject spotPrefab;
     public GameObject stationPrefab;

@@ -7,7 +7,7 @@ public class Node
     public float lat;
     public float lon;
     public bool isStation;
-    public List<Edge> edges = new List<Edge>();
+    public List<Edge> edges = new();
 
     public Node(string name, float lat, float lon, bool isStation)
     {

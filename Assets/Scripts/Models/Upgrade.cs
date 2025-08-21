@@ -1,13 +1,11 @@
 using System;
-using System.Collections.Generic;
-using UnityEngine;
 
 [Serializable]
 public class Upgrade
 {
     public string name;
     public float price;
-    public Action<TrainController> apply; // fonction à exécuter pour appliquer l'upgrade
+    public Action<TrainController> apply;
 
     public Upgrade(string name, float price, Action<TrainController> apply)
     {

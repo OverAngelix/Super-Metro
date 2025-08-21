@@ -1,7 +1,7 @@
 public class Dialog
 {
-    public string speakerName; // Nom de la personne qui parle
-    public string text;     // Texte du dialogue
+    public string speakerName;
+    public string text;
 
     public Dialog(string speakerName, string text)
     {

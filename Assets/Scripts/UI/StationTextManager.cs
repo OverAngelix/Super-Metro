@@ -24,8 +24,8 @@ public class StationTextManager : MonoBehaviour
         station = stationControllerscript.station;
         stationName.text = station.name;
         stationNameUI.text = station.name;
-        closeButtonUI.onClick.AddListener(closeUI);
-        upgradeButtonUI.onClick.AddListener(upgradeStation);
+        closeButtonUI.onClick.AddListener(CloseUI);
+        upgradeButtonUI.onClick.AddListener(UpgradeStation);
     }
 
     void Update()
@@ -41,12 +41,12 @@ public class StationTextManager : MonoBehaviour
     }
 
     #region ACTIONS BUTTONS
-    void closeUI()
+    void CloseUI()
     {
         CanvasUI.enabled = false;
     }
 
-    void upgradeStation()
+    void UpgradeStation()
     {
         if (SuperGlobal.money - 150 >= 0)
         {

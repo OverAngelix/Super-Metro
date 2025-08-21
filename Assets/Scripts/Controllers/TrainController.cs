@@ -5,16 +5,16 @@ using System.Collections.Generic;
 public class TrainController : MonoBehaviour
 {
     public float speed = 20f;
-    public int maxPassengers = 5; // capacité max du train
+    public int maxPassengers = 5;
     public float timeToEnter = 0.2f;
     public float timeToWaitAtStation = 2f;
-    public List<GameObject> passengers = new List<GameObject>();
+    public List<GameObject> passengers = new();
 
     private List<Node> path;
     private int currentTargetIndex = 0;
     private bool forward = true; // sens du parcours
 
-    public Node currentStation; // nouvelle propriété pour suivre la station actuelle
+    public Node currentStation;
 
     public void SetPath(List<Node> newPath)
     {
@@ -25,9 +25,9 @@ public class TrainController : MonoBehaviour
         // Positionner le train sur le premier node
         if (path.Count > 0)
         {
-            string firstName = path[0].name;
-            GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstName)?.obj
-                                ?? SuperGlobal.GetStation(firstName)?.obj;
+            string firstNodeName = path[0].name;
+            GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstNodeName)?.obj
+                                ?? SuperGlobal.GetStation(firstNodeName)?.obj;
             if (firstObj != null && currentTargetIndex == 0)
                 transform.position = firstObj.transform.position;
         }
@@ -42,9 +42,9 @@ public class TrainController : MonoBehaviour
         while (true)
         {
             if (path == null || path.Count == 0) yield break;
-            string targetName = path[currentTargetIndex].name;
-            GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetName)?.obj
-                                ?? SuperGlobal.GetStation(targetName)?.obj;
+            string targetNodeName = path[currentTargetIndex].name;
+            GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetNodeName)?.obj
+                                ?? SuperGlobal.GetStation(targetNodeName)?.obj;
             if (targetObj == null)
             {
                 yield return null;
@@ -55,7 +55,7 @@ public class TrainController : MonoBehaviour
             while (Vector3.Distance(transform.position, targetObj.transform.position) > 0.05f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, targetObj.transform.position, Time.deltaTime * speed);
-                // Étape 2 : Rotation vers la cible (nouvelle partie)
+                // Rotation vers la cible
                 Vector3 direction = targetObj.transform.position - transform.position;
                 if (direction != Vector3.zero)
                 {
@@ -66,7 +66,7 @@ public class TrainController : MonoBehaviour
             }
 
             // Si on est sur une station, gérer les passagers
-            Station station = SuperGlobal.GetStation(targetName);
+            Station station = SuperGlobal.GetStation(targetNodeName);
 
             if (station != null)
             {

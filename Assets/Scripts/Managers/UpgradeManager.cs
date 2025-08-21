@@ -25,10 +25,8 @@ public class UpgradeManager : MonoBehaviour
             return;
         }
 
-        // Appliquer l’upgrade
         upgrade.apply(train);
 
-        // Mettre à jour l’argent et stats globales
         SuperGlobal.money -= upgrade.price;
         SuperGlobal.nbUpgrade++;
     }

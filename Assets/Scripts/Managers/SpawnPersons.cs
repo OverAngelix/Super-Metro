@@ -36,7 +36,7 @@ public class SpawnPersons : MonoBehaviour
         var endSpot = SuperGlobal.spots[endIndex];
 
         // Construire le graphe des nodes
-        List<Node> allNodes = new List<Node>();
+        List<Node> allNodes = new();
 
         // Ajouter tous les spots comme nodes
         foreach (Location spot in SuperGlobal.spots)
@@ -61,7 +61,7 @@ public class SpawnPersons : MonoBehaviour
                 if (node == other) continue;
 
                 float dist = Dijkstra.Distance(node.lat, node.lon, other.lat, other.lon);
-                float speedMultiplier = (node.isStation && other.isStation) ? 0.25f : 1f; // métro ×4 plus rapide
+                float speedMultiplier = (node.isStation && other.isStation) ? 0.25f : 1f; // TODO : Ajouter une vérif que c'est bien la meme ligne + la vitesse moyenne de la ligne
                 node.edges.Add(new Edge(other, dist * speedMultiplier));
             }
         }

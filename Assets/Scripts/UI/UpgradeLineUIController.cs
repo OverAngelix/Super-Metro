@@ -31,9 +31,7 @@ public class UpgradeLineUIController : MonoBehaviour
     private void OnClick()
     {
         train.Upgrade(upgradeName);
-        // Mettre à jour le texte après upgrade
         Init(upgradeName, train);
-        // Mettre à jour les ticketUI sur le côté
         stationListInformationUIController.RefreshUI();
     }
 }

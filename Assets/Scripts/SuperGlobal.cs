@@ -68,7 +68,7 @@ public class SuperGlobal : MonoBehaviour
         Station station = null;
         foreach (TrainLine trainline in trainLines)
         {
-            station = trainline.stations.Find(st => st.name == targetName);
+            station = trainline.stations.Find(st => st.name == targetName && st.line == trainline.lineNumber);
             if (station != null)
                 break;
         }

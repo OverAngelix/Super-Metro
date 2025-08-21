@@ -9,30 +9,28 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance;
 
     [Header("UI Prefab")]
-    public GameObject questLineUIPrefab; // ton QuestLineUI
-    public Transform questsParent;        // parent où les lignes vont être créées
+    public GameObject questLineUIPrefab;
+    public Transform questsParentTransform;
 
     [Header("Textures")]
     public Texture2D checkTexture;
     public Texture2D uncheckTexture;
     public bool skipTutorial;
-    public List<BaseQuest> quests = new List<BaseQuest>();
+    public List<BaseQuest> quests = new();
 
     private void Awake()
     {
         Instance = this;
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return null; // attendre 1 frame, c'est une "arnaque" pour que les tickets soient générés pour la quete du menu d'amélioration, il faudra faire autrement quand on aura le tuto
         InitializeQuests();
     }
 
-    public BaseQuest GetQuestByName(string name) // suppose que les quetes ont des noms uniques !
+    public BaseQuest GetQuestByName(string name)
     {
         return quests.Find(q => q.questName == name);
-
     }
 
     void InitializeQuests()
@@ -87,27 +85,6 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    // DEPRECATED
-    // public void AddQuest(string name, Func<string> getCurrentValue, Func<bool> isCompleted)
-    // {
-    //     // Instancie la ligne UI
-    //     GameObject go = Instantiate(questLineUIPrefab, questsParent);
-    //     QuestLineUIController qlUIController = go.GetComponent<QuestLineUIController>();
-
-    //     // Crée la quête
-    //     Quest newQuest = new BaseQuest(
-    //         name,
-    //         qlUIController.checkImage,
-    //         qlUIController.valueText,
-    //         getCurrentValue,
-    //         isCompleted,
-    //         checkTexture,
-    //         uncheckTexture
-    //     );
-
-    //     quests.Add(newQuest);
-    // }
-
     public void AddConditionQuest(
         string name,
         Func<string> getCurrentValue,
@@ -117,7 +94,7 @@ public class QuestManager : MonoBehaviour
         Func<bool> activationCondition = null
         )
     {
-        BaseQuest quest = new ConditionQuest(name, null, null,
+        BaseQuest quest = new ConditionQuest(name,
                                             getCurrentValue, isCompleted,
                                             checkTexture, uncheckTexture, startDialogs, completeDialogs, activationCondition);
         quests.Add(quest);
@@ -130,12 +107,11 @@ public class QuestManager : MonoBehaviour
         Func<bool> activationCondition = null
         )
     {
-        BaseQuest quest = new ButtonClickQuest(name, null, null,
+        BaseQuest quest = new ButtonClickQuest(name,
                                             button,
                                             checkTexture, uncheckTexture, startDialogs, completeDialogs, activationCondition);
         quests.Add(quest);
     }
-
 
     private void Update()
     {

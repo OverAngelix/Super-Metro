@@ -17,10 +17,9 @@ public class ConnectStations : MonoBehaviour
         }
     }
 
-
     public void CreateLines(List<Station> stationObjects, Color colorLine)
     {
-        Material colorMat = new Material(lineMaterial);
+        Material colorMat = new(lineMaterial);
         colorMat.SetColor("_BaseColor", colorLine);
         for (int i = 0; i < stationObjects.Count - 1; i++)
         {
@@ -30,7 +29,7 @@ public class ConnectStations : MonoBehaviour
 
     void CreateLine(Vector3 start, Vector3 end, Material material)
     {
-        GameObject lineObj = new GameObject("Line");
+        GameObject lineObj = new("Line");
         lineObj.transform.parent = linesContainer;
         LineRenderer lr = lineObj.AddComponent<LineRenderer>();
         lr.material = material;

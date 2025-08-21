@@ -19,8 +19,6 @@ public class PersonController : MonoBehaviour
     private float waitTime = 0f;         // temps passé à attendre aux stations
     private float happiness = 1f;        // entre 0 et 1
 
-    private void Start() { }
-
     public void SetPath(List<Node> newPath)
     {
         path = newPath;
@@ -28,9 +26,9 @@ public class PersonController : MonoBehaviour
 
         if (path.Count > 0)
         {
-            string firstName = path[0].name;
-            GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstName)?.obj
-                                ?? SuperGlobal.GetStation(firstName)?.obj;
+            string firstNodeName = path[0].name;
+            GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstNodeName)?.obj
+                                ?? SuperGlobal.GetStation(firstNodeName)?.obj;
             if (firstObj != null)
                 transform.position = firstObj.transform.position;
         }
@@ -45,12 +43,11 @@ public class PersonController : MonoBehaviour
 
     void Update()
     {
-        // Si la personne est dans le train
         if (onTrain)
         {
             travelTime += Time.deltaTime;
 
-            // 🔹 Vérifier happiness même en train
+            // Vérifier happiness même en train
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
             if (currentHappiness <= 0f && !happinessSent)
             {
@@ -69,15 +66,15 @@ public class PersonController : MonoBehaviour
         // Pas dans le train : marcher ou attendre
         if (path == null || currentTargetIndex >= path.Count) return;
 
-        string targetName = path[currentTargetIndex].name;
-        GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetName)?.obj
-                            ?? SuperGlobal.GetStation(targetName)?.obj;
+        string targetNodeName = path[currentTargetIndex].name;
+        GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetNodeName)?.obj
+                            ?? SuperGlobal.GetStation(targetNodeName)?.obj;
 
         if (targetObj == null) return;
 
         // Vérifier si le node est une station
 
-        Station station = SuperGlobal.GetStation(targetName);
+        Station station = SuperGlobal.GetStation(targetNodeName);
 
         if (station != null)
         {
@@ -89,7 +86,7 @@ public class PersonController : MonoBehaviour
 
             waitTime += Time.deltaTime;
 
-            // 🔹 Vérifier happiness en temps réel
+            // Vérifier happiness en temps réel
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
             if (currentHappiness <= 0f && !happinessSent)
             {
@@ -172,10 +169,10 @@ public class PersonController : MonoBehaviour
 
     private float CalculateHappiness(float travel, float wait)
     {
-        // Exemple simple : moins le temps total est élevé, plus la note est haute
+        // Moins le temps total est élevé, plus la note est haute
         float total = travel + wait;
 
-        // Ajuster maxTime selon ce que tu juges "long"
+        // Ajuster maxTime selon ce qui est "long"
         Node startNode = path[0];
         Node lastNode = path[path.Count - 1];
         Vector2 start = new Vector2(startNode.lat, startNode.lon);
@@ -183,9 +180,7 @@ public class PersonController : MonoBehaviour
         float distance = Vector2.Distance(start, last);
 
         float maxTime = Mathf.Max(10, 500f * distance / speed);
-        //SuperGlobal.Log("TIME : " + maxTime);
         float score = 1f - Mathf.Clamp01(total / maxTime); // 1 si rapide, 0 si trop long
-        //SuperGlobal.Log("SCORE : " + score);
         return score;
     }
 }

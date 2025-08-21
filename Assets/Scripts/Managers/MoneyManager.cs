@@ -3,12 +3,11 @@ using UnityEngine.UI;
 
 public class MoneyManager : MonoBehaviour
 {
-    RawImage moneyImage;
+    private RawImage moneyImage;
     void Start()
     {
         moneyImage = GetComponent<RawImage>();
         moneyImage.color = new Color(00, 255, 00);
-
     }
 
     // Update is called once per frame

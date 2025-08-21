@@ -12,8 +12,6 @@ public class ButtonClickQuest : BaseQuest
 
     public ButtonClickQuest(
         string name,
-        RawImage img,
-        TextMeshProUGUI txt,
         Button btn,
         Texture2D check,
         Texture2D uncheck,
@@ -21,14 +19,14 @@ public class ButtonClickQuest : BaseQuest
         List<Dialog> completeDialogs = null,
         Func<bool> activationCondition = null
         )
-        : base(name, img, txt, null, null, check, uncheck, startDialogs, completeDialogs, activationCondition)
+        : base(name, null, null, check, uncheck, startDialogs, completeDialogs, activationCondition)
     {
         button = btn;
-        // Création de l'action
+
         action = () =>
         {
             clicked = true;
-            button.onClick.RemoveListener(action); // on retire le listener
+            button.onClick.RemoveListener(action);
         };
 
         button.onClick.AddListener(action);

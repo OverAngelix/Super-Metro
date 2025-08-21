@@ -8,8 +8,6 @@ public class CustomCameraController : MonoBehaviour
     public float rotationSpeed = 50f;
 
     private Vector3 lastMousePos;
-    private Vector3 velocity = Vector3.zero;
-
 
     void Update()
     {
@@ -29,7 +27,7 @@ public class CustomCameraController : MonoBehaviour
         // Clic gauche → translation X/Z
         if (Input.GetMouseButton(0))
         {
-            Vector3 move = new Vector3(delta.x, 0, delta.y) * moveSpeed * Time.deltaTime;
+            Vector3 move = moveSpeed * Time.deltaTime * new Vector3(delta.x, 0, delta.y);
             transform.Translate(move, Space.World);
 
         }
@@ -52,9 +50,8 @@ public class CustomCameraController : MonoBehaviour
             // Calculer la nouvelle position Y
             float newY = transform.position.y - scroll * zoomSpeed * Time.deltaTime;
 
-            // Clamp entre 5 et 90
             newY = Mathf.Clamp(newY, 5f, 90f);
-
+            
             // Appliquer seulement la différence sur Y
             transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
