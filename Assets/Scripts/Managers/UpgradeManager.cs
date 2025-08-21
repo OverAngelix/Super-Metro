@@ -11,7 +11,6 @@ public class UpgradeManager : MonoBehaviour
 
     public static void Upgrade(string upgradeName, TrainController train)
     {
-        Debug.Log("coucou" + upgradeName + train.ToString());
         if (!upgradesList.ContainsKey(upgradeName))
         {
             Debug.LogWarning($"Upgrade {upgradeName} does not exist.");
@@ -20,17 +19,17 @@ public class UpgradeManager : MonoBehaviour
 
         Upgrade upgrade = upgradesList[upgradeName];
 
-        if (SuperGlobal.money < upgrade.Price)
+        if (SuperGlobal.money < upgrade.price)
         {
             SuperGlobal.Log("Not enough money!");
             return;
         }
 
         // Appliquer l’upgrade
-        upgrade.Apply(train);
+        upgrade.apply(train);
 
         // Mettre à jour l’argent et stats globales
-        SuperGlobal.money -= upgrade.Price;
+        SuperGlobal.money -= upgrade.price;
         SuperGlobal.nbUpgrade++;
     }
 }

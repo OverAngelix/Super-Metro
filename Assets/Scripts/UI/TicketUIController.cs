@@ -39,7 +39,6 @@ public class TicketUIController : MonoBehaviour
 
     public void RefreshUI()
     {
-        SuperGlobal.Log("coucoucou " + trainLine.ToString() + " " + trainLine.trains.Count);
         if (trainLine == null || trainLine.trains == null || trainLine.trains.Count == 0)
         {
             trainText.text = "Aucun train";

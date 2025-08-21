@@ -20,8 +20,8 @@ public class UpgradeLineUIController : MonoBehaviour
         // Mettre à jour le texte en fonction du type d'upgrade
         upgradeTextObject.text = upgradeName switch
         {
-            "speed" => $"Vitesse ({train.speed}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}",
-            "maxPassengers" => $"Capacité ({train.maxPassengers}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}",
+            "speed" => $"Vitesse ({train.speed}) - Prix : {UpgradeManager.upgradesList[upgradeName].price}",
+            "maxPassengers" => $"Capacité ({train.maxPassengers}) - Prix : {UpgradeManager.upgradesList[upgradeName].price}",
             _ => upgradeName,
         };
         button.onClick.RemoveAllListeners();
