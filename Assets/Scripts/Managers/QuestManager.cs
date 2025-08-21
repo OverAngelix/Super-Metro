@@ -23,8 +23,9 @@ public class QuestManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return null; // pour skip la premier frame de l'update (le temps que tout soit initialisé)
         InitializeQuests();
     }
 
