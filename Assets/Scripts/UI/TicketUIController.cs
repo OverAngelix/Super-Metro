@@ -37,8 +37,9 @@ public class TicketUIController : MonoBehaviour
         upgradeButton.onClick.RemoveListener(OpenUpgradeUI);
     }
 
-    private void RefreshUI()
+    public void RefreshUI()
     {
+        SuperGlobal.Log("coucoucou " + trainLine.ToString() + " " + trainLine.trains.Count);
         if (trainLine == null || trainLine.trains == null || trainLine.trains.Count == 0)
         {
             trainText.text = "Aucun train";
@@ -57,13 +58,14 @@ public class TicketUIController : MonoBehaviour
         TrainController currentTrain = trainLine.trains[currentTrainIndex];
 
         trainText.text = $"Train {currentTrainIndex}";
-        lineText.text = $"Line {trainLine.lineNumber}";
-        passengersText.text = $"Passengers: {currentTrain.passengers.Count} / {currentTrain.maxPassengers}";
-        speedText.text = $"Speed: {currentTrain.speed} km/h";
+        lineText.text = $"Ligne {trainLine.lineNumber}";
+        passengersText.text = $"Passagers : {currentTrain.passengers.Count} / {currentTrain.maxPassengers}";
+        speedText.text = $"Vitesse : {currentTrain.speed} km/h";
 
         // Active/désactive navigation selon index
         previousTrainButton.interactable = currentTrainIndex > 0;
         nextTrainButton.interactable = currentTrainIndex < trainLine.trains.Count - 1;
+        upgradeButton.interactable = true;
     }
 
     private void ShowNextTrain()

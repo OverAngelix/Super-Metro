@@ -120,7 +120,7 @@ public class AddStationUIController : MonoBehaviour
     private void RefreshUI()
     {
         currentLineIndex = Mathf.Clamp(currentLineIndex, 0, SuperGlobal.trainLines.Count - 1);
-        lineText.text = $"Line {SuperGlobal.trainLines[currentLineIndex].lineNumber}";
+        lineText.text = $"Ligne {SuperGlobal.trainLines[currentLineIndex].lineNumber}";
         previousLineButton.interactable = currentLineIndex > 0;
         nextLineButton.interactable = currentLineIndex < SuperGlobal.trainLines.Count - 1;
     }

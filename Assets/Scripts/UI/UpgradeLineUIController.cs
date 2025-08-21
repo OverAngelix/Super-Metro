@@ -9,6 +9,7 @@ public class UpgradeLineUIController : MonoBehaviour
 
     private string upgradeName;
     private TrainController train;
+    public StationListInformationUIController stationListInformationUIController;
 
     // Appelée depuis l'UpgradeUIController pour initialiser la ligne
     public void Init(string upgradeName, TrainController train)
@@ -17,27 +18,22 @@ public class UpgradeLineUIController : MonoBehaviour
         this.train = train;
 
         // Mettre à jour le texte en fonction du type d'upgrade
-        switch (upgradeName)
+        upgradeTextObject.text = upgradeName switch
         {
-            case "speed":
-                upgradeTextObject.text = $"Vitesse ({train.speed}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}";
-                break;
-            case "maxPassengers":
-                upgradeTextObject.text = $"Capacité ({train.maxPassengers}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}";
-                break;
-            default:
-                upgradeTextObject.text = upgradeName;
-                break;
-        }
-
+            "speed" => $"Vitesse ({train.speed}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}",
+            "maxPassengers" => $"Capacité ({train.maxPassengers}) - Prix : {UpgradeManager.upgradesList[upgradeName].Price}",
+            _ => upgradeName,
+        };
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(OnClick);
     }
 
     private void OnClick()
     {
-        UpgradeManager.Upgrade(upgradeName, train);
+        train.Upgrade(upgradeName);
         // Mettre à jour le texte après upgrade
         Init(upgradeName, train);
+        // Mettre à jour les ticketUI sur le côté
+        stationListInformationUIController.RefreshUI();
     }
 }

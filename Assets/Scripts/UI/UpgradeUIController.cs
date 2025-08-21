@@ -48,6 +48,7 @@ public class UpgradeUIController : MonoBehaviour
         {
             GameObject go = Instantiate(upgradeLineUI, upgradesContainer);
             var lineUI = go.GetComponent<UpgradeLineUIController>();
+            lineUI.stationListInformationUIController = StationListInformationUIController.Instance;
             lineUI.Init(kvp.Key, currentTrain);
             upgradeLines.Add(lineUI);
         }

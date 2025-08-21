@@ -5,12 +5,13 @@ public class UpgradeManager : MonoBehaviour
 {
     public static Dictionary<string, Upgrade> upgradesList = new Dictionary<string, Upgrade>
         {
-            { "speed", new Upgrade("speed", 100f, t => t.speed += 1f) },
-            { "maxPassengers", new Upgrade("maxPassengers", 50f, t => t.maxPassengers += 1) }
+            { "maxPassengers", new Upgrade("maxPassengers", 50f, t => t.maxPassengers += 1) },
+            { "speed", new Upgrade("speed", 100f, t => t.speed += 1f) }
         };
 
     public static void Upgrade(string upgradeName, TrainController train)
     {
+        Debug.Log("coucou" + upgradeName + train.ToString());
         if (!upgradesList.ContainsKey(upgradeName))
         {
             Debug.LogWarning($"Upgrade {upgradeName} does not exist.");
