@@ -265,28 +265,31 @@ public class OSMTileManager : MonoBehaviour
     {
         string jsonResponse = null;
         string filePath = string.Format(HOUSES_JSON_PATH_TEMPLATE, tileX, tileY);
-        SuperGlobal.Log(filePath);
+
+        // Tenter de charger les données depuis un fichier JSON local
         if (File.Exists(filePath))
         {
             jsonResponse = File.ReadAllText(filePath);
-            Debug.Log($"Données de maisons chargées depuis le fichier JSON : {filePath}");
+            Debug.Log($"Données de bâtiments chargées depuis le fichier JSON : {filePath}");
         }
         else
         {
-            Debug.Log("Fichier JSON de maisons non trouvé. Lancement d'une requête Overpass...");
+            // Le fichier n'existe pas, on lance une requête Overpass
+            Debug.Log("Fichier JSON de bâtiments non trouvé. Lancement d'une requête Overpass...");
 
+            // Déterminer la zone de la tuile
             double minLat = GeoUtils.TileToLat(tileY + 1, zoomLevel);
             double maxLat = GeoUtils.TileToLat(tileY, zoomLevel);
             double minLon = GeoUtils.TileToLon(tileX, zoomLevel);
             double maxLon = GeoUtils.TileToLon(tileX + 1, zoomLevel);
 
             string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
-            string query = $"[out:json];(node[building]({bbox});way[building]({bbox});relation[building]({bbox}););out;";
+            string query = $"[out:json];way[building]({bbox});(._;>;);out;";
             string url = "http://overpass-api.de/api/interpreter";
-            WWWForm form = new();
+            WWWForm form = new WWWForm();
             form.AddField("data", query);
 
-            Debug.Log($"Requête Overpass pour les maisons de la tuile ({tileX},{tileY}) : " + query);
+            Debug.Log($"Requête Overpass pour les bâtiments de la tuile ({tileX},{tileY}) : " + query);
 
             using (UnityWebRequest www = UnityWebRequest.Post(url, form))
             {
@@ -296,21 +299,22 @@ public class OSMTileManager : MonoBehaviour
                 if (www.result == UnityWebRequest.Result.Success)
                 {
                     jsonResponse = www.downloadHandler.text;
-                    Debug.Log("Requête Overpass pour les maisons réussie. Sauvegarde du fichier...");
-                    SaveJsonToFile(jsonResponse, string.Format("houses-{0}-{1}.json", tileX, tileY));
+                    Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
+                    // Sauvegarder le JSON dans le dossier Resources/JSON
+                    SaveJsonToFile(jsonResponse, string.Format("buildings-{0}-{1}.json", tileX, tileY));
                 }
                 else
                 {
-                    Debug.LogError($"Erreur de requête Overpass pour les maisons de la tuile ({tileX},{tileY}) : {www.error}");
+                    Debug.LogError($"Erreur de requête Overpass pour la tuile ({tileX},{tileY}) : {www.error}");
                     yield break;
                 }
             }
         }
 
+        // Etape 2: Dessiner les bâtiments avec les données chargées ou récupérées
         OverpassResponse response = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
 
-        // Crée un dictionnaire pour un accès rapide aux nœuds
-        Dictionary<long, Element> nodesDict = new();
+        Dictionary<long, Element> nodesDict = new Dictionary<long, Element>();
         foreach (var element in response.elements)
         {
             if (element.type == "node")
@@ -322,93 +326,118 @@ public class OSMTileManager : MonoBehaviour
         string tileKey = $"{zoomLevel}_{tileX}_{tileY}";
         if (!loadedTiles.ContainsKey(tileKey))
         {
-            Debug.LogError($"Tile {tileKey} not found. Cannot create houses.");
+            Debug.LogError($"Tuile {tileKey} non trouvée. Impossible de créer le maillage des bâtiments.");
             yield break;
         }
         GameObject tileObj = loadedTiles[tileKey];
 
+        GameObject buildingsMeshObject = new GameObject($"Buildings_Mesh_{tileX}_{tileY}");
+        buildingsMeshObject.transform.parent = tileObj.transform;
+        buildingsMeshObject.transform.localPosition = Vector3.zero;
+
+        MeshFilter meshFilter = buildingsMeshObject.AddComponent<MeshFilter>();
+        MeshRenderer meshRenderer = buildingsMeshObject.AddComponent<MeshRenderer>();
+        meshRenderer.material = houseMaterial; // Assurez-vous d'avoir ce matériau
+
+        List<Vector3> allVertices = new List<Vector3>();
+        List<int> allTriangles = new List<int>();
+        List<Vector2> allUvs = new List<Vector2>();
+
+        float buildingHeight = 5.0f;
+        int vertexIndexOffset = 0;
+
         foreach (var element in response.elements)
         {
-            if (element.type == "way" && element.nodes != null && element.nodes.Count > 0)
+            if (element.type == "way" && element.nodes != null)
             {
-                SuperGlobal.Log("MAISON " +element.id.ToString());
-                GameObject house = new($"House_{element.id}");
-                house.transform.parent = tileObj.transform;
-
-                MeshFilter meshFilter = house.AddComponent<MeshFilter>();
-                MeshRenderer meshRenderer = house.AddComponent<MeshRenderer>();
-                meshRenderer.material = houseMaterial;
-
-                Mesh mesh = new();
-                List<Vector3> vertices = new();
-                List<int> triangles = new();
-
-                // Création du maillage de base (face inférieure)
-                List<Vector3> footprintVertices = new();
-
-                for (int i = 0; i < element.nodes.Count; i++)
+                List<Vector3> polygonVertices = new List<Vector3>();
+                bool hasValidVertices = false;
+                foreach (long nodeId in element.nodes)
                 {
-                    if (nodesDict.ContainsKey(element.nodes[i]))
+                    if (nodesDict.ContainsKey(nodeId))
                     {
-                        Element node = nodesDict[element.nodes[i]];
-                        Vector3 globalPos = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, node.lat, node.lon, zoomLevel, tileSize);
-                        Vector3 localPos = globalPos - tileObj.transform.localPosition;
-                        footprintVertices.Add(new Vector3(localPos.x, 0, localPos.z));
+                        Element node = nodesDict[nodeId];
+                        Vector3 pos = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, node.lat, node.lon, zoomLevel, tileSize) - tileObj.transform.localPosition;
+                        if (pos != Vector3.zero)
+                        {
+                            polygonVertices.Add(pos);
+                            hasValidVertices = true;
+                        }
                     }
                 }
-
-                // Triangulation de la base du polygone
-                for (int i = 1; i < footprintVertices.Count - 1; i++)
+                Debug.Log(polygonVertices.Count);
+                // Un polygone valide doit avoir au moins 3 sommets uniques
+                if (hasValidVertices && polygonVertices.Count >= 3)
                 {
-                    triangles.Add(0);
-                    triangles.Add(i);
-                    triangles.Add(i + 1);
+                    // Triangulation de la base du bâtiment (fan triangulation)
+                    int baseStartIndex = allVertices.Count;
+                    allVertices.Add(polygonVertices[0]);
+                    allUvs.Add(Vector2.zero); // UVs pour le sommet de départ
+
+                    for (int i = 1; i < polygonVertices.Count - 1; i++)
+                    {
+                        allVertices.Add(polygonVertices[i]);
+                        allVertices.Add(polygonVertices[i + 1]);
+
+                        // UVs pour les triangles de base (peuvent être ajustés)
+                        allUvs.Add(Vector2.one);
+                        allUvs.Add(Vector2.zero);
+
+                        allTriangles.Add(baseStartIndex);
+                        allTriangles.Add(baseStartIndex + (i - 1) * 2 + 1);
+                        allTriangles.Add(baseStartIndex + (i - 1) * 2 + 2);
+                    }
+
+                    // Extrusion du bâtiment pour créer les murs
+                    int extrusionStartIndex = allVertices.Count;
+                    for (int i = 0; i < polygonVertices.Count - 1; i++)
+                    {
+                        Vector3 p1 = polygonVertices[i];
+                        Vector3 p2 = polygonVertices[i + 1];
+                        Vector3 p1_up = p1 + Vector3.up * buildingHeight;
+                        Vector3 p2_up = p2 + Vector3.up * buildingHeight;
+
+                        // Ajouter les 4 sommets du mur
+                        allVertices.Add(p1);
+                        allVertices.Add(p1_up);
+                        allVertices.Add(p2_up);
+                        allVertices.Add(p2);
+
+                        // Ajouter les triangles pour le mur
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 0);
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 1);
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 2);
+
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 0);
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 2);
+                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 3);
+
+                        // UVs pour le mur
+                        allUvs.Add(new Vector2(0, 0));
+                        allUvs.Add(new Vector2(0, 1));
+                        allUvs.Add(new Vector2(1, 1));
+                        allUvs.Add(new Vector2(1, 0));
+
+                        vertexIndexOffset += 4;
+                    }
                 }
-
-                // Extrusion du maillage pour ajouter les faces latérales et le toit
-                int baseVertexCount = vertices.Count;
-                int footprintCount = footprintVertices.Count;
-
-                // Ajout des sommets du toit
-                foreach (var v in footprintVertices)
-                {
-                    vertices.Add(v); // Base
-                    vertices.Add(new Vector3(v.x, houseHeight, v.z)); // Toit
-                }
-
-                // Création des faces latérales
-                for (int i = 0; i < footprintCount; i++)
-                {
-                    int currentBaseIndex = i * 2;
-                    int nextBaseIndex = ((i + 1) % footprintCount) * 2;
-
-                    // Premier triangle de la face
-                    triangles.Add(currentBaseIndex);
-                    triangles.Add(nextBaseIndex);
-                    triangles.Add(currentBaseIndex + 1);
-
-                    // Deuxième triangle de la face
-                    triangles.Add(nextBaseIndex);
-                    triangles.Add(nextBaseIndex + 1);
-                    triangles.Add(currentBaseIndex + 1);
-                }
-
-                // Ajout des triangles pour le toit
-                for (int i = 1; i < footprintCount - 1; i++)
-                {
-                    triangles.Add(baseVertexCount + 1);
-                    triangles.Add(baseVertexCount + i * 2 + 1);
-                    triangles.Add(baseVertexCount + (i + 1) * 2 + 1);
-                }
-
-                mesh.vertices = vertices.ToArray();
-                mesh.triangles = triangles.ToArray();
-                mesh.RecalculateNormals();
-                meshFilter.mesh = mesh;
-                SuperGlobal.Log("FIN CHARGEMENT MAISON " + $"House_{element.id}");
             }
         }
 
+        if (allVertices.Count > 0)
+        {
+            Mesh mesh = new Mesh();
+            mesh.vertices = allVertices.ToArray();
+            mesh.triangles = allTriangles.ToArray();
+            mesh.uv = allUvs.ToArray();
+            mesh.RecalculateNormals();
+            meshFilter.mesh = mesh;
+            Debug.Log($"Bâtiments fusionnés en un seul mesh pour la tuile ({tileX},{tileY}) avec {allVertices.Count} sommets.");
+        }
+        else
+        {
+            DestroyImmediate(buildingsMeshObject);
+        }
     }
     #endregion
 
