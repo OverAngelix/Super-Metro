@@ -39,8 +39,8 @@ public class TicketUIController : MonoBehaviour
     {
         if (trainLine == null || trainLine.trains == null || trainLine.trains.Count == 0)
         {
-            trainText.text = "Aucun train";
-            lineText.text = string.Empty;
+            trainText.text = trainLine.trains.Count == 0 ? "Aucun train": $"Train {currentTrainIndex}";
+            lineText.text = trainLine == null ? string.Empty : $"Ligne {trainLine.lineNumber}";
             passengersText.text = string.Empty;
             speedText.text = string.Empty;
 
