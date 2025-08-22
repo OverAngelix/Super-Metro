@@ -40,6 +40,7 @@ public class MainUIController : MonoBehaviour
     {
         bool newState = !trainLineEditUIInstance.activeSelf;
         trainLineEditUIInstance.SetActive(newState);
+        trainLineEditUIInstance.GetComponent<TrainLineEditUIController>().RefreshUI();
     }
 
     void OnDestroy()
