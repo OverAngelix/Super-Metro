@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainUIController : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MainUIController : MonoBehaviour
     private GameObject createTrainLineUIInstance;
     private GameObject trainLineEditUIInstance;
     private CreateTrainLineUIController createTrainLineUIController;
+
+    public TMP_Text happinessTextObject;
 
     void Start()
     {
@@ -28,6 +31,11 @@ public class MainUIController : MonoBehaviour
         trainLineEditUIInstance = Instantiate(trainLineEditUIPrefab, transform.parent);
         trainLineEditUIInstance.SetActive(false);
 
+    }
+
+    void Update()
+    {
+        happinessTextObject.text = $"{SuperGlobal.ComputeHappiness()*100} %";
     }
 
     private void ShowOrHideCreateTrainLineUI()

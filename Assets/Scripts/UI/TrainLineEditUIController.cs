@@ -12,11 +12,19 @@ public class TrainLineEditUIController : MonoBehaviour
 
     [Header("UI References")]
     public Transform stationListContainer;
-    public StationsListItem stationListItemPrefab; 
+    public Transform trainListContainer;
+    public StationsListItem stationListItemPrefab;
+    public TrainListItem trainListItemPrefab;
     public TMP_Text trainLineNameText;
     private List<StationsListItem> stationItems = new();
+    private List<TrainListItem> trainItems = new();
 
     public void RefreshUI()
+    {
+        RefreshStations();
+        RefreshTrains();
+    }
+    public void RefreshStations()
     {
         // Clear ancienne liste
         foreach (var item in stationItems)
@@ -29,32 +37,67 @@ public class TrainLineEditUIController : MonoBehaviour
             trainLine = SuperGlobal.trainLines[currentTrainLineIndex];
         }
         // Nom de la ligne
-            if (trainLineNameText != null)
-                // trainLineNameText.text = trainLine.name;
+        if (trainLineNameText != null)
+            // trainLineNameText.text = trainLine.name;
 
-                // Création des items pour chaque station
-                for (int i = 0; i < trainLine.stations.Count; i++)
-                {
-                    Station station = trainLine.stations[i];
+            // Création des items pour chaque station
+            for (int i = 0; i < trainLine.stations.Count; i++)
+            {
+                Station station = trainLine.stations[i];
 
-                    StationsListItem item = Instantiate(stationListItemPrefab, stationListContainer);
-                    item.station = station;
-                    item.indexTextObject.text = station.index.ToString();
-                    item.nameTextObject.text = station.name;
+                StationsListItem item = Instantiate(stationListItemPrefab, stationListContainer);
+                item.station = station;
+                item.indexTextObject.text = station.index.ToString();
+                item.nameTextObject.text = station.name;
 
-                    // On connecte l’action d’édition
-                    item.editButton.onClick.RemoveAllListeners();
-                    item.editButton.onClick.AddListener(() => OnEditStation(item.station));
+                // On connecte l’action d’édition
+                item.editButton.onClick.RemoveAllListeners();
+                item.editButton.onClick.AddListener(() => OnEditStation(item.station));
 
-                    stationItems.Add(item);
-                }
+                stationItems.Add(item);
+            }
+    }
+
+    public void RefreshTrains()
+    {
+        // Clear ancienne liste
+        foreach (var item in trainItems)
+        {
+            Destroy(item.gameObject);
+        }
+        trainItems.Clear();
+        if (trainLine == null)
+        {
+            trainLine = SuperGlobal.trainLines[currentTrainLineIndex];
+        }
+        // Nom de la ligne
+        if (trainLineNameText != null)
+            // trainLineNameText.text = trainLine.name;
+
+            // Création des items pour chaque train
+            for (int i = 0; i < trainLine.trains.Count; i++)
+            {
+                TrainController train = trainLine.trains[i];
+
+                TrainListItem item = Instantiate(trainListItemPrefab, trainListContainer);
+                item.train = train;
+                item.indexTextObject.text = i.ToString();
+
+                // On connecte l’action d’édition
+                item.editButton.onClick.RemoveAllListeners();
+                item.editButton.onClick.AddListener(() => OnEditTrain(item.train));
+
+                trainItems.Add(item);
+            }
     }
 
     void OnEditStation(Station station)
     {
         Debug.Log("Edit station : " + station.name);
-
-        // Ici tu peux ouvrir une UI d’édition pour modifier le nom, l’index etc.
-        // Par exemple un pop-up avec un TMP_InputField et un bouton Save.
+    }
+    
+     void OnEditTrain(TrainController train)
+    {
+        Debug.Log("Edit train");
     }
 }
