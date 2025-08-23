@@ -13,13 +13,13 @@ public class StationsListItem : MonoBehaviour
 
     void Start()
     {
-        editButton.onClick.AddListener(editStation);
+        editButton.onClick.AddListener(OpenEditStationUI);
         indexTextObject.text = station.index.ToString();
         nameTextObject.text = station.name;
     }
 
-    void editStation()
+    private void OpenEditStationUI()
     {
-        
+        UpgradeStationUIController.Instance.Open(station);
     }
 }

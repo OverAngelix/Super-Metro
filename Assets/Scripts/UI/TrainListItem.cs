@@ -17,6 +17,11 @@ public class TrainListItem : MonoBehaviour
 
     void editTrain()
     {
-        
+        OpenUpgradeUI();
+    }
+    
+    private void OpenUpgradeUI()
+    {
+        UpgradeUIController.Instance.Open(train, 0); // TODO : Changer l'index du train
     }
 }
