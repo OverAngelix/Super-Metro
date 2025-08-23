@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SuperGlobal : MonoBehaviour
 {
@@ -15,20 +16,24 @@ public class SuperGlobal : MonoBehaviour
     public static int nbUpgrade = 0;
     public static int nbStation = 4;
 
-    public static List<float> peopleHappiness = new();
+    public static int happinessCount = 100;
+    public static List<float> peopleHappiness = Enumerable.Repeat(0.5f, happinessCount).ToList();
 
     public static float ComputeHappiness()
     {
         if (peopleHappiness.Count == 0)
-            return 0.5f;
+        return 0.5f;
+
+        int start = Mathf.Max(0, peopleHappiness.Count - happinessCount);
+
+        var range = peopleHappiness.GetRange(start, peopleHappiness.Count - start);
 
         float sum = 0f;
-        int count = 100;
-        int start = Mathf.Max(0, peopleHappiness.Count - count);
-        foreach (float h in peopleHappiness.GetRange(start, peopleHappiness.Count - start))
+        foreach (float h in range)
             sum += h;
 
-        return sum / count;
+        float average = sum / range.Count;
+        return Mathf.Round(average * 100f) / 100f;
     }
 
 
