@@ -36,4 +36,19 @@ public class ButtonClickQuest : BaseQuest
     {
         UpdateQuestWithBool(clicked);
     }
+
+    protected override void OnActivated()
+    {
+        base.OnActivated();
+        QuestIndicatorController questIndicatorController = QuestIndicatorController.Instance;
+        questIndicatorController.ShowCursorOnButton(button);
+    }
+
+    protected override void OnCompleted()
+    {
+        base.OnCompleted();
+        QuestIndicatorController questIndicatorController = QuestIndicatorController.Instance;
+        questIndicatorController.HideCursor();
+    }
+
 }
