@@ -43,7 +43,6 @@ public class QuestManager : MonoBehaviour
         {
             MainUIController mainUIController = MainUIController.Instance;
             Button trainLineEditButton = mainUIController.trainLineEditButton;
-            Debug.Log("aze0");
             AddButtonClickQuest(
                 "Ouvre le menu de configuration de lignes",
                 trainLineEditButton,
@@ -55,9 +54,7 @@ public class QuestManager : MonoBehaviour
                 new List<Dialog>() {
                     new Dialog("", "Bravo.") }
             );
-            Debug.Log("aze1");
             TrainLineEditUIController trainLineEditController = TrainLineEditUIController.Instance;
-            Debug.Log("aze " + trainLineEditController.ToString());
             Button addTrainButton = trainLineEditController.addTrainButton;
             AddButtonClickQuest(
                 "Achète une nouvelle rame",

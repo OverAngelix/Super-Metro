@@ -14,22 +14,24 @@ public class QuestIndicatorController : MonoBehaviour
 
     public void ShowCursorOnButton(Button buttonToClick)
     {
+       Canvas.ForceUpdateCanvases(); // force tous les layouts à se recalculer
+
         cursorImage.gameObject.SetActive(true);
         RectTransform cursorRect = cursorImage.rectTransform;
         RectTransform buttonRect = buttonToClick.GetComponent<RectTransform>();
 
-        Vector2 buttonCenter = buttonRect.rect.center;
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(null, buttonRect.position);
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(cursorRect.parent as RectTransform, screenPoint, null, out localPoint);
+
         float width = buttonRect.rect.width;
         float height = buttonRect.rect.height;
-        Vector3 worldCenter = buttonRect.TransformPoint(buttonCenter);
-        Vector3 localPos = cursorRect.parent.InverseTransformPoint(worldCenter);
 
-        cursorRect.localPosition = new Vector3(localPos.x + width / 2, localPos.y - height / 2, localPos.z);
+        cursorRect.localPosition = new Vector3(localPoint.x + width / 2, localPoint.y - height / 2, cursorRect.localPosition.z);
     }
 
     public void HideCursor()
     {
-        Debug.Log("hide");
         cursorImage.gameObject.SetActive(false);
     }
 }
