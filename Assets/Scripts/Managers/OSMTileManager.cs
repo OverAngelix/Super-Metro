@@ -66,6 +66,7 @@ public class OSMTileManager : MonoBehaviour
             {
                 var sta = station;
                 GameObject obj = PlacePoint(sta.lat, sta.lon, stationPrefab);
+                station.controller = obj.GetComponent<StationController>();
                 obj.name = sta.name;
                 sta.obj = obj;
                 StationController controller = obj.GetComponent<StationController>();
@@ -227,7 +228,6 @@ public class OSMTileManager : MonoBehaviour
         {
             StationController stationController = stationPrefab.GetComponent<StationController>();
             stationController.trainPrefab = trainPrefab;
-
         }
         point.transform.localPosition = pointPosition;
         return point;

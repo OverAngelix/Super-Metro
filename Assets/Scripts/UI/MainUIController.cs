@@ -12,11 +12,16 @@ public class MainUIController : MonoBehaviour
     public Button createTrainLineButton;
     public Button trainLineEditButton;
     private GameObject createTrainLineUIInstance;
-    private GameObject trainLineEditUIInstance;
     private CreateTrainLineUIController createTrainLineUIController;
 
     public TMP_Text happinessTextObject;
 
+    public static MainUIController Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         createTrainLineUIController = createTrainLineButton.GetComponent<CreateTrainLineUIController>();
@@ -28,8 +33,7 @@ public class MainUIController : MonoBehaviour
         createTrainLineUIInstance.SetActive(false);
 
         SuperGlobal.Log(trainLineEditUIPrefab.ToString());
-        trainLineEditUIInstance = Instantiate(trainLineEditUIPrefab, transform.parent);
-        trainLineEditUIInstance.SetActive(false);
+        trainLineEditUIPrefab.SetActive(false);
 
     }
 
@@ -46,9 +50,9 @@ public class MainUIController : MonoBehaviour
 
     private void ShowOrHideTrainLineEditUI()
     {
-        bool newState = !trainLineEditUIInstance.activeSelf;
-        trainLineEditUIInstance.SetActive(newState);
-        trainLineEditUIInstance.GetComponent<TrainLineEditUIController>().RefreshUI();
+        bool newState = !trainLineEditUIPrefab.activeSelf;
+        trainLineEditUIPrefab.SetActive(newState);
+        trainLineEditUIPrefab.GetComponent<TrainLineEditUIController>().RefreshUI();
     }
 
     void OnDestroy()

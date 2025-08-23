@@ -14,7 +14,7 @@ public class StationController : MonoBehaviour
         }
     }
 
-    private GameObject RunTrain()
+    public GameObject RunTrain()
     {
         GameObject obj = Instantiate(trainPrefab);
         obj.transform.position = station.obj.transform.position;

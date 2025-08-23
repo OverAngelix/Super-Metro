@@ -41,13 +41,34 @@ public class QuestManager : MonoBehaviour
 
         if (!skipTutorial)
         {
-            StationListInformationUIController stationListInformationUIController = StationListInformationUIController.Instance;
-            Button upgradeBtn = stationListInformationUIController.ticketUIControllers[0].upgradeButton;
+            MainUIController mainUIController = MainUIController.Instance;
+            Button trainLineEditButton = mainUIController.trainLineEditButton;
+            Debug.Log("aze0");
             AddButtonClickQuest(
-                "Cliquez sur le menu d'amélioration",
-                upgradeBtn,
-                new List<Dialog>() { new Dialog("", "Bonjour, il faut que tu améliores"), new Dialog("", "Pour ça, clique sur le menu dans le ticket rouge en haut à gauche.") },
-                new List<Dialog>() { new Dialog("", "Bravo tu as amélioré") }
+                "Ouvre le menu de configuration de lignes",
+                trainLineEditButton,
+                new List<Dialog>() {
+                    new Dialog("", "Bonjour, bienvenue dans Super Métro, tu t'apprètes à vivre une super aventure."),
+                    new Dialog("", "Ici, notre but, c'est de remplacer toutes les voitures par les métros, et de faciliter la vie des gens."),
+                    new Dialog("", "Nous possédons déjà une ligne de métro, achète donc une nouvelle rame afin de la rendre active. Clique ici pour ouvrir le menu de configuration des lignes.")
+                },
+                new List<Dialog>() {
+                    new Dialog("", "Bravo.") }
+            );
+            Debug.Log("aze1");
+            TrainLineEditUIController trainLineEditController = TrainLineEditUIController.Instance;
+            Debug.Log("aze " + trainLineEditController.ToString());
+            Button addTrainButton = trainLineEditController.addTrainButton;
+            AddButtonClickQuest(
+                "Achète une nouvelle rame",
+                addTrainButton,
+                new List<Dialog>() {
+                    new Dialog("", "Parfait, maintenant cliques sur le bouton pour acheter un nouveau train.")
+                },
+                new List<Dialog>() {
+                    new Dialog("", "Regarde, tu as un train qui fonctionne, c'est super !.")
+                },
+                () => GetQuestByName("Ouvre le menu de configuration de lignes").completed == true
             );
 
             /////////////////////////////
@@ -65,15 +86,15 @@ public class QuestManager : MonoBehaviour
             //     () => SuperGlobal.money >= 5000
             // );
 
-            int nbUpgradesObjectif = 10;
-            AddConditionQuest(
-                "Améliorations",
-                () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
-                () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
-                new List<Dialog>() { new Dialog("", "Test debut quete") },
-                new List<Dialog>() { new Dialog("", "Test fin quete") },
-                () => GetQuestByName("Cliquez sur le menu d'amélioration").completed == true
-            );
+            // int nbUpgradesObjectif = 10;
+            // AddConditionQuest(
+            //     "Améliorations",
+            //     () => "Améliorations : " + SuperGlobal.nbUpgrade + " / " + nbUpgradesObjectif,
+            //     () => SuperGlobal.nbUpgrade >= nbUpgradesObjectif,
+            //     new List<Dialog>() { new Dialog("", "Test debut quete") },
+            //     new List<Dialog>() { new Dialog("", "Test fin quete") },
+            //     () => GetQuestByName("Cliquez sur le menu d'amélioration").completed == true
+            // );
 
             // int nbStationsObjectif = 6;
             // AddQuest(

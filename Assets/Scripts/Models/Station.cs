@@ -9,6 +9,7 @@ public class Station : Location
     public int level;
     public int capacity;
     public List<PersonController> waitingPeople = new();
+    public StationController controller;
 
     public Station(string name, float lat, float lon, int line, int index)
         : base(name, lat, lon)

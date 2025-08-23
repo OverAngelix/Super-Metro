@@ -21,6 +21,16 @@ public class TrainLine
         return trains.Count;
     }
 
+    public TrainController AddTrain()
+    {
+        if (SuperGlobal.money - GetNewTrainPrice() >= 0)
+        {
+            stations[0].controller.RunTrain();
+            SuperGlobal.money -= GetNewTrainPrice();
+        }
+        return null;
+    }
+
     public Station AddStation(string name, float lat, float lon)
     {
         if (SuperGlobal.money - stationPrice >= 0 && !string.IsNullOrEmpty(name))
@@ -39,6 +49,12 @@ public class TrainLine
         }
         return null;
 
+    }
+
+
+    public float GetNewTrainPrice()
+    {
+        return 500;
     }
 
 }

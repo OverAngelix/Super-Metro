@@ -18,11 +18,31 @@ public class TrainLineEditUIController : MonoBehaviour
     public TMP_Text trainLineNameText;
     private List<StationsListItem> stationItems = new();
     private List<TrainListItem> trainItems = new();
+    public Button addTrainButton;
+    public Button addStationButton;
+    public static TrainLineEditUIController Instance;
+
+    void Awake()
+    {
+        Instance = this;
+        gameObject.SetActive(false);
+    }
+    void Start()
+    {
+        addTrainButton.onClick.AddListener(AddTrain);
+        addStationButton.onClick.AddListener(AddStation);
+    }
+
+    void OnDestroy() {
+        addTrainButton.onClick.RemoveListener(AddTrain);
+        addStationButton.onClick.RemoveListener(AddStation);
+    }
 
     public void RefreshUI()
     {
         RefreshStations();
         RefreshTrains();
+        RefreshButtons();
     }
     public void RefreshStations()
     {
@@ -91,13 +111,30 @@ public class TrainLineEditUIController : MonoBehaviour
             }
     }
 
+    private void RefreshButtons()
+    {
+        addTrainButton.GetComponentInChildren<TMP_Text>().text = $"Acheter un train ({trainLine.GetNewTrainPrice()})";
+    }
+
     void OnEditStation(Station station)
     {
         Debug.Log("Edit station : " + station.name);
     }
-    
-     void OnEditTrain(TrainController train)
+
+    void OnEditTrain(TrainController train)
     {
         Debug.Log("Edit train");
     }
+
+    void AddTrain()
+    {
+        float trainPrice = trainLine.GetNewTrainPrice();
+        trainLine.AddTrain();
+    }
+
+    void AddStation()
+    {
+        
+    }
+
 }
