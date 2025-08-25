@@ -1,0 +1,892 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-08-25T08:22:30Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 164480279,
+  "lat": 50.6395619,
+  "lon": 3.0679561
+},
+{
+  "type": "node",
+  "id": 206182009,
+  "lat": 50.6387886,
+  "lon": 3.0659019
+},
+{
+  "type": "node",
+  "id": 251053066,
+  "lat": 50.6392677,
+  "lon": 3.0654347
+},
+{
+  "type": "node",
+  "id": 262088681,
+  "lat": 50.6375952,
+  "lon": 3.0673050
+},
+{
+  "type": "node",
+  "id": 320950907,
+  "lat": 50.6384056,
+  "lon": 3.0663266
+},
+{
+  "type": "node",
+  "id": 320963937,
+  "lat": 50.6378873,
+  "lon": 3.0658766
+},
+{
+  "type": "node",
+  "id": 320963939,
+  "lat": 50.6381405,
+  "lon": 3.0651402
+},
+{
+  "type": "node",
+  "id": 596091952,
+  "lat": 50.6380412,
+  "lon": 3.0656712
+},
+{
+  "type": "node",
+  "id": 596091968,
+  "lat": 50.6381487,
+  "lon": 3.0658461
+},
+{
+  "type": "node",
+  "id": 596091990,
+  "lat": 50.6383336,
+  "lon": 3.0661481
+},
+{
+  "type": "node",
+  "id": 596091991,
+  "lat": 50.6383510,
+  "lon": 3.0661227
+},
+{
+  "type": "node",
+  "id": 596091999,
+  "lat": 50.6384156,
+  "lon": 3.0662178
+},
+{
+  "type": "node",
+  "id": 1299481329,
+  "lat": 50.6389051,
+  "lon": 3.0658210
+},
+{
+  "type": "node",
+  "id": 1299481372,
+  "lat": 50.6391262,
+  "lon": 3.0662474
+},
+{
+  "type": "node",
+  "id": 1299846816,
+  "lat": 50.6392894,
+  "lon": 3.0668647
+},
+{
+  "type": "node",
+  "id": 1325382317,
+  "lat": 50.6386673,
+  "lon": 3.0657316,
+  "tags": {
+    "amenity": "parking_entrance",
+    "bicycle": "no",
+    "foot": "no",
+    "hgv": "no",
+    "maxheight": "1.9",
+    "parking": "underground",
+    "vehicle": "permissive"
+  }
+},
+{
+  "type": "node",
+  "id": 1325382393,
+  "lat": 50.6384340,
+  "lon": 3.0655351
+},
+{
+  "type": "node",
+  "id": 1325382399,
+  "lat": 50.6384677,
+  "lon": 3.0654308
+},
+{
+  "type": "node",
+  "id": 1325382470,
+  "lat": 50.6381868,
+  "lon": 3.0651784
+},
+{
+  "type": "node",
+  "id": 2191415640,
+  "lat": 50.6379851,
+  "lon": 3.0667926
+},
+{
+  "type": "node",
+  "id": 2612020378,
+  "lat": 50.6387702,
+  "lon": 3.0659196,
+  "tags": {
+    "button_operated": "no",
+    "check_date": "2025-06-10",
+    "check_date:kerb": "2025-06-10",
+    "crossing": "traffic_signals",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "mapillary": "626829692047793",
+    "tactile_paving": "yes",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2612020380,
+  "lat": 50.6389885,
+  "lon": 3.0657561,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "mapillary": "194553485693711",
+    "survey:date": "2018-08-24",
+    "tactile_paving": "yes",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3075917544,
+  "lat": 50.6383395,
+  "lon": 3.0662762,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "tactile_paving": "incorrect"
+  }
+},
+{
+  "type": "node",
+  "id": 3075917554,
+  "lat": 50.6395378,
+  "lon": 3.0678581,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "kerb": "flush",
+    "survey:date": "2023-12-03",
+    "tactile_paving": "incorrect",
+    "traffic_signals:sound": "no",
+    "traffic_signals:vibration": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4860114949,
+  "lat": 50.6380416,
+  "lon": 3.0667234
+},
+{
+  "type": "node",
+  "id": 5574701506,
+  "lat": 50.6377297,
+  "lon": 3.0671220
+},
+{
+  "type": "node",
+  "id": 6284976176,
+  "lat": 50.6390820,
+  "lon": 3.0660947,
+  "tags": {
+    "highway": "traffic_signals",
+    "red_turn:right:bicycle": "yes",
+    "traffic_signals": "signal",
+    "traffic_signals:direction": "forward"
+  }
+},
+{
+  "type": "node",
+  "id": 6506248313,
+  "lat": 50.6383083,
+  "lon": 3.0662488,
+  "tags": {
+    "highway": "traffic_signals"
+  }
+},
+{
+  "type": "node",
+  "id": 6506248314,
+  "lat": 50.6382905,
+  "lon": 3.0664521,
+  "tags": {
+    "highway": "traffic_signals"
+  }
+},
+{
+  "type": "node",
+  "id": 6506248315,
+  "lat": 50.6383182,
+  "lon": 3.0664219,
+  "tags": {
+    "crossing": "marked",
+    "highway": "crossing",
+    "mapillary": "1286976555055091",
+    "survey:date": "2018-08-24",
+    "tactile_paving": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8627261217,
+  "lat": 50.6376520,
+  "lon": 3.0672200
+},
+{
+  "type": "node",
+  "id": 9116081763,
+  "lat": 50.6376678,
+  "lon": 3.0672001,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9551692459,
+  "lat": 50.6381507,
+  "lon": 3.0666044
+},
+{
+  "type": "node",
+  "id": 9642461704,
+  "lat": 50.6384653,
+  "lon": 3.0654374
+},
+{
+  "type": "node",
+  "id": 11017471129,
+  "lat": 50.6394523,
+  "lon": 3.0675185
+},
+{
+  "type": "node",
+  "id": 11141491210,
+  "lat": 50.6390076,
+  "lon": 3.0659640
+},
+{
+  "type": "node",
+  "id": 11141491211,
+  "lat": 50.6388163,
+  "lon": 3.0659359
+},
+{
+  "type": "node",
+  "id": 11141491212,
+  "lat": 50.6389099,
+  "lon": 3.0660652
+},
+{
+  "type": "node",
+  "id": 11141491213,
+  "lat": 50.6390296,
+  "lon": 3.0662211
+},
+{
+  "type": "node",
+  "id": 11141491214,
+  "lat": 50.6390796,
+  "lon": 3.0664161
+},
+{
+  "type": "node",
+  "id": 11141491215,
+  "lat": 50.6392002,
+  "lon": 3.0668823
+},
+{
+  "type": "node",
+  "id": 11141491216,
+  "lat": 50.6393439,
+  "lon": 3.0674143
+},
+{
+  "type": "node",
+  "id": 11141491217,
+  "lat": 50.6394383,
+  "lon": 3.0677645
+},
+{
+  "type": "node",
+  "id": 11141491218,
+  "lat": 50.6394941,
+  "lon": 3.0680010
+},
+{
+  "type": "node",
+  "id": 11141491219,
+  "lat": 50.6396114,
+  "lon": 3.0679237,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "highway": "crossing",
+    "tactile_paving": "yes",
+    "traffic_signals:sound": "no",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11204769561,
+  "lat": 50.6379087,
+  "lon": 3.0658147,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "yes",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11335557342,
+  "lat": 50.6389080,
+  "lon": 3.0658251
+},
+{
+  "type": "node",
+  "id": 11338207143,
+  "lat": 50.6388346,
+  "lon": 3.0657579,
+  "tags": {
+    "crossing": "marked",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "kerb": "no",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11338207144,
+  "lat": 50.6389523,
+  "lon": 3.0658149
+},
+{
+  "type": "node",
+  "id": 11338207146,
+  "lat": 50.6390198,
+  "lon": 3.0658153,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "crossing:island": "yes",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "tactile_paving": "yes",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11338207147,
+  "lat": 50.6391209,
+  "lon": 3.0656792
+},
+{
+  "type": "node",
+  "id": 11338207148,
+  "lat": 50.6392773,
+  "lon": 3.0654824
+},
+{
+  "type": "node",
+  "id": 11338207149,
+  "lat": 50.6393416,
+  "lon": 3.0653576
+},
+{
+  "type": "node",
+  "id": 11338207150,
+  "lat": 50.6394335,
+  "lon": 3.0651759
+},
+{
+  "type": "node",
+  "id": 11338207151,
+  "lat": 50.6394348,
+  "lon": 3.0650845,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals": "signal"
+  }
+},
+{
+  "type": "node",
+  "id": 11393966599,
+  "lat": 50.6390246,
+  "lon": 3.0658335,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals": "signal",
+    "traffic_signals:direction": "forward"
+  }
+},
+{
+  "type": "node",
+  "id": 11393966600,
+  "lat": 50.6395269,
+  "lon": 3.0678148,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals:direction": "backward"
+  }
+},
+{
+  "type": "node",
+  "id": 11393966603,
+  "lat": 50.6393137,
+  "lon": 3.0667354
+},
+{
+  "type": "node",
+  "id": 11393966604,
+  "lat": 50.6395868,
+  "lon": 3.0678280,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11808986792,
+  "lat": 50.6388924,
+  "lon": 3.0657409
+},
+{
+  "type": "node",
+  "id": 11808986793,
+  "lat": 50.6387621,
+  "lon": 3.0656433
+},
+{
+  "type": "node",
+  "id": 11808986794,
+  "lat": 50.6382111,
+  "lon": 3.0651394
+},
+{
+  "type": "node",
+  "id": 11808986795,
+  "lat": 50.6381633,
+  "lon": 3.0651202
+},
+{
+  "type": "node",
+  "id": 11808986796,
+  "lat": 50.6382008,
+  "lon": 3.0651353
+},
+{
+  "type": "node",
+  "id": 12556158505,
+  "lat": 50.6394702,
+  "lon": 3.0678998
+},
+{
+  "type": "node",
+  "id": 13036955236,
+  "lat": 50.6386826,
+  "lon": 3.0660147,
+  "tags": {
+    "highway": "traffic_signals",
+    "red_turn:right:bicycle": "yes",
+    "traffic_signals": "signal",
+    "traffic_signals:direction": "forward"
+  }
+},
+{
+  "type": "node",
+  "id": 13036955238,
+  "lat": 50.6391103,
+  "lon": 3.0659523,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13036955239,
+  "lat": 50.6390391,
+  "lon": 3.0660193,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "tactile_paving": "yes",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 13036955240,
+  "lat": 50.6389469,
+  "lon": 3.0661135
+},
+{
+  "type": "node",
+  "id": 13036955241,
+  "lat": 50.6387153,
+  "lon": 3.0659792,
+  "tags": {
+    "cycleway": "asl"
+  }
+},
+{
+  "type": "way",
+  "id": 15117715,
+  "nodes": [
+    206182009,
+    1299481329
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue des Arts",
+    "oneway": "no",
+    "source:maxspeed": "FR:zone30",
+    "surface": "asphalt",
+    "zone:maxspeed": "FR:30"
+  }
+},
+{
+  "type": "way",
+  "id": 29185600,
+  "nodes": [
+    262088681,
+    8627261217,
+    9116081763,
+    5574701506,
+    2191415640,
+    4860114949,
+    9551692459,
+    6506248314,
+    6506248315,
+    320950907
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue des Arts",
+    "oneway": "yes",
+    "oneway:bicycle": "no",
+    "sidewalk": "both",
+    "source:maxspeed": "FR:zone30",
+    "surface": "asphalt",
+    "zone:maxspeed": "FR:30"
+  }
+},
+{
+  "type": "way",
+  "id": 29187029,
+  "nodes": [
+    320963937,
+    6506248313,
+    3075917544,
+    320950907
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue Léon Trulin",
+    "name:etymology:wikidata": "Q3271360",
+    "oneway": "no",
+    "sidewalk": "both",
+    "source:maxspeed": "FR:zone30",
+    "surface": "asphalt",
+    "zone:maxspeed": "FR:30"
+  }
+},
+{
+  "type": "way",
+  "id": 46656369,
+  "nodes": [
+    320950907,
+    13036955236,
+    13036955241,
+    2612020378,
+    206182009
+  ],
+  "tags": {
+    "highway": "residential",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue des Arts",
+    "oneway": "no",
+    "source:maxspeed": "FR:zone30",
+    "surface": "asphalt",
+    "zone:maxspeed": "FR:30"
+  }
+},
+{
+  "type": "way",
+  "id": 71346819,
+  "nodes": [
+    1299481329,
+    11338207143,
+    1325382399,
+    1325382470,
+    320963939
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Boulevard Carnot",
+    "name:etymology:wikidata": "Q310767",
+    "note": "rue en sens unique, impasse le temps des travaux",
+    "oneway": "yes",
+    "sidewalk:left": "yes",
+    "sidewalk:right": "separate",
+    "source:maxspeed": "FR:zone30",
+    "start_date": "1909-12-04",
+    "surface": "asphalt",
+    "zone:maxspeed": "FR:30"
+  }
+},
+{
+  "type": "way",
+  "id": 117119296,
+  "nodes": [
+    251053066,
+    2612020380,
+    1299481329
+  ],
+  "tags": {
+    "bicycle": "yes",
+    "bicycle:conditional": "no @ (Sa 11:00-19:00)",
+    "highway": "living_street",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "20",
+    "motor_vehicle:conditional": "destination @ (Sa 11:00-19:00)",
+    "name": "Rue des Arts",
+    "oneway": "yes",
+    "smoothness": "bad",
+    "start_date": "1066",
+    "surface": "sett"
+  }
+},
+{
+  "type": "way",
+  "id": 117691408,
+  "nodes": [
+    1325382399,
+    9642461704,
+    1325382393,
+    1325382317
+  ],
+  "tags": {
+    "highway": "service",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 484396465,
+  "nodes": [
+    164480279,
+    3075917554,
+    11393966600,
+    11017471129,
+    1299846816,
+    1299481372,
+    6284976176,
+    13036955239,
+    11141491210,
+    11335557342,
+    1299481329
+  ],
+  "tags": {
+    "cycleway:both": "separate",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Boulevard Carnot",
+    "name:etymology:wikidata": "Q310767",
+    "oneway": "no",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "source": "https://www.lavoixdunord.fr/1323623/article/2023-05-04/lille-le-futur-boulevard-carnot-vert-et-apaise-se-devoile-enfin",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1201697249,
+  "nodes": [
+    2612020378,
+    11141491211,
+    11141491212,
+    13036955240,
+    11141491213,
+    11141491214,
+    11141491215,
+    11141491216,
+    11141491217,
+    12556158505,
+    11141491218
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Boulevard Carnot",
+    "start_date": "2023",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1209339569,
+  "nodes": [
+    596091990,
+    596091968,
+    596091952,
+    11204769561,
+    3075917544,
+    596091999,
+    596091991,
+    596091990
+  ],
+  "tags": {
+    "area": "yes",
+    "highway": "pedestrian",
+    "surface": "sett"
+  }
+},
+{
+  "type": "way",
+  "id": 1222501370,
+  "nodes": [
+    1299481329,
+    11338207144,
+    11338207146,
+    11338207147,
+    11338207148,
+    11338207149,
+    11338207150,
+    11338207151
+  ],
+  "tags": {
+    "check_date:surface": "2024-01-06",
+    "cycleway:surface": "asphalt",
+    "foot": "designated",
+    "footway:surface": "asphalt",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "yes",
+    "segregated": "yes",
+    "start_date": "2023-11",
+    "surface": "asphalt",
+    "surface:colour": "red",
+    "width": "1.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1228621493,
+  "nodes": [
+    11141491219,
+    11393966604,
+    11393966603,
+    13036955238,
+    11393966599,
+    11338207146,
+    2612020380,
+    11808986792,
+    11808986793,
+    11808986794,
+    11808986796,
+    11808986795,
+    320963939
+  ],
+  "tags": {
+    "check_date:surface": "2024-01-06",
+    "cycleway:surface": "asphalt",
+    "cycleway:width": "2.5",
+    "foot": "designated",
+    "footway:surface": "asphalt",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "no",
+    "segregated": "yes",
+    "start_date": "2023",
+    "surface": "asphalt",
+    "surface:colour": "red",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1418617290,
+  "nodes": [
+    13036955238,
+    13036955239,
+    13036955240
+  ],
+  "tags": {
+    "highway": "footway",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

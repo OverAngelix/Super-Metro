@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -220,7 +221,7 @@ public class OSMTileManager : MonoBehaviour
         {
             renderer.sharedMaterial = new Material(tileMaterial);
         }
-        renderer.sharedMaterial.mainTexture = texture;
+        //renderer.sharedMaterial.mainTexture = texture;
 
         loadedTiles[tileKey] = tileObj;
     }
@@ -256,11 +257,31 @@ public class OSMTileManager : MonoBehaviour
         connect.CreateLines(trainLine.stations, trainLine.lineColor);
     }
 
-    #region FONCTIONNALITE POUR LES MAISONS
-    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/houses-{0}-{1}.json";
-    public Material houseMaterial;
-    public float houseHeight = 1.0f;
 
+    [Header("Parametres de generation")]
+    public Material roadMaterial;
+    public Material houseMaterial;
+
+    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Roads/";
+    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Houses/";
+
+    [Serializable]
+    public class OverpassResponse
+    {
+        public Element[] elements;
+    }
+    [Serializable]
+    public class Element
+    {
+        public long id;
+        public string type;
+        public double lat;
+        public double lon;
+        public List<long> nodes;
+        public Dictionary<string, string> tags;
+    }
+
+    #region FONCTIONNALITE POUR LES MAISONS
     IEnumerator CreateHousesForTile(int tileX, int tileY)
     {
         string jsonResponse = null;
@@ -301,7 +322,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, string.Format("buildings-{0}-{1}.json", tileX, tileY));
+                    SaveJsonToFile(jsonResponse, HOUSES_JSON_PATH_TEMPLATE, string.Format("houses-{0}-{1}.json", tileX, tileY));
                 }
                 else
                 {
@@ -331,245 +352,56 @@ public class OSMTileManager : MonoBehaviour
         }
         GameObject tileObj = loadedTiles[tileKey];
 
-        GameObject buildingsMeshObject = new GameObject($"Buildings_Mesh_{tileX}_{tileY}");
-        buildingsMeshObject.transform.parent = tileObj.transform;
-        buildingsMeshObject.transform.localPosition = Vector3.zero;
+        GameObject meshObj = new GameObject($"Houses_Mesh_{tileX}_{tileY}");
+        meshObj.transform.parent = tileObj.transform;
+        meshObj.transform.localPosition = new Vector3(0, 0.2f, 0);
 
-        MeshFilter meshFilter = buildingsMeshObject.AddComponent<MeshFilter>();
-        MeshRenderer meshRenderer = buildingsMeshObject.AddComponent<MeshRenderer>();
-        meshRenderer.material = houseMaterial; // Assurez-vous d'avoir ce matériau
+        MeshFilter mf = meshObj.AddComponent<MeshFilter>();
+        MeshRenderer mr = meshObj.AddComponent<MeshRenderer>();
+        mr.material = houseMaterial;
 
-        List<Vector3> allVertices = new List<Vector3>();
-        List<int> allTriangles = new List<int>();
-        List<Vector2> allUvs = new List<Vector2>();
+        Mesh mesh = new Mesh();
 
-        float buildingHeight = 5.0f;
-        int vertexIndexOffset = 0;
+        List<Vector3> vertices = new List<Vector3>();
+        List<int> indices = new List<int>();
 
         foreach (var element in response.elements)
         {
-            if (element.type == "way" && element.nodes != null)
+            if (element.type != "way" || element.nodes == null) continue;
+
+            List<Vector3> baseVerts = new List<Vector3>();
+            foreach (long nodeId in element.nodes)
             {
-                List<Vector3> polygonVertices = new List<Vector3>();
-                bool hasValidVertices = false;
-                foreach (long nodeId in element.nodes)
-                {
-                    if (nodesDict.ContainsKey(nodeId))
-                    {
-                        Element node = nodesDict[nodeId];
-                        Vector3 pos = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, node.lat, node.lon, zoomLevel, tileSize) - tileObj.transform.localPosition;
-                        if (pos != Vector3.zero)
-                        {
-                            polygonVertices.Add(pos);
-                            hasValidVertices = true;
-                        }
-                    }
-                }
-                Debug.Log(polygonVertices.Count);
-                // Un polygone valide doit avoir au moins 3 sommets uniques
-                if (hasValidVertices && polygonVertices.Count >= 3)
-                {
-                    // Triangulation de la base du bâtiment (fan triangulation)
-                    int baseStartIndex = allVertices.Count;
-                    allVertices.Add(polygonVertices[0]);
-                    allUvs.Add(Vector2.zero); // UVs pour le sommet de départ
+                if (!nodesDict.TryGetValue(nodeId, out var node)) continue;
+                Vector3 pos = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, node.lat, node.lon, zoomLevel, tileSize)
+                    - tileObj.transform.localPosition;
+                baseVerts.Add(pos);
+            }
 
-                    for (int i = 1; i < polygonVertices.Count - 1; i++)
-                    {
-                        allVertices.Add(polygonVertices[i]);
-                        allVertices.Add(polygonVertices[i + 1]);
+            if (baseVerts.Count < 3) continue;
 
-                        // UVs pour les triangles de base (peuvent être ajustés)
-                        allUvs.Add(Vector2.one);
-                        allUvs.Add(Vector2.zero);
+            int startIndex = vertices.Count;
+            vertices.AddRange(baseVerts);
 
-                        allTriangles.Add(baseStartIndex);
-                        allTriangles.Add(baseStartIndex + (i - 1) * 2 + 1);
-                        allTriangles.Add(baseStartIndex + (i - 1) * 2 + 2);
-                    }
-
-                    // Extrusion du bâtiment pour créer les murs
-                    int extrusionStartIndex = allVertices.Count;
-                    for (int i = 0; i < polygonVertices.Count - 1; i++)
-                    {
-                        Vector3 p1 = polygonVertices[i];
-                        Vector3 p2 = polygonVertices[i + 1];
-                        Vector3 p1_up = p1 + Vector3.up * buildingHeight;
-                        Vector3 p2_up = p2 + Vector3.up * buildingHeight;
-
-                        // Ajouter les 4 sommets du mur
-                        allVertices.Add(p1);
-                        allVertices.Add(p1_up);
-                        allVertices.Add(p2_up);
-                        allVertices.Add(p2);
-
-                        // Ajouter les triangles pour le mur
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 0);
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 1);
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 2);
-
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 0);
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 2);
-                        allTriangles.Add(extrusionStartIndex + vertexIndexOffset + 3);
-
-                        // UVs pour le mur
-                        allUvs.Add(new Vector2(0, 0));
-                        allUvs.Add(new Vector2(0, 1));
-                        allUvs.Add(new Vector2(1, 1));
-                        allUvs.Add(new Vector2(1, 0));
-
-                        vertexIndexOffset += 4;
-                    }
-                }
+            // Créer des lignes pour chaque arête du polygone
+            for (int i = 0; i < baseVerts.Count; i++)
+            {
+                int next = (i + 1) % baseVerts.Count;
+                indices.Add(startIndex + i);
+                indices.Add(startIndex + next);
             }
         }
 
-        if (allVertices.Count > 0)
-        {
-            Mesh mesh = new Mesh();
-            mesh.vertices = allVertices.ToArray();
-            mesh.triangles = allTriangles.ToArray();
-            mesh.uv = allUvs.ToArray();
-            mesh.RecalculateNormals();
-            meshFilter.mesh = mesh;
-            Debug.Log($"Bâtiments fusionnés en un seul mesh pour la tuile ({tileX},{tileY}) avec {allVertices.Count} sommets.");
-        }
-        else
-        {
-            DestroyImmediate(buildingsMeshObject);
-        }
+        // Assigner les données au mesh
+        mesh.SetVertices(vertices);
+        mesh.SetIndices(indices.ToArray(), MeshTopology.Lines, 0);
+
+        mf.mesh = mesh;
+
     }
     #endregion
 
-
-    /*IEnumerator CreateHousesForTile(int tileX, int tileY)
-    {
-        string jsonResponse = null;
-        string filePath = string.Format(HOUSES_JSON_PATH_TEMPLATE, tileX, tileY);
-
-        // Tenter de charger les données depuis un fichier JSON local
-        if (File.Exists(filePath))
-        {
-            jsonResponse = File.ReadAllText(filePath);
-            Debug.Log($"Données de maisons chargées depuis le fichier JSON : {filePath}");
-        }
-        else
-        {
-            // Le fichier n'existe pas, on lance une requête Overpass
-            Debug.Log("Fichier JSON de maisons non trouvé. Lancement d'une requête Overpass...");
-
-            // Déterminer la zone de la tuile
-            double minLat = GeoUtils.TileToLat(tileY + 1, zoomLevel);
-            double maxLat = GeoUtils.TileToLat(tileY, zoomLevel);
-            double minLon = GeoUtils.TileToLon(tileX, zoomLevel);
-            double maxLon = GeoUtils.TileToLon(tileX + 1, zoomLevel);
-
-            string bbox = $"{minLat.ToString(CultureInfo.InvariantCulture)},{minLon.ToString(CultureInfo.InvariantCulture)},{maxLat.ToString(CultureInfo.InvariantCulture)},{maxLon.ToString(CultureInfo.InvariantCulture)}";
-            string query = $"[out:json];(node[building=house]({bbox});way[building=house]({bbox});relation[building=house]({bbox}););out center;";
-            string url = "http://overpass-api.de/api/interpreter";
-            WWWForm form = new WWWForm();
-            form.AddField("data", query);
-
-            Debug.Log($"Requête Overpass pour les maisons de la tuile ({tileX},{tileY}) : " + query);
-
-            using (UnityWebRequest www = UnityWebRequest.Post(url, form))
-            {
-                www.SetRequestHeader("User-Agent", "Unity-OSM-App/1.0");
-                yield return www.SendWebRequest();
-
-                if (www.result == UnityWebRequest.Result.Success)
-                {
-                    jsonResponse = www.downloadHandler.text;
-                    Debug.Log("Requête Overpass pour les maisons réussie. Sauvegarde du fichier...");
-                    SaveJsonToFile(jsonResponse, string.Format("houses-{0}-{1}.json", tileX, tileY));
-                }
-                else
-                {
-                    Debug.LogError($"Erreur de requête Overpass pour les maisons de la tuile ({tileX},{tileY}) : {www.error}");
-                    yield break;
-                }
-            }
-        }
-
-        OverpassResponse response = JsonUtility.FromJson<OverpassResponse>(jsonResponse);
-
-        string tileKey = $"{zoomLevel}_{tileX}_{tileY}";
-        if (!loadedTiles.ContainsKey(tileKey))
-        {
-            Debug.LogError($"Tile {tileKey} not found. Cannot create houses.");
-            yield break;
-        }
-        GameObject tileObj = loadedTiles[tileKey];
-
-
-        foreach (var element in response.elements)
-        {
-
-            // Créer un cube pour représenter la maison
-            GameObject house = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            house.name = $"House_{element.id}";
-            house.transform.parent = tileObj.transform;
-
-            // Ajuster la position en Z pour qu'il soit sur la tuile et la taille
-            house.transform.localScale = new Vector3(0.1f, 1.0f, 0.1f);
-
-
-            // Convert the geographic coordinates to a Unity position
-            Vector3 globalPosition = GeoUtils.LatLonToUnityPosition(centerLat, centerLon, element.center.lat, element.center.lon, zoomLevel, tileSize);
-
-            // The position relative to the tile's local position
-            Vector3 localPosition = globalPosition - tileObj.transform.localPosition;
-
-            // Set the house's local position
-            house.transform.localPosition = new Vector3(localPosition.x, houseHeight, localPosition.z);
-
-            // Apply material
-            if (houseMaterial != null)
-            {
-                house.GetComponent<Renderer>().material = houseMaterial;
-            }
-        }
-
-        Debug.Log($"Maisons pour la tuile ({tileX},{tileY}) placées : {response.elements.Length}");
-    }
-    #endregion*/
-
-
-
-
     #region FONCTIONNALITE POUR LES ROUTES
-    [Header("Parametres de generation")]
-    public Material roadMaterial;
-    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/routes-{0}-{1}.json";
-    [Serializable]
-    public class OverpassResponse
-    {
-        public Element[] elements;
-    }
-
-    [Serializable]
-    public class Element
-    {
-        public long id;
-        public string type;
-        public double lat;
-        public double lon;
-        public Center center;
-        public List<long> nodes;
-        public Dictionary<string, string> tags;
-    }
-
-
-    [Serializable]
-    public class Center
-    {
-        public double lat;
-        public double lon;
-    }
-
-
-
-    // Étape 2: Générer un mesh de routes pour une tuile spécifique en faisant une requête ciblée
     IEnumerator CreateRoadsMeshForTile(int tileX, int tileY)
     {
         string jsonResponse = null;
@@ -610,7 +442,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, string.Format("routes-{0}-{1}.json", tileX, tileY));
+                    SaveJsonToFile(jsonResponse, ROADS_JSON_PATH_TEMPLATE, string.Format("roads-{0}-{1}.json", tileX, tileY));
                 }
                 else
                 {
@@ -654,7 +486,7 @@ public class OSMTileManager : MonoBehaviour
         List<int> allTriangles = new List<int>();
 
         // Largeur des routes, réduite pour un meilleur visuel
-        float roadWidth = 0.1f;
+        float roadWidth = 0.01f;
         int vertexIndexOffset = 0;
 
         foreach (var element in response.elements)
@@ -707,7 +539,6 @@ public class OSMTileManager : MonoBehaviour
             mesh.triangles = allTriangles.ToArray();
             mesh.RecalculateNormals();
             meshFilter.mesh = mesh;
-            Debug.Log($"Routes fusionnées en un seul mesh pour la tuile ({tileX},{tileY}) avec {allVertices.Count} sommets.");
         }
         else
         {
@@ -716,12 +547,8 @@ public class OSMTileManager : MonoBehaviour
     }
 
     // Fonction d'aide pour sauvegarder les données JSON
-    private void SaveJsonToFile(string jsonData, string filename)
+    private void SaveJsonToFile(string jsonData, string path, string filename)
     {
-        // Le chemin pour les fichiers de ressources est toujours Resources/
-        string path = Application.dataPath + "/Resources/JSON/";
-
-        // S'assurer que le dossier existe
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);

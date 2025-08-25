@@ -1,0 +1,10618 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-08-25T08:31:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 404219814,
+  "lat": 50.5781527,
+  "lon": 3.1888375,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396210,
+  "lat": 50.5783120,
+  "lon": 3.1885865,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396214,
+  "lat": 50.5783822,
+  "lon": 3.1884205
+},
+{
+  "type": "node",
+  "id": 404396217,
+  "lat": 50.5784564,
+  "lon": 3.1881320,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396218,
+  "lat": 50.5785870,
+  "lon": 3.1872521,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396222,
+  "lat": 50.5788649,
+  "lon": 3.1850548,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396224,
+  "lat": 50.5789026,
+  "lon": 3.1847110,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396225,
+  "lat": 50.5789110,
+  "lon": 3.1845268
+},
+{
+  "type": "node",
+  "id": 404396230,
+  "lat": 50.5789872,
+  "lon": 3.1837245,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396232,
+  "lat": 50.5790606,
+  "lon": 3.1835748,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396235,
+  "lat": 50.5791195,
+  "lon": 3.1834972,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396238,
+  "lat": 50.5794309,
+  "lon": 3.1831018,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396241,
+  "lat": 50.5795224,
+  "lon": 3.1829234,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 404396244,
+  "lat": 50.5795256,
+  "lon": 3.1828761
+},
+{
+  "type": "node",
+  "id": 404396248,
+  "lat": 50.5795241,
+  "lon": 3.1828348,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404396250,
+  "lat": 50.5793530,
+  "lon": 3.1820489,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404454053,
+  "lat": 50.5778591,
+  "lon": 3.1846534,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404454055,
+  "lat": 50.5783340,
+  "lon": 3.1853944,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 404454058,
+  "lat": 50.5787401,
+  "lon": 3.1860864,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 405092458,
+  "lat": 50.5785318,
+  "lon": 3.1876143,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 405092460,
+  "lat": 50.5785476,
+  "lon": 3.1875095
+},
+{
+  "type": "node",
+  "id": 405092557,
+  "lat": 50.5838464,
+  "lon": 3.1862998
+},
+{
+  "type": "node",
+  "id": 406362297,
+  "lat": 50.5786644,
+  "lon": 3.1866611,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 406362509,
+  "lat": 50.5804463,
+  "lon": 3.1821346
+},
+{
+  "type": "node",
+  "id": 406362513,
+  "lat": 50.5807319,
+  "lon": 3.1826659
+},
+{
+  "type": "node",
+  "id": 406362514,
+  "lat": 50.5808208,
+  "lon": 3.1825650
+},
+{
+  "type": "node",
+  "id": 406362516,
+  "lat": 50.5812583,
+  "lon": 3.1824606
+},
+{
+  "type": "node",
+  "id": 406362519,
+  "lat": 50.5821649,
+  "lon": 3.1823874
+},
+{
+  "type": "node",
+  "id": 406362521,
+  "lat": 50.5824949,
+  "lon": 3.1824919
+},
+{
+  "type": "node",
+  "id": 406362522,
+  "lat": 50.5833138,
+  "lon": 3.1830438
+},
+{
+  "type": "node",
+  "id": 406362523,
+  "lat": 50.5838343,
+  "lon": 3.1833487
+},
+{
+  "type": "node",
+  "id": 406362793,
+  "lat": 50.5797651,
+  "lon": 3.1844804
+},
+{
+  "type": "node",
+  "id": 406362794,
+  "lat": 50.5807194,
+  "lon": 3.1846688
+},
+{
+  "type": "node",
+  "id": 406370640,
+  "lat": 50.5828112,
+  "lon": 3.1854557
+},
+{
+  "type": "node",
+  "id": 406370646,
+  "lat": 50.5841706,
+  "lon": 3.1834231
+},
+{
+  "type": "node",
+  "id": 408456009,
+  "lat": 50.5803718,
+  "lon": 3.1845848
+},
+{
+  "type": "node",
+  "id": 408456010,
+  "lat": 50.5820567,
+  "lon": 3.1849314
+},
+{
+  "type": "node",
+  "id": 408456011,
+  "lat": 50.5829839,
+  "lon": 3.1851409
+},
+{
+  "type": "node",
+  "id": 408456013,
+  "lat": 50.5832628,
+  "lon": 3.1852912
+},
+{
+  "type": "node",
+  "id": 408456014,
+  "lat": 50.5840163,
+  "lon": 3.1857868
+},
+{
+  "type": "node",
+  "id": 408456348,
+  "lat": 50.5803602,
+  "lon": 3.1828356
+},
+{
+  "type": "node",
+  "id": 408456349,
+  "lat": 50.5805206,
+  "lon": 3.1826630
+},
+{
+  "type": "node",
+  "id": 408456350,
+  "lat": 50.5804222,
+  "lon": 3.1829294
+},
+{
+  "type": "node",
+  "id": 408479354,
+  "lat": 50.5792522,
+  "lon": 3.1816322,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479366,
+  "lat": 50.5804581,
+  "lon": 3.1758099,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479367,
+  "lat": 50.5805704,
+  "lon": 3.1757427,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479368,
+  "lat": 50.5807657,
+  "lon": 3.1757193,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479369,
+  "lat": 50.5810193,
+  "lon": 3.1758837,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479370,
+  "lat": 50.5810148,
+  "lon": 3.1759413,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479371,
+  "lat": 50.5810223,
+  "lon": 3.1759982,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479372,
+  "lat": 50.5810408,
+  "lon": 3.1760484,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479373,
+  "lat": 50.5810686,
+  "lon": 3.1760866,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479374,
+  "lat": 50.5811026,
+  "lon": 3.1761089,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479376,
+  "lat": 50.5811394,
+  "lon": 3.1761129,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479377,
+  "lat": 50.5812416,
+  "lon": 3.1759608,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479379,
+  "lat": 50.5812409,
+  "lon": 3.1759006,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479380,
+  "lat": 50.5812275,
+  "lon": 3.1758441,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479383,
+  "lat": 50.5812031,
+  "lon": 3.1757978,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479384,
+  "lat": 50.5811704,
+  "lon": 3.1757668,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479386,
+  "lat": 50.5811329,
+  "lon": 3.1757546,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408479388,
+  "lat": 50.5810950,
+  "lon": 3.1757625,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480513,
+  "lat": 50.5799799,
+  "lon": 3.1788756
+},
+{
+  "type": "node",
+  "id": 408480514,
+  "lat": 50.5801531,
+  "lon": 3.1786788
+},
+{
+  "type": "node",
+  "id": 408480515,
+  "lat": 50.5803577,
+  "lon": 3.1783873
+},
+{
+  "type": "node",
+  "id": 408480516,
+  "lat": 50.5805197,
+  "lon": 3.1781551,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480517,
+  "lat": 50.5807933,
+  "lon": 3.1778755,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480518,
+  "lat": 50.5809433,
+  "lon": 3.1777645,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480519,
+  "lat": 50.5810989,
+  "lon": 3.1776352,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480520,
+  "lat": 50.5811693,
+  "lon": 3.1775677,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480521,
+  "lat": 50.5812588,
+  "lon": 3.1774018,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480522,
+  "lat": 50.5813007,
+  "lon": 3.1771576,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480523,
+  "lat": 50.5813143,
+  "lon": 3.1769444,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480526,
+  "lat": 50.5813371,
+  "lon": 3.1765592,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480529,
+  "lat": 50.5813675,
+  "lon": 3.1763256,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408480531,
+  "lat": 50.5813861,
+  "lon": 3.1762364,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730170,
+  "lat": 50.5813212,
+  "lon": 3.1761115,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730171,
+  "lat": 50.5813495,
+  "lon": 3.1761578,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730172,
+  "lat": 50.5817287,
+  "lon": 3.1765509,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730173,
+  "lat": 50.5819985,
+  "lon": 3.1767555,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730174,
+  "lat": 50.5825190,
+  "lon": 3.1770433,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730175,
+  "lat": 50.5826494,
+  "lon": 3.1770996,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730176,
+  "lat": 50.5827722,
+  "lon": 3.1771194,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730177,
+  "lat": 50.5828605,
+  "lon": 3.1770538,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730178,
+  "lat": 50.5828815,
+  "lon": 3.1770162,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730179,
+  "lat": 50.5830509,
+  "lon": 3.1766386,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730180,
+  "lat": 50.5832252,
+  "lon": 3.1763023,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730181,
+  "lat": 50.5834896,
+  "lon": 3.1760468,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730182,
+  "lat": 50.5835203,
+  "lon": 3.1760497,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408730183,
+  "lat": 50.5837398,
+  "lon": 3.1762369,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738585,
+  "lat": 50.5772719,
+  "lon": 3.1795581,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738586,
+  "lat": 50.5765052,
+  "lon": 3.1800086,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738587,
+  "lat": 50.5762927,
+  "lon": 3.1801191,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738588,
+  "lat": 50.5761093,
+  "lon": 3.1802398,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738589,
+  "lat": 50.5756671,
+  "lon": 3.1806171,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738590,
+  "lat": 50.5744255,
+  "lon": 3.1812841,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738591,
+  "lat": 50.5743706,
+  "lon": 3.1813055,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738592,
+  "lat": 50.5739486,
+  "lon": 3.1813610,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738593,
+  "lat": 50.5738587,
+  "lon": 3.1813889,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738594,
+  "lat": 50.5737243,
+  "lon": 3.1815445,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738595,
+  "lat": 50.5734805,
+  "lon": 3.1819986,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738596,
+  "lat": 50.5734472,
+  "lon": 3.1820515,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738597,
+  "lat": 50.5725990,
+  "lon": 3.1825592,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738598,
+  "lat": 50.5724193,
+  "lon": 3.1826221,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738599,
+  "lat": 50.5717052,
+  "lon": 3.1826309,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738600,
+  "lat": 50.5708798,
+  "lon": 3.1822167,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738601,
+  "lat": 50.5707629,
+  "lon": 3.1822348,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738602,
+  "lat": 50.5704825,
+  "lon": 3.1825487,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738603,
+  "lat": 50.5704619,
+  "lon": 3.1825737,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738604,
+  "lat": 50.5704395,
+  "lon": 3.1825917,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738605,
+  "lat": 50.5703895,
+  "lon": 3.1826020,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738606,
+  "lat": 50.5700734,
+  "lon": 3.1825580,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738607,
+  "lat": 50.5692448,
+  "lon": 3.1820955,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738608,
+  "lat": 50.5683629,
+  "lon": 3.1817528,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738609,
+  "lat": 50.5680741,
+  "lon": 3.1815670,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738610,
+  "lat": 50.5679770,
+  "lon": 3.1814579,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738615,
+  "lat": 50.5767689,
+  "lon": 3.1760609,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738616,
+  "lat": 50.5763673,
+  "lon": 3.1763417,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738617,
+  "lat": 50.5762490,
+  "lon": 3.1764997,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738618,
+  "lat": 50.5760426,
+  "lon": 3.1773381,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738619,
+  "lat": 50.5760043,
+  "lon": 3.1776925,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408738620,
+  "lat": 50.5760432,
+  "lon": 3.1782063,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740462,
+  "lat": 50.5754454,
+  "lon": 3.1807641,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740463,
+  "lat": 50.5728341,
+  "lon": 3.1812788,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740464,
+  "lat": 50.5720373,
+  "lon": 3.1814034,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740465,
+  "lat": 50.5711603,
+  "lon": 3.1809500,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740466,
+  "lat": 50.5711050,
+  "lon": 3.1811437,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740467,
+  "lat": 50.5698625,
+  "lon": 3.1809409,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740468,
+  "lat": 50.5693666,
+  "lon": 3.1807355,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740469,
+  "lat": 50.5681383,
+  "lon": 3.1801053,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740470,
+  "lat": 50.5728851,
+  "lon": 3.1824270,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740472,
+  "lat": 50.5747670,
+  "lon": 3.1825939,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740473,
+  "lat": 50.5736468,
+  "lon": 3.1834110,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740474,
+  "lat": 50.5741012,
+  "lon": 3.1830649,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408740475,
+  "lat": 50.5749039,
+  "lon": 3.1825235,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408741286,
+  "lat": 50.5793078,
+  "lon": 3.1818469
+},
+{
+  "type": "node",
+  "id": 408741287,
+  "lat": 50.5826411,
+  "lon": 3.1803571
+},
+{
+  "type": "node",
+  "id": 408741288,
+  "lat": 50.5827730,
+  "lon": 3.1803786
+},
+{
+  "type": "node",
+  "id": 408741289,
+  "lat": 50.5851966,
+  "lon": 3.1824772
+},
+{
+  "type": "node",
+  "id": 408746738,
+  "lat": 50.5777785,
+  "lon": 3.1785662,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746739,
+  "lat": 50.5776232,
+  "lon": 3.1785403,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746740,
+  "lat": 50.5775528,
+  "lon": 3.1785125,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746741,
+  "lat": 50.5774300,
+  "lon": 3.1784165,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746742,
+  "lat": 50.5773333,
+  "lon": 3.1782787,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746743,
+  "lat": 50.5773033,
+  "lon": 3.1781875,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746744,
+  "lat": 50.5772233,
+  "lon": 3.1777934,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746745,
+  "lat": 50.5771941,
+  "lon": 3.1775637,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746746,
+  "lat": 50.5771554,
+  "lon": 3.1772921,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746747,
+  "lat": 50.5770250,
+  "lon": 3.1768502,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746749,
+  "lat": 50.5761719,
+  "lon": 3.1741709,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746750,
+  "lat": 50.5759655,
+  "lon": 3.1736648,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746751,
+  "lat": 50.5757859,
+  "lon": 3.1734304,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746753,
+  "lat": 50.5747081,
+  "lon": 3.1724561,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746754,
+  "lat": 50.5744609,
+  "lon": 3.1721957,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746755,
+  "lat": 50.5739327,
+  "lon": 3.1716299,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746756,
+  "lat": 50.5734688,
+  "lon": 3.1711305,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746757,
+  "lat": 50.5729493,
+  "lon": 3.1705809,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746760,
+  "lat": 50.5697461,
+  "lon": 3.1688729,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746763,
+  "lat": 50.5731901,
+  "lon": 3.1822824,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408746765,
+  "lat": 50.5730446,
+  "lon": 3.1823562,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749534,
+  "lat": 50.5701428,
+  "lon": 3.1692957,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749535,
+  "lat": 50.5699989,
+  "lon": 3.1696016,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749536,
+  "lat": 50.5695808,
+  "lon": 3.1704814,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "traffic_calming": "table"
+  }
+},
+{
+  "type": "node",
+  "id": 408749537,
+  "lat": 50.5692546,
+  "lon": 3.1711763,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "traffic_calming": "table"
+  }
+},
+{
+  "type": "node",
+  "id": 408749538,
+  "lat": 50.5677932,
+  "lon": 3.1773141,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 408749539,
+  "lat": 50.5673706,
+  "lon": 3.1790441,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749540,
+  "lat": 50.5674019,
+  "lon": 3.1792425,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749541,
+  "lat": 50.5678423,
+  "lon": 3.1794855,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749542,
+  "lat": 50.5679936,
+  "lon": 3.1796257,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749543,
+  "lat": 50.5680511,
+  "lon": 3.1797372,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408749546,
+  "lat": 50.5677648,
+  "lon": 3.1812321,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758607,
+  "lat": 50.5746267,
+  "lon": 3.1718626,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758608,
+  "lat": 50.5760684,
+  "lon": 3.1701360,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758609,
+  "lat": 50.5769289,
+  "lon": 3.1677659,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758610,
+  "lat": 50.5772995,
+  "lon": 3.1668117,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758611,
+  "lat": 50.5780477,
+  "lon": 3.1652204,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758612,
+  "lat": 50.5784639,
+  "lon": 3.1643101,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758613,
+  "lat": 50.5795180,
+  "lon": 3.1648999,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758614,
+  "lat": 50.5806737,
+  "lon": 3.1655155,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758615,
+  "lat": 50.5825832,
+  "lon": 3.1670457,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758616,
+  "lat": 50.5836591,
+  "lon": 3.1680138,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758617,
+  "lat": 50.5804071,
+  "lon": 3.1758556,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758618,
+  "lat": 50.5800867,
+  "lon": 3.1753978,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 408758619,
+  "lat": 50.5761381,
+  "lon": 3.1700084,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154548,
+  "lat": 50.5838829,
+  "lon": 3.1764339
+},
+{
+  "type": "node",
+  "id": 409154549,
+  "lat": 50.5810286,
+  "lon": 3.1807518
+},
+{
+  "type": "node",
+  "id": 409154550,
+  "lat": 50.5811106,
+  "lon": 3.1810463
+},
+{
+  "type": "node",
+  "id": 409154551,
+  "lat": 50.5817345,
+  "lon": 3.1720486,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154552,
+  "lat": 50.5810057,
+  "lon": 3.1714982,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154553,
+  "lat": 50.5805991,
+  "lon": 3.1726259,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154554,
+  "lat": 50.5821667,
+  "lon": 3.1740085,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154555,
+  "lat": 50.5812434,
+  "lon": 3.1716873,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154556,
+  "lat": 50.5812150,
+  "lon": 3.1731574,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154710,
+  "lat": 50.5814679,
+  "lon": 3.1754939,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154711,
+  "lat": 50.5817668,
+  "lon": 3.1748611,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154712,
+  "lat": 50.5823640,
+  "lon": 3.1735914,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 409154713,
+  "lat": 50.5828725,
+  "lon": 3.1725092,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 415995658,
+  "lat": 50.5831061,
+  "lon": 3.1720490,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995659,
+  "lat": 50.5832842,
+  "lon": 3.1716769,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995661,
+  "lat": 50.5824600,
+  "lon": 3.1712318,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995825,
+  "lat": 50.5812314,
+  "lon": 3.1693285,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995826,
+  "lat": 50.5813075,
+  "lon": 3.1693262,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995827,
+  "lat": 50.5813668,
+  "lon": 3.1693313,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995828,
+  "lat": 50.5814301,
+  "lon": 3.1693532,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995829,
+  "lat": 50.5814957,
+  "lon": 3.1693929,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995830,
+  "lat": 50.5816549,
+  "lon": 3.1695460,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 415995831,
+  "lat": 50.5827319,
+  "lon": 3.1709422,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000187,
+  "lat": 50.5827969,
+  "lon": 3.1685715,
+  "tags": {
+    "highway": "turning_circle",
+    "noexit": "yes",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000188,
+  "lat": 50.5831061,
+  "lon": 3.1688844,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000189,
+  "lat": 50.5831332,
+  "lon": 3.1689107,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000190,
+  "lat": 50.5832565,
+  "lon": 3.1689525,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000191,
+  "lat": 50.5833099,
+  "lon": 3.1689309,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000192,
+  "lat": 50.5834039,
+  "lon": 3.1688621,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000193,
+  "lat": 50.5834369,
+  "lon": 3.1688465,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000194,
+  "lat": 50.5835280,
+  "lon": 3.1688407,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000195,
+  "lat": 50.5835933,
+  "lon": 3.1688643,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000196,
+  "lat": 50.5836515,
+  "lon": 3.1689027,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000197,
+  "lat": 50.5836772,
+  "lon": 3.1689314,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000198,
+  "lat": 50.5838304,
+  "lon": 3.1692816,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000199,
+  "lat": 50.5839009,
+  "lon": 3.1693934,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000200,
+  "lat": 50.5839601,
+  "lon": 3.1694459,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000201,
+  "lat": 50.5840863,
+  "lon": 3.1695345,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000202,
+  "lat": 50.5841127,
+  "lon": 3.1695565,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416000203,
+  "lat": 50.5842240,
+  "lon": 3.1696925,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008"
+  }
+},
+{
+  "type": "node",
+  "id": 416336464,
+  "lat": 50.5849298,
+  "lon": 3.1679417,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336465,
+  "lat": 50.5846403,
+  "lon": 3.1678310,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336466,
+  "lat": 50.5843744,
+  "lon": 3.1677844,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336468,
+  "lat": 50.5828760,
+  "lon": 3.1682892,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336469,
+  "lat": 50.5815058,
+  "lon": 3.1689860,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336470,
+  "lat": 50.5813507,
+  "lon": 3.1690853,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336471,
+  "lat": 50.5812950,
+  "lon": 3.1691391,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336472,
+  "lat": 50.5809091,
+  "lon": 3.1693602,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336473,
+  "lat": 50.5802109,
+  "lon": 3.1693715,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336474,
+  "lat": 50.5800715,
+  "lon": 3.1693498,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336475,
+  "lat": 50.5797530,
+  "lon": 3.1692468,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336476,
+  "lat": 50.5787963,
+  "lon": 3.1686244,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336477,
+  "lat": 50.5781466,
+  "lon": 3.1683118,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336479,
+  "lat": 50.5806050,
+  "lon": 3.1693617,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416336521,
+  "lat": 50.5841893,
+  "lon": 3.1677995,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350269,
+  "lat": 50.5846141,
+  "lon": 3.1591169
+},
+{
+  "type": "node",
+  "id": 416350317,
+  "lat": 50.5715090,
+  "lon": 3.1632726
+},
+{
+  "type": "node",
+  "id": 416350318,
+  "lat": 50.5715316,
+  "lon": 3.1633966
+},
+{
+  "type": "node",
+  "id": 416350319,
+  "lat": 50.5715746,
+  "lon": 3.1636032
+},
+{
+  "type": "node",
+  "id": 416350320,
+  "lat": 50.5715907,
+  "lon": 3.1637152
+},
+{
+  "type": "node",
+  "id": 416350321,
+  "lat": 50.5715946,
+  "lon": 3.1638117
+},
+{
+  "type": "node",
+  "id": 416350322,
+  "lat": 50.5715588,
+  "lon": 3.1639854
+},
+{
+  "type": "node",
+  "id": 416350343,
+  "lat": 50.5714988,
+  "lon": 3.1640873
+},
+{
+  "type": "node",
+  "id": 416350344,
+  "lat": 50.5714381,
+  "lon": 3.1641396
+},
+{
+  "type": "node",
+  "id": 416350345,
+  "lat": 50.5713699,
+  "lon": 3.1641775
+},
+{
+  "type": "node",
+  "id": 416350346,
+  "lat": 50.5712622,
+  "lon": 3.1642144
+},
+{
+  "type": "node",
+  "id": 416350347,
+  "lat": 50.5709688,
+  "lon": 3.1643227
+},
+{
+  "type": "node",
+  "id": 416350348,
+  "lat": 50.5708138,
+  "lon": 3.1643790
+},
+{
+  "type": "node",
+  "id": 416350349,
+  "lat": 50.5707345,
+  "lon": 3.1644249
+},
+{
+  "type": "node",
+  "id": 416350350,
+  "lat": 50.5706502,
+  "lon": 3.1644880
+},
+{
+  "type": "node",
+  "id": 416350351,
+  "lat": 50.5705133,
+  "lon": 3.1646313
+},
+{
+  "type": "node",
+  "id": 416350352,
+  "lat": 50.5700590,
+  "lon": 3.1653600
+},
+{
+  "type": "node",
+  "id": 416350353,
+  "lat": 50.5697832,
+  "lon": 3.1658534
+},
+{
+  "type": "node",
+  "id": 416350354,
+  "lat": 50.5697290,
+  "lon": 3.1659314
+},
+{
+  "type": "node",
+  "id": 416350355,
+  "lat": 50.5696618,
+  "lon": 3.1659711
+},
+{
+  "type": "node",
+  "id": 419001229,
+  "lat": 50.5846768,
+  "lon": 3.1748487,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419001232,
+  "lat": 50.5838526,
+  "lon": 3.1763872,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419277592,
+  "lat": 50.5831262,
+  "lon": 3.1720080,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386278,
+  "lat": 50.5695630,
+  "lon": 3.1685799,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386280,
+  "lat": 50.5688779,
+  "lon": 3.1674970,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386282,
+  "lat": 50.5685166,
+  "lon": 3.1668145
+},
+{
+  "type": "node",
+  "id": 419386286,
+  "lat": 50.5679850,
+  "lon": 3.1658283,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386397,
+  "lat": 50.5690720,
+  "lon": 3.1651114,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386400,
+  "lat": 50.5683968,
+  "lon": 3.1665734,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419386407,
+  "lat": 50.5695870,
+  "lon": 3.1659293,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 419606550,
+  "lat": 50.5675199,
+  "lon": 3.1651415,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "traffic_calming": "table"
+  }
+},
+{
+  "type": "node",
+  "id": 552550032,
+  "lat": 50.5697581,
+  "lon": 3.1719880
+},
+{
+  "type": "node",
+  "id": 1715079547,
+  "lat": 50.5727867,
+  "lon": 3.1811835
+},
+{
+  "type": "node",
+  "id": 1715079568,
+  "lat": 50.5723121,
+  "lon": 3.1701590
+},
+{
+  "type": "node",
+  "id": 1715079602,
+  "lat": 50.5740167,
+  "lon": 3.1813485
+},
+{
+  "type": "node",
+  "id": 1715079609,
+  "lat": 50.5723510,
+  "lon": 3.1698314
+},
+{
+  "type": "node",
+  "id": 1715079643,
+  "lat": 50.5737911,
+  "lon": 3.1814465
+},
+{
+  "type": "node",
+  "id": 1715079667,
+  "lat": 50.5704064,
+  "lon": 3.1687115
+},
+{
+  "type": "node",
+  "id": 1715079669,
+  "lat": 50.5727189,
+  "lon": 3.1811370
+},
+{
+  "type": "node",
+  "id": 1715079671,
+  "lat": 50.5708577,
+  "lon": 3.1678659
+},
+{
+  "type": "node",
+  "id": 1715079696,
+  "lat": 50.5720231,
+  "lon": 3.1694559
+},
+{
+  "type": "node",
+  "id": 1715079700,
+  "lat": 50.5713431,
+  "lon": 3.1677909
+},
+{
+  "type": "node",
+  "id": 1715079764,
+  "lat": 50.5726159,
+  "lon": 3.1699955
+},
+{
+  "type": "node",
+  "id": 1715079786,
+  "lat": 50.5716321,
+  "lon": 3.1685444
+},
+{
+  "type": "node",
+  "id": 1715079787,
+  "lat": 50.5709781,
+  "lon": 3.1677353
+},
+{
+  "type": "node",
+  "id": 1715079794,
+  "lat": 50.5725195,
+  "lon": 3.1825928
+},
+{
+  "type": "node",
+  "id": 1715079800,
+  "lat": 50.5731014,
+  "lon": 3.1704544
+},
+{
+  "type": "node",
+  "id": 1715079812,
+  "lat": 50.5728730,
+  "lon": 3.1705060
+},
+{
+  "type": "node",
+  "id": 1715079846,
+  "lat": 50.5701944,
+  "lon": 3.1691474
+},
+{
+  "type": "node",
+  "id": 1715079852,
+  "lat": 50.5720665,
+  "lon": 3.1696120
+},
+{
+  "type": "node",
+  "id": 1715079863,
+  "lat": 50.5720452,
+  "lon": 3.1695524
+},
+{
+  "type": "node",
+  "id": 1715079864,
+  "lat": 50.5727540,
+  "lon": 3.1811524
+},
+{
+  "type": "node",
+  "id": 1715079871,
+  "lat": 50.5720985,
+  "lon": 3.1813850
+},
+{
+  "type": "node",
+  "id": 1715079893,
+  "lat": 50.5728126,
+  "lon": 3.1812096
+},
+{
+  "type": "node",
+  "id": 1715079895,
+  "lat": 50.5735162,
+  "lon": 3.1819350
+},
+{
+  "type": "node",
+  "id": 1715079909,
+  "lat": 50.5718706,
+  "lon": 3.1686571
+},
+{
+  "type": "node",
+  "id": 1715079913,
+  "lat": 50.5719098,
+  "lon": 3.1688422
+},
+{
+  "type": "node",
+  "id": 1715079924,
+  "lat": 50.5713894,
+  "lon": 3.1678497
+},
+{
+  "type": "node",
+  "id": 1715079930,
+  "lat": 50.5700580,
+  "lon": 3.1694813
+},
+{
+  "type": "node",
+  "id": 1715079952,
+  "lat": 50.5719445,
+  "lon": 3.1813953
+},
+{
+  "type": "node",
+  "id": 1715079954,
+  "lat": 50.5709288,
+  "lon": 3.1677740
+},
+{
+  "type": "node",
+  "id": 1715079955,
+  "lat": 50.5717396,
+  "lon": 3.1690873
+},
+{
+  "type": "node",
+  "id": 1715079995,
+  "lat": 50.5728746,
+  "lon": 3.1822800
+},
+{
+  "type": "node",
+  "id": 1715080014,
+  "lat": 50.5712999,
+  "lon": 3.1677491
+},
+{
+  "type": "node",
+  "id": 1715080016,
+  "lat": 50.5733973,
+  "lon": 3.1821088
+},
+{
+  "type": "node",
+  "id": 1715080018,
+  "lat": 50.5708228,
+  "lon": 3.1679238
+},
+{
+  "type": "node",
+  "id": 1715080025,
+  "lat": 50.5721006,
+  "lon": 3.1696683
+},
+{
+  "type": "node",
+  "id": 1715080026,
+  "lat": 50.5725791,
+  "lon": 3.1702883
+},
+{
+  "type": "node",
+  "id": 1715080036,
+  "lat": 50.5728075,
+  "lon": 3.1701431
+},
+{
+  "type": "node",
+  "id": 1715080037,
+  "lat": 50.5718311,
+  "lon": 3.1826318,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 1715080039,
+  "lat": 50.5730776,
+  "lon": 3.1704186
+},
+{
+  "type": "node",
+  "id": 1715080046,
+  "lat": 50.5717639,
+  "lon": 3.1679423
+},
+{
+  "type": "node",
+  "id": 1715080104,
+  "lat": 50.5721870,
+  "lon": 3.1813611
+},
+{
+  "type": "node",
+  "id": 1715080105,
+  "lat": 50.5721372,
+  "lon": 3.1697053,
+  "tags": {
+    "barrier": "gate",
+    "source": "BDOrtho IGN"
+  }
+},
+{
+  "type": "node",
+  "id": 1715080108,
+  "lat": 50.5710201,
+  "lon": 3.1677055
+},
+{
+  "type": "node",
+  "id": 1715080128,
+  "lat": 50.5714740,
+  "lon": 3.1825228
+},
+{
+  "type": "node",
+  "id": 1715080156,
+  "lat": 50.5711058,
+  "lon": 3.1676823
+},
+{
+  "type": "node",
+  "id": 1715080159,
+  "lat": 50.5717484,
+  "lon": 3.1826324
+},
+{
+  "type": "node",
+  "id": 1715080164,
+  "lat": 50.5718365,
+  "lon": 3.1684337
+},
+{
+  "type": "node",
+  "id": 1715080190,
+  "lat": 50.5718664,
+  "lon": 3.1813777
+},
+{
+  "type": "node",
+  "id": 1715080191,
+  "lat": 50.5722606,
+  "lon": 3.1813311
+},
+{
+  "type": "node",
+  "id": 1715080195,
+  "lat": 50.5724605,
+  "lon": 3.1702244
+},
+{
+  "type": "node",
+  "id": 1715080223,
+  "lat": 50.5718110,
+  "lon": 3.1695637
+},
+{
+  "type": "node",
+  "id": 1715080245,
+  "lat": 50.5714370,
+  "lon": 3.1679287
+},
+{
+  "type": "node",
+  "id": 1715080250,
+  "lat": 50.5716783,
+  "lon": 3.1687301,
+  "tags": {
+    "barrier": "gate",
+    "source": "BDOrtho IGN"
+  }
+},
+{
+  "type": "node",
+  "id": 1715080273,
+  "lat": 50.5717565,
+  "lon": 3.1691774
+},
+{
+  "type": "node",
+  "id": 1715080309,
+  "lat": 50.5703165,
+  "lon": 3.1688823
+},
+{
+  "type": "node",
+  "id": 1715080326,
+  "lat": 50.5714773,
+  "lon": 3.1680132
+},
+{
+  "type": "node",
+  "id": 1715080368,
+  "lat": 50.5712434,
+  "lon": 3.1677096
+},
+{
+  "type": "node",
+  "id": 1715080394,
+  "lat": 50.5731306,
+  "lon": 3.1705640
+},
+{
+  "type": "node",
+  "id": 1715080406,
+  "lat": 50.5731193,
+  "lon": 3.1705009
+},
+{
+  "type": "node",
+  "id": 1715080412,
+  "lat": 50.5711944,
+  "lon": 3.1676931
+},
+{
+  "type": "node",
+  "id": 1715080426,
+  "lat": 50.5730979,
+  "lon": 3.1707339
+},
+{
+  "type": "node",
+  "id": 1715080459,
+  "lat": 50.5731131,
+  "lon": 3.1706921,
+  "tags": {
+    "direction": "forward",
+    "highway": "give_way",
+    "source": "BDOrtho IGN"
+  }
+},
+{
+  "type": "node",
+  "id": 1715080463,
+  "lat": 50.5716509,
+  "lon": 3.1686142
+},
+{
+  "type": "node",
+  "id": 1715080465,
+  "lat": 50.5726382,
+  "lon": 3.1703256
+},
+{
+  "type": "node",
+  "id": 1715080474,
+  "lat": 50.5702183,
+  "lon": 3.1690839
+},
+{
+  "type": "node",
+  "id": 1715080477,
+  "lat": 50.5733540,
+  "lon": 3.1821513
+},
+{
+  "type": "node",
+  "id": 1715080493,
+  "lat": 50.5731289,
+  "lon": 3.1706285
+},
+{
+  "type": "node",
+  "id": 2583527858,
+  "lat": 50.5684527,
+  "lon": 3.1666844,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 2583527863,
+  "lat": 50.5690815,
+  "lon": 3.1678265,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "zebra",
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 2583527865,
+  "lat": 50.5686410,
+  "lon": 3.1670624,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:markings": "zebra",
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 2583693551,
+  "lat": 50.5716468,
+  "lon": 3.1698958
+},
+{
+  "type": "node",
+  "id": 2583693554,
+  "lat": 50.5708241,
+  "lon": 3.1695716
+},
+{
+  "type": "node",
+  "id": 2639793329,
+  "lat": 50.5701334,
+  "lon": 3.1693173,
+  "tags": {
+    "direction": "backward",
+    "highway": "stop"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939353,
+  "lat": 50.5782018,
+  "lon": 3.1887635,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "crossing:markings": "zebra",
+    "highway": "crossing",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939359,
+  "lat": 50.5785630,
+  "lon": 3.1874051,
+  "tags": {
+    "button_operated": "no",
+    "crossing": "traffic_signals",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "tactile_paving": "no",
+    "traffic_signals:sound": "no",
+    "traffic_signals:vibration": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939360,
+  "lat": 50.5786879,
+  "lon": 3.1864813,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939362,
+  "lat": 50.5789080,
+  "lon": 3.1846487,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939363,
+  "lat": 50.5789129,
+  "lon": 3.1844136,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939364,
+  "lat": 50.5789577,
+  "lon": 3.1845256,
+  "tags": {
+    "crossing": "uncontrolled",
+    "highway": "crossing",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2643939365,
+  "lat": 50.5789194,
+  "lon": 3.1840148,
+  "tags": {
+    "crossing": "uncontrolled",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2645332435,
+  "lat": 50.5786047,
+  "lon": 3.1871164,
+  "tags": {
+    "bus": "yes",
+    "name": "Bouvines – Église",
+    "public_transport": "stop_position",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2907238920,
+  "lat": 50.5786393,
+  "lon": 3.1777302,
+  "tags": {
+    "bus": "yes",
+    "name": "Tourne Bride",
+    "public_transport": "stop_position",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2907238921,
+  "lat": 50.5786219,
+  "lon": 3.1778754,
+  "tags": {
+    "bus": "yes",
+    "name": "Tourne Bride",
+    "public_transport": "stop_position",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 3358591730,
+  "lat": 50.5804026,
+  "lon": 3.1785399
+},
+{
+  "type": "node",
+  "id": 3358591731,
+  "lat": 50.5791602,
+  "lon": 3.1772383
+},
+{
+  "type": "node",
+  "id": 3358591732,
+  "lat": 50.5795546,
+  "lon": 3.1780256
+},
+{
+  "type": "node",
+  "id": 3358591733,
+  "lat": 50.5799172,
+  "lon": 3.1789314
+},
+{
+  "type": "node",
+  "id": 3358591734,
+  "lat": 50.5752273,
+  "lon": 3.1797825
+},
+{
+  "type": "node",
+  "id": 3358591735,
+  "lat": 50.5739290,
+  "lon": 3.1777995
+},
+{
+  "type": "node",
+  "id": 3358591736,
+  "lat": 50.5746924,
+  "lon": 3.1786635
+},
+{
+  "type": "node",
+  "id": 3358591737,
+  "lat": 50.5748921,
+  "lon": 3.1790075
+},
+{
+  "type": "node",
+  "id": 3358591738,
+  "lat": 50.5745103,
+  "lon": 3.1784045
+},
+{
+  "type": "node",
+  "id": 3358591739,
+  "lat": 50.5735264,
+  "lon": 3.1822538
+},
+{
+  "type": "node",
+  "id": 3358591740,
+  "lat": 50.5736457,
+  "lon": 3.1828371
+},
+{
+  "type": "node",
+  "id": 3358591741,
+  "lat": 50.5737625,
+  "lon": 3.1830487
+},
+{
+  "type": "node",
+  "id": 3358591742,
+  "lat": 50.5738416,
+  "lon": 3.1830803
+},
+{
+  "type": "node",
+  "id": 3358591743,
+  "lat": 50.5739559,
+  "lon": 3.1830487
+},
+{
+  "type": "node",
+  "id": 3358591744,
+  "lat": 50.5741505,
+  "lon": 3.1829300
+},
+{
+  "type": "node",
+  "id": 3358591745,
+  "lat": 50.5743125,
+  "lon": 3.1827699
+},
+{
+  "type": "node",
+  "id": 3358591746,
+  "lat": 50.5743916,
+  "lon": 3.1826769
+},
+{
+  "type": "node",
+  "id": 3358591747,
+  "lat": 50.5744531,
+  "lon": 3.1826216
+},
+{
+  "type": "node",
+  "id": 3358591748,
+  "lat": 50.5744770,
+  "lon": 3.1825900
+},
+{
+  "type": "node",
+  "id": 3358591749,
+  "lat": 50.5744732,
+  "lon": 3.1825089
+},
+{
+  "type": "node",
+  "id": 3358591750,
+  "lat": 50.5742974,
+  "lon": 3.1820838
+},
+{
+  "type": "node",
+  "id": 3358591751,
+  "lat": 50.5742648,
+  "lon": 3.1819790
+},
+{
+  "type": "node",
+  "id": 3358591752,
+  "lat": 50.5742510,
+  "lon": 3.1817002
+},
+{
+  "type": "node",
+  "id": 3358591753,
+  "lat": 50.5742296,
+  "lon": 3.1816073
+},
+{
+  "type": "node",
+  "id": 3358591754,
+  "lat": 50.5741970,
+  "lon": 3.1815460
+},
+{
+  "type": "node",
+  "id": 3358591755,
+  "lat": 50.5740877,
+  "lon": 3.1815421
+},
+{
+  "type": "node",
+  "id": 3358591756,
+  "lat": 50.5739408,
+  "lon": 3.1816132
+},
+{
+  "type": "node",
+  "id": 3358591757,
+  "lat": 50.5738805,
+  "lon": 3.1816844
+},
+{
+  "type": "node",
+  "id": 3358591758,
+  "lat": 50.5736457,
+  "lon": 3.1819157
+},
+{
+  "type": "node",
+  "id": 3358591759,
+  "lat": 50.5737387,
+  "lon": 3.1818030
+},
+{
+  "type": "node",
+  "id": 3358591760,
+  "lat": 50.5743527,
+  "lon": 3.1822657
+},
+{
+  "type": "node",
+  "id": 3358591765,
+  "lat": 50.5743742,
+  "lon": 3.1814633
+},
+{
+  "type": "node",
+  "id": 3358591766,
+  "lat": 50.5743225,
+  "lon": 3.1820008
+},
+{
+  "type": "node",
+  "id": 3358591767,
+  "lat": 50.5743677,
+  "lon": 3.1819296
+},
+{
+  "type": "node",
+  "id": 3358591768,
+  "lat": 50.5744493,
+  "lon": 3.1818900
+},
+{
+  "type": "node",
+  "id": 3358591769,
+  "lat": 50.5745767,
+  "lon": 3.1815236
+},
+{
+  "type": "node",
+  "id": 3358591770,
+  "lat": 50.5745347,
+  "lon": 3.1812378,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 4097733213,
+  "lat": 50.5673691,
+  "lon": 3.1791432
+},
+{
+  "type": "node",
+  "id": 4097733214,
+  "lat": 50.5674898,
+  "lon": 3.1793217
+},
+{
+  "type": "node",
+  "id": 4097735120,
+  "lat": 50.5682697,
+  "lon": 3.1817127
+},
+{
+  "type": "node",
+  "id": 4097735157,
+  "lat": 50.5761057,
+  "lon": 3.1698719
+},
+{
+  "type": "node",
+  "id": 4097735158,
+  "lat": 50.5761122,
+  "lon": 3.1697277
+},
+{
+  "type": "node",
+  "id": 4097735160,
+  "lat": 50.5762618,
+  "lon": 3.1701333
+},
+{
+  "type": "node",
+  "id": 4781795132,
+  "lat": 50.5759849,
+  "lon": 3.1817970
+},
+{
+  "type": "node",
+  "id": 4781795133,
+  "lat": 50.5757197,
+  "lon": 3.1805768
+},
+{
+  "type": "node",
+  "id": 4789895550,
+  "lat": 50.5843300,
+  "lon": 3.1592781
+},
+{
+  "type": "node",
+  "id": 4789895551,
+  "lat": 50.5831898,
+  "lon": 3.1617303
+},
+{
+  "type": "node",
+  "id": 4789895552,
+  "lat": 50.5830791,
+  "lon": 3.1619744
+},
+{
+  "type": "node",
+  "id": 4789895553,
+  "lat": 50.5830237,
+  "lon": 3.1620039
+},
+{
+  "type": "node",
+  "id": 4789895554,
+  "lat": 50.5828445,
+  "lon": 3.1618242
+},
+{
+  "type": "node",
+  "id": 4789895555,
+  "lat": 50.5827721,
+  "lon": 3.1617665
+},
+{
+  "type": "node",
+  "id": 4789895556,
+  "lat": 50.5827150,
+  "lon": 3.1617826
+},
+{
+  "type": "node",
+  "id": 4789895557,
+  "lat": 50.5826278,
+  "lon": 3.1619523
+},
+{
+  "type": "node",
+  "id": 4789895558,
+  "lat": 50.5808823,
+  "lon": 3.1656826
+},
+{
+  "type": "node",
+  "id": 4817324505,
+  "lat": 50.5683659,
+  "lon": 3.1749512
+},
+{
+  "type": "node",
+  "id": 4851113806,
+  "lat": 50.5785036,
+  "lon": 3.1878133
+},
+{
+  "type": "node",
+  "id": 4858385348,
+  "lat": 50.5729507,
+  "lon": 3.1702745
+},
+{
+  "type": "node",
+  "id": 4858385349,
+  "lat": 50.5708964,
+  "lon": 3.1678117
+},
+{
+  "type": "node",
+  "id": 4858385350,
+  "lat": 50.5710602,
+  "lon": 3.1676903
+},
+{
+  "type": "node",
+  "id": 4858385351,
+  "lat": 50.5711499,
+  "lon": 3.1676837
+},
+{
+  "type": "node",
+  "id": 4858385352,
+  "lat": 50.5703186,
+  "lon": 3.1693988
+},
+{
+  "type": "node",
+  "id": 4858385353,
+  "lat": 50.5704541,
+  "lon": 3.1694471
+},
+{
+  "type": "node",
+  "id": 4858385354,
+  "lat": 50.5696297,
+  "lon": 3.1659654
+},
+{
+  "type": "node",
+  "id": 4858385355,
+  "lat": 50.5696966,
+  "lon": 3.1659606
+},
+{
+  "type": "node",
+  "id": 4858385356,
+  "lat": 50.5704314,
+  "lon": 3.1647430
+},
+{
+  "type": "node",
+  "id": 4858385357,
+  "lat": 50.5705693,
+  "lon": 3.1645676
+},
+{
+  "type": "node",
+  "id": 4858385358,
+  "lat": 50.5709072,
+  "lon": 3.1643409
+},
+{
+  "type": "node",
+  "id": 5672664931,
+  "lat": 50.5831544,
+  "lon": 3.1719548,
+  "tags": {
+    "crossing": "marked",
+    "crossing:island": "yes",
+    "highway": "crossing",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5672664932,
+  "lat": 50.5817140,
+  "lon": 3.1749758,
+  "tags": {
+    "crossing": "marked",
+    "crossing:island": "no",
+    "highway": "crossing",
+    "kerb": "lowered",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5672664933,
+  "lat": 50.5801957,
+  "lon": 3.1760990
+},
+{
+  "type": "node",
+  "id": 5672664934,
+  "lat": 50.5779641,
+  "lon": 3.1790530
+},
+{
+  "type": "node",
+  "id": 6169290165,
+  "lat": 50.5784189,
+  "lon": 3.1883024
+},
+{
+  "type": "node",
+  "id": 6169291295,
+  "lat": 50.5812013,
+  "lon": 3.1847604
+},
+{
+  "type": "node",
+  "id": 6169291296,
+  "lat": 50.5804421,
+  "lon": 3.1835445
+},
+{
+  "type": "node",
+  "id": 6169291297,
+  "lat": 50.5803811,
+  "lon": 3.1843560
+},
+{
+  "type": "node",
+  "id": 6169291298,
+  "lat": 50.5806896,
+  "lon": 3.1826969
+},
+{
+  "type": "node",
+  "id": 6501456136,
+  "lat": 50.5690150,
+  "lon": 3.1677162
+},
+{
+  "type": "node",
+  "id": 6531783917,
+  "lat": 50.5812762,
+  "lon": 3.1820262
+},
+{
+  "type": "node",
+  "id": 6531783918,
+  "lat": 50.5812213,
+  "lon": 3.1816736
+},
+{
+  "type": "node",
+  "id": 6531783919,
+  "lat": 50.5811872,
+  "lon": 3.1816362
+},
+{
+  "type": "node",
+  "id": 6531783920,
+  "lat": 50.5811620,
+  "lon": 3.1816246
+},
+{
+  "type": "node",
+  "id": 6531783921,
+  "lat": 50.5811279,
+  "lon": 3.1816339
+},
+{
+  "type": "node",
+  "id": 6531783922,
+  "lat": 50.5810982,
+  "lon": 3.1816736
+},
+{
+  "type": "node",
+  "id": 6531783923,
+  "lat": 50.5810775,
+  "lon": 3.1817343
+},
+{
+  "type": "node",
+  "id": 6531783924,
+  "lat": 50.5811412,
+  "lon": 3.1820846
+},
+{
+  "type": "node",
+  "id": 6531783925,
+  "lat": 50.5811561,
+  "lon": 3.1821149
+},
+{
+  "type": "node",
+  "id": 6531783926,
+  "lat": 50.5811887,
+  "lon": 3.1821429
+},
+{
+  "type": "node",
+  "id": 6531783927,
+  "lat": 50.5812124,
+  "lon": 3.1821429
+},
+{
+  "type": "node",
+  "id": 6531783928,
+  "lat": 50.5812509,
+  "lon": 3.1821219
+},
+{
+  "type": "node",
+  "id": 6531783929,
+  "lat": 50.5812673,
+  "lon": 3.1820752
+},
+{
+  "type": "node",
+  "id": 6533084060,
+  "lat": 50.5675815,
+  "lon": 3.1652211
+},
+{
+  "type": "node",
+  "id": 6533084062,
+  "lat": 50.5676504,
+  "lon": 3.1653116
+},
+{
+  "type": "node",
+  "id": 6533084063,
+  "lat": 50.5677632,
+  "lon": 3.1654654
+},
+{
+  "type": "node",
+  "id": 6533084064,
+  "lat": 50.5678779,
+  "lon": 3.1656450
+},
+{
+  "type": "node",
+  "id": 6658123923,
+  "lat": 50.5783588,
+  "lon": 3.1884819
+},
+{
+  "type": "node",
+  "id": 6658123924,
+  "lat": 50.5784476,
+  "lon": 3.1881822
+},
+{
+  "type": "node",
+  "id": 6658123925,
+  "lat": 50.5788118,
+  "lon": 3.1855296
+},
+{
+  "type": "node",
+  "id": 6658123926,
+  "lat": 50.5793706,
+  "lon": 3.1845062
+},
+{
+  "type": "node",
+  "id": 6658123927,
+  "lat": 50.5789138,
+  "lon": 3.1841623
+},
+{
+  "type": "node",
+  "id": 6658123928,
+  "lat": 50.5789151,
+  "lon": 3.1840879
+},
+{
+  "type": "node",
+  "id": 6658123929,
+  "lat": 50.5787788,
+  "lon": 3.1840557
+},
+{
+  "type": "node",
+  "id": 6658123930,
+  "lat": 50.5789376,
+  "lon": 3.1838910
+},
+{
+  "type": "node",
+  "id": 6658123931,
+  "lat": 50.5789523,
+  "lon": 3.1838300
+},
+{
+  "type": "node",
+  "id": 6658123932,
+  "lat": 50.5790099,
+  "lon": 3.1836708
+},
+{
+  "type": "node",
+  "id": 6658123933,
+  "lat": 50.5793927,
+  "lon": 3.1831534
+},
+{
+  "type": "node",
+  "id": 6658123934,
+  "lat": 50.5794721,
+  "lon": 3.1830384
+},
+{
+  "type": "node",
+  "id": 6658123935,
+  "lat": 50.5794956,
+  "lon": 3.1830018
+},
+{
+  "type": "node",
+  "id": 6658123936,
+  "lat": 50.5795738,
+  "lon": 3.1828891,
+  "tags": {
+    "direction": "backward",
+    "highway": "give_way"
+  }
+},
+{
+  "type": "node",
+  "id": 6658123937,
+  "lat": 50.5796845,
+  "lon": 3.1829095
+},
+{
+  "type": "node",
+  "id": 6658123938,
+  "lat": 50.5797456,
+  "lon": 3.1829068
+},
+{
+  "type": "node",
+  "id": 6658123939,
+  "lat": 50.5800743,
+  "lon": 3.1828734
+},
+{
+  "type": "node",
+  "id": 6658123940,
+  "lat": 50.5803870,
+  "lon": 3.1839551
+},
+{
+  "type": "node",
+  "id": 6658123941,
+  "lat": 50.5803945,
+  "lon": 3.1838705
+},
+{
+  "type": "node",
+  "id": 6658123942,
+  "lat": 50.5804069,
+  "lon": 3.1837846
+},
+{
+  "type": "node",
+  "id": 6658123943,
+  "lat": 50.5804479,
+  "lon": 3.1834392
+},
+{
+  "type": "node",
+  "id": 6658123944,
+  "lat": 50.5804464,
+  "lon": 3.1833008
+},
+{
+  "type": "node",
+  "id": 6658123945,
+  "lat": 50.5806265,
+  "lon": 3.1827340
+},
+{
+  "type": "node",
+  "id": 6658123946,
+  "lat": 50.5804536,
+  "lon": 3.1828154
+},
+{
+  "type": "node",
+  "id": 6658123947,
+  "lat": 50.5805439,
+  "lon": 3.1827765
+},
+{
+  "type": "node",
+  "id": 6658123948,
+  "lat": 50.5804153,
+  "lon": 3.1828256
+},
+{
+  "type": "node",
+  "id": 6658123949,
+  "lat": 50.5795263,
+  "lon": 3.1818088
+},
+{
+  "type": "node",
+  "id": 6658123950,
+  "lat": 50.5792795,
+  "lon": 3.1817303
+},
+{
+  "type": "node",
+  "id": 6658123951,
+  "lat": 50.5792276,
+  "lon": 3.1815505
+},
+{
+  "type": "node",
+  "id": 6658123952,
+  "lat": 50.5791671,
+  "lon": 3.1813724
+},
+{
+  "type": "node",
+  "id": 6658123953,
+  "lat": 50.5790393,
+  "lon": 3.1810357
+},
+{
+  "type": "node",
+  "id": 6658123954,
+  "lat": 50.5772463,
+  "lon": 3.1779395
+},
+{
+  "type": "node",
+  "id": 6658123955,
+  "lat": 50.5772731,
+  "lon": 3.1780689
+},
+{
+  "type": "node",
+  "id": 6658123956,
+  "lat": 50.5773756,
+  "lon": 3.1783543
+},
+{
+  "type": "node",
+  "id": 6658123957,
+  "lat": 50.5774922,
+  "lon": 3.1784726
+},
+{
+  "type": "node",
+  "id": 6658123958,
+  "lat": 50.5777017,
+  "lon": 3.1785573
+},
+{
+  "type": "node",
+  "id": 6658123959,
+  "lat": 50.5789125,
+  "lon": 3.1774607
+},
+{
+  "type": "node",
+  "id": 6658123960,
+  "lat": 50.5785335,
+  "lon": 3.1778402
+},
+{
+  "type": "node",
+  "id": 6658123961,
+  "lat": 50.5784714,
+  "lon": 3.1779167
+},
+{
+  "type": "node",
+  "id": 6658123962,
+  "lat": 50.5784117,
+  "lon": 3.1779998
+},
+{
+  "type": "node",
+  "id": 6658123963,
+  "lat": 50.5783709,
+  "lon": 3.1780803
+},
+{
+  "type": "node",
+  "id": 6658123964,
+  "lat": 50.5783351,
+  "lon": 3.1781755
+},
+{
+  "type": "node",
+  "id": 6658123965,
+  "lat": 50.5783197,
+  "lon": 3.1782305,
+  "tags": {
+    "highway": "traffic_signals"
+  }
+},
+{
+  "type": "node",
+  "id": 6658123966,
+  "lat": 50.5782993,
+  "lon": 3.1783150
+},
+{
+  "type": "node",
+  "id": 6658123967,
+  "lat": 50.5782627,
+  "lon": 3.1785094
+},
+{
+  "type": "node",
+  "id": 6658123968,
+  "lat": 50.5782431,
+  "lon": 3.1786529,
+  "tags": {
+    "crossing": "traffic_signals",
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 6658123969,
+  "lat": 50.5782335,
+  "lon": 3.1787911
+},
+{
+  "type": "node",
+  "id": 6658123970,
+  "lat": 50.5782327,
+  "lon": 3.1788654
+},
+{
+  "type": "node",
+  "id": 6658123971,
+  "lat": 50.5782444,
+  "lon": 3.1790501
+},
+{
+  "type": "node",
+  "id": 6658123972,
+  "lat": 50.5782528,
+  "lon": 3.1791100
+},
+{
+  "type": "node",
+  "id": 6658123973,
+  "lat": 50.5782652,
+  "lon": 3.1791775
+},
+{
+  "type": "node",
+  "id": 6658123974,
+  "lat": 50.5782815,
+  "lon": 3.1792557
+},
+{
+  "type": "node",
+  "id": 6658123975,
+  "lat": 50.5783207,
+  "lon": 3.1794046
+},
+{
+  "type": "node",
+  "id": 6658123976,
+  "lat": 50.5783447,
+  "lon": 3.1794731
+},
+{
+  "type": "node",
+  "id": 6658123977,
+  "lat": 50.5783705,
+  "lon": 3.1795364
+},
+{
+  "type": "node",
+  "id": 6658123978,
+  "lat": 50.5785246,
+  "lon": 3.1798772
+},
+{
+  "type": "node",
+  "id": 6658123980,
+  "lat": 50.5787758,
+  "lon": 3.1803973
+},
+{
+  "type": "node",
+  "id": 6658123985,
+  "lat": 50.5785324,
+  "lon": 3.1797669
+},
+{
+  "type": "node",
+  "id": 6658123986,
+  "lat": 50.5784925,
+  "lon": 3.1796587
+},
+{
+  "type": "node",
+  "id": 6658123987,
+  "lat": 50.5784545,
+  "lon": 3.1795491
+},
+{
+  "type": "node",
+  "id": 6658123989,
+  "lat": 50.5786241,
+  "lon": 3.1800043
+},
+{
+  "type": "node",
+  "id": 6658123990,
+  "lat": 50.5783578,
+  "lon": 3.1792493
+},
+{
+  "type": "node",
+  "id": 6658123991,
+  "lat": 50.5783209,
+  "lon": 3.1790987
+},
+{
+  "type": "node",
+  "id": 6658123992,
+  "lat": 50.5783000,
+  "lon": 3.1789735,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 6658123993,
+  "lat": 50.5782928,
+  "lon": 3.1789052
+},
+{
+  "type": "node",
+  "id": 6658123994,
+  "lat": 50.5782900,
+  "lon": 3.1787885
+},
+{
+  "type": "node",
+  "id": 6658123995,
+  "lat": 50.5783000,
+  "lon": 3.1786707,
+  "tags": {
+    "crossing": "traffic_signals",
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 6658123997,
+  "lat": 50.5783412,
+  "lon": 3.1784282
+},
+{
+  "type": "node",
+  "id": 6658123998,
+  "lat": 50.5783670,
+  "lon": 3.1783177
+},
+{
+  "type": "node",
+  "id": 6658123999,
+  "lat": 50.5783942,
+  "lon": 3.1782162
+},
+{
+  "type": "node",
+  "id": 6658124000,
+  "lat": 50.5784272,
+  "lon": 3.1781395
+},
+{
+  "type": "node",
+  "id": 6658124001,
+  "lat": 50.5784644,
+  "lon": 3.1780696
+},
+{
+  "type": "node",
+  "id": 6658124002,
+  "lat": 50.5784988,
+  "lon": 3.1780177
+},
+{
+  "type": "node",
+  "id": 6658124003,
+  "lat": 50.5785504,
+  "lon": 3.1779568
+},
+{
+  "type": "node",
+  "id": 6658124004,
+  "lat": 50.5786891,
+  "lon": 3.1777996
+},
+{
+  "type": "node",
+  "id": 6658124005,
+  "lat": 50.5789184,
+  "lon": 3.1775418
+},
+{
+  "type": "node",
+  "id": 6658124006,
+  "lat": 50.5782373,
+  "lon": 3.1789905
+},
+{
+  "type": "node",
+  "id": 6658124007,
+  "lat": 50.5782803,
+  "lon": 3.1784128
+},
+{
+  "type": "node",
+  "id": 6658124008,
+  "lat": 50.5782292,
+  "lon": 3.1784052
+},
+{
+  "type": "node",
+  "id": 6658124009,
+  "lat": 50.5781527,
+  "lon": 3.1784165
+},
+{
+  "type": "node",
+  "id": 6658124010,
+  "lat": 50.5781096,
+  "lon": 3.1784337
+},
+{
+  "type": "node",
+  "id": 6658124011,
+  "lat": 50.5780004,
+  "lon": 3.1784778
+},
+{
+  "type": "node",
+  "id": 6658124012,
+  "lat": 50.5779259,
+  "lon": 3.1785139
+},
+{
+  "type": "node",
+  "id": 6658124013,
+  "lat": 50.5778629,
+  "lon": 3.1785410
+},
+{
+  "type": "node",
+  "id": 6658124014,
+  "lat": 50.5778571,
+  "lon": 3.1785613
+},
+{
+  "type": "node",
+  "id": 6658124015,
+  "lat": 50.5779331,
+  "lon": 3.1785545
+},
+{
+  "type": "node",
+  "id": 6658124016,
+  "lat": 50.5780190,
+  "lon": 3.1785455
+},
+{
+  "type": "node",
+  "id": 6658124017,
+  "lat": 50.5781035,
+  "lon": 3.1785410
+},
+{
+  "type": "node",
+  "id": 6658124018,
+  "lat": 50.5781562,
+  "lon": 3.1785439
+},
+{
+  "type": "node",
+  "id": 6658124019,
+  "lat": 50.5781997,
+  "lon": 3.1785514,
+  "tags": {
+    "highway": "traffic_signals"
+  }
+},
+{
+  "type": "node",
+  "id": 6658124020,
+  "lat": 50.5783123,
+  "lon": 3.1785882
+},
+{
+  "type": "node",
+  "id": 6658124021,
+  "lat": 50.5782543,
+  "lon": 3.1785686
+},
+{
+  "type": "node",
+  "id": 6658124022,
+  "lat": 50.5771734,
+  "lon": 3.1774065
+},
+{
+  "type": "node",
+  "id": 6658124023,
+  "lat": 50.5771339,
+  "lon": 3.1771922
+},
+{
+  "type": "node",
+  "id": 6658124024,
+  "lat": 50.5771050,
+  "lon": 3.1770986
+},
+{
+  "type": "node",
+  "id": 6658124025,
+  "lat": 50.5763285,
+  "lon": 3.1763734
+},
+{
+  "type": "node",
+  "id": 6658124026,
+  "lat": 50.5763001,
+  "lon": 3.1764051
+},
+{
+  "type": "node",
+  "id": 6658124027,
+  "lat": 50.5760206,
+  "lon": 3.1774389
+},
+{
+  "type": "node",
+  "id": 6658124028,
+  "lat": 50.5760054,
+  "lon": 3.1775484
+},
+{
+  "type": "node",
+  "id": 6658124029,
+  "lat": 50.5762125,
+  "lon": 3.1794469
+},
+{
+  "type": "node",
+  "id": 6658124048,
+  "lat": 50.5761107,
+  "lon": 3.1739924
+},
+{
+  "type": "node",
+  "id": 6658124049,
+  "lat": 50.5760549,
+  "lon": 3.1738463
+},
+{
+  "type": "node",
+  "id": 6658124050,
+  "lat": 50.5760126,
+  "lon": 3.1737530
+},
+{
+  "type": "node",
+  "id": 6658124051,
+  "lat": 50.5758989,
+  "lon": 3.1735653
+},
+{
+  "type": "node",
+  "id": 6658124052,
+  "lat": 50.5758480,
+  "lon": 3.1735004
+},
+{
+  "type": "node",
+  "id": 6658124053,
+  "lat": 50.5757230,
+  "lon": 3.1733682
+},
+{
+  "type": "node",
+  "id": 6658124054,
+  "lat": 50.5745922,
+  "lon": 3.1719188
+},
+{
+  "type": "node",
+  "id": 6658124055,
+  "lat": 50.5745700,
+  "lon": 3.1719776
+},
+{
+  "type": "node",
+  "id": 6658124056,
+  "lat": 50.5745707,
+  "lon": 3.1720333
+},
+{
+  "type": "node",
+  "id": 6658124057,
+  "lat": 50.5748681,
+  "lon": 3.1726177
+},
+{
+  "type": "node",
+  "id": 6658124058,
+  "lat": 50.5727575,
+  "lon": 3.1704079
+},
+{
+  "type": "node",
+  "id": 6658124059,
+  "lat": 50.5702278,
+  "lon": 3.1693529
+},
+{
+  "type": "node",
+  "id": 6658124060,
+  "lat": 50.5696697,
+  "lon": 3.1687397
+},
+{
+  "type": "node",
+  "id": 6658124061,
+  "lat": 50.5698087,
+  "lon": 3.1689700
+},
+{
+  "type": "node",
+  "id": 6658124062,
+  "lat": 50.5698965,
+  "lon": 3.1690872
+},
+{
+  "type": "node",
+  "id": 6658124063,
+  "lat": 50.5699808,
+  "lon": 3.1691780
+},
+{
+  "type": "node",
+  "id": 6658124064,
+  "lat": 50.5687676,
+  "lon": 3.1673035
+},
+{
+  "type": "node",
+  "id": 6658124076,
+  "lat": 50.5745751,
+  "lon": 3.1814932
+},
+{
+  "type": "node",
+  "id": 6658124077,
+  "lat": 50.5811433,
+  "lon": 3.1821753
+},
+{
+  "type": "node",
+  "id": 6658124078,
+  "lat": 50.5810040,
+  "lon": 3.1822859
+},
+{
+  "type": "node",
+  "id": 6658124079,
+  "lat": 50.5808601,
+  "lon": 3.1824465
+},
+{
+  "type": "node",
+  "id": 6658478757,
+  "lat": 50.5799722,
+  "lon": 3.1763611
+},
+{
+  "type": "node",
+  "id": 6658478758,
+  "lat": 50.5800584,
+  "lon": 3.1762596
+},
+{
+  "type": "node",
+  "id": 6658478759,
+  "lat": 50.5805134,
+  "lon": 3.1757709
+},
+{
+  "type": "node",
+  "id": 6658478760,
+  "lat": 50.5806298,
+  "lon": 3.1757256
+},
+{
+  "type": "node",
+  "id": 6658478761,
+  "lat": 50.5806935,
+  "lon": 3.1757171
+},
+{
+  "type": "node",
+  "id": 6658478762,
+  "lat": 50.5808344,
+  "lon": 3.1757332
+},
+{
+  "type": "node",
+  "id": 6658478763,
+  "lat": 50.5809149,
+  "lon": 3.1757686,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 6658478764,
+  "lat": 50.5812861,
+  "lon": 3.1772864
+},
+{
+  "type": "node",
+  "id": 6658478765,
+  "lat": 50.5812136,
+  "lon": 3.1775048
+},
+{
+  "type": "node",
+  "id": 6658478766,
+  "lat": 50.5807059,
+  "lon": 3.1779516
+},
+{
+  "type": "node",
+  "id": 6658478767,
+  "lat": 50.5814508,
+  "lon": 3.1763190
+},
+{
+  "type": "node",
+  "id": 6658478768,
+  "lat": 50.5815417,
+  "lon": 3.1764055
+},
+{
+  "type": "node",
+  "id": 6658478769,
+  "lat": 50.5821561,
+  "lon": 3.1768566
+},
+{
+  "type": "node",
+  "id": 6658478770,
+  "lat": 50.5826993,
+  "lon": 3.1771195
+},
+{
+  "type": "node",
+  "id": 6658478771,
+  "lat": 50.5828044,
+  "lon": 3.1771067
+},
+{
+  "type": "node",
+  "id": 6658478772,
+  "lat": 50.5832679,
+  "lon": 3.1762335
+},
+{
+  "type": "node",
+  "id": 6658478773,
+  "lat": 50.5833553,
+  "lon": 3.1761248
+},
+{
+  "type": "node",
+  "id": 6658478774,
+  "lat": 50.5834250,
+  "lon": 3.1760637
+},
+{
+  "type": "node",
+  "id": 6658478775,
+  "lat": 50.5835887,
+  "lon": 3.1760843
+},
+{
+  "type": "node",
+  "id": 6658478776,
+  "lat": 50.5811750,
+  "lon": 3.1760983
+},
+{
+  "type": "node",
+  "id": 6658478777,
+  "lat": 50.5812064,
+  "lon": 3.1760657
+},
+{
+  "type": "node",
+  "id": 6658478778,
+  "lat": 50.5812297,
+  "lon": 3.1760180
+},
+{
+  "type": "node",
+  "id": 6658478779,
+  "lat": 50.5810609,
+  "lon": 3.1757897
+},
+{
+  "type": "node",
+  "id": 6658478780,
+  "lat": 50.5810352,
+  "lon": 3.1758313
+},
+{
+  "type": "node",
+  "id": 6658478781,
+  "lat": 50.5812428,
+  "lon": 3.1759306
+},
+{
+  "type": "node",
+  "id": 6658478782,
+  "lat": 50.5812357,
+  "lon": 3.1758715
+},
+{
+  "type": "node",
+  "id": 6658478783,
+  "lat": 50.5812166,
+  "lon": 3.1758194
+},
+{
+  "type": "node",
+  "id": 6658478784,
+  "lat": 50.5811876,
+  "lon": 3.1757801
+},
+{
+  "type": "node",
+  "id": 6658482685,
+  "lat": 50.5811520,
+  "lon": 3.1757582
+},
+{
+  "type": "node",
+  "id": 6658482686,
+  "lat": 50.5811138,
+  "lon": 3.1757560
+},
+{
+  "type": "node",
+  "id": 6658482687,
+  "lat": 50.5810773,
+  "lon": 3.1757738
+},
+{
+  "type": "node",
+  "id": 6658482688,
+  "lat": 50.5810470,
+  "lon": 3.1758089
+},
+{
+  "type": "node",
+  "id": 6658482689,
+  "lat": 50.5810259,
+  "lon": 3.1758565
+},
+{
+  "type": "node",
+  "id": 6658482690,
+  "lat": 50.5810156,
+  "lon": 3.1759122
+},
+{
+  "type": "node",
+  "id": 6658482691,
+  "lat": 50.5810171,
+  "lon": 3.1759702
+},
+{
+  "type": "node",
+  "id": 6658482692,
+  "lat": 50.5810302,
+  "lon": 3.1760245
+},
+{
+  "type": "node",
+  "id": 6658482693,
+  "lat": 50.5810537,
+  "lon": 3.1760693
+},
+{
+  "type": "node",
+  "id": 6658482694,
+  "lat": 50.5810850,
+  "lon": 3.1760999
+},
+{
+  "type": "node",
+  "id": 6658482695,
+  "lat": 50.5811209,
+  "lon": 3.1761133
+},
+{
+  "type": "node",
+  "id": 6658482696,
+  "lat": 50.5811576,
+  "lon": 3.1761079
+},
+{
+  "type": "node",
+  "id": 6658482697,
+  "lat": 50.5811913,
+  "lon": 3.1760844
+},
+{
+  "type": "node",
+  "id": 6658482698,
+  "lat": 50.5812193,
+  "lon": 3.1760434
+},
+{
+  "type": "node",
+  "id": 6658482699,
+  "lat": 50.5812372,
+  "lon": 3.1759902
+},
+{
+  "type": "node",
+  "id": 6658482700,
+  "lat": 50.5809716,
+  "lon": 3.1758076
+},
+{
+  "type": "node",
+  "id": 6658482701,
+  "lat": 50.5814190,
+  "lon": 3.1755897
+},
+{
+  "type": "node",
+  "id": 6658482702,
+  "lat": 50.5813660,
+  "lon": 3.1756844
+},
+{
+  "type": "node",
+  "id": 6658482703,
+  "lat": 50.5813244,
+  "lon": 3.1757408
+},
+{
+  "type": "node",
+  "id": 6658482704,
+  "lat": 50.5812729,
+  "lon": 3.1757994
+},
+{
+  "type": "node",
+  "id": 6658482705,
+  "lat": 50.5812800,
+  "lon": 3.1760656,
+  "tags": {
+    "highway": "crossing",
+    "kerb": "lowered"
+  }
+},
+{
+  "type": "node",
+  "id": 6658482706,
+  "lat": 50.5812560,
+  "lon": 3.1692090
+},
+{
+  "type": "node",
+  "id": 6658482707,
+  "lat": 50.5812351,
+  "lon": 3.1692665
+},
+{
+  "type": "node",
+  "id": 6658482708,
+  "lat": 50.5814247,
+  "lon": 3.1690323
+},
+{
+  "type": "node",
+  "id": 6658482709,
+  "lat": 50.5815639,
+  "lon": 3.1694514
+},
+{
+  "type": "node",
+  "id": 6658482710,
+  "lat": 50.5810738,
+  "lon": 3.1693533
+},
+{
+  "type": "node",
+  "id": 6658482715,
+  "lat": 50.5831943,
+  "lon": 3.1689469
+},
+{
+  "type": "node",
+  "id": 6658482716,
+  "lat": 50.5832830,
+  "lon": 3.1689463
+},
+{
+  "type": "node",
+  "id": 6658482717,
+  "lat": 50.5833793,
+  "lon": 3.1688768
+},
+{
+  "type": "node",
+  "id": 6658482718,
+  "lat": 50.5834962,
+  "lon": 3.1688382
+},
+{
+  "type": "node",
+  "id": 6658482719,
+  "lat": 50.5837182,
+  "lon": 3.1689972
+},
+{
+  "type": "node",
+  "id": 6658482720,
+  "lat": 50.5837379,
+  "lon": 3.1690401
+},
+{
+  "type": "node",
+  "id": 6658482721,
+  "lat": 50.5838522,
+  "lon": 3.1693228
+},
+{
+  "type": "node",
+  "id": 6658482722,
+  "lat": 50.5841401,
+  "lon": 3.1695841
+},
+{
+  "type": "node",
+  "id": 6658482751,
+  "lat": 50.5847590,
+  "lon": 3.1678735
+},
+{
+  "type": "node",
+  "id": 6658482754,
+  "lat": 50.5845734,
+  "lon": 3.1678103
+},
+{
+  "type": "node",
+  "id": 6658482755,
+  "lat": 50.5844453,
+  "lon": 3.1677900
+},
+{
+  "type": "node",
+  "id": 6658482756,
+  "lat": 50.5842698,
+  "lon": 3.1677875
+},
+{
+  "type": "node",
+  "id": 7038777439,
+  "lat": 50.5777292,
+  "lon": 3.1847512
+},
+{
+  "type": "node",
+  "id": 7038777440,
+  "lat": 50.5771070,
+  "lon": 3.1853692
+},
+{
+  "type": "node",
+  "id": 7038777441,
+  "lat": 50.5767404,
+  "lon": 3.1858774
+},
+{
+  "type": "node",
+  "id": 7038777442,
+  "lat": 50.5759711,
+  "lon": 3.1870116
+},
+{
+  "type": "node",
+  "id": 7038777443,
+  "lat": 50.5758626,
+  "lon": 3.1871620
+},
+{
+  "type": "node",
+  "id": 7038777444,
+  "lat": 50.5760976,
+  "lon": 3.1878369
+},
+{
+  "type": "node",
+  "id": 7038777445,
+  "lat": 50.5766324,
+  "lon": 3.1893349
+},
+{
+  "type": "node",
+  "id": 7038777447,
+  "lat": 50.5763559,
+  "lon": 3.1886062
+},
+{
+  "type": "node",
+  "id": 7504120371,
+  "lat": 50.5742554,
+  "lon": 3.1728621
+},
+{
+  "type": "node",
+  "id": 7504120372,
+  "lat": 50.5737170,
+  "lon": 3.1729481
+},
+{
+  "type": "node",
+  "id": 7504120373,
+  "lat": 50.5732645,
+  "lon": 3.1727382
+},
+{
+  "type": "node",
+  "id": 7504120374,
+  "lat": 50.5724881,
+  "lon": 3.1722181
+},
+{
+  "type": "node",
+  "id": 7504120376,
+  "lat": 50.5719385,
+  "lon": 3.1718229
+},
+{
+  "type": "node",
+  "id": 7504120377,
+  "lat": 50.5718435,
+  "lon": 3.1717300
+},
+{
+  "type": "node",
+  "id": 7504120378,
+  "lat": 50.5711929,
+  "lon": 3.1710234
+},
+{
+  "type": "node",
+  "id": 7504120379,
+  "lat": 50.5710062,
+  "lon": 3.1707487
+},
+{
+  "type": "node",
+  "id": 7504120380,
+  "lat": 50.5705491,
+  "lon": 3.1700373
+},
+{
+  "type": "node",
+  "id": 8424771373,
+  "lat": 50.5702531,
+  "lon": 3.1694136
+},
+{
+  "type": "node",
+  "id": 8424771374,
+  "lat": 50.5705369,
+  "lon": 3.1695313
+},
+{
+  "type": "node",
+  "id": 8424771375,
+  "lat": 50.5710415,
+  "lon": 3.1697037
+},
+{
+  "type": "node",
+  "id": 8424771376,
+  "lat": 50.5716919,
+  "lon": 3.1699755
+},
+{
+  "type": "node",
+  "id": 8424771377,
+  "lat": 50.5719401,
+  "lon": 3.1700636
+},
+{
+  "type": "node",
+  "id": 8424771378,
+  "lat": 50.5720567,
+  "lon": 3.1701077
+},
+{
+  "type": "node",
+  "id": 8424771379,
+  "lat": 50.5720861,
+  "lon": 3.1700675
+},
+{
+  "type": "node",
+  "id": 8424771380,
+  "lat": 50.5730286,
+  "lon": 3.1705968
+},
+{
+  "type": "node",
+  "id": 8424771381,
+  "lat": 50.5728399,
+  "lon": 3.1704132
+},
+{
+  "type": "node",
+  "id": 8424771382,
+  "lat": 50.5726190,
+  "lon": 3.1702394
+},
+{
+  "type": "node",
+  "id": 8424771383,
+  "lat": 50.5724104,
+  "lon": 3.1701379
+},
+{
+  "type": "node",
+  "id": 8424771384,
+  "lat": 50.5715638,
+  "lon": 3.1697974
+},
+{
+  "type": "node",
+  "id": 8424771385,
+  "lat": 50.5708981,
+  "lon": 3.1695342
+},
+{
+  "type": "node",
+  "id": 8424771386,
+  "lat": 50.5703765,
+  "lon": 3.1693216
+},
+{
+  "type": "node",
+  "id": 8424771387,
+  "lat": 50.5702385,
+  "lon": 3.1692202
+},
+{
+  "type": "node",
+  "id": 8424771410,
+  "lat": 50.5785864,
+  "lon": 3.1777823
+},
+{
+  "type": "node",
+  "id": 8424771411,
+  "lat": 50.5785274,
+  "lon": 3.1777976
+},
+{
+  "type": "node",
+  "id": 8424771412,
+  "lat": 50.5783977,
+  "lon": 3.1779695
+},
+{
+  "type": "node",
+  "id": 8424771413,
+  "lat": 50.5783315,
+  "lon": 3.1781076
+},
+{
+  "type": "node",
+  "id": 8424771414,
+  "lat": 50.5782689,
+  "lon": 3.1782706
+},
+{
+  "type": "node",
+  "id": 8424771416,
+  "lat": 50.5782092,
+  "lon": 3.1783529
+},
+{
+  "type": "node",
+  "id": 8424772717,
+  "lat": 50.5780833,
+  "lon": 3.1783911
+},
+{
+  "type": "node",
+  "id": 8424772718,
+  "lat": 50.5778939,
+  "lon": 3.1784778
+},
+{
+  "type": "node",
+  "id": 8424772719,
+  "lat": 50.5778333,
+  "lon": 3.1784940
+},
+{
+  "type": "node",
+  "id": 8424772720,
+  "lat": 50.5777381,
+  "lon": 3.1785042
+},
+{
+  "type": "node",
+  "id": 8424772721,
+  "lat": 50.5776233,
+  "lon": 3.1784763
+},
+{
+  "type": "node",
+  "id": 8424772722,
+  "lat": 50.5775739,
+  "lon": 3.1784499,
+  "tags": {
+    "highway": "crossing"
+  }
+},
+{
+  "type": "node",
+  "id": 8424772723,
+  "lat": 50.5773179,
+  "lon": 3.1776705
+},
+{
+  "type": "node",
+  "id": 8424772724,
+  "lat": 50.5771951,
+  "lon": 3.1773034
+},
+{
+  "type": "node",
+  "id": 8424772725,
+  "lat": 50.5781824,
+  "lon": 3.1785486
+},
+{
+  "type": "node",
+  "id": 8424772726,
+  "lat": 50.5780992,
+  "lon": 3.1785938
+},
+{
+  "type": "node",
+  "id": 8424772727,
+  "lat": 50.5778584,
+  "lon": 3.1786213
+},
+{
+  "type": "node",
+  "id": 8424772728,
+  "lat": 50.5777281,
+  "lon": 3.1786144
+},
+{
+  "type": "node",
+  "id": 8424772729,
+  "lat": 50.5776073,
+  "lon": 3.1785846
+},
+{
+  "type": "node",
+  "id": 8424772730,
+  "lat": 50.5774967,
+  "lon": 3.1785262
+},
+{
+  "type": "node",
+  "id": 8424772731,
+  "lat": 50.5773861,
+  "lon": 3.1784482
+},
+{
+  "type": "node",
+  "id": 8424772732,
+  "lat": 50.5773286,
+  "lon": 3.1783818
+},
+{
+  "type": "node",
+  "id": 8424772733,
+  "lat": 50.5772864,
+  "lon": 3.1782947
+},
+{
+  "type": "node",
+  "id": 8424772734,
+  "lat": 50.5772391,
+  "lon": 3.1780896
+},
+{
+  "type": "node",
+  "id": 8424772735,
+  "lat": 50.5771933,
+  "lon": 3.1777940
+},
+{
+  "type": "node",
+  "id": 8424772736,
+  "lat": 50.5771220,
+  "lon": 3.1773322
+},
+{
+  "type": "node",
+  "id": 8424772737,
+  "lat": 50.5770958,
+  "lon": 3.1772153
+},
+{
+  "type": "node",
+  "id": 8424772738,
+  "lat": 50.5770914,
+  "lon": 3.1771809
+},
+{
+  "type": "node",
+  "id": 8424772739,
+  "lat": 50.5786790,
+  "lon": 3.1779215
+},
+{
+  "type": "node",
+  "id": 8424772740,
+  "lat": 50.5785418,
+  "lon": 3.1781292
+},
+{
+  "type": "node",
+  "id": 8424772741,
+  "lat": 50.5784294,
+  "lon": 3.1783340
+},
+{
+  "type": "node",
+  "id": 8424772742,
+  "lat": 50.5783928,
+  "lon": 3.1784001
+},
+{
+  "type": "node",
+  "id": 8424772757,
+  "lat": 50.5802844,
+  "lon": 3.1760680
+},
+{
+  "type": "node",
+  "id": 8424772758,
+  "lat": 50.5804343,
+  "lon": 3.1759053
+},
+{
+  "type": "node",
+  "id": 8424772759,
+  "lat": 50.5805340,
+  "lon": 3.1758308
+},
+{
+  "type": "node",
+  "id": 8424772760,
+  "lat": 50.5806242,
+  "lon": 3.1757953
+},
+{
+  "type": "node",
+  "id": 8424772761,
+  "lat": 50.5807508,
+  "lon": 3.1757827
+},
+{
+  "type": "node",
+  "id": 8424772762,
+  "lat": 50.5808752,
+  "lon": 3.1758205
+},
+{
+  "type": "node",
+  "id": 8424772763,
+  "lat": 50.5809407,
+  "lon": 3.1758778
+},
+{
+  "type": "node",
+  "id": 8424772764,
+  "lat": 50.5809662,
+  "lon": 3.1759351
+},
+{
+  "type": "node",
+  "id": 8424772765,
+  "lat": 50.5809989,
+  "lon": 3.1760783
+},
+{
+  "type": "node",
+  "id": 8424772766,
+  "lat": 50.5810367,
+  "lon": 3.1761287
+},
+{
+  "type": "node",
+  "id": 8424772767,
+  "lat": 50.5810877,
+  "lon": 3.1761803
+},
+{
+  "type": "node",
+  "id": 8424772768,
+  "lat": 50.5811379,
+  "lon": 3.1761780
+},
+{
+  "type": "node",
+  "id": 8424772769,
+  "lat": 50.5811837,
+  "lon": 3.1761677
+},
+{
+  "type": "node",
+  "id": 8424772770,
+  "lat": 50.5812412,
+  "lon": 3.1761184
+},
+{
+  "type": "node",
+  "id": 8424772771,
+  "lat": 50.5813288,
+  "lon": 3.1759515
+},
+{
+  "type": "node",
+  "id": 8424772772,
+  "lat": 50.5814346,
+  "lon": 3.1756834
+},
+{
+  "type": "node",
+  "id": 8424772773,
+  "lat": 50.5817137,
+  "lon": 3.1748478
+},
+{
+  "type": "node",
+  "id": 8424772774,
+  "lat": 50.5815051,
+  "lon": 3.1753066
+},
+{
+  "type": "node",
+  "id": 8424772775,
+  "lat": 50.5814039,
+  "lon": 3.1755240
+},
+{
+  "type": "node",
+  "id": 8424772776,
+  "lat": 50.5813364,
+  "lon": 3.1756230
+},
+{
+  "type": "node",
+  "id": 8424772777,
+  "lat": 50.5812659,
+  "lon": 3.1756834
+},
+{
+  "type": "node",
+  "id": 8424772778,
+  "lat": 50.5812045,
+  "lon": 3.1756979
+},
+{
+  "type": "node",
+  "id": 8424772779,
+  "lat": 50.5811493,
+  "lon": 3.1756979
+},
+{
+  "type": "node",
+  "id": 8424772780,
+  "lat": 50.5810957,
+  "lon": 3.1756979
+},
+{
+  "type": "node",
+  "id": 8424772781,
+  "lat": 50.5810604,
+  "lon": 3.1757100
+},
+{
+  "type": "node",
+  "id": 8424772782,
+  "lat": 50.5810266,
+  "lon": 3.1757220
+},
+{
+  "type": "node",
+  "id": 8424772783,
+  "lat": 50.5809898,
+  "lon": 3.1757172
+},
+{
+  "type": "node",
+  "id": 8424772784,
+  "lat": 50.5809469,
+  "lon": 3.1757051
+},
+{
+  "type": "node",
+  "id": 8424772785,
+  "lat": 50.5808135,
+  "lon": 3.1756544
+},
+{
+  "type": "node",
+  "id": 8424772786,
+  "lat": 50.5827584,
+  "lon": 3.1727520
+},
+{
+  "type": "node",
+  "id": 8424772787,
+  "lat": 50.5830559,
+  "lon": 3.1719848
+},
+{
+  "type": "node",
+  "id": 8424772788,
+  "lat": 50.5828661,
+  "lon": 3.1723716
+},
+{
+  "type": "node",
+  "id": 8424772789,
+  "lat": 50.5827603,
+  "lon": 3.1726179
+},
+{
+  "type": "node",
+  "id": 8522651301,
+  "lat": 50.5746279,
+  "lon": 3.1722093
+},
+{
+  "type": "node",
+  "id": 8550791315,
+  "lat": 50.5774627,
+  "lon": 3.1808521
+},
+{
+  "type": "node",
+  "id": 8550791316,
+  "lat": 50.5785947,
+  "lon": 3.1800286,
+  "tags": {
+    "kerb": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 8607972864,
+  "lat": 50.5685475,
+  "lon": 3.1741945
+},
+{
+  "type": "node",
+  "id": 8607972865,
+  "lat": 50.5693392,
+  "lon": 3.1750351
+},
+{
+  "type": "node",
+  "id": 8607972866,
+  "lat": 50.5694759,
+  "lon": 3.1752411
+},
+{
+  "type": "node",
+  "id": 8607972867,
+  "lat": 50.5695605,
+  "lon": 3.1763759
+},
+{
+  "type": "node",
+  "id": 8607972868,
+  "lat": 50.5696293,
+  "lon": 3.1764394
+},
+{
+  "type": "node",
+  "id": 8607972869,
+  "lat": 50.5697808,
+  "lon": 3.1763512
+},
+{
+  "type": "node",
+  "id": 8607972870,
+  "lat": 50.5702764,
+  "lon": 3.1762412
+},
+{
+  "type": "node",
+  "id": 8607972871,
+  "lat": 50.5699292,
+  "lon": 3.1757984
+},
+{
+  "type": "node",
+  "id": 8607972872,
+  "lat": 50.5700895,
+  "lon": 3.1767212
+},
+{
+  "type": "node",
+  "id": 8607972873,
+  "lat": 50.5698594,
+  "lon": 3.1772120
+},
+{
+  "type": "node",
+  "id": 8607972874,
+  "lat": 50.5698122,
+  "lon": 3.1772321
+},
+{
+  "type": "node",
+  "id": 8607972875,
+  "lat": 50.5689813,
+  "lon": 3.1762025
+},
+{
+  "type": "node",
+  "id": 8607972876,
+  "lat": 50.5694402,
+  "lon": 3.1751872
+},
+{
+  "type": "node",
+  "id": 8607972877,
+  "lat": 50.5690599,
+  "lon": 3.1760286
+},
+{
+  "type": "node",
+  "id": 8607972878,
+  "lat": 50.5682410,
+  "lon": 3.1754777
+},
+{
+  "type": "node",
+  "id": 8607972879,
+  "lat": 50.5692025,
+  "lon": 3.1764766
+},
+{
+  "type": "node",
+  "id": 8607972880,
+  "lat": 50.5699981,
+  "lon": 3.1769125
+},
+{
+  "type": "node",
+  "id": 8607972892,
+  "lat": 50.5693362,
+  "lon": 3.1761512
+},
+{
+  "type": "node",
+  "id": 8607972893,
+  "lat": 50.5692742,
+  "lon": 3.1760134
+},
+{
+  "type": "node",
+  "id": 8607972894,
+  "lat": 50.5691348,
+  "lon": 3.1758629
+},
+{
+  "type": "node",
+  "id": 8607972895,
+  "lat": 50.5698970,
+  "lon": 3.1757588
+},
+{
+  "type": "node",
+  "id": 8607972896,
+  "lat": 50.5696990,
+  "lon": 3.1761419
+},
+{
+  "type": "node",
+  "id": 8607972897,
+  "lat": 50.5698415,
+  "lon": 3.1763377
+},
+{
+  "type": "node",
+  "id": 8607972898,
+  "lat": 50.5695312,
+  "lon": 3.1759835
+},
+{
+  "type": "node",
+  "id": 8607977183,
+  "lat": 50.5697220,
+  "lon": 3.1719218
+},
+{
+  "type": "node",
+  "id": 8607977184,
+  "lat": 50.5703262,
+  "lon": 3.1730311
+},
+{
+  "type": "node",
+  "id": 8607977185,
+  "lat": 50.5707400,
+  "lon": 3.1735601
+},
+{
+  "type": "node",
+  "id": 8607977186,
+  "lat": 50.5711461,
+  "lon": 3.1744286
+},
+{
+  "type": "node",
+  "id": 8607977187,
+  "lat": 50.5712102,
+  "lon": 3.1744665
+},
+{
+  "type": "node",
+  "id": 8607977188,
+  "lat": 50.5713032,
+  "lon": 3.1743514
+},
+{
+  "type": "node",
+  "id": 8607977189,
+  "lat": 50.5718147,
+  "lon": 3.1732636
+},
+{
+  "type": "node",
+  "id": 8633612918,
+  "lat": 50.5775198,
+  "lon": 3.1680243,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 8633612919,
+  "lat": 50.5769341,
+  "lon": 3.1677522
+},
+{
+  "type": "node",
+  "id": 8633637432,
+  "lat": 50.5677147,
+  "lon": 3.1653956
+},
+{
+  "type": "node",
+  "id": 8633637433,
+  "lat": 50.5678229,
+  "lon": 3.1655551
+},
+{
+  "type": "node",
+  "id": 8633637434,
+  "lat": 50.5679370,
+  "lon": 3.1657429
+},
+{
+  "type": "node",
+  "id": 8633637664,
+  "lat": 50.5700963,
+  "lon": 3.1691359
+},
+{
+  "type": "node",
+  "id": 8633637665,
+  "lat": 50.5700103,
+  "lon": 3.1690608
+},
+{
+  "type": "node",
+  "id": 8633637666,
+  "lat": 50.5699703,
+  "lon": 3.1690286
+},
+{
+  "type": "node",
+  "id": 8633637667,
+  "lat": 50.5699464,
+  "lon": 3.1690139
+},
+{
+  "type": "node",
+  "id": 8633637668,
+  "lat": 50.5699140,
+  "lon": 3.1689924
+},
+{
+  "type": "node",
+  "id": 8633637669,
+  "lat": 50.5698800,
+  "lon": 3.1689656
+},
+{
+  "type": "node",
+  "id": 8633637670,
+  "lat": 50.5698416,
+  "lon": 3.1689280
+},
+{
+  "type": "node",
+  "id": 8633637671,
+  "lat": 50.5697948,
+  "lon": 3.1688784
+},
+{
+  "type": "node",
+  "id": 8633637672,
+  "lat": 50.5697352,
+  "lon": 3.1688140
+},
+{
+  "type": "node",
+  "id": 8633637673,
+  "lat": 50.5697087,
+  "lon": 3.1687845
+},
+{
+  "type": "node",
+  "id": 8633637674,
+  "lat": 50.5701728,
+  "lon": 3.1692082
+},
+{
+  "type": "node",
+  "id": 8633637675,
+  "lat": 50.5702360,
+  "lon": 3.1692593
+},
+{
+  "type": "node",
+  "id": 8633637676,
+  "lat": 50.5702880,
+  "lon": 3.1692982
+},
+{
+  "type": "node",
+  "id": 8633637677,
+  "lat": 50.5703502,
+  "lon": 3.1693371
+},
+{
+  "type": "node",
+  "id": 8633637678,
+  "lat": 50.5704157,
+  "lon": 3.1693733
+},
+{
+  "type": "node",
+  "id": 8633637679,
+  "lat": 50.5704694,
+  "lon": 3.1693988
+},
+{
+  "type": "node",
+  "id": 8633637680,
+  "lat": 50.5705367,
+  "lon": 3.1694296
+},
+{
+  "type": "node",
+  "id": 8633637681,
+  "lat": 50.5705852,
+  "lon": 3.1694537
+},
+{
+  "type": "node",
+  "id": 8633637682,
+  "lat": 50.5706381,
+  "lon": 3.1694806
+},
+{
+  "type": "node",
+  "id": 8633637683,
+  "lat": 50.5709268,
+  "lon": 3.1696120
+},
+{
+  "type": "node",
+  "id": 8633637684,
+  "lat": 50.5710282,
+  "lon": 3.1696509
+},
+{
+  "type": "node",
+  "id": 8633637685,
+  "lat": 50.5712317,
+  "lon": 3.1697313
+},
+{
+  "type": "node",
+  "id": 8633637686,
+  "lat": 50.5707454,
+  "lon": 3.1695409
+},
+{
+  "type": "node",
+  "id": 8633637687,
+  "lat": 50.5703876,
+  "lon": 3.1694256
+},
+{
+  "type": "node",
+  "id": 8633637688,
+  "lat": 50.5702735,
+  "lon": 3.1693786
+},
+{
+  "type": "node",
+  "id": 8633637689,
+  "lat": 50.5700853,
+  "lon": 3.1692566
+},
+{
+  "type": "node",
+  "id": 8633637690,
+  "lat": 50.5700341,
+  "lon": 3.1692217
+},
+{
+  "type": "node",
+  "id": 8633637691,
+  "lat": 50.5699493,
+  "lon": 3.1691467
+},
+{
+  "type": "node",
+  "id": 8633637692,
+  "lat": 50.5698672,
+  "lon": 3.1690494
+},
+{
+  "type": "node",
+  "id": 8633637693,
+  "lat": 50.5696918,
+  "lon": 3.1687832
+},
+{
+  "type": "node",
+  "id": 8633637694,
+  "lat": 50.5723986,
+  "lon": 3.1701940
+},
+{
+  "type": "node",
+  "id": 8633637695,
+  "lat": 50.5725238,
+  "lon": 3.1702557
+},
+{
+  "type": "node",
+  "id": 8633637696,
+  "lat": 50.5727001,
+  "lon": 3.1703657
+},
+{
+  "type": "node",
+  "id": 8633637697,
+  "lat": 50.5728134,
+  "lon": 3.1704515
+},
+{
+  "type": "node",
+  "id": 8633637698,
+  "lat": 50.5730195,
+  "lon": 3.1706500
+},
+{
+  "type": "node",
+  "id": 8633637699,
+  "lat": 50.5747886,
+  "lon": 3.1725396
+},
+{
+  "type": "node",
+  "id": 8633637700,
+  "lat": 50.5734335,
+  "lon": 3.1728454
+},
+{
+  "type": "node",
+  "id": 8633637701,
+  "lat": 50.5735008,
+  "lon": 3.1728789
+},
+{
+  "type": "node",
+  "id": 8633637702,
+  "lat": 50.5735774,
+  "lon": 3.1729111
+},
+{
+  "type": "node",
+  "id": 8633637703,
+  "lat": 50.5736524,
+  "lon": 3.1729352
+},
+{
+  "type": "node",
+  "id": 8633637704,
+  "lat": 50.5737852,
+  "lon": 3.1729487
+},
+{
+  "type": "node",
+  "id": 8633637705,
+  "lat": 50.5738943,
+  "lon": 3.1729326
+},
+{
+  "type": "node",
+  "id": 8633637706,
+  "lat": 50.5747085,
+  "lon": 3.1727354
+},
+{
+  "type": "node",
+  "id": 8633637707,
+  "lat": 50.5747332,
+  "lon": 3.1727261
+},
+{
+  "type": "node",
+  "id": 8633637708,
+  "lat": 50.5715017,
+  "lon": 3.1680791
+},
+{
+  "type": "node",
+  "id": 8633637717,
+  "lat": 50.5687032,
+  "lon": 3.1735201,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 8633637718,
+  "lat": 50.5689004,
+  "lon": 3.1726576
+},
+{
+  "type": "node",
+  "id": 8633637719,
+  "lat": 50.5679864,
+  "lon": 3.1765093
+},
+{
+  "type": "node",
+  "id": 8633637720,
+  "lat": 50.5673654,
+  "lon": 3.1790936
+},
+{
+  "type": "node",
+  "id": 8633637721,
+  "lat": 50.5673799,
+  "lon": 3.1791902
+},
+{
+  "type": "node",
+  "id": 8633637722,
+  "lat": 50.5674285,
+  "lon": 3.1792814
+},
+{
+  "type": "node",
+  "id": 8633637723,
+  "lat": 50.5674532,
+  "lon": 3.1793015
+},
+{
+  "type": "node",
+  "id": 8633637724,
+  "lat": 50.5677879,
+  "lon": 3.1794557
+},
+{
+  "type": "node",
+  "id": 8633637725,
+  "lat": 50.5678910,
+  "lon": 3.1795160
+},
+{
+  "type": "node",
+  "id": 8633637726,
+  "lat": 50.5679234,
+  "lon": 3.1795415
+},
+{
+  "type": "node",
+  "id": 8633637727,
+  "lat": 50.5679609,
+  "lon": 3.1795831
+},
+{
+  "type": "node",
+  "id": 8633637728,
+  "lat": 50.5680282,
+  "lon": 3.1796837
+},
+{
+  "type": "node",
+  "id": 8633637729,
+  "lat": 50.5680699,
+  "lon": 3.1797869
+},
+{
+  "type": "node",
+  "id": 8633637730,
+  "lat": 50.5680937,
+  "lon": 3.1798688
+},
+{
+  "type": "node",
+  "id": 8633637731,
+  "lat": 50.5681150,
+  "lon": 3.1799693
+},
+{
+  "type": "node",
+  "id": 8633637747,
+  "lat": 50.5678169,
+  "lon": 3.1812783
+},
+{
+  "type": "node",
+  "id": 8633637748,
+  "lat": 50.5678510,
+  "lon": 3.1813131
+},
+{
+  "type": "node",
+  "id": 8633637749,
+  "lat": 50.5678978,
+  "lon": 3.1813627
+},
+{
+  "type": "node",
+  "id": 8633637750,
+  "lat": 50.5681338,
+  "lon": 3.1816243
+},
+{
+  "type": "node",
+  "id": 8633637751,
+  "lat": 50.5681764,
+  "lon": 3.1816578
+},
+{
+  "type": "node",
+  "id": 8633637752,
+  "lat": 50.5682241,
+  "lon": 3.1816900
+},
+{
+  "type": "node",
+  "id": 8633637755,
+  "lat": 50.5692965,
+  "lon": 3.1821164,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 8633637756,
+  "lat": 50.5693476,
+  "lon": 3.1821446
+},
+{
+  "type": "node",
+  "id": 8633637757,
+  "lat": 50.5694072,
+  "lon": 3.1821795
+},
+{
+  "type": "node",
+  "id": 8633637758,
+  "lat": 50.5699779,
+  "lon": 3.1825215
+},
+{
+  "type": "node",
+  "id": 8633637759,
+  "lat": 50.5700205,
+  "lon": 3.1825416
+},
+{
+  "type": "node",
+  "id": 8633637760,
+  "lat": 50.5697991,
+  "lon": 3.1824128
+},
+{
+  "type": "node",
+  "id": 8633637761,
+  "lat": 50.5703297,
+  "lon": 3.1825992
+},
+{
+  "type": "node",
+  "id": 8633637762,
+  "lat": 50.5704183,
+  "lon": 3.1826006
+},
+{
+  "type": "node",
+  "id": 8633637763,
+  "lat": 50.5707249,
+  "lon": 3.1822613
+},
+{
+  "type": "node",
+  "id": 8633637764,
+  "lat": 50.5707948,
+  "lon": 3.1822211
+},
+{
+  "type": "node",
+  "id": 8633637765,
+  "lat": 50.5708391,
+  "lon": 3.1822143
+},
+{
+  "type": "node",
+  "id": 8633637766,
+  "lat": 50.5709217,
+  "lon": 3.1822211
+},
+{
+  "type": "node",
+  "id": 8633637767,
+  "lat": 50.5709566,
+  "lon": 3.1822291
+},
+{
+  "type": "node",
+  "id": 8633637768,
+  "lat": 50.5709924,
+  "lon": 3.1822439
+},
+{
+  "type": "node",
+  "id": 8633637769,
+  "lat": 50.5716287,
+  "lon": 3.1826086
+},
+{
+  "type": "node",
+  "id": 8633637770,
+  "lat": 50.5716653,
+  "lon": 3.1826220
+},
+{
+  "type": "node",
+  "id": 8633637771,
+  "lat": 50.5720920,
+  "lon": 3.1826287
+},
+{
+  "type": "node",
+  "id": 8633637772,
+  "lat": 50.5723756,
+  "lon": 3.1826274
+},
+{
+  "type": "node",
+  "id": 8633637773,
+  "lat": 50.5724625,
+  "lon": 3.1826127
+},
+{
+  "type": "node",
+  "id": 8633637774,
+  "lat": 50.5732410,
+  "lon": 3.1822465
+},
+{
+  "type": "node",
+  "id": 8633637775,
+  "lat": 50.5737622,
+  "lon": 3.1814821
+},
+{
+  "type": "node",
+  "id": 8633637776,
+  "lat": 50.5738227,
+  "lon": 3.1814124
+},
+{
+  "type": "node",
+  "id": 8633637777,
+  "lat": 50.5738943,
+  "lon": 3.1813721
+},
+{
+  "type": "node",
+  "id": 8633637778,
+  "lat": 50.5743193,
+  "lon": 3.1813185
+},
+{
+  "type": "node",
+  "id": 8633637779,
+  "lat": 50.5750622,
+  "lon": 3.1809623,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 8633637780,
+  "lat": 50.5755457,
+  "lon": 3.1807016
+},
+{
+  "type": "node",
+  "id": 8633637781,
+  "lat": 50.5756147,
+  "lon": 3.1806546
+},
+{
+  "type": "node",
+  "id": 8633637782,
+  "lat": 50.5757740,
+  "lon": 3.1805326
+},
+{
+  "type": "node",
+  "id": 8633637783,
+  "lat": 50.5758148,
+  "lon": 3.1804991
+},
+{
+  "type": "node",
+  "id": 8633637784,
+  "lat": 50.5758651,
+  "lon": 3.1804521
+},
+{
+  "type": "node",
+  "id": 8633637785,
+  "lat": 50.5760646,
+  "lon": 3.1802747,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 8633637786,
+  "lat": 50.5761717,
+  "lon": 3.1801933
+},
+{
+  "type": "node",
+  "id": 8633637787,
+  "lat": 50.5762347,
+  "lon": 3.1801531
+},
+{
+  "type": "node",
+  "id": 8633637788,
+  "lat": 50.5770983,
+  "lon": 3.1796810
+},
+{
+  "type": "node",
+  "id": 8633637789,
+  "lat": 50.5771511,
+  "lon": 3.1796475
+},
+{
+  "type": "node",
+  "id": 8633637790,
+  "lat": 50.5772065,
+  "lon": 3.1796072
+},
+{
+  "type": "node",
+  "id": 8633637791,
+  "lat": 50.5773606,
+  "lon": 3.1794906
+},
+{
+  "type": "node",
+  "id": 8633637792,
+  "lat": 50.5774637,
+  "lon": 3.1794101
+},
+{
+  "type": "node",
+  "id": 8633637793,
+  "lat": 50.5778341,
+  "lon": 3.1791177
+},
+{
+  "type": "node",
+  "id": 8633637794,
+  "lat": 50.5778835,
+  "lon": 3.1790856
+},
+{
+  "type": "node",
+  "id": 8633637795,
+  "lat": 50.5779193,
+  "lon": 3.1790668
+},
+{
+  "type": "node",
+  "id": 8633637796,
+  "lat": 50.5763812,
+  "lon": 3.1800726
+},
+{
+  "type": "node",
+  "id": 8633637797,
+  "lat": 50.5762696,
+  "lon": 3.1798795
+},
+{
+  "type": "node",
+  "id": 8633637798,
+  "lat": 50.5762560,
+  "lon": 3.1797534
+},
+{
+  "type": "node",
+  "id": 8633637799,
+  "lat": 50.5762398,
+  "lon": 3.1796314
+},
+{
+  "type": "node",
+  "id": 8633637800,
+  "lat": 50.5760814,
+  "lon": 3.1785572
+},
+{
+  "type": "node",
+  "id": 8633637801,
+  "lat": 50.5760669,
+  "lon": 3.1784458
+},
+{
+  "type": "node",
+  "id": 8633637802,
+  "lat": 50.5760559,
+  "lon": 3.1783372
+},
+{
+  "type": "node",
+  "id": 8633637803,
+  "lat": 50.5760031,
+  "lon": 3.1776117
+},
+{
+  "type": "node",
+  "id": 8633637804,
+  "lat": 50.5760107,
+  "lon": 3.1774950
+},
+{
+  "type": "node",
+  "id": 8633637809,
+  "lat": 50.5762100,
+  "lon": 3.1766260
+},
+{
+  "type": "node",
+  "id": 8633637810,
+  "lat": 50.5762296,
+  "lon": 3.1765562
+},
+{
+  "type": "node",
+  "id": 8633637811,
+  "lat": 50.5762756,
+  "lon": 3.1764449
+},
+{
+  "type": "node",
+  "id": 8633637812,
+  "lat": 50.5781892,
+  "lon": 3.1784070
+},
+{
+  "type": "node",
+  "id": 8633637813,
+  "lat": 50.5782931,
+  "lon": 3.1787302,
+  "tags": {
+    "highway": "traffic_signals"
+  }
+},
+{
+  "type": "node",
+  "id": 8633637814,
+  "lat": 50.5782897,
+  "lon": 3.1788509
+},
+{
+  "type": "node",
+  "id": 8633637815,
+  "lat": 50.5783102,
+  "lon": 3.1790346
+},
+{
+  "type": "node",
+  "id": 8633637816,
+  "lat": 50.5783391,
+  "lon": 3.1791821
+},
+{
+  "type": "node",
+  "id": 8633637817,
+  "lat": 50.5783783,
+  "lon": 3.1793176
+},
+{
+  "type": "node",
+  "id": 8633637818,
+  "lat": 50.5783025,
+  "lon": 3.1793363
+},
+{
+  "type": "node",
+  "id": 8633637819,
+  "lat": 50.5782335,
+  "lon": 3.1789286
+},
+{
+  "type": "node",
+  "id": 8633637820,
+  "lat": 50.5782369,
+  "lon": 3.1787275
+},
+{
+  "type": "node",
+  "id": 8633637863,
+  "lat": 50.5821415,
+  "lon": 3.1790829
+},
+{
+  "type": "node",
+  "id": 8633637864,
+  "lat": 50.5804750,
+  "lon": 3.1782165
+},
+{
+  "type": "node",
+  "id": 8633637865,
+  "lat": 50.5804333,
+  "lon": 3.1782742
+},
+{
+  "type": "node",
+  "id": 8633637866,
+  "lat": 50.5802127,
+  "lon": 3.1785974
+},
+{
+  "type": "node",
+  "id": 8633637867,
+  "lat": 50.5800960,
+  "lon": 3.1787516
+},
+{
+  "type": "node",
+  "id": 8633637868,
+  "lat": 50.5800458,
+  "lon": 3.1788079
+},
+{
+  "type": "node",
+  "id": 8633637869,
+  "lat": 50.5798090,
+  "lon": 3.1790145
+},
+{
+  "type": "node",
+  "id": 8633637870,
+  "lat": 50.5797051,
+  "lon": 3.1790949
+},
+{
+  "type": "node",
+  "id": 8633637871,
+  "lat": 50.5795501,
+  "lon": 3.1792183
+},
+{
+  "type": "node",
+  "id": 8633637872,
+  "lat": 50.5794675,
+  "lon": 3.1792827
+},
+{
+  "type": "node",
+  "id": 8633637873,
+  "lat": 50.5790886,
+  "lon": 3.1811616
+},
+{
+  "type": "node",
+  "id": 8633637874,
+  "lat": 50.5791320,
+  "lon": 3.1812742
+},
+{
+  "type": "node",
+  "id": 8633637875,
+  "lat": 50.5789796,
+  "lon": 3.1808867
+},
+{
+  "type": "node",
+  "id": 8633637876,
+  "lat": 50.5791993,
+  "lon": 3.1814593
+},
+{
+  "type": "node",
+  "id": 8633637877,
+  "lat": 50.5795152,
+  "lon": 3.1827736
+},
+{
+  "type": "node",
+  "id": 8633637878,
+  "lat": 50.5795127,
+  "lon": 3.1829640
+},
+{
+  "type": "node",
+  "id": 8633637879,
+  "lat": 50.5796455,
+  "lon": 3.1829077
+},
+{
+  "type": "node",
+  "id": 8633637880,
+  "lat": 50.5807645,
+  "lon": 3.1826301
+},
+{
+  "type": "node",
+  "id": 8633637881,
+  "lat": 50.5804724,
+  "lon": 3.1823605
+},
+{
+  "type": "node",
+  "id": 8633637882,
+  "lat": 50.5804852,
+  "lon": 3.1824584
+},
+{
+  "type": "node",
+  "id": 8633637883,
+  "lat": 50.5805048,
+  "lon": 3.1825724
+},
+{
+  "type": "node",
+  "id": 8633637884,
+  "lat": 50.5804963,
+  "lon": 3.1827977
+},
+{
+  "type": "node",
+  "id": 8633637885,
+  "lat": 50.5804486,
+  "lon": 3.1833731
+},
+{
+  "type": "node",
+  "id": 8633637886,
+  "lat": 50.5804460,
+  "lon": 3.1835031
+},
+{
+  "type": "node",
+  "id": 8633637887,
+  "lat": 50.5804358,
+  "lon": 3.1836011
+},
+{
+  "type": "node",
+  "id": 8633637888,
+  "lat": 50.5803839,
+  "lon": 3.1840222
+},
+{
+  "type": "node",
+  "id": 8633637889,
+  "lat": 50.5803822,
+  "lon": 3.1840999
+},
+{
+  "type": "node",
+  "id": 8633637890,
+  "lat": 50.5803830,
+  "lon": 3.1842461
+},
+{
+  "type": "node",
+  "id": 8633637891,
+  "lat": 50.5798456,
+  "lon": 3.1844862
+},
+{
+  "type": "node",
+  "id": 8633637892,
+  "lat": 50.5798048,
+  "lon": 3.1844822
+},
+{
+  "type": "node",
+  "id": 8633637893,
+  "lat": 50.5789098,
+  "lon": 3.1845948
+},
+{
+  "type": "node",
+  "id": 8633637894,
+  "lat": 50.5788314,
+  "lon": 3.1853553
+},
+{
+  "type": "node",
+  "id": 8633637895,
+  "lat": 50.5787922,
+  "lon": 3.1856905
+},
+{
+  "type": "node",
+  "id": 8633637896,
+  "lat": 50.5828636,
+  "lon": 3.1851017
+},
+{
+  "type": "node",
+  "id": 8633637897,
+  "lat": 50.5829249,
+  "lon": 3.1851178
+},
+{
+  "type": "node",
+  "id": 8633637898,
+  "lat": 50.5830493,
+  "lon": 3.1851675
+},
+{
+  "type": "node",
+  "id": 8633637899,
+  "lat": 50.5831004,
+  "lon": 3.1851916
+},
+{
+  "type": "node",
+  "id": 8633637900,
+  "lat": 50.5831498,
+  "lon": 3.1852198
+},
+{
+  "type": "node",
+  "id": 8633638646,
+  "lat": 50.5829369,
+  "lon": 3.1682628
+},
+{
+  "type": "node",
+  "id": 8633638647,
+  "lat": 50.5830663,
+  "lon": 3.1682172
+},
+{
+  "type": "node",
+  "id": 8633638648,
+  "lat": 50.5831540,
+  "lon": 3.1681877
+},
+{
+  "type": "node",
+  "id": 8633638649,
+  "lat": 50.5834469,
+  "lon": 3.1681019
+},
+{
+  "type": "node",
+  "id": 8633638650,
+  "lat": 50.5835014,
+  "lon": 3.1680818
+},
+{
+  "type": "node",
+  "id": 8633638651,
+  "lat": 50.5835542,
+  "lon": 3.1680590
+},
+{
+  "type": "node",
+  "id": 8633638652,
+  "lat": 50.5840967,
+  "lon": 3.1678256
+},
+{
+  "type": "node",
+  "id": 8633638653,
+  "lat": 50.5841426,
+  "lon": 3.1678109
+},
+{
+  "type": "node",
+  "id": 8633638656,
+  "lat": 50.5842287,
+  "lon": 3.1677908
+},
+{
+  "type": "node",
+  "id": 8633638657,
+  "lat": 50.5843206,
+  "lon": 3.1677841
+},
+{
+  "type": "node",
+  "id": 8633638658,
+  "lat": 50.5845224,
+  "lon": 3.1678002
+},
+{
+  "type": "node",
+  "id": 8633638659,
+  "lat": 50.5847012,
+  "lon": 3.1678511
+},
+{
+  "type": "node",
+  "id": 8633638854,
+  "lat": 50.5818801,
+  "lon": 3.1766662
+},
+{
+  "type": "node",
+  "id": 8633638855,
+  "lat": 50.5820794,
+  "lon": 3.1768070
+},
+{
+  "type": "node",
+  "id": 8633638856,
+  "lat": 50.5822812,
+  "lon": 3.1769237
+},
+{
+  "type": "node",
+  "id": 8633638857,
+  "lat": 50.5824123,
+  "lon": 3.1769907
+},
+{
+  "type": "node",
+  "id": 8633638858,
+  "lat": 50.5827385,
+  "lon": 3.1771235
+},
+{
+  "type": "node",
+  "id": 8633638859,
+  "lat": 50.5828338,
+  "lon": 3.1770846
+},
+{
+  "type": "node",
+  "id": 8633638860,
+  "lat": 50.5831906,
+  "lon": 3.1763631
+},
+{
+  "type": "node",
+  "id": 8633638861,
+  "lat": 50.5833124,
+  "lon": 3.1761754
+},
+{
+  "type": "node",
+  "id": 8633638862,
+  "lat": 50.5833933,
+  "lon": 3.1760868
+},
+{
+  "type": "node",
+  "id": 8633638863,
+  "lat": 50.5834538,
+  "lon": 3.1760506
+},
+{
+  "type": "node",
+  "id": 8633638864,
+  "lat": 50.5835542,
+  "lon": 3.1760614
+},
+{
+  "type": "node",
+  "id": 8633638865,
+  "lat": 50.5836343,
+  "lon": 3.1761204
+},
+{
+  "type": "node",
+  "id": 8633638866,
+  "lat": 50.5836845,
+  "lon": 3.1761700
+},
+{
+  "type": "node",
+  "id": 8633638867,
+  "lat": 50.5838165,
+  "lon": 3.1763349
+},
+{
+  "type": "node",
+  "id": 8659169356,
+  "lat": 50.5759761,
+  "lon": 3.1736860
+},
+{
+  "type": "node",
+  "id": 8690839938,
+  "lat": 50.5755826,
+  "lon": 3.1806764
+},
+{
+  "type": "node",
+  "id": 8690839940,
+  "lat": 50.5812987,
+  "lon": 3.1757701
+},
+{
+  "type": "node",
+  "id": 8957143586,
+  "lat": 50.5785759,
+  "lon": 3.1873277,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals:direction": "backward"
+  }
+},
+{
+  "type": "node",
+  "id": 8957143588,
+  "lat": 50.5785184,
+  "lon": 3.1877122,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals:direction": "forward"
+  }
+},
+{
+  "type": "node",
+  "id": 9083730248,
+  "lat": 50.5686681,
+  "lon": 3.1671139,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals:direction": "forward"
+  }
+},
+{
+  "type": "node",
+  "id": 9083730250,
+  "lat": 50.5683243,
+  "lon": 3.1664423,
+  "tags": {
+    "highway": "traffic_signals",
+    "traffic_signals:direction": "backward"
+  }
+},
+{
+  "type": "node",
+  "id": 10118791969,
+  "lat": 50.5838426,
+  "lon": 3.1679349
+},
+{
+  "type": "node",
+  "id": 10704556933,
+  "lat": 50.5721445,
+  "lon": 3.1701456
+},
+{
+  "type": "node",
+  "id": 10704556934,
+  "lat": 50.5723610,
+  "lon": 3.1702384
+},
+{
+  "type": "node",
+  "id": 10704556935,
+  "lat": 50.5725828,
+  "lon": 3.1703533
+},
+{
+  "type": "node",
+  "id": 10704556936,
+  "lat": 50.5727686,
+  "lon": 3.1704943
+},
+{
+  "type": "node",
+  "id": 10704556937,
+  "lat": 50.5730275,
+  "lon": 3.1707317
+},
+{
+  "type": "node",
+  "id": 10704556938,
+  "lat": 50.5735256,
+  "lon": 3.1712664
+},
+{
+  "type": "node",
+  "id": 10704556939,
+  "lat": 50.5746572,
+  "lon": 3.1724832
+},
+{
+  "type": "node",
+  "id": 10704556940,
+  "lat": 50.5748242,
+  "lon": 3.1726533
+},
+{
+  "type": "node",
+  "id": 10704556941,
+  "lat": 50.5755669,
+  "lon": 3.1733071
+},
+{
+  "type": "node",
+  "id": 10704556942,
+  "lat": 50.5757691,
+  "lon": 3.1734921
+},
+{
+  "type": "node",
+  "id": 10704556943,
+  "lat": 50.5758799,
+  "lon": 3.1736256
+},
+{
+  "type": "node",
+  "id": 10704556944,
+  "lat": 50.5759420,
+  "lon": 3.1737270
+},
+{
+  "type": "node",
+  "id": 10704556945,
+  "lat": 50.5760008,
+  "lon": 3.1738516
+},
+{
+  "type": "node",
+  "id": 10704556946,
+  "lat": 50.5760629,
+  "lon": 3.1740260
+},
+{
+  "type": "node",
+  "id": 10704556947,
+  "lat": 50.5763195,
+  "lon": 3.1747858
+},
+{
+  "type": "node",
+  "id": 10704556948,
+  "lat": 50.5767224,
+  "lon": 3.1760934
+},
+{
+  "type": "node",
+  "id": 10704556949,
+  "lat": 50.5770653,
+  "lon": 3.1771097
+},
+{
+  "type": "node",
+  "id": 10704556950,
+  "lat": 50.5771497,
+  "lon": 3.1771477
+},
+{
+  "type": "node",
+  "id": 10704556951,
+  "lat": 50.5771026,
+  "lon": 3.1769852
+},
+{
+  "type": "node",
+  "id": 10704556952,
+  "lat": 50.5767975,
+  "lon": 3.1760260
+},
+{
+  "type": "node",
+  "id": 10704556953,
+  "lat": 50.5764517,
+  "lon": 3.1749353
+},
+{
+  "type": "node",
+  "id": 10704556954,
+  "lat": 50.5761703,
+  "lon": 3.1740580
+},
+{
+  "type": "node",
+  "id": 10704556955,
+  "lat": 50.5760991,
+  "lon": 3.1738658
+},
+{
+  "type": "node",
+  "id": 10704556956,
+  "lat": 50.5760302,
+  "lon": 3.1737181
+},
+{
+  "type": "node",
+  "id": 10704556957,
+  "lat": 50.5759725,
+  "lon": 3.1736042
+},
+{
+  "type": "node",
+  "id": 10704556958,
+  "lat": 50.5758641,
+  "lon": 3.1734619
+},
+{
+  "type": "node",
+  "id": 10704556959,
+  "lat": 50.5756674,
+  "lon": 3.1732644
+},
+{
+  "type": "node",
+  "id": 10704556960,
+  "lat": 50.5751307,
+  "lon": 3.1727946
+},
+{
+  "type": "node",
+  "id": 10704556961,
+  "lat": 50.5746797,
+  "lon": 3.1723686
+},
+{
+  "type": "node",
+  "id": 10704556962,
+  "lat": 50.5741588,
+  "lon": 3.1718070
+},
+{
+  "type": "node",
+  "id": 10704556963,
+  "lat": 50.5733112,
+  "lon": 3.1708977
+},
+{
+  "type": "node",
+  "id": 10704556968,
+  "lat": 50.5781662,
+  "lon": 3.1783659
+},
+{
+  "type": "node",
+  "id": 10704556969,
+  "lat": 50.5781651,
+  "lon": 3.1784133
+},
+{
+  "type": "node",
+  "id": 10704556970,
+  "lat": 50.5781616,
+  "lon": 3.1785449
+},
+{
+  "type": "node",
+  "id": 10728279686,
+  "lat": 50.5843985,
+  "lon": 3.1677863
+},
+{
+  "type": "node",
+  "id": 10728279689,
+  "lat": 50.5839783,
+  "lon": 3.1678765
+},
+{
+  "type": "node",
+  "id": 10778355313,
+  "lat": 50.5804885,
+  "lon": 3.1693686
+},
+{
+  "type": "node",
+  "id": 11078287697,
+  "lat": 50.5770112,
+  "lon": 3.1811408
+},
+{
+  "type": "node",
+  "id": 11078288616,
+  "lat": 50.5761517,
+  "lon": 3.1816903
+},
+{
+  "type": "node",
+  "id": 11078288622,
+  "lat": 50.5783732,
+  "lon": 3.1801897
+},
+{
+  "type": "node",
+  "id": 11871423881,
+  "lat": 50.5729093,
+  "lon": 3.1704807
+},
+{
+  "type": "node",
+  "id": 11986003517,
+  "lat": 50.5772796,
+  "lon": 3.1780946
+},
+{
+  "type": "node",
+  "id": 11986003518,
+  "lat": 50.5774187,
+  "lon": 3.1779711
+},
+{
+  "type": "node",
+  "id": 12069367807,
+  "lat": 50.5700293,
+  "lon": 3.1695397,
+  "tags": {
+    "traffic_calming": "table"
+  }
+},
+{
+  "type": "node",
+  "id": 12069367808,
+  "lat": 50.5676044,
+  "lon": 3.1793712,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 12069367810,
+  "lat": 50.5705513,
+  "lon": 3.1824671,
+  "tags": {
+    "traffic_calming": "cushion"
+  }
+},
+{
+  "type": "node",
+  "id": 12168053938,
+  "lat": 50.5786267,
+  "lon": 3.1869436
+},
+{
+  "type": "node",
+  "id": 12294314296,
+  "lat": 50.5801958,
+  "lon": 3.1833208
+},
+{
+  "type": "node",
+  "id": 12294314297,
+  "lat": 50.5798805,
+  "lon": 3.1834285
+},
+{
+  "type": "node",
+  "id": 12294314298,
+  "lat": 50.5800702,
+  "lon": 3.1845283
+},
+{
+  "type": "node",
+  "id": 12294314299,
+  "lat": 50.5800514,
+  "lon": 3.1840764
+},
+{
+  "type": "node",
+  "id": 12294330605,
+  "lat": 50.5822018,
+  "lon": 3.1686321
+},
+{
+  "type": "node",
+  "id": 12294330606,
+  "lat": 50.5823278,
+  "lon": 3.1687494
+},
+{
+  "type": "node",
+  "id": 12294330607,
+  "lat": 50.5828328,
+  "lon": 3.1692564,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 12294330608,
+  "lat": 50.5831114,
+  "lon": 3.1695500
+},
+{
+  "type": "node",
+  "id": 12294330609,
+  "lat": 50.5828143,
+  "lon": 3.1692378
+},
+{
+  "type": "node",
+  "id": 12294330610,
+  "lat": 50.5826963,
+  "lon": 3.1695551
+},
+{
+  "type": "node",
+  "id": 12294330611,
+  "lat": 50.5824833,
+  "lon": 3.1711177
+},
+{
+  "type": "node",
+  "id": 12294330612,
+  "lat": 50.5824714,
+  "lon": 3.1711455
+},
+{
+  "type": "node",
+  "id": 12294330613,
+  "lat": 50.5822897,
+  "lon": 3.1715779
+},
+{
+  "type": "node",
+  "id": 12294330614,
+  "lat": 50.5820667,
+  "lon": 3.1767989
+},
+{
+  "type": "node",
+  "id": 12294330615,
+  "lat": 50.5822854,
+  "lon": 3.1761826
+},
+{
+  "type": "node",
+  "id": 12294330616,
+  "lat": 50.5823789,
+  "lon": 3.1759421
+},
+{
+  "type": "node",
+  "id": 12294330617,
+  "lat": 50.5812893,
+  "lon": 3.1762772
+},
+{
+  "type": "node",
+  "id": 12294330618,
+  "lat": 50.5809984,
+  "lon": 3.1762517
+},
+{
+  "type": "node",
+  "id": 12343934555,
+  "lat": 50.5703608,
+  "lon": 3.1730753
+},
+{
+  "type": "node",
+  "id": 12343934573,
+  "lat": 50.5690466,
+  "lon": 3.1677687
+},
+{
+  "type": "node",
+  "id": 12343934574,
+  "lat": 50.5693990,
+  "lon": 3.1672766
+},
+{
+  "type": "node",
+  "id": 12529675241,
+  "lat": 50.5790860,
+  "lon": 3.1835380
+},
+{
+  "type": "node",
+  "id": 12529675242,
+  "lat": 50.5790349,
+  "lon": 3.1836171
+},
+{
+  "type": "node",
+  "id": 12529675243,
+  "lat": 50.5789685,
+  "lon": 3.1837794
+},
+{
+  "type": "node",
+  "id": 12529675244,
+  "lat": 50.5789268,
+  "lon": 3.1839524
+},
+{
+  "type": "node",
+  "id": 12529675245,
+  "lat": 50.5784345,
+  "lon": 3.1882440
+},
+{
+  "type": "node",
+  "id": 12529675246,
+  "lat": 50.5783349,
+  "lon": 3.1885377
+},
+{
+  "type": "node",
+  "id": 12529675247,
+  "lat": 50.5782761,
+  "lon": 3.1886490
+},
+{
+  "type": "node",
+  "id": 12529675248,
+  "lat": 50.5783988,
+  "lon": 3.1883733
+},
+{
+  "type": "node",
+  "id": 12539323144,
+  "lat": 50.5698353,
+  "lon": 3.1690065
+},
+{
+  "type": "node",
+  "id": 12539323145,
+  "lat": 50.5699217,
+  "lon": 3.1691165
+},
+{
+  "type": "node",
+  "id": 12539323147,
+  "lat": 50.5694979,
+  "lon": 3.1684825
+},
+{
+  "type": "node",
+  "id": 12540019803,
+  "lat": 50.5811426,
+  "lon": 3.1775956
+},
+{
+  "type": "node",
+  "id": 12540019804,
+  "lat": 50.5811954,
+  "lon": 3.1775326
+},
+{
+  "type": "node",
+  "id": 12540019805,
+  "lat": 50.5812380,
+  "lon": 3.1774548
+},
+{
+  "type": "node",
+  "id": 12540019806,
+  "lat": 50.5812746,
+  "lon": 3.1773448
+},
+{
+  "type": "node",
+  "id": 12540019807,
+  "lat": 50.5807500,
+  "lon": 3.1779107
+},
+{
+  "type": "node",
+  "id": 12540019808,
+  "lat": 50.5806598,
+  "lon": 3.1779966
+},
+{
+  "type": "node",
+  "id": 12540019809,
+  "lat": 50.5806070,
+  "lon": 3.1780516
+},
+{
+  "type": "node",
+  "id": 12540019810,
+  "lat": 50.5805704,
+  "lon": 3.1780931
+},
+{
+  "type": "node",
+  "id": 12540019839,
+  "lat": 50.5782131,
+  "lon": 3.1683420
+},
+{
+  "type": "node",
+  "id": 12540019840,
+  "lat": 50.5787317,
+  "lon": 3.1685887
+},
+{
+  "type": "node",
+  "id": 12540019841,
+  "lat": 50.5788578,
+  "lon": 3.1686558
+},
+{
+  "type": "node",
+  "id": 12540019842,
+  "lat": 50.5789319,
+  "lon": 3.1686987
+},
+{
+  "type": "node",
+  "id": 12540019843,
+  "lat": 50.5789838,
+  "lon": 3.1687295
+},
+{
+  "type": "node",
+  "id": 12540019844,
+  "lat": 50.5790409,
+  "lon": 3.1687644
+},
+{
+  "type": "node",
+  "id": 12540019845,
+  "lat": 50.5792367,
+  "lon": 3.1688945
+},
+{
+  "type": "node",
+  "id": 12540019846,
+  "lat": 50.5792913,
+  "lon": 3.1689334
+},
+{
+  "type": "node",
+  "id": 12540019847,
+  "lat": 50.5796293,
+  "lon": 3.1691721
+},
+{
+  "type": "node",
+  "id": 12540019848,
+  "lat": 50.5796864,
+  "lon": 3.1692097
+},
+{
+  "type": "node",
+  "id": 12540019849,
+  "lat": 50.5793526,
+  "lon": 3.1689763
+},
+{
+  "type": "node",
+  "id": 12540019850,
+  "lat": 50.5798184,
+  "lon": 3.1692767
+},
+{
+  "type": "node",
+  "id": 12540019851,
+  "lat": 50.5798720,
+  "lon": 3.1692995
+},
+{
+  "type": "node",
+  "id": 12540019852,
+  "lat": 50.5800117,
+  "lon": 3.1693344
+},
+{
+  "type": "node",
+  "id": 12540019853,
+  "lat": 50.5799376,
+  "lon": 3.1693210
+},
+{
+  "type": "node",
+  "id": 12540019854,
+  "lat": 50.5801429,
+  "lon": 3.1693625
+},
+{
+  "type": "node",
+  "id": 12540019855,
+  "lat": 50.5802851,
+  "lon": 3.1693746
+},
+{
+  "type": "node",
+  "id": 12540019856,
+  "lat": 50.5803643,
+  "lon": 3.1693746
+},
+{
+  "type": "node",
+  "id": 12540019871,
+  "lat": 50.5747562,
+  "lon": 3.1727140
+},
+{
+  "type": "node",
+  "id": 12540019872,
+  "lat": 50.5701119,
+  "lon": 3.1693640
+},
+{
+  "type": "node",
+  "id": 12540019873,
+  "lat": 50.5702084,
+  "lon": 3.1695118
+},
+{
+  "type": "node",
+  "id": 12540019874,
+  "lat": 50.5714779,
+  "lon": 3.1713742
+},
+{
+  "type": "node",
+  "id": 12540019875,
+  "lat": 50.5714370,
+  "lon": 3.1713286
+},
+{
+  "type": "node",
+  "id": 12540019876,
+  "lat": 50.5713995,
+  "lon": 3.1712857
+},
+{
+  "type": "node",
+  "id": 12540019877,
+  "lat": 50.5711568,
+  "lon": 3.1709759
+},
+{
+  "type": "node",
+  "id": 12540019878,
+  "lat": 50.5711236,
+  "lon": 3.1709263
+},
+{
+  "type": "node",
+  "id": 12540020159,
+  "lat": 50.5825102,
+  "lon": 3.1710684
+},
+{
+  "type": "node",
+  "id": 12540020160,
+  "lat": 50.5824634,
+  "lon": 3.1711797
+},
+{
+  "type": "node",
+  "id": 12540125374,
+  "lat": 50.5831625,
+  "lon": 3.1689320
+},
+{
+  "type": "node",
+  "id": 12540125375,
+  "lat": 50.5832255,
+  "lon": 3.1689522
+},
+{
+  "type": "node",
+  "id": 12540125376,
+  "lat": 50.5834665,
+  "lon": 3.1688395
+},
+{
+  "type": "node",
+  "id": 12540125377,
+  "lat": 50.5835628,
+  "lon": 3.1688502
+},
+{
+  "type": "node",
+  "id": 12540125378,
+  "lat": 50.5836241,
+  "lon": 3.1688824
+},
+{
+  "type": "node",
+  "id": 12540125379,
+  "lat": 50.5836990,
+  "lon": 3.1689629
+},
+{
+  "type": "node",
+  "id": 12540125390,
+  "lat": 50.5841699,
+  "lon": 3.1696187
+},
+{
+  "type": "node",
+  "id": 12540125391,
+  "lat": 50.5838753,
+  "lon": 3.1693599
+},
+{
+  "type": "node",
+  "id": 12540125392,
+  "lat": 50.5839281,
+  "lon": 3.1694202
+},
+{
+  "type": "node",
+  "id": 12543888354,
+  "lat": 50.5829339,
+  "lon": 3.1723882
+},
+{
+  "type": "node",
+  "id": 12543888368,
+  "lat": 50.5782016,
+  "lon": 3.1789987
+},
+{
+  "type": "node",
+  "id": 12543888369,
+  "lat": 50.5803791,
+  "lon": 3.1784600
+},
+{
+  "type": "node",
+  "id": 12732007844,
+  "lat": 50.5715350,
+  "lon": 3.1640397
+},
+{
+  "type": "node",
+  "id": 12732007845,
+  "lat": 50.5715844,
+  "lon": 3.1639016
+},
+{
+  "type": "node",
+  "id": 12732059768,
+  "lat": 50.5828045,
+  "lon": 3.1617813
+},
+{
+  "type": "node",
+  "id": 12732059769,
+  "lat": 50.5827465,
+  "lon": 3.1617632
+},
+{
+  "type": "node",
+  "id": 12732059770,
+  "lat": 50.5826810,
+  "lon": 3.1618336
+},
+{
+  "type": "node",
+  "id": 12732059771,
+  "lat": 50.5830987,
+  "lon": 3.1619415
+},
+{
+  "type": "node",
+  "id": 12732059772,
+  "lat": 50.5830544,
+  "lon": 3.1619959
+},
+{
+  "type": "node",
+  "id": 12732059773,
+  "lat": 50.5829931,
+  "lon": 3.1619905
+},
+{
+  "type": "node",
+  "id": 12732059774,
+  "lat": 50.5834308,
+  "lon": 3.1612106
+},
+{
+  "type": "node",
+  "id": 12732059775,
+  "lat": 50.5845671,
+  "lon": 3.1591400
+},
+{
+  "type": "node",
+  "id": 12732059776,
+  "lat": 50.5844918,
+  "lon": 3.1591923
+},
+{
+  "type": "node",
+  "id": 12732059777,
+  "lat": 50.5843956,
+  "lon": 3.1592499
+},
+{
+  "type": "node",
+  "id": 12732059778,
+  "lat": 50.5843044,
+  "lon": 3.1593633
+},
+{
+  "type": "node",
+  "id": 12734180511,
+  "lat": 50.5825903,
+  "lon": 3.1850367
+},
+{
+  "type": "node",
+  "id": 13074615743,
+  "lat": 50.5782449,
+  "lon": 3.1783204
+},
+{
+  "type": "way",
+  "id": 34717875,
+  "nodes": [
+    404454053,
+    404454055,
+    404454058
+  ],
+  "tags": {
+    "access": "destination",
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "Rue du Général Deffontaines",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "fine_gravel"
+  }
+},
+{
+  "type": "way",
+  "id": 34717876,
+  "nodes": [
+    2643939365,
+    6658123929,
+    404454053
+  ],
+  "tags": {
+    "bicycle": "yes",
+    "highway": "footway",
+    "lit": "yes",
+    "name": "Ruelle de la Fontaine Saint-Pierre",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "gravel"
+  }
+},
+{
+  "type": "way",
+  "id": 34778625,
+  "nodes": [
+    406362509,
+    8633637881,
+    8633637882,
+    8633637883,
+    408456349,
+    6658123947
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue de la Source",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34778626,
+  "nodes": [
+    404396244,
+    6658123936,
+    8633637879,
+    6658123937,
+    6658123938,
+    6658123939,
+    408456348,
+    6658123948,
+    6658123946,
+    8633637884,
+    6658123947,
+    6658123945,
+    6169291298,
+    406362513,
+    8633637880,
+    406362514
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "no",
+    "maxspeed": "30",
+    "name": "Chemin du Marais",
+    "sidewalk": "both",
+    "surface": "asphalt",
+    "width": "5.2"
+  }
+},
+{
+  "type": "way",
+  "id": 34778662,
+  "nodes": [
+    404396225,
+    2643939364,
+    6658123926,
+    406362793,
+    8633637892,
+    8633637891,
+    12294314298,
+    408456009,
+    406362794
+  ],
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "residential",
+    "horse": "yes",
+    "maxspeed": "30",
+    "motor_vehicle": "yes",
+    "name": "Rue des Neuf Bonniers",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34779238,
+  "nodes": [
+    406370640,
+    405092557
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Chaussée des Bonniers"
+  }
+},
+{
+  "type": "way",
+  "id": 34779239,
+  "nodes": [
+    406362514,
+    406362516,
+    406362519,
+    406362521,
+    406362522,
+    406362523,
+    406370646
+  ],
+  "tags": {
+    "agricultural": "designated",
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "horse": "yes",
+    "lit": "no",
+    "motor_vehicle": "destination",
+    "name": "Chemin du Marais",
+    "segregated": "no",
+    "smoothness": "intermediate",
+    "surface": "fine_gravel",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 34854964,
+  "nodes": [
+    404396250,
+    408741286
+  ],
+  "tags": {
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "30",
+    "maxspeed:type": "FR:urban",
+    "maxweight:signed": "no",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "shoulder": "no",
+    "sidewalk": "both",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34854965,
+  "nodes": [
+    6658482689,
+    408479369,
+    6658482690,
+    408479370,
+    6658482691,
+    408479371,
+    6658482692,
+    408479372,
+    6658482693,
+    408479373,
+    6658482694,
+    408479374,
+    6658482695,
+    408479376,
+    6658482696,
+    6658478776,
+    6658482697,
+    6658478777,
+    6658482698,
+    6658478778,
+    6658482699,
+    408479377,
+    6658478781,
+    408479379,
+    6658478782,
+    408479380
+  ],
+  "tags": {
+    "cycleway:right": "separate",
+    "highway": "secondary",
+    "junction": "roundabout",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34855106,
+  "nodes": [
+    408480531,
+    408480529,
+    408480526,
+    408480523,
+    408480522,
+    6658478764,
+    12540019806,
+    408480521,
+    12540019805,
+    6658478765,
+    12540019804,
+    408480520,
+    12540019803,
+    408480519,
+    408480518,
+    408480517,
+    12540019807,
+    6658478766,
+    12540019808,
+    12540019809,
+    12540019810,
+    408480516,
+    8633637864,
+    8633637865,
+    408480515
+  ],
+  "tags": {
+    "agricultural": "designated",
+    "bicycle": "designated",
+    "description": "Sens interdit sauf riverains",
+    "foot": "yes",
+    "highway": "residential",
+    "horse": "no",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "motor_vehicle": "destination",
+    "name": "Chemin du Pont de Bouvines",
+    "oneway": "no",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34865457,
+  "nodes": [
+    6658478778,
+    6658482705,
+    408730170,
+    408730171,
+    408480531,
+    6658478767,
+    6658478768,
+    408730172,
+    8633638854,
+    408730173,
+    12294330614,
+    8633638855,
+    6658478769,
+    8633638856,
+    8633638857,
+    408730174,
+    408730175,
+    6658478770,
+    8633638858,
+    408730176,
+    6658478771,
+    8633638859,
+    408730177,
+    408730178,
+    408730179,
+    8633638860,
+    408730180,
+    6658478772,
+    8633638861,
+    6658478773,
+    8633638862,
+    6658478774,
+    8633638863,
+    408730181,
+    408730182,
+    8633638864,
+    6658478775,
+    8633638865,
+    8633638866,
+    408730183,
+    8633638867,
+    419001232,
+    409154548
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue de la Marque",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34866122,
+  "nodes": [
+    6658123992,
+    6658124006,
+    12543888368,
+    5672664934,
+    8633637795,
+    8633637794,
+    8633637793,
+    8633637792,
+    8633637791,
+    408738585,
+    8633637790,
+    8633637789,
+    8633637788,
+    408738586,
+    8633637796,
+    408738587
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue du Bas Sainghin",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34866123,
+  "nodes": [
+    408738615,
+    10704556948,
+    408738616,
+    6658124025,
+    6658124026,
+    8633637811,
+    408738617,
+    8633637810,
+    8633637809,
+    408738618,
+    6658124027,
+    8633637804,
+    6658124028,
+    8633637803,
+    408738619,
+    408738620,
+    8633637802,
+    8633637801,
+    8633637800,
+    6658124029,
+    8633637799,
+    8633637798,
+    8633637797,
+    408738587
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Chemin Delattre",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 34866344,
+  "nodes": [
+    408740470,
+    1715079995,
+    408740463,
+    1715079893,
+    1715079547,
+    1715079864,
+    1715079669,
+    1715080191,
+    1715080104,
+    1715079871,
+    408740464,
+    1715079952,
+    1715080190,
+    408740465,
+    408740466,
+    408740467,
+    408740468,
+    408740469
+  ],
+  "tags": {
+    "highway": "track",
+    "name": "Chemin de la Couture",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 34866345,
+  "nodes": [
+    3358591770,
+    6658124076,
+    408740472
+  ],
+  "tags": {
+    "highway": "path",
+    "local_ref": "GR121B",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "grass",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 34866346,
+  "nodes": [
+    408740473,
+    408740474,
+    408740472
+  ],
+  "tags": {
+    "highway": "track",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 34866488,
+  "nodes": [
+    408740472,
+    408740475,
+    4781795132,
+    11078288616,
+    11078287697,
+    8550791315,
+    11078288622,
+    8550791316
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "segregated": "no",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 34866490,
+  "nodes": [
+    408741286,
+    6658123949,
+    409154550
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "local_ref": "GR121B",
+    "segregated": "no",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 34866492,
+  "nodes": [
+    408741286,
+    6658123950,
+    408479354,
+    6658123951,
+    8633637876,
+    6658123952,
+    8633637874,
+    8633637873,
+    6658123953,
+    8633637875,
+    6658123980
+  ],
+  "tags": {
+    "cycleway:both": "lane",
+    "cycleway:both:lane": "exclusive",
+    "foot": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "no",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "sidewalk": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34867006,
+  "nodes": [
+    408740470,
+    408738597,
+    1715079794,
+    8633637773,
+    408738598,
+    8633637772,
+    8633637771,
+    1715080037,
+    1715080159,
+    408738599,
+    8633637770,
+    8633637769,
+    1715080128,
+    8633637768,
+    8633637767,
+    8633637766,
+    408738600,
+    8633637765,
+    8633637764,
+    408738601,
+    8633637763,
+    12069367810,
+    408738602,
+    408738603,
+    408738604,
+    8633637762,
+    408738605,
+    8633637761,
+    408738606,
+    8633637759,
+    8633637758,
+    8633637760,
+    8633637757,
+    8633637756,
+    8633637755,
+    408738607,
+    408738608,
+    4097735120,
+    8633637752,
+    8633637751,
+    8633637750,
+    408738609,
+    408738610,
+    8633637749,
+    8633637748,
+    8633637747,
+    408749546
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "Rue du Bas Sainghin",
+    "sidewalk": "no",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34867015,
+  "nodes": [
+    408746738,
+    6658123958,
+    408746739,
+    408746740,
+    6658123957,
+    408746741,
+    6658123956,
+    408746742,
+    408746743,
+    11986003517,
+    6658123955,
+    6658123954,
+    408746744,
+    408746745,
+    6658124022,
+    408746746,
+    6658124023,
+    6658124024,
+    408746747
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 34867016,
+  "nodes": [
+    408738590,
+    408738591,
+    8633637778,
+    1715079602,
+    408738592,
+    8633637777,
+    408738593,
+    8633637776,
+    1715079643,
+    8633637775,
+    408738594,
+    1715079895,
+    408738595,
+    408738596,
+    1715080016,
+    1715080477,
+    8633637774,
+    408746763,
+    408746765
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "50",
+    "name": "Rue du Bas Sainghin",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34867017,
+  "nodes": [
+    408746765,
+    408740470
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "Rue du Bas Sainghin",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34867335,
+  "nodes": [
+    8633637674,
+    408749534,
+    2639793329,
+    12540019872,
+    1715079930,
+    12069367807,
+    408749535,
+    408749536,
+    408749537,
+    8633637718,
+    8633637717,
+    8607972864,
+    4817324505,
+    8607972878,
+    8633637719,
+    408749538,
+    408749539,
+    8633637720,
+    4097733213,
+    8633637721,
+    408749540,
+    8633637722,
+    8633637723,
+    4097733214,
+    12069367808,
+    8633637724,
+    408749541,
+    8633637725,
+    8633637726,
+    8633637727,
+    408749542,
+    8633637728,
+    408749543,
+    8633637729,
+    8633637730,
+    8633637731,
+    408740469
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue du Gransart",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34867866,
+  "nodes": [
+    408746753,
+    10704556961,
+    8522651301,
+    6658124056,
+    6658124055,
+    6658124054,
+    408758607,
+    408758608,
+    408758619,
+    4097735157,
+    4097735158,
+    408758609
+  ],
+  "tags": {
+    "highway": "track",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 34867867,
+  "nodes": [
+    408758617,
+    408758618,
+    4097735160,
+    408758619
+  ],
+  "tags": {
+    "highway": "track",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "surface": "dirt",
+    "tracktype": "grade5"
+  }
+},
+{
+  "type": "way",
+  "id": 34888270,
+  "nodes": [
+    409154548,
+    8633637863,
+    409154549
+  ],
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "path",
+    "horse": "no",
+    "name": "Chemin de Bouvines",
+    "surface": "unpaved",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 34888271,
+  "nodes": [
+    409154551,
+    409154555,
+    409154552,
+    409154553,
+    409154556,
+    409154554
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Allée des Récailles",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 34888272,
+  "nodes": [
+    409154555,
+    409154556
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Allée des Récailles",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 34888292,
+  "nodes": [
+    409154710,
+    5672664932,
+    409154711
+  ],
+  "tags": {
+    "cycleway:left": "separate",
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "no",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35472852,
+  "nodes": [
+    415995661,
+    8424772787,
+    415995658
+  ],
+  "tags": {
+    "highway": "residential",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxspeed:type": "FR:zone30",
+    "name": "Allée du Moulin Blanc",
+    "ref:FR:FANTOIR": "595230501F",
+    "sidewalk": "right",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35472867,
+  "nodes": [
+    415995825,
+    415995826,
+    415995827,
+    415995828,
+    415995829,
+    6658482709,
+    415995830,
+    415995831,
+    415995659
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Allée Dussart",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35473248,
+  "nodes": [
+    416000187,
+    416000188,
+    416000189,
+    12540125374,
+    6658482715,
+    12540125375,
+    416000190,
+    6658482716,
+    416000191,
+    6658482717,
+    416000192,
+    416000193,
+    12540125376,
+    6658482718,
+    416000194,
+    12540125377,
+    416000195,
+    12540125378,
+    416000196,
+    416000197,
+    12540125379,
+    6658482719,
+    6658482720,
+    416000198,
+    6658482721,
+    12540125391,
+    416000199,
+    12540125392,
+    416000200,
+    416000201,
+    416000202,
+    6658482722,
+    12540125390,
+    416000203
+  ],
+  "tags": {
+    "hgv": "yes",
+    "highway": "residential",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "name": "Allée des Symphorines",
+    "oneway": "no",
+    "sidewalk": "both",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35536197,
+  "nodes": [
+    416336464,
+    6658482751,
+    8633638659,
+    416336465,
+    6658482754,
+    8633638658,
+    6658482755,
+    10728279686,
+    416336466,
+    8633638657,
+    6658482756,
+    8633638656,
+    416336521,
+    8633638653,
+    8633638652,
+    10728279689,
+    10118791969,
+    408758616,
+    8633638651,
+    8633638650,
+    8633638649,
+    8633638648,
+    8633638647,
+    8633638646,
+    416336468,
+    12294330605,
+    416336469,
+    6658482708,
+    416336470,
+    416336471,
+    6658482706,
+    6658482707,
+    415995825
+  ],
+  "tags": {
+    "hgv": "destination",
+    "highway": "residential",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "name": "Petit Chemin de Péronne",
+    "oneway": "no",
+    "sidewalk": "both",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35536199,
+  "nodes": [
+    416336479,
+    10778355313,
+    12540019856,
+    12540019855,
+    416336473,
+    12540019854,
+    416336474,
+    12540019852,
+    12540019853,
+    12540019851,
+    12540019850,
+    416336475,
+    12540019848,
+    12540019847,
+    12540019849,
+    12540019846,
+    12540019845,
+    12540019844,
+    12540019843,
+    12540019842,
+    12540019841,
+    416336476,
+    12540019840,
+    12540019839,
+    416336477,
+    8633612918,
+    408758609
+  ],
+  "tags": {
+    "highway": "track",
+    "name": "Petit Chemin de Péronne",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 35536202,
+  "nodes": [
+    408758609,
+    8633612919,
+    408758610,
+    408758611,
+    408758612,
+    408758613,
+    408758614,
+    4789895558,
+    408758615,
+    408758616
+  ],
+  "tags": {
+    "highway": "track",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 35537186,
+  "nodes": [
+    416350317,
+    416350318,
+    416350319,
+    416350320,
+    416350321,
+    12732007845,
+    416350322,
+    12732007844,
+    416350343,
+    416350344,
+    416350345,
+    416350346,
+    416350347,
+    4858385358,
+    416350348,
+    416350349,
+    416350350,
+    4858385357,
+    416350351,
+    4858385356,
+    416350352,
+    416350353,
+    416350354,
+    4858385355,
+    416350355
+  ],
+  "tags": {
+    "highway": "track",
+    "name": "Chemin des Famars",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 35873718,
+  "nodes": [
+    419277592,
+    419001229
+  ],
+  "tags": {
+    "highway": "track",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 35883318,
+  "nodes": [
+    12539323147,
+    2583527863,
+    12343934573,
+    6501456136,
+    419386280,
+    6658124064,
+    9083730248,
+    2583527865,
+    419386282,
+    2583527858,
+    419386400,
+    9083730250,
+    419386286,
+    8633637434,
+    6533084064,
+    8633637433,
+    6533084063,
+    8633637432,
+    6533084062,
+    6533084060,
+    419606550
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue du Général de Gaulle",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "sidewalk": "both",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 35883329,
+  "nodes": [
+    416350355,
+    4858385354,
+    419386407,
+    419386397
+  ],
+  "tags": {
+    "highway": "track",
+    "name": "Rue du Fort",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "tracktype": "grade1"
+  }
+},
+{
+  "type": "way",
+  "id": 159391965,
+  "nodes": [
+    8633637674,
+    1715079846,
+    1715080474,
+    1715080309,
+    1715079667,
+    1715080018,
+    1715079671,
+    4858385349,
+    1715079954,
+    1715079787,
+    1715080108,
+    4858385350,
+    1715080156,
+    4858385351,
+    1715080412,
+    1715080368,
+    1715080014,
+    1715079700,
+    1715079924,
+    1715080245,
+    1715080326,
+    8633637708,
+    1715079786,
+    1715080463,
+    1715080250
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "source": "BDOrtho IGN"
+  }
+},
+{
+  "type": "way",
+  "id": 159391978,
+  "nodes": [
+    1715080105,
+    1715079609,
+    1715079764,
+    1715080036,
+    4858385348,
+    1715080039,
+    1715079800,
+    1715080406,
+    1715080394,
+    1715080493,
+    1715080459,
+    1715080426
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "source": "BDOrtho IGN"
+  }
+},
+{
+  "type": "way",
+  "id": 178024417,
+  "nodes": [
+    406362794,
+    6169291295,
+    408456010,
+    12734180511,
+    8633637896,
+    8633637897,
+    408456011,
+    8633637898,
+    8633637899,
+    8633637900,
+    408456013,
+    408456014
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue des Neuf Bonniers",
+    "note": "Pavé de Bouvines",
+    "oneway": "yes",
+    "surface": "sett",
+    "width": "2.8"
+  }
+},
+{
+  "type": "way",
+  "id": 252291557,
+  "nodes": [
+    6658124057,
+    8633637699,
+    408746753,
+    408746754,
+    408746755,
+    408746756,
+    1715080426,
+    8633637698,
+    408746757,
+    1715079812,
+    8633637697,
+    6658124058,
+    8633637696,
+    1715080465,
+    1715080026,
+    8633637695,
+    1715080195,
+    8633637694,
+    1715079568,
+    8424771379,
+    2583693551,
+    8633637685,
+    8633637684,
+    8633637683,
+    2583693554,
+    8633637686
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "70",
+    "name": "Route de Péronne",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 287108819,
+  "nodes": [
+    404219814,
+    2643939353,
+    12529675247,
+    404396210,
+    12529675246,
+    6658123923,
+    404396214,
+    12529675248,
+    6169290165,
+    12529675245,
+    6658123924,
+    404396217,
+    4851113806,
+    8957143588,
+    405092458,
+    405092460,
+    2643939359,
+    8957143586,
+    404396218,
+    2645332435,
+    12168053938,
+    406362297,
+    2643939360,
+    404454058,
+    8633637895,
+    6658123925,
+    8633637894,
+    404396222,
+    404396224,
+    2643939362,
+    8633637893,
+    404396225,
+    2643939363,
+    6658123927,
+    6658123928,
+    2643939365,
+    12529675244,
+    6658123930,
+    6658123931,
+    12529675243,
+    404396230,
+    6658123932,
+    12529675242,
+    404396232,
+    12529675241,
+    404396235,
+    6658123933,
+    404396238,
+    6658123934,
+    6658123935,
+    8633637878,
+    404396241,
+    404396244,
+    404396248,
+    8633637877,
+    404396250
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue Félix Dehau",
+    "oneway": "no",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "sidewalk": "both",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;Mise à jour : 2021",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 329037859,
+  "nodes": [
+    408480515,
+    12543888369,
+    3358591730,
+    409154549
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "segregated": "no",
+    "surface": "compacted",
+    "traffic_sign": "FR:C115"
+  }
+},
+{
+  "type": "way",
+  "id": 329037860,
+  "nodes": [
+    3358591731,
+    3358591732,
+    3358591733
+  ],
+  "tags": {
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 329037861,
+  "nodes": [
+    408740462,
+    3358591734,
+    3358591737,
+    3358591736,
+    3358591738,
+    3358591735
+  ],
+  "tags": {
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 329037862,
+  "nodes": [
+    3358591739,
+    3358591740,
+    3358591741,
+    3358591742,
+    3358591743,
+    3358591744,
+    3358591745,
+    3358591746,
+    3358591747,
+    3358591748,
+    3358591749,
+    3358591760,
+    3358591750,
+    3358591751,
+    3358591752,
+    3358591753,
+    3358591754,
+    3358591755,
+    3358591756,
+    3358591757,
+    3358591759,
+    3358591758,
+    3358591739
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 329037864,
+  "nodes": [
+    3358591754,
+    3358591765
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 329037865,
+  "nodes": [
+    3358591750,
+    3358591766,
+    3358591767,
+    3358591768,
+    3358591769,
+    6658124076
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 485409323,
+  "nodes": [
+    4781795132,
+    4781795133
+  ],
+  "tags": {
+    "highway": "track",
+    "surface": "grass",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 486367026,
+  "nodes": [
+    416350269,
+    12732059775,
+    12732059776,
+    12732059777,
+    4789895550,
+    12732059778,
+    12732059774,
+    4789895551,
+    12732059771,
+    4789895552,
+    12732059772,
+    4789895553,
+    12732059773,
+    4789895554,
+    12732059768,
+    4789895555,
+    12732059769,
+    4789895556,
+    12732059770,
+    4789895557,
+    4789895558
+  ],
+  "tags": {
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 493999170,
+  "nodes": [
+    1715080046,
+    1715080164,
+    1715079909,
+    1715079913,
+    1715079696,
+    1715079863,
+    1715079852,
+    1715080025,
+    1715080105
+  ],
+  "tags": {
+    "access": "private",
+    "highway": "service",
+    "service": "emergency_access",
+    "source": "Métropole Européenne de Lille",
+    "source:date": "2020"
+  }
+},
+{
+  "type": "way",
+  "id": 493999172,
+  "nodes": [
+    1715080250,
+    1715079955,
+    1715080273,
+    1715080223
+  ],
+  "tags": {
+    "access": "private",
+    "highway": "service",
+    "service": "emergency_access",
+    "source": "Métropole Européenne de Lille",
+    "source:date": "2020"
+  }
+},
+{
+  "type": "way",
+  "id": 595100702,
+  "nodes": [
+    409154554,
+    409154712,
+    8424772786
+  ],
+  "tags": {
+    "cycleway": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 595100705,
+  "nodes": [
+    5672664933,
+    408758617,
+    408479366,
+    6658478759,
+    408479367,
+    6658478760,
+    6658478761,
+    408479368
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "cycleway:right": "separate",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 695590921,
+  "nodes": [
+    6531783917,
+    6531783918,
+    6531783919,
+    6531783920,
+    6531783921,
+    6531783922,
+    6531783923,
+    6531783924,
+    6531783925,
+    6531783926,
+    6531783927,
+    6531783928,
+    6531783929,
+    6531783917
+  ],
+  "tags": {
+    "highway": "footway",
+    "leisure": "track",
+    "lit": "no",
+    "sport": "running",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 695590922,
+  "nodes": [
+    409154549,
+    409154550
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "name": "Chemin de Bouvines",
+    "segregated": "no",
+    "surface": "compacted",
+    "traffic_sign": "FR:C115"
+  }
+},
+{
+  "type": "way",
+  "id": 695590923,
+  "nodes": [
+    409154550,
+    408741287,
+    408741288,
+    408741289
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "motor_vehicle": "no",
+    "oneway": "no",
+    "segregated": "no",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 695590924,
+  "nodes": [
+    408480515,
+    8633637866,
+    408480514,
+    8633637867,
+    8633637868,
+    408480513,
+    3358591733,
+    8633637869,
+    8633637870,
+    8633637871,
+    8633637872,
+    6658123989
+  ],
+  "tags": {
+    "agricultural": "designated",
+    "bicycle": "designated",
+    "description": "Sens interdit sauf riverains",
+    "foot": "yes",
+    "highway": "residential",
+    "maxspeed": "30",
+    "motor_vehicle": "destination",
+    "name": "Chemin du Pont de Bouvines",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553868,
+  "nodes": [
+    6658123948,
+    408456350,
+    6658123944,
+    8633637885,
+    6658123943,
+    8633637886,
+    6169291296,
+    8633637887,
+    6658123942,
+    6658123941,
+    6658123940,
+    8633637888,
+    8633637889,
+    8633637890,
+    6169291297,
+    408456009
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue de la Source"
+  }
+},
+{
+  "type": "way",
+  "id": 708553869,
+  "nodes": [
+    3358591731,
+    6658478757,
+    6658478758,
+    5672664933
+  ],
+  "tags": {
+    "cycleway:both": "lane",
+    "cycleway:both:lane": "exclusive",
+    "foot": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "sidewalk": "no",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553870,
+  "nodes": [
+    3358591731,
+    6658123959,
+    2907238920,
+    8424771410,
+    6658123960,
+    6658123961,
+    6658123962,
+    6658123963,
+    6658123964,
+    6658123965,
+    6658123966,
+    6658124007
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553872,
+  "nodes": [
+    6658123997,
+    6658124007
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "secondary",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553873,
+  "nodes": [
+    408746738,
+    6658124014,
+    6658124015,
+    6658124016,
+    6658124017,
+    6658124018,
+    10704556970,
+    8424772725,
+    6658124019,
+    6658124021
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553874,
+  "nodes": [
+    6658123980,
+    6658123989,
+    6658123985,
+    6658123986,
+    6658123987,
+    8633637817,
+    6658123990,
+    8633637816,
+    6658123991,
+    8633637815,
+    6658123992,
+    6658123993,
+    8633637814,
+    6658123994,
+    8633637813,
+    6658123995,
+    6658124020
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553875,
+  "nodes": [
+    6658124021,
+    6658123968,
+    8633637820,
+    6658123969,
+    6658123970,
+    8633637819,
+    6658124006,
+    6658123971,
+    6658123972,
+    6658123973,
+    6658123974,
+    8633637818,
+    6658123975,
+    6658123976,
+    6658123977,
+    6658123978,
+    8550791316
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708553878,
+  "nodes": [
+    6531783925,
+    6658124077,
+    6658124078,
+    6658124079,
+    406362514
+  ],
+  "tags": {
+    "highway": "footway",
+    "lit": "no",
+    "surface": "fine_gravel"
+  }
+},
+{
+  "type": "way",
+  "id": 708583261,
+  "nodes": [
+    6658124007,
+    6658124008,
+    8633637812,
+    10704556969,
+    6658124009,
+    6658124010,
+    6658124011,
+    6658124012,
+    6658124013,
+    408746738
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708583262,
+  "nodes": [
+    6658123997,
+    6658123998,
+    6658123999,
+    6658124000,
+    6658124001,
+    6658124002,
+    6658124003,
+    2907238921,
+    6658124004
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "exclusive",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 708583263,
+  "nodes": [
+    408479380,
+    6658478783,
+    408479383,
+    6658478784,
+    408479384,
+    6658482685,
+    408479386,
+    6658482686,
+    408479388,
+    6658482687,
+    6658478779,
+    6658482688,
+    6658478780,
+    6658482689
+  ],
+  "tags": {
+    "cycleway:right": "separate",
+    "highway": "secondary",
+    "junction": "roundabout",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 753335162,
+  "nodes": [
+    404454053,
+    7038777439,
+    7038777440,
+    7038777441,
+    7038777442,
+    7038777443,
+    7038777444,
+    7038777447,
+    7038777445
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 802245566,
+  "nodes": [
+    6658124057,
+    10704556940,
+    12540019871,
+    8633637707,
+    8633637706,
+    7504120371,
+    8633637705,
+    8633637704,
+    7504120372,
+    8633637703,
+    8633637702,
+    8633637701,
+    8633637700,
+    7504120373,
+    7504120374
+  ],
+  "tags": {
+    "highway": "path"
+  }
+},
+{
+  "type": "way",
+  "id": 802245567,
+  "nodes": [
+    7504120376,
+    7504120377,
+    12540019874,
+    12540019875,
+    12540019876,
+    7504120378,
+    12540019877,
+    12540019878,
+    7504120379,
+    7504120380,
+    12540019873,
+    12540019872
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "Route de Péronne"
+  }
+},
+{
+  "type": "way",
+  "id": 907261938,
+  "nodes": [
+    408749534,
+    8424771373,
+    8424771374,
+    8424771375,
+    8424771376,
+    8424771377,
+    8424771378,
+    10704556933,
+    10704556934,
+    10704556935,
+    10704556936,
+    10704556937,
+    10704556938,
+    10704556939,
+    10704556940,
+    10704556941,
+    10704556942,
+    10704556943,
+    10704556944,
+    10704556945,
+    10704556946,
+    10704556947,
+    10704556948,
+    10704556949
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "cycleway:surface:colour": "red",
+    "foot": "yes",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no",
+    "start_date": "2023-01",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261939,
+  "nodes": [
+    1715080459,
+    8424771380,
+    11871423881,
+    8424771381,
+    8424771382,
+    8424771383,
+    8424771384,
+    8424771385,
+    8424771386,
+    8424771387,
+    8633637674
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "yes",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261943,
+  "nodes": [
+    8424771410,
+    8424771411,
+    8424771412,
+    8424771413,
+    8424771414,
+    13074615743,
+    8424771416,
+    10704556968,
+    8424772717,
+    8424772718,
+    8424772719,
+    8424772720,
+    8424772721,
+    8424772722
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "yes",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261944,
+  "nodes": [
+    8424772723,
+    8424772724,
+    10704556950,
+    10704556951,
+    10704556952,
+    10704556953,
+    10704556954,
+    10704556955,
+    10704556956,
+    10704556957,
+    10704556958,
+    10704556959,
+    10704556960,
+    10704556961,
+    10704556962,
+    10704556963,
+    1715080459
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "cycleway:surface:colour": "red",
+    "foot": "yes",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no",
+    "start_date": "2023-01",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261945,
+  "nodes": [
+    408746739,
+    8424772722,
+    11986003518,
+    8424772723
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261946,
+  "nodes": [
+    10704556949,
+    8424772738,
+    8424772737,
+    8424772736,
+    8424772735,
+    8424772734,
+    8424772733,
+    8424772732,
+    8424772731,
+    8424772730,
+    8424772729,
+    8424772728,
+    8424772727,
+    8424772726,
+    10704556970
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "yes",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 907261947,
+  "nodes": [
+    6658124004,
+    6658124005,
+    3358591731
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "sidewalk": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261948,
+  "nodes": [
+    6658123997,
+    8424772742,
+    8424772741,
+    8424772740,
+    8424772739,
+    6658124004
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "yes",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261951,
+  "nodes": [
+    5672664933,
+    8424772757,
+    8424772758,
+    8424772759,
+    8424772760,
+    8424772761,
+    8424772762,
+    8424772763,
+    8424772764,
+    8424772765,
+    8424772766,
+    8424772767,
+    8424772768,
+    8424772769,
+    8424772770,
+    6658482705,
+    8424772771,
+    8424772772,
+    409154710
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261952,
+  "nodes": [
+    408479380,
+    6658482704,
+    8690839940,
+    6658482703,
+    6658482702,
+    6658482701,
+    409154710
+  ],
+  "tags": {
+    "cycleway:both": "separate",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261953,
+  "nodes": [
+    409154711,
+    8424772773,
+    8424772774,
+    8424772775,
+    8424772776,
+    8424772777,
+    8424772778,
+    8424772779,
+    8424772780,
+    8424772781,
+    8424772782,
+    8424772783,
+    8424772784,
+    8424772785,
+    408479368
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261954,
+  "nodes": [
+    408479368,
+    6658478762,
+    6658478763,
+    6658482700,
+    6658482689
+  ],
+  "tags": {
+    "cycleway:both": "separate",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2008",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261956,
+  "nodes": [
+    12543888354,
+    415995658,
+    419277592,
+    5672664931,
+    415995659
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "good",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907261957,
+  "nodes": [
+    8424772787,
+    8424772788,
+    8424772789,
+    8424772786
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "cycleway",
+    "oneway": "yes",
+    "segregated": "no",
+    "surface": "dirt"
+  }
+},
+{
+  "type": "way",
+  "id": 917836223,
+  "nodes": [
+    8550791316,
+    6658123980
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "exclusive",
+    "foot": "yes",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "sidewalk": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 920972232,
+  "nodes": [
+    8550791316,
+    6658123989
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "lit": "no",
+    "segregated": "no",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 927880608,
+  "nodes": [
+    8607972864,
+    8607972865,
+    8607972876,
+    8607972866,
+    8607972898,
+    8607972867,
+    8607972868,
+    8607972869,
+    8607972897,
+    8607972870,
+    8607972871,
+    8607972895,
+    8607972866
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880609,
+  "nodes": [
+    8607972870,
+    8607972872,
+    8607972880,
+    8607972873,
+    8607972874,
+    8607972879,
+    8607972875,
+    8607972877,
+    8607972894,
+    8607972876
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880611,
+  "nodes": [
+    8607972867,
+    8607972879
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880612,
+  "nodes": [
+    8607972868,
+    8607972880
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880615,
+  "nodes": [
+    8607972867,
+    8607972892,
+    8607972893,
+    8607972894
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880616,
+  "nodes": [
+    8607972895,
+    8607972896
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880617,
+  "nodes": [
+    8607972897,
+    8607972896,
+    8607972898
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 927880690,
+  "nodes": [
+    408749537,
+    8607977183,
+    552550032,
+    8607977184,
+    12343934555,
+    8607977185,
+    8607977186,
+    8607977187,
+    8607977188,
+    8607977189
+  ],
+  "tags": {
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 931210717,
+  "nodes": [
+    8633637692,
+    6658124062,
+    12539323145,
+    8633637691,
+    6658124063,
+    8633637690,
+    8633637689,
+    408749534
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 931210718,
+  "nodes": [
+    408749534,
+    6658124059,
+    8633637688,
+    4858385352,
+    8633637687,
+    4858385353,
+    8633637686
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 931210719,
+  "nodes": [
+    8633637686,
+    8633637682,
+    8633637681,
+    8633637680,
+    8633637679,
+    8633637678,
+    8633637677,
+    8633637676,
+    8633637675,
+    8633637674
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 931210720,
+  "nodes": [
+    8633637674,
+    8633637664,
+    8633637665,
+    8633637666,
+    8633637667,
+    8633637668,
+    8633637669,
+    8633637670,
+    8633637671,
+    8633637672,
+    8633637673,
+    6658124060
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 931210721,
+  "nodes": [
+    6658124021,
+    6658124020
+  ],
+  "tags": {
+    "highway": "secondary",
+    "name": "Route de Péronne",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 931210722,
+  "nodes": [
+    6658124007,
+    6658123967,
+    6658124021
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 938091199,
+  "nodes": [
+    408738587,
+    8633637787,
+    8633637786,
+    408738588,
+    8633637785,
+    8633637784,
+    8633637783,
+    8633637782,
+    4781795133,
+    408738589,
+    8633637781,
+    8690839938,
+    8633637780,
+    408740462,
+    8633637779,
+    3358591770
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue du Bas Sainghin",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1025979772,
+  "nodes": [
+    6658124020,
+    6658123997
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "oneway": "yes",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1092935501,
+  "nodes": [
+    408746747,
+    408738615,
+    408746749,
+    6658124048,
+    6658124049,
+    6658124050,
+    8659169356,
+    408746750,
+    6658124051,
+    6658124052,
+    408746751,
+    6658124053,
+    6658124057
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "50",
+    "name": "Route de Péronne",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 1150730858,
+  "nodes": [
+    10704556968,
+    10704556969,
+    10704556970
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "crossing": "marked",
+    "crossing:markings": "zebra",
+    "foot": "designated",
+    "footway": "crossing",
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 1153580345,
+  "nodes": [
+    415995825,
+    6658482710,
+    416336472,
+    416336479
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "30",
+    "name": "Petit Chemin de Péronne",
+    "oneway": "no",
+    "sidewalk": "both",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1292914771,
+  "nodes": [
+    11986003518,
+    11986003517
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1322586398,
+  "nodes": [
+    3358591770,
+    408738590
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "name": "Rue du Bas Sainghin",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1328850058,
+  "nodes": [
+    12294330605,
+    12294330606,
+    12294330609,
+    12294330607,
+    12294330608
+  ],
+  "tags": {
+    "access": "private",
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1328850059,
+  "nodes": [
+    12294330609,
+    12294330610
+  ],
+  "tags": {
+    "access": "private",
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1328850060,
+  "nodes": [
+    12540020159,
+    12294330611,
+    12294330612,
+    12540020160,
+    415995661,
+    12294330613
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "Allée du Moulin Blanc"
+  }
+},
+{
+  "type": "way",
+  "id": 1328850061,
+  "nodes": [
+    12294330614,
+    12294330615,
+    12294330616
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1328850062,
+  "nodes": [
+    408480529,
+    12294330617,
+    12294330618
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1328851859,
+  "nodes": [
+    6658123943,
+    12294314296,
+    12294314297
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1328851860,
+  "nodes": [
+    12294314298,
+    12294314299
+  ],
+  "tags": {
+    "access": "private",
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1334248294,
+  "nodes": [
+    12343934573,
+    12343934574
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1354949064,
+  "nodes": [
+    6658124060,
+    8633637693,
+    408746760,
+    6658124061,
+    12539323144,
+    8633637692
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Rue du Général de Gaulle",
+    "oneway": "yes",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1354949065,
+  "nodes": [
+    6658124060,
+    419386278,
+    12539323147
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Route de Péronne",
+    "ref": "M 19",
+    "ref:2018": "D 19",
+    "sidewalk": "both",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1355393359,
+  "nodes": [
+    8424772786,
+    409154713,
+    12543888354
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "good",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1355393360,
+  "nodes": [
+    409154711,
+    409154554
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Rue de Lille",
+    "ref": "M 955",
+    "ref:1973": "N 355",
+    "ref:2018": "D 955",
+    "smoothness": "excellent",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1422692316,
+  "nodes": [
+    8424771414,
+    6658124007
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "highway": "cycleway",
+    "lit": "yes",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

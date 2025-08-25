@@ -1,0 +1,2450 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-08-25T08:31:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 416350323,
+  "lat": 50.5750562,
+  "lon": 3.1607830,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350324,
+  "lat": 50.5750861,
+  "lon": 3.1608351,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350325,
+  "lat": 50.5750945,
+  "lon": 3.1608271,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350326,
+  "lat": 50.5750998,
+  "lon": 3.1608425,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350327,
+  "lat": 50.5750360,
+  "lon": 3.1609055,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350328,
+  "lat": 50.5750301,
+  "lon": 3.1608930,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350329,
+  "lat": 50.5750422,
+  "lon": 3.1608804,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350330,
+  "lat": 50.5750240,
+  "lon": 3.1608350,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350331,
+  "lat": 50.5750715,
+  "lon": 3.1613095,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350332,
+  "lat": 50.5750938,
+  "lon": 3.1613731,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350333,
+  "lat": 50.5751075,
+  "lon": 3.1613664,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350334,
+  "lat": 50.5751102,
+  "lon": 3.1613800,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350335,
+  "lat": 50.5750409,
+  "lon": 3.1614175,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350336,
+  "lat": 50.5750380,
+  "lon": 3.1614028,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350337,
+  "lat": 50.5750441,
+  "lon": 3.1613989,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416350338,
+  "lat": 50.5750320,
+  "lon": 3.1613488,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626393,
+  "lat": 50.5831057,
+  "lon": 3.1430018,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626394,
+  "lat": 50.5830547,
+  "lon": 3.1425639,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626395,
+  "lat": 50.5844017,
+  "lon": 3.1421820,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626396,
+  "lat": 50.5845325,
+  "lon": 3.1433107,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626398,
+  "lat": 50.5842537,
+  "lon": 3.1433908,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626399,
+  "lat": 50.5841740,
+  "lon": 3.1426936,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626400,
+  "lat": 50.5837647,
+  "lon": 3.1428106,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626401,
+  "lat": 50.5837829,
+  "lon": 3.1429827,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626402,
+  "lat": 50.5835429,
+  "lon": 3.1430527,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626403,
+  "lat": 50.5835247,
+  "lon": 3.1428762,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626404,
+  "lat": 50.5818493,
+  "lon": 3.1425533,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626405,
+  "lat": 50.5821157,
+  "lon": 3.1424673,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626406,
+  "lat": 50.5822567,
+  "lon": 3.1435604,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626407,
+  "lat": 50.5822845,
+  "lon": 3.1435522,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626409,
+  "lat": 50.5823003,
+  "lon": 3.1436725,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626410,
+  "lat": 50.5822792,
+  "lon": 3.1436756,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626411,
+  "lat": 50.5822908,
+  "lon": 3.1437576,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626413,
+  "lat": 50.5822343,
+  "lon": 3.1437654,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626415,
+  "lat": 50.5822131,
+  "lon": 3.1437894,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626418,
+  "lat": 50.5821842,
+  "lon": 3.1438045,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626420,
+  "lat": 50.5821597,
+  "lon": 3.1438198,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626423,
+  "lat": 50.5821297,
+  "lon": 3.1438280,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626427,
+  "lat": 50.5821031,
+  "lon": 3.1438327,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626429,
+  "lat": 50.5820699,
+  "lon": 3.1438357,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626430,
+  "lat": 50.5820478,
+  "lon": 3.1438283,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626431,
+  "lat": 50.5819323,
+  "lon": 3.1438664,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626432,
+  "lat": 50.5819101,
+  "lon": 3.1437199,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626433,
+  "lat": 50.5819977,
+  "lon": 3.1436935,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626434,
+  "lat": 50.5823831,
+  "lon": 3.1443076,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626435,
+  "lat": 50.5831475,
+  "lon": 3.1440633,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626436,
+  "lat": 50.5831421,
+  "lon": 3.1440354,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626437,
+  "lat": 50.5832343,
+  "lon": 3.1440022,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626438,
+  "lat": 50.5832618,
+  "lon": 3.1440287,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626439,
+  "lat": 50.5833630,
+  "lon": 3.1447785,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626440,
+  "lat": 50.5833450,
+  "lon": 3.1448235,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626441,
+  "lat": 50.5832517,
+  "lon": 3.1448584,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626442,
+  "lat": 50.5832464,
+  "lon": 3.1448288,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626443,
+  "lat": 50.5832264,
+  "lon": 3.1448319,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626444,
+  "lat": 50.5832411,
+  "lon": 3.1449452,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626445,
+  "lat": 50.5832098,
+  "lon": 3.1449865,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626446,
+  "lat": 50.5828679,
+  "lon": 3.1451007,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626447,
+  "lat": 50.5828467,
+  "lon": 3.1449560,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626448,
+  "lat": 50.5824115,
+  "lon": 3.1451000,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626449,
+  "lat": 50.5823883,
+  "lon": 3.1449343,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626450,
+  "lat": 50.5824638,
+  "lon": 3.1449095,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626451,
+  "lat": 50.5829516,
+  "lon": 3.1462323,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626452,
+  "lat": 50.5832458,
+  "lon": 3.1461364,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626453,
+  "lat": 50.5832763,
+  "lon": 3.1463717,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626454,
+  "lat": 50.5833685,
+  "lon": 3.1463385,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626455,
+  "lat": 50.5834266,
+  "lon": 3.1467396,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626456,
+  "lat": 50.5832357,
+  "lon": 3.1468042,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626457,
+  "lat": 50.5831892,
+  "lon": 3.1464694,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626458,
+  "lat": 50.5829916,
+  "lon": 3.1465357,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626459,
+  "lat": 50.5820055,
+  "lon": 3.1461281,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626460,
+  "lat": 50.5822294,
+  "lon": 3.1461597,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626461,
+  "lat": 50.5821727,
+  "lon": 3.1472053,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626462,
+  "lat": 50.5819469,
+  "lon": 3.1471737,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626477,
+  "lat": 50.5840030,
+  "lon": 3.1473544,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626478,
+  "lat": 50.5841681,
+  "lon": 3.1485193,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626479,
+  "lat": 50.5829883,
+  "lon": 3.1489377,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626480,
+  "lat": 50.5829718,
+  "lon": 3.1488219,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626481,
+  "lat": 50.5822952,
+  "lon": 3.1490686,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626482,
+  "lat": 50.5823076,
+  "lon": 3.1491402,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626483,
+  "lat": 50.5822338,
+  "lon": 3.1491763,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626484,
+  "lat": 50.5822173,
+  "lon": 3.1490892,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626485,
+  "lat": 50.5814916,
+  "lon": 3.1493448,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626486,
+  "lat": 50.5815070,
+  "lon": 3.1494641,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626487,
+  "lat": 50.5803245,
+  "lon": 3.1498812,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626488,
+  "lat": 50.5801552,
+  "lon": 3.1487236,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626489,
+  "lat": 50.5808506,
+  "lon": 3.1484810,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626490,
+  "lat": 50.5808359,
+  "lon": 3.1483959,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626491,
+  "lat": 50.5812857,
+  "lon": 3.1482274,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626493,
+  "lat": 50.5812975,
+  "lon": 3.1483146,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626494,
+  "lat": 50.5813419,
+  "lon": 3.1483045,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626495,
+  "lat": 50.5813591,
+  "lon": 3.1484287,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626496,
+  "lat": 50.5820906,
+  "lon": 3.1481540,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626497,
+  "lat": 50.5820827,
+  "lon": 3.1480952,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626498,
+  "lat": 50.5821161,
+  "lon": 3.1480805,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626499,
+  "lat": 50.5821267,
+  "lon": 3.1481459,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626500,
+  "lat": 50.5828332,
+  "lon": 3.1478926,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626501,
+  "lat": 50.5828173,
+  "lon": 3.1477792,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626502,
+  "lat": 50.5828618,
+  "lon": 3.1477604,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626503,
+  "lat": 50.5828527,
+  "lon": 3.1476689,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626504,
+  "lat": 50.5832968,
+  "lon": 3.1475111,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626505,
+  "lat": 50.5833101,
+  "lon": 3.1476027,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626506,
+  "lat": 50.5796887,
+  "lon": 3.1481887,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626507,
+  "lat": 50.5791345,
+  "lon": 3.1490593,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626508,
+  "lat": 50.5789995,
+  "lon": 3.1488436,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626509,
+  "lat": 50.5789924,
+  "lon": 3.1488533,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626510,
+  "lat": 50.5778966,
+  "lon": 3.1471580,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626511,
+  "lat": 50.5784605,
+  "lon": 3.1462951,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626512,
+  "lat": 50.5791468,
+  "lon": 3.1490753,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626513,
+  "lat": 50.5792064,
+  "lon": 3.1489793,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626514,
+  "lat": 50.5792760,
+  "lon": 3.1490936,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626515,
+  "lat": 50.5792846,
+  "lon": 3.1490812,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626516,
+  "lat": 50.5792954,
+  "lon": 3.1490743,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626517,
+  "lat": 50.5793090,
+  "lon": 3.1490745,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626518,
+  "lat": 50.5793197,
+  "lon": 3.1490809,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626519,
+  "lat": 50.5793316,
+  "lon": 3.1490900,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626520,
+  "lat": 50.5793383,
+  "lon": 3.1491017,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626521,
+  "lat": 50.5793438,
+  "lon": 3.1491205,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626522,
+  "lat": 50.5793460,
+  "lon": 3.1491375,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626523,
+  "lat": 50.5793458,
+  "lon": 3.1491615,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626524,
+  "lat": 50.5793412,
+  "lon": 3.1491721,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626525,
+  "lat": 50.5793332,
+  "lon": 3.1491898,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626526,
+  "lat": 50.5793235,
+  "lon": 3.1492003,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626527,
+  "lat": 50.5793075,
+  "lon": 3.1492063,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626528,
+  "lat": 50.5792956,
+  "lon": 3.1492052,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626529,
+  "lat": 50.5792849,
+  "lon": 3.1491979,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626530,
+  "lat": 50.5792736,
+  "lon": 3.1491870,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626531,
+  "lat": 50.5792658,
+  "lon": 3.1491718,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626532,
+  "lat": 50.5792648,
+  "lon": 3.1491575,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626533,
+  "lat": 50.5792489,
+  "lon": 3.1491528,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626534,
+  "lat": 50.5792225,
+  "lon": 3.1491942,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626535,
+  "lat": 50.5798453,
+  "lon": 3.1469931,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626536,
+  "lat": 50.5798904,
+  "lon": 3.1473423,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626537,
+  "lat": 50.5796652,
+  "lon": 3.1474165,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626538,
+  "lat": 50.5796591,
+  "lon": 3.1473752,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626540,
+  "lat": 50.5796435,
+  "lon": 3.1473805,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626542,
+  "lat": 50.5796223,
+  "lon": 3.1473578,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626544,
+  "lat": 50.5796148,
+  "lon": 3.1473143,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626546,
+  "lat": 50.5796490,
+  "lon": 3.1472993,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626548,
+  "lat": 50.5796194,
+  "lon": 3.1470683,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626549,
+  "lat": 50.5802601,
+  "lon": 3.1452417,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626551,
+  "lat": 50.5803021,
+  "lon": 3.1455819,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626553,
+  "lat": 50.5803430,
+  "lon": 3.1455673,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626555,
+  "lat": 50.5803842,
+  "lon": 3.1458965,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626556,
+  "lat": 50.5803469,
+  "lon": 3.1459070,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626558,
+  "lat": 50.5803898,
+  "lon": 3.1462320,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626560,
+  "lat": 50.5801198,
+  "lon": 3.1463220,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626562,
+  "lat": 50.5800837,
+  "lon": 3.1460361,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626565,
+  "lat": 50.5792125,
+  "lon": 3.1463212,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626566,
+  "lat": 50.5791573,
+  "lon": 3.1459020,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626569,
+  "lat": 50.5800298,
+  "lon": 3.1456247,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416626572,
+  "lat": 50.5799910,
+  "lon": 3.1453345,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010985,
+  "lat": 50.5811653,
+  "lon": 3.1427664,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010987,
+  "lat": 50.5812119,
+  "lon": 3.1430797,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010988,
+  "lat": 50.5812412,
+  "lon": 3.1434642,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010989,
+  "lat": 50.5812126,
+  "lon": 3.1435998,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010991,
+  "lat": 50.5811954,
+  "lon": 3.1436025,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422010998,
+  "lat": 50.5811880,
+  "lon": 3.1435946,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011001,
+  "lat": 50.5811865,
+  "lon": 3.1435751,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011003,
+  "lat": 50.5811576,
+  "lon": 3.1435642,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011005,
+  "lat": 50.5811510,
+  "lon": 3.1435745,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011011,
+  "lat": 50.5807892,
+  "lon": 3.1437059,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011012,
+  "lat": 50.5806755,
+  "lon": 3.1429492,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011014,
+  "lat": 50.5799677,
+  "lon": 3.1432205,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011015,
+  "lat": 50.5801363,
+  "lon": 3.1444542,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011017,
+  "lat": 50.5783059,
+  "lon": 3.1450744,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011023,
+  "lat": 50.5781373,
+  "lon": 3.1438407,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011025,
+  "lat": 50.5777348,
+  "lon": 3.1450148,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011028,
+  "lat": 50.5778065,
+  "lon": 3.1451350,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011030,
+  "lat": 50.5776908,
+  "lon": 3.1453078,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011032,
+  "lat": 50.5780720,
+  "lon": 3.1459373,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011038,
+  "lat": 50.5776353,
+  "lon": 3.1465834,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011041,
+  "lat": 50.5771696,
+  "lon": 3.1458309,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011043,
+  "lat": 50.5774922,
+  "lon": 3.1453526,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011045,
+  "lat": 50.5774634,
+  "lon": 3.1453065,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011052,
+  "lat": 50.5775026,
+  "lon": 3.1452464,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011055,
+  "lat": 50.5775329,
+  "lon": 3.1452900,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011057,
+  "lat": 50.5776079,
+  "lon": 3.1451747,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011058,
+  "lat": 50.5776144,
+  "lon": 3.1451873,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011148,
+  "lat": 50.5738774,
+  "lon": 3.1486146,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011154,
+  "lat": 50.5739060,
+  "lon": 3.1486514,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011156,
+  "lat": 50.5738766,
+  "lon": 3.1487223,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 422011158,
+  "lat": 50.5738480,
+  "lon": 3.1486868,
+  "tags": {
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "node",
+  "id": 7652619140,
+  "lat": 50.5803951,
+  "lon": 3.1586497
+},
+{
+  "type": "node",
+  "id": 7652619141,
+  "lat": 50.5803353,
+  "lon": 3.1586776
+},
+{
+  "type": "node",
+  "id": 7652619142,
+  "lat": 50.5803195,
+  "lon": 3.1585932
+},
+{
+  "type": "node",
+  "id": 7652619143,
+  "lat": 50.5803793,
+  "lon": 3.1585654
+},
+{
+  "type": "node",
+  "id": 8608785384,
+  "lat": 50.5778646,
+  "lon": 3.1455948
+},
+{
+  "type": "node",
+  "id": 8608785385,
+  "lat": 50.5777383,
+  "lon": 3.1453862
+},
+{
+  "type": "node",
+  "id": 8608785453,
+  "lat": 50.5807604,
+  "lon": 3.1449556
+},
+{
+  "type": "node",
+  "id": 8608785454,
+  "lat": 50.5805514,
+  "lon": 3.1450050
+},
+{
+  "type": "node",
+  "id": 8608785455,
+  "lat": 50.5805791,
+  "lon": 3.1453107
+},
+{
+  "type": "node",
+  "id": 8608785456,
+  "lat": 50.5807732,
+  "lon": 3.1452647
+},
+{
+  "type": "node",
+  "id": 8608785457,
+  "lat": 50.5807578,
+  "lon": 3.1450888
+},
+{
+  "type": "node",
+  "id": 8608785458,
+  "lat": 50.5807700,
+  "lon": 3.1450854
+},
+{
+  "type": "node",
+  "id": 8608785500,
+  "lat": 50.5800934,
+  "lon": 3.1441399
+},
+{
+  "type": "node",
+  "id": 12505134769,
+  "lat": 50.5802635,
+  "lon": 3.1445352
+},
+{
+  "type": "node",
+  "id": 12505134770,
+  "lat": 50.5802363,
+  "lon": 3.1445430
+},
+{
+  "type": "node",
+  "id": 12505134771,
+  "lat": 50.5802397,
+  "lon": 3.1445720
+},
+{
+  "type": "node",
+  "id": 12505134772,
+  "lat": 50.5802669,
+  "lon": 3.1445641
+},
+{
+  "type": "node",
+  "id": 12505140702,
+  "lat": 50.5792496,
+  "lon": 3.1473363
+},
+{
+  "type": "node",
+  "id": 12505140703,
+  "lat": 50.5792352,
+  "lon": 3.1473606
+},
+{
+  "type": "node",
+  "id": 12505140704,
+  "lat": 50.5792565,
+  "lon": 3.1473918
+},
+{
+  "type": "node",
+  "id": 12505140705,
+  "lat": 50.5792709,
+  "lon": 3.1473675
+},
+{
+  "type": "node",
+  "id": 12505140706,
+  "lat": 50.5792084,
+  "lon": 3.1472759
+},
+{
+  "type": "node",
+  "id": 12505140707,
+  "lat": 50.5791940,
+  "lon": 3.1473002
+},
+{
+  "type": "node",
+  "id": 12505140708,
+  "lat": 50.5792153,
+  "lon": 3.1473313
+},
+{
+  "type": "node",
+  "id": 12505140709,
+  "lat": 50.5792297,
+  "lon": 3.1473071
+},
+{
+  "type": "node",
+  "id": 12732007832,
+  "lat": 50.5750834,
+  "lon": 3.1613233
+},
+{
+  "type": "node",
+  "id": 12732007833,
+  "lat": 50.5750808,
+  "lon": 3.1613159
+},
+{
+  "type": "node",
+  "id": 12732007834,
+  "lat": 50.5750766,
+  "lon": 3.1613106
+},
+{
+  "type": "node",
+  "id": 12732007835,
+  "lat": 50.5750402,
+  "lon": 3.1613255
+},
+{
+  "type": "node",
+  "id": 12732007836,
+  "lat": 50.5750353,
+  "lon": 3.1613320
+},
+{
+  "type": "node",
+  "id": 12732007837,
+  "lat": 50.5750327,
+  "lon": 3.1613391
+},
+{
+  "type": "node",
+  "id": 12732007838,
+  "lat": 50.5750702,
+  "lon": 3.1607927
+},
+{
+  "type": "node",
+  "id": 12732007839,
+  "lat": 50.5750658,
+  "lon": 3.1607857
+},
+{
+  "type": "node",
+  "id": 12732007840,
+  "lat": 50.5750616,
+  "lon": 3.1607825
+},
+{
+  "type": "node",
+  "id": 12732007841,
+  "lat": 50.5750257,
+  "lon": 3.1608122
+},
+{
+  "type": "node",
+  "id": 12732007842,
+  "lat": 50.5750234,
+  "lon": 3.1608192
+},
+{
+  "type": "node",
+  "id": 12732007843,
+  "lat": 50.5750228,
+  "lon": 3.1608281
+},
+{
+  "type": "node",
+  "id": 12732059701,
+  "lat": 50.5808769,
+  "lon": 3.1591708
+},
+{
+  "type": "node",
+  "id": 12732059702,
+  "lat": 50.5808821,
+  "lon": 3.1591443
+},
+{
+  "type": "node",
+  "id": 12732059703,
+  "lat": 50.5808685,
+  "lon": 3.1591376
+},
+{
+  "type": "node",
+  "id": 12732059704,
+  "lat": 50.5808633,
+  "lon": 3.1591641
+},
+{
+  "type": "way",
+  "id": 35537182,
+  "nodes": [
+    416350323,
+    12732007840,
+    12732007839,
+    12732007838,
+    416350324,
+    416350325,
+    416350326,
+    416350327,
+    416350328,
+    416350329,
+    416350330,
+    12732007843,
+    12732007842,
+    12732007841,
+    416350323
+  ],
+  "tags": {
+    "building": "bunker",
+    "military": "bunker",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35537183,
+  "nodes": [
+    416350331,
+    12732007834,
+    12732007833,
+    12732007832,
+    416350332,
+    416350333,
+    416350334,
+    416350335,
+    416350336,
+    416350337,
+    416350338,
+    12732007837,
+    12732007836,
+    12732007835,
+    416350331
+  ],
+  "tags": {
+    "building": "bunker",
+    "military": "bunker",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555634,
+  "nodes": [
+    416626393,
+    416626394,
+    416626395,
+    416626396,
+    416626398,
+    416626399,
+    416626400,
+    416626401,
+    416626402,
+    416626403,
+    416626393
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "1280",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Gefco",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555635,
+  "nodes": [
+    416626404,
+    416626405,
+    416626406,
+    416626407,
+    416626409,
+    416626410,
+    416626411,
+    416626413,
+    416626415,
+    416626418,
+    416626420,
+    416626423,
+    416626427,
+    416626429,
+    416626430,
+    416626431,
+    416626432,
+    416626433,
+    416626404
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "1316",
+    "addr:postcode": "59253",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Kuehne+Nagel",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "website": "https://fr.kuehne-nagel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 35555636,
+  "nodes": [
+    416626434,
+    416626435,
+    416626436,
+    416626437,
+    416626438,
+    416626439,
+    416626440,
+    416626441,
+    416626442,
+    416626443,
+    416626444,
+    416626445,
+    416626446,
+    416626447,
+    416626448,
+    416626449,
+    416626450,
+    416626434
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "1079",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "warehouse",
+    "name": "Amazon - Logistique - Lille - DNC1",
+    "source": "local knowledge"
+  }
+},
+{
+  "type": "way",
+  "id": 35555637,
+  "nodes": [
+    416626451,
+    416626452,
+    416626453,
+    416626454,
+    416626455,
+    416626456,
+    416626457,
+    416626458,
+    416626451
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "889",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Nord France Couverture",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555638,
+  "nodes": [
+    416626459,
+    416626460,
+    416626461,
+    416626462,
+    416626459
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "841",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Ciblex",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555641,
+  "nodes": [
+    416626477,
+    416626478,
+    416626479,
+    416626480,
+    416626481,
+    416626482,
+    416626483,
+    416626484,
+    416626485,
+    416626486,
+    416626487,
+    416626488,
+    416626489,
+    416626490,
+    416626491,
+    416626493,
+    416626494,
+    416626495,
+    416626496,
+    416626497,
+    416626498,
+    416626499,
+    416626500,
+    416626501,
+    416626502,
+    416626503,
+    416626504,
+    416626505,
+    416626477
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "766",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Auchan retail France",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555642,
+  "nodes": [
+    416626506,
+    416626507,
+    416626508,
+    416626509,
+    416626510,
+    416626511,
+    416626506
+  ],
+  "tags": {
+    "addr:city": "Fretin",
+    "addr:housenumber": "348",
+    "addr:postcode": "59256",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Trenois Decamps Logistique",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555643,
+  "nodes": [
+    416626512,
+    416626513,
+    416626514,
+    416626515,
+    416626516,
+    416626517,
+    416626518,
+    416626519,
+    416626520,
+    416626521,
+    416626522,
+    416626523,
+    416626524,
+    416626525,
+    416626526,
+    416626527,
+    416626528,
+    416626529,
+    416626530,
+    416626531,
+    416626532,
+    416626533,
+    416626534,
+    416626512
+  ],
+  "tags": {
+    "building": "yes",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555644,
+  "nodes": [
+    416626535,
+    416626536,
+    416626537,
+    416626538,
+    416626540,
+    416626542,
+    416626544,
+    416626546,
+    416626548,
+    416626535
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "517",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Routiers bretons",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 35555645,
+  "nodes": [
+    416626549,
+    416626551,
+    416626553,
+    416626555,
+    416626556,
+    416626558,
+    416626560,
+    416626562,
+    416626565,
+    416626566,
+    416626569,
+    416626572,
+    416626549
+  ],
+  "tags": {
+    "addr:city": "Sainghin-en-Mélantois",
+    "addr:housenumber": "423",
+    "addr:postcode": "59523",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Delquignies Logistique",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 36139877,
+  "nodes": [
+    422010985,
+    422010987,
+    422010988,
+    422010989,
+    422010991,
+    422010998,
+    422011001,
+    422011003,
+    422011005,
+    422011011,
+    422011012,
+    422010985
+  ],
+  "tags": {
+    "addr:city": "Fretin",
+    "addr:housenumber": "60",
+    "addr:postcode": "59256",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "123Roulement",
+    "shop": "hardware",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
+    "website": "https://www.123roulement.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 36139878,
+  "nodes": [
+    422011014,
+    8608785500,
+    422011015,
+    422011017,
+    422011023,
+    422011014
+  ],
+  "tags": {
+    "addr:city": "Fretin",
+    "addr:housenumber": "106",
+    "addr:postcode": "59256",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Transalliance",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 36139879,
+  "nodes": [
+    422011025,
+    422011028,
+    422011030,
+    8608785385,
+    8608785384,
+    422011032,
+    422011038,
+    422011041,
+    422011043,
+    422011045,
+    422011052,
+    422011055,
+    422011057,
+    422011058,
+    422011025
+  ],
+  "tags": {
+    "addr:city": "Fretin",
+    "addr:housenumber": "332",
+    "addr:postcode": "59256",
+    "addr:street": "Rue des Hauts de Sainghin",
+    "building": "yes",
+    "name": "Sherwin Williams",
+    "office": "company",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 36139886,
+  "nodes": [
+    422011148,
+    422011154,
+    422011156,
+    422011158,
+    422011148
+  ],
+  "tags": {
+    "building": "yes",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+  }
+},
+{
+  "type": "way",
+  "id": 819449896,
+  "nodes": [
+    7652619140,
+    7652619141,
+    7652619142,
+    7652619143,
+    7652619140
+  ],
+  "tags": {
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 927982330,
+  "nodes": [
+    8608785453,
+    8608785454,
+    8608785455,
+    8608785456,
+    8608785457,
+    8608785458,
+    8608785453
+  ],
+  "tags": {
+    "building": "yes",
+    "name": "Mauffrey haut de France",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 1351632456,
+  "nodes": [
+    12505134769,
+    12505134770,
+    12505134771,
+    12505134772,
+    12505134769
+  ],
+  "tags": {
+    "building": "yes",
+    "operator": "Enedis",
+    "operator:wikidata": "Q3587594",
+    "power": "substation",
+    "source": "Exploitants contributeurs de l'Agence ORE - 2022-07 - Enedis",
+    "substation": "minor_distribution",
+    "voltage": "20000"
+  }
+},
+{
+  "type": "way",
+  "id": 1351632462,
+  "nodes": [
+    12505140702,
+    12505140703,
+    12505140704,
+    12505140705,
+    12505140702
+  ],
+  "tags": {
+    "building": "service",
+    "operator": "Enedis",
+    "operator:wikidata": "Q3587594",
+    "power": "substation",
+    "source": "Exploitants contributeurs de l'Agence ORE - 2022-07 - Enedis",
+    "substation": "minor_distribution",
+    "voltage": "20000"
+  }
+},
+{
+  "type": "way",
+  "id": 1351632463,
+  "nodes": [
+    12505140706,
+    12505140707,
+    12505140708,
+    12505140709,
+    12505140706
+  ],
+  "tags": {
+    "building": "service",
+    "operator": "Enedis",
+    "operator:wikidata": "Q3587594",
+    "power": "substation",
+    "source": "Exploitants contributeurs de l'Agence ORE - 2022-07 - Enedis",
+    "substation": "minor_distribution",
+    "voltage": "20000"
+  }
+},
+{
+  "type": "way",
+  "id": 1375108785,
+  "nodes": [
+    12732059704,
+    12732059703,
+    12732059702,
+    12732059701,
+    12732059704
+  ],
+  "tags": {
+    "building": "yes"
+  }
+}
+
+  ]
+}
