@@ -262,8 +262,8 @@ public class OSMTileManager : MonoBehaviour
     public Material roadMaterial;
     public Material houseMaterial;
 
-    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Roads/";
-    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Houses/";
+    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Roads/roads-{0}-{1}.json";
+    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Houses/houses-{0}-{1}.json";
 
     [Serializable]
     public class OverpassResponse
@@ -322,7 +322,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, HOUSES_JSON_PATH_TEMPLATE, string.Format("houses-{0}-{1}.json", tileX, tileY));
+                    SaveJsonToFile(jsonResponse, HOUSES_JSON_PATH_TEMPLATE);
                 }
                 else
                 {
@@ -442,7 +442,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, ROADS_JSON_PATH_TEMPLATE, string.Format("roads-{0}-{1}.json", tileX, tileY));
+                    SaveJsonToFile(jsonResponse, ROADS_JSON_PATH_TEMPLATE);
                 }
                 else
                 {
@@ -547,14 +547,14 @@ public class OSMTileManager : MonoBehaviour
     }
 
     // Fonction d'aide pour sauvegarder les données JSON
-    private void SaveJsonToFile(string jsonData, string path, string filename)
+    private void SaveJsonToFile(string jsonData, string path)
     {
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
         }
 
-        string fullPath = path + filename;
+        string fullPath = path;
         File.WriteAllText(fullPath, jsonData);
         Debug.Log($"Données JSON sauvegardées à : {fullPath}");
 
