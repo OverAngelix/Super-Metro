@@ -34,7 +34,7 @@ public class StationController : MonoBehaviour
         foreach (var st in trainLine.stations)
         {
             if (st.line == station.line)
-                path.Add(new Node { name = st.name });
+                path.Add(new Node { name = st.name, gameObject = st.obj });
         }
         // Donner le chemin au train
         TrainController train = obj.GetComponent<TrainController>();

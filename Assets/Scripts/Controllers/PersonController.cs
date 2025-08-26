@@ -28,9 +28,7 @@ public class PersonController : MonoBehaviour
 
         if (path.Count > 0)
         {
-            string firstNodeName = path[0].name;
-            GameObject firstObj = SuperGlobal.spots.Find(s => s.name == firstNodeName)?.obj
-                                ?? SuperGlobal.GetStation(firstNodeName)?.obj;
+            GameObject firstObj = path[0].gameObject;
             if (firstObj != null)
                 transform.position = firstObj.transform.position;
         }
@@ -71,15 +69,13 @@ public class PersonController : MonoBehaviour
         // Pas dans le train : marcher ou attendre
         if (path == null || currentTargetIndex >= path.Count) return;
 
-        string targetNodeName = path[currentTargetIndex].name;
-        GameObject targetObj = SuperGlobal.spots.Find(s => s.name == targetNodeName)?.obj
-                            ?? SuperGlobal.GetStation(targetNodeName)?.obj;
+        GameObject targetObj = path[currentTargetIndex].gameObject;
 
         if (targetObj == null) return;
 
         // Vérifier si le node est une station
 
-        Station station = SuperGlobal.GetStation(targetNodeName);
+        Station station = SuperGlobal.GetStationByObj(targetObj);
 
         if (station != null)
         {
@@ -110,8 +106,8 @@ public class PersonController : MonoBehaviour
 
         if (currentTargetIndex > 0)
         {
-            string prevName = path[currentTargetIndex - 1].name;
-            bool prevIsStation = SuperGlobal.ExistStation(prevName);
+            GameObject prevObj = path[currentTargetIndex - 1].gameObject;
+            bool prevIsStation = SuperGlobal.ExistStationByObj(prevObj);
             bool targetIsStation = station != null;
             if (prevIsStation && targetIsStation) currentSpeed *= 4f;
         }
@@ -156,7 +152,7 @@ public class PersonController : MonoBehaviour
     {
         if (stationNode == null) return;
 
-        GameObject stationObj = SuperGlobal.GetStation(stationNode.name)?.obj;
+        GameObject stationObj = stationNode.gameObject;
         if (stationObj != null)
             transform.position = stationObj.transform.position;
 
@@ -169,7 +165,7 @@ public class PersonController : MonoBehaviour
         // Reprendre le chemin à la station suivante
         for (int i = 0; i < path.Count; i++)
         {
-            if (path[i].name == stationNode.name)
+            if (path[i].gameObject == stationObj)
             {
                 currentTargetIndex = i + 1;
                 break;

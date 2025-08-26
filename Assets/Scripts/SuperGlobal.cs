@@ -54,21 +54,29 @@ public class SuperGlobal : MonoBehaviour
             stations = new List<Station>(),
             trains = new List<TrainController>()
         },
-        // new TrainLine // Seconde ligne (Jaune)
-        // {
-        //     lineNumber = 2,
-        //     maintenance = 250f,
-        //     lineColor = Color.yellow,
-        //     stations = new List<Station>(),
-        //     trains = new List<TrainController>()
-        // },
+        new TrainLine // Seconde ligne (Jaune)
+        {
+            lineNumber = 2,
+            maintenance = 250f,
+            lineColor = Color.yellow,
+            stations = new List<Station>(),
+            trains = new List<TrainController>()
+        },
+        new TrainLine // Troisieme ligne (verte)
+        {
+            lineNumber = 3,
+            maintenance = 250f,
+            lineColor = Color.green,
+            stations = new List<Station>(),
+            trains = new List<TrainController>()
+        },
     };
 
     public static void SetStations()
     {
         LoadData();
         foreach (TrainLine trainLine in trainLines) {
-            trainLines[0].stations = stations.FindAll(s => s.line == trainLine.lineNumber);
+            trainLine.stations = stations.FindAll(s => s.line == trainLine.lineNumber);
         }
     }
 
@@ -78,6 +86,18 @@ public class SuperGlobal : MonoBehaviour
         foreach (TrainLine trainline in trainLines)
         {
             station = trainline.stations.Find(st => st.name == targetName && st.line == trainline.lineNumber);
+            if (station != null)
+                break;
+        }
+        return station;
+    }
+
+    public static Station GetStationByObj(GameObject obj)
+    {
+        Station station = null;
+        foreach (TrainLine trainline in trainLines)
+        {
+            station = trainline.stations.Find(st => st.obj == obj);
             if (station != null)
                 break;
         }
@@ -102,6 +122,20 @@ public class SuperGlobal : MonoBehaviour
         foreach (TrainLine trainline in trainLines)
         {
             Station station = trainline.stations.Find(st => st.name == targetName);
+            if (station != null)
+            {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public static bool ExistStationByObj(GameObject obj)
+    {
+        foreach (TrainLine trainline in trainLines)
+        {
+            Station station = trainline.stations.Find(st => st.obj == obj);
             if (station != null)
             {
                 return true;

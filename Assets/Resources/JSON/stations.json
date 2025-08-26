@@ -55,6 +55,20 @@
       "lon": 3.1264094,
       "line": 2,
       "index": 3
+    },
+    {
+      "name": "Wasquehal Hôtel de FILLE3",
+      "lat": 50.7197318,
+      "lon": 3.1364094,
+      "line": 3,
+      "index": 0
+    },
+    {
+      "name": "Gare Lille EUROPEaa",
+      "lat": 50.698047,
+      "lon": 3.1000097,
+      "line": 3,
+      "index": 1
     }
   ]
 }

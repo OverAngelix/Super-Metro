@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class SpawnPersons : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class SpawnPersons : MonoBehaviour
         // Ajouter tous les spots comme nodes
         foreach (Location spot in SuperGlobal.spots)
         {
-            allNodes.Add(new Node(spot.name, spot.lat, spot.lon, false));
+            allNodes.Add(new Node(spot.name, spot.lat, spot.lon, false, spot.obj));
         }
 
         // Ajouter toutes les stations comme nodes
@@ -49,7 +50,7 @@ public class SpawnPersons : MonoBehaviour
         {
             foreach (Station station in trainline.stations)
             {
-                allNodes.Add(new Node(station.name, station.lat, station.lon, true));
+                allNodes.Add(new Node(station.name, station.lat, station.lon, true, station.obj));
             }
         }
 
