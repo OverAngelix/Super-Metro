@@ -262,8 +262,8 @@ public class OSMTileManager : MonoBehaviour
     public Material roadMaterial;
     public Material houseMaterial;
 
-    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Roads/roads-{0}-{1}.json";
-    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Houses/houses-{0}-{1}.json";
+    private const string ROADS_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Roads/";
+    private const string HOUSES_JSON_PATH_TEMPLATE = "Assets/Resources/JSON/Houses/";
 
     [Serializable]
     public class OverpassResponse
@@ -285,7 +285,8 @@ public class OSMTileManager : MonoBehaviour
     IEnumerator CreateHousesForTile(int tileX, int tileY)
     {
         string jsonResponse = null;
-        string filePath = string.Format(HOUSES_JSON_PATH_TEMPLATE, tileX, tileY);
+        string filename = string.Format("houses-{0}-{1}.json", tileX, tileY);
+        string filePath = HOUSES_JSON_PATH_TEMPLATE + filename;
 
         // Tenter de charger les données depuis un fichier JSON local
         if (File.Exists(filePath))
@@ -322,7 +323,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, HOUSES_JSON_PATH_TEMPLATE);
+                    SaveJsonToFile(jsonResponse, HOUSES_JSON_PATH_TEMPLATE, filename);
                 }
                 else
                 {
@@ -405,7 +406,8 @@ public class OSMTileManager : MonoBehaviour
     IEnumerator CreateRoadsMeshForTile(int tileX, int tileY)
     {
         string jsonResponse = null;
-        string filePath = string.Format(ROADS_JSON_PATH_TEMPLATE, tileX, tileY);
+        string filename = string.Format("roads-{0}-{1}.json", tileX, tileY);
+        string filePath = ROADS_JSON_PATH_TEMPLATE + filename;
 
         // Tenter de charger les données depuis un fichier JSON local
         if (File.Exists(filePath))
@@ -442,7 +444,7 @@ public class OSMTileManager : MonoBehaviour
                     jsonResponse = www.downloadHandler.text;
                     Debug.Log("Requête Overpass réussie. Sauvegarde du fichier...");
                     // Sauvegarder le JSON dans le dossier Resources/JSON
-                    SaveJsonToFile(jsonResponse, ROADS_JSON_PATH_TEMPLATE);
+                    SaveJsonToFile(jsonResponse, ROADS_JSON_PATH_TEMPLATE, filename);
                 }
                 else
                 {
@@ -546,15 +548,14 @@ public class OSMTileManager : MonoBehaviour
         }
     }
 
-    // Fonction d'aide pour sauvegarder les données JSON
-    private void SaveJsonToFile(string jsonData, string path)
+    private void SaveJsonToFile(string jsonData, string path, string filename)
     {
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
         }
 
-        string fullPath = path;
+        string fullPath = Path.Combine(path, filename);
         File.WriteAllText(fullPath, jsonData);
         Debug.Log($"Données JSON sauvegardées à : {fullPath}");
 
