@@ -249,6 +249,7 @@ public class OSMTileManager : MonoBehaviour
 
         StationController controller = obj.GetComponent<StationController>();
         controller.station = station;
+        station.controller = controller;
         foreach (var train in trainLine.trains)
         {
             controller.UpdateTrainPath(train.gameObject, trainLine);

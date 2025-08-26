@@ -67,6 +67,7 @@ public class AddStationUIController : MonoBehaviour
             newLon = latLon.y;
             panel.SetActive(true);
             SuperGlobal.isUIOpen = true;
+            RefreshUI();
         }
 
     }

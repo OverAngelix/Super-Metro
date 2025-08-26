@@ -7,8 +7,6 @@ public class CreateTrainLineUIController : MonoBehaviour
     [Header("UI")]
     public Button validateButton;
     public TMP_InputField inputField;
-    public StationListInformationUIController stationListInformationUIController;
-
     private CreateTrainLineUIController createTrainLineUIController;
     void Start()
     {
@@ -23,7 +21,7 @@ public class CreateTrainLineUIController : MonoBehaviour
     void TryCreateTrainLine()
     {
         TrainLineManager.TryCreateTrainLine(inputField.text);
-        stationListInformationUIController.RefreshUI();
+        StationListInformationUIController.Instance.RefreshUI();
         gameObject.SetActive(false);
     }
 }
