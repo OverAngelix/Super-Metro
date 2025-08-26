@@ -8,10 +8,6 @@ public class StationController : MonoBehaviour
 
     void Start()
     {
-        if (station.index == 0)
-        {
-            RunTrain();
-        }
     }
 
     public GameObject RunTrain()

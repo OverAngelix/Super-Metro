@@ -22,20 +22,29 @@ public class TrainLineEditUIController : MonoBehaviour
     public Button addStationButton;
     public static TrainLineEditUIController Instance;
 
+    public Button previousLineButton;
+    public Button nextLineButton;
+
     void Awake()
     {
         Instance = this;
         gameObject.SetActive(false);
+        GetComponent<Canvas>().enabled = true;
     }
     void Start()
     {
         addTrainButton.onClick.AddListener(AddTrain);
         addStationButton.onClick.AddListener(AddStation);
+        previousLineButton.onClick.AddListener(previousLine);
+        nextLineButton.onClick.AddListener(nextLine);
     }
 
-    void OnDestroy() {
+    void OnDestroy()
+    {
         addTrainButton.onClick.RemoveListener(AddTrain);
         addStationButton.onClick.RemoveListener(AddStation);
+        previousLineButton.onClick.RemoveListener(previousLine);
+        nextLineButton.onClick.RemoveListener(nextLine);
     }
 
     public void RefreshUI()
@@ -58,7 +67,7 @@ public class TrainLineEditUIController : MonoBehaviour
         }
         // Nom de la ligne
         if (trainLineNameText != null)
-            // trainLineNameText.text = trainLine.name;
+            trainLineNameText.text = $"Ligne {trainLine.lineNumber}";
 
             // Création des items pour chaque station
             for (int i = 0; i < trainLine.stations.Count; i++)
@@ -92,7 +101,6 @@ public class TrainLineEditUIController : MonoBehaviour
         }
         // Nom de la ligne
         if (trainLineNameText != null)
-            // trainLineNameText.text = trainLine.name;
 
             // Création des items pour chaque train
             for (int i = 0; i < trainLine.trains.Count; i++)
@@ -128,13 +136,31 @@ public class TrainLineEditUIController : MonoBehaviour
 
     void AddTrain()
     {
-        float trainPrice = trainLine.GetNewTrainPrice();
         trainLine.AddTrain();
+        StationListInformationUIController.Instance.RefreshUI();
     }
 
     void AddStation()
     {
-        
+
+    }
+    
+    void previousLine()
+    {
+        if (SuperGlobal.trainLines.Count == 0) return;
+
+        currentTrainLineIndex = Mathf.Clamp(currentTrainLineIndex - 1, 0, SuperGlobal.trainLines.Count - 1);
+        trainLine = SuperGlobal.trainLines[currentTrainLineIndex];
+        RefreshUI();
+    }
+
+    void nextLine()
+    {
+        if (SuperGlobal.trainLines.Count == 0) return;
+
+        currentTrainLineIndex = Mathf.Clamp(currentTrainLineIndex + 1, 0, SuperGlobal.trainLines.Count - 1);
+        trainLine = SuperGlobal.trainLines[currentTrainLineIndex];
+        RefreshUI();
     }
 
 }

@@ -11,6 +11,7 @@ public class MainUIController : MonoBehaviour
     [Header("UI")]
     public Button createTrainLineButton;
     public Button trainLineEditButton;
+    public Button statisticsButton;
     private GameObject createTrainLineUIInstance;
     private CreateTrainLineUIController createTrainLineUIController;
 
@@ -28,7 +29,7 @@ public class MainUIController : MonoBehaviour
 
         createTrainLineButton.onClick.AddListener(ShowOrHideCreateTrainLineUI);
         trainLineEditButton.onClick.AddListener(ShowOrHideTrainLineEditUI);
-
+        statisticsButton.onClick.AddListener(ShowOrHideStatistics);
         createTrainLineUIInstance = Instantiate(createTrainLineUIPrefab, transform.parent);
         createTrainLineUIInstance.SetActive(false);
 
@@ -55,10 +56,19 @@ public class MainUIController : MonoBehaviour
         trainLineEditUIPrefab.GetComponent<TrainLineEditUIController>().RefreshUI();
     }
 
+    private void ShowOrHideStatistics()
+    {
+        GameObject statisticsUI = StatisticsUIController.Instance.gameObject;
+        bool newState = !statisticsUI.activeSelf;
+        statisticsUI.SetActive(newState);
+        StatisticsUIController.Instance.RefreshUI(0);
+    }
+
     void OnDestroy()
     {
         createTrainLineButton.onClick.RemoveListener(ShowOrHideCreateTrainLineUI);
         trainLineEditButton.onClick.RemoveListener(ShowOrHideTrainLineEditUI);
+        statisticsButton.onClick.RemoveListener(ShowOrHideStatistics);
     }
 
 }

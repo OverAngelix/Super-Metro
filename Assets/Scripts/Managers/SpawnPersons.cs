@@ -77,6 +77,8 @@ public class SpawnPersons : MonoBehaviour
         PersonController controller = newPerson.GetComponent<PersonController>();
 
         // Passer le chemin au contrôleur
+        controller.startSpot = startSpot;
+        controller.endSpot = endSpot;
         controller.SetPath(path);
     }
 }

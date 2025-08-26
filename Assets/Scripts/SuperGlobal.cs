@@ -21,19 +21,22 @@ public class SuperGlobal : MonoBehaviour
 
     public static float ComputeHappiness()
     {
-        if (peopleHappiness.Count == 0)
-        return 0.5f;
+        // if (peopleHappiness.Count == 0)
+        // return 0.5f;
 
         int start = Mathf.Max(0, peopleHappiness.Count - happinessCount);
 
         var range = peopleHappiness.GetRange(start, peopleHappiness.Count - start);
 
-        float sum = 0f;
-        foreach (float h in range)
-            sum += h;
+        // float sum = 0f;
+        // foreach (float h in range)
+        //     sum += h;
 
-        float average = sum / range.Count;
-        return Mathf.Round(average * 100f) / 100f;
+        // float average = sum / range.Count;
+        // return Mathf.Round(average * 100f) / 100f;
+        return range.Any()
+        ? peopleHappiness.Average()
+        : 0f;
     }
 
 
@@ -51,21 +54,22 @@ public class SuperGlobal : MonoBehaviour
             stations = new List<Station>(),
             trains = new List<TrainController>()
         },
-        new TrainLine // Seconde ligne (Jaune)
-        {
-            lineNumber = 2,
-            maintenance = 250f,
-            lineColor = Color.yellow,
-            stations = new List<Station>(),
-            trains = new List<TrainController>()
-        },
+        // new TrainLine // Seconde ligne (Jaune)
+        // {
+        //     lineNumber = 2,
+        //     maintenance = 250f,
+        //     lineColor = Color.yellow,
+        //     stations = new List<Station>(),
+        //     trains = new List<TrainController>()
+        // },
     };
 
     public static void SetStations()
     {
         LoadData();
-        trainLines[0].stations = stations.FindAll(s => s.line == 1);
-        trainLines[1].stations = stations.FindAll(s => s.line == 2);
+        foreach (TrainLine trainLine in trainLines) {
+            trainLines[0].stations = stations.FindAll(s => s.line == trainLine.lineNumber);
+        }
     }
 
     public static Station GetStation(string targetName)

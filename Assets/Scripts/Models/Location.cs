@@ -9,6 +9,8 @@ public class Location
     public float lat;
     public float lon;
     public GameObject obj;
+    public List<PersonController> peopleToLocation = new();
+    public List<PersonController> peopleFromLocation = new();
 
     public Location(string name, float lat, float lon)
     {

@@ -11,13 +11,15 @@ public class PersonController : MonoBehaviour
     private bool onTrain = false;
     private TrainController currentTrain;
     private bool happinessSent = false;
+    public float happiness = 1f;
 
+    public Location startSpot;
+    public Location endSpot;
     private Node targetStationNode; // la station où la personne doit descendre
 
     // Variables pour le système de happiness
     private float travelTime = 0f;       // temps passé en mouvement
     private float waitTime = 0f;         // temps passé à attendre aux stations
-    private float happiness = 1f;        // entre 0 et 1
 
     public void SetPath(List<Node> newPath)
     {
@@ -51,7 +53,10 @@ public class PersonController : MonoBehaviour
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
             if (currentHappiness <= 0f && !happinessSent)
             {
-                SuperGlobal.peopleHappiness.Add(0f);
+                happiness = 0f;
+                SuperGlobal.peopleHappiness.Add(happiness);
+                startSpot.peopleFromLocation.Add(this);
+                endSpot.peopleToLocation.Add(this);
                 happinessSent = true;
             }
 
@@ -90,7 +95,10 @@ public class PersonController : MonoBehaviour
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
             if (currentHappiness <= 0f && !happinessSent)
             {
-                SuperGlobal.peopleHappiness.Add(0f);
+                happiness = 0f;
+                SuperGlobal.peopleHappiness.Add(happiness);
+                startSpot.peopleFromLocation.Add(this);
+                endSpot.peopleToLocation.Add(this);
                 happinessSent = true;
             }
 
@@ -129,6 +137,8 @@ public class PersonController : MonoBehaviour
             {
                 happiness = CalculateHappiness(travelTime, waitTime);
                 SuperGlobal.peopleHappiness.Add(happiness);
+                startSpot.peopleFromLocation.Add(this);
+                endSpot.peopleToLocation.Add(this);
                 happinessSent = true;
             }
         }
