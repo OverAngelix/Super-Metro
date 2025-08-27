@@ -25,7 +25,8 @@ public class MainMenuController : MonoBehaviour
         quitButton.onClick.AddListener(Quit);
         closeMenuOptionsButton.onClick.AddListener(CloseMenuOptions);
         volumeBar.onValueChanged.AddListener(ChangeVolume);
-        volumeValueText.text = "100";
+        volumeValueText.text = "10";
+        mainMusic.volume = 0.10f;
         frenchButton.onClick.AddListener(ChangeToFrench);
         englishButton.onClick.AddListener(ChangeToEnglish);
     }
