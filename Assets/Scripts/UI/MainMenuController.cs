@@ -8,6 +8,8 @@ public class MainMenuController : MonoBehaviour
     public Button startButton;
     public Button optionsButton;
     public Button quitButton;
+    public Button frenchButton;
+    public Button englishButton;
     public Button closeMenuOptionsButton;
 
     public GameObject MainMenu;
@@ -24,8 +26,10 @@ public class MainMenuController : MonoBehaviour
         closeMenuOptionsButton.onClick.AddListener(CloseMenuOptions);
         volumeBar.onValueChanged.AddListener(ChangeVolume);
         volumeValueText.text = "100";
-
+        frenchButton.onClick.AddListener(ChangeToFrench);
+        englishButton.onClick.AddListener(ChangeToEnglish);
     }
+
     public void StartTutorial()
     {
         SceneManager.LoadScene("MapManagement");
@@ -47,6 +51,20 @@ public class MainMenuController : MonoBehaviour
     {
         mainMusic.volume = value;
         volumeValueText.text = Mathf.Round(value * 100).ToString();
+    }
+
+    public void ChangeToFrench()
+    {
+        I18nManager.Instance.SetLanguage("fr");
+        englishButton.interactable = true;
+        frenchButton.interactable = false;
+    }
+
+    public void ChangeToEnglish()
+    {
+        I18nManager.Instance.SetLanguage("en");
+        englishButton.interactable = false;
+        frenchButton.interactable = true;
     }
 
     public void Quit()
