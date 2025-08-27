@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; // Pour charger une scène
 using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
-    public Button startButton;
+    public Button tutorialButton;
     public Button optionsButton;
     public Button quitButton;
     public Button frenchButton;
@@ -20,7 +20,7 @@ public class MainMenuController : MonoBehaviour
     public AudioSource mainMusic;
     private void Start()
     {
-        startButton.onClick.AddListener(StartTutorial);
+        tutorialButton.onClick.AddListener(StartTutorial);
         optionsButton.onClick.AddListener(Options);
         quitButton.onClick.AddListener(Quit);
         closeMenuOptionsButton.onClick.AddListener(CloseMenuOptions);
