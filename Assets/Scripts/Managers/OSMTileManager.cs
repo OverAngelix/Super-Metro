@@ -90,6 +90,8 @@ public class OSMTileManager : MonoBehaviour
         {
             var spot = SuperGlobal.spots[i];
             GameObject obj = PlacePoint(spot.lat, spot.lon, spotPrefab);
+            LocationController locationController = obj.GetComponent<LocationController>();
+            locationController.location = spot;
             spot.obj = obj;
         }
     }

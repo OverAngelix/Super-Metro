@@ -106,6 +106,7 @@ public class TrainController : MonoBehaviour
 
             Node stationToGo = person.GetNextTarget();
             person.BoardTrain(this, stationToGo);
+            StationListInformationUIController.Instance.RefreshUI();
 
             if (Time.time + timeToEnter < endTime)
                 yield return new WaitForSeconds(timeToEnter);

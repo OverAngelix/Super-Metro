@@ -49,13 +49,9 @@ public class PersonController : MonoBehaviour
 
             // Vérifier happiness même en train
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
-            if (currentHappiness <= 0f && !happinessSent)
+            if (currentHappiness <= 0f)
             {
-                happiness = 0f;
-                SuperGlobal.peopleHappiness.Add(happiness);
-                startSpot.peopleFromLocation.Add(this);
-                endSpot.peopleToLocation.Add(this);
-                happinessSent = true;
+                SendHappiness();
             }
 
             // Vérifier si elle doit descendre
@@ -89,13 +85,9 @@ public class PersonController : MonoBehaviour
 
             // Vérifier happiness en temps réel
             float currentHappiness = CalculateHappiness(travelTime, waitTime);
-            if (currentHappiness <= 0f && !happinessSent)
+            if (currentHappiness <= 0f)
             {
-                happiness = 0f;
-                SuperGlobal.peopleHappiness.Add(happiness);
-                startSpot.peopleFromLocation.Add(this);
-                endSpot.peopleToLocation.Add(this);
-                happinessSent = true;
+                SendHappiness();
             }
 
             return; // stop mouvement tant qu'on attend le train
@@ -117,25 +109,20 @@ public class PersonController : MonoBehaviour
         // Compter le temps de déplacement
         travelTime += Time.deltaTime;
 
-        // 🔹 Vérifier happiness en temps réel même en marchant
+        // Vérifier happiness en temps réel même en marchant
         float h = CalculateHappiness(travelTime, waitTime);
         if (h <= 0f)
         {
-            SuperGlobal.peopleHappiness.Add(0f);
-            Destroy(gameObject);
+            SendHappiness();
             return;
         }
 
         if (Vector3.Distance(transform.position, targetObj.transform.position) < 0.1f)
         {
             currentTargetIndex++;
-            if (currentTargetIndex >= path.Count && !happinessSent)
+            if (currentTargetIndex >= path.Count)
             {
-                happiness = CalculateHappiness(travelTime, waitTime);
-                SuperGlobal.peopleHappiness.Add(happiness);
-                startSpot.peopleFromLocation.Add(this);
-                endSpot.peopleToLocation.Add(this);
-                happinessSent = true;
+                FinishJourney();
             }
         }
     }
@@ -185,8 +172,32 @@ public class PersonController : MonoBehaviour
         Vector2 last = new Vector2(lastNode.lat, lastNode.lon);
         float distance = Vector2.Distance(start, last);
 
-        float maxTime = Mathf.Max(10, 500f * distance / speed);
-        float score = 1f - Mathf.Clamp01(total / maxTime); // 1 si rapide, 0 si trop long
+        float maxTime = Mathf.Max(20, 500f * distance / speed);
+
+        float perfectScoreTimeThreshold = 1 / 4f; // c'est le ratio en dessous duquel on a 1 en terme de temps passé
+
+        float score = total <= perfectScoreTimeThreshold * maxTime ? 1f : (total / ((perfectScoreTimeThreshold - 1) * maxTime)) - (1 / (perfectScoreTimeThreshold - 1)); // 1 si rapide, 0 si trop long
+
+        SuperGlobal.Log($"Mon temps max est {maxTime}, ma distance {distance}, mon temps actuel est {total} et mon score est {score}");
         return score;
+    }
+    
+    private void SendHappiness()
+    {
+        if (!happinessSent)
+        {
+            happiness = CalculateHappiness(travelTime, waitTime);
+            SuperGlobal.peopleHappiness.Add(happiness);
+            startSpot.peopleFromLocation.Add(this);
+            endSpot.peopleToLocation.Add(this);
+            happinessSent = true;
+        }
+    }
+
+    private void FinishJourney()
+    {
+        // La personne termine son parcours → on s'assure que la happiness est envoyée
+        SendHappiness();
+        Destroy(gameObject);
     }
 }

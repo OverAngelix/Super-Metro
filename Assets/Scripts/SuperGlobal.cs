@@ -54,22 +54,22 @@ public class SuperGlobal : MonoBehaviour
             stations = new List<Station>(),
             trains = new List<TrainController>()
         },
-        new TrainLine // Seconde ligne (Jaune)
-        {
-            lineNumber = 2,
-            maintenance = 250f,
-            lineColor = Color.yellow,
-            stations = new List<Station>(),
-            trains = new List<TrainController>()
-        },
-        new TrainLine // Troisieme ligne (verte)
-        {
-            lineNumber = 3,
-            maintenance = 250f,
-            lineColor = Color.green,
-            stations = new List<Station>(),
-            trains = new List<TrainController>()
-        },
+        // new TrainLine // Seconde ligne (Jaune)
+        // {
+        //     lineNumber = 2,
+        //     maintenance = 250f,
+        //     lineColor = Color.yellow,
+        //     stations = new List<Station>(),
+        //     trains = new List<TrainController>()
+        // },
+        // new TrainLine // Troisieme ligne (verte)
+        // {
+        //     lineNumber = 3,
+        //     maintenance = 250f,
+        //     lineColor = Color.green,
+        //     stations = new List<Station>(),
+        //     trains = new List<TrainController>()
+        // },
     };
 
     public static void SetStations()

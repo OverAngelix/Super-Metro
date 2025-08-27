@@ -10,6 +10,10 @@ public class SpawnPersons : MonoBehaviour
 
     private float timer = 0f;
 
+    void Start()
+    {
+        SpawnPerson();
+    }
     void Update()
     {
         timer += Time.deltaTime * spawnSpeed;
@@ -35,6 +39,10 @@ public class SpawnPersons : MonoBehaviour
             endIndex = Random.Range(0, SuperGlobal.spots.Count);
         } while (endIndex == startIndex);
         var endSpot = SuperGlobal.spots[endIndex];
+
+        // For testing
+        // startSpot = SuperGlobal.spots.Find((s) => s.name == "Lidl Wasquehal");
+        // endSpot = SuperGlobal.spots.Find((s) => s.name == "Villa Cavrois");
 
         // Construire le graphe des nodes
         List<Node> allNodes = new();
@@ -80,6 +88,7 @@ public class SpawnPersons : MonoBehaviour
         // Passer le chemin au contrôleur
         controller.startSpot = startSpot;
         controller.endSpot = endSpot;
+
         controller.SetPath(path);
     }
 }

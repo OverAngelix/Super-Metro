@@ -18,10 +18,11 @@ public class StationController : MonoBehaviour
 
         TrainLine trainLine = SuperGlobal.GetTrainLineOfLineStation(station.line);
         TrainController train = UpdateTrainPath(obj, trainLine);
-        if (trainLine.lineNumber == 2)
-        {
-            train.speed = 100f;
-        }
+
+
+        train.speed = 100f;
+        train.maxPassengers = 1000;
+
         trainLine.trains.Add(train);
 
         return obj;
