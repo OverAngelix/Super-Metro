@@ -11,7 +11,7 @@ public class SuperGlobal : MonoBehaviour
     public static float money = 15000f;
     public static float ticketPrice = 1.8f;
 
-    private static readonly bool isDebug = true;
+    private static readonly bool isDebug = false;
 
     public static int nbUpgrade = 0;
     public static int nbStation = 4;

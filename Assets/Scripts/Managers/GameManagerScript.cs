@@ -9,7 +9,7 @@ public class GameManagerScript : MonoBehaviour
 
     void Update()
     {
-        money.text = SuperGlobal.money.ToString("F1") + "€";
+        money.text = SuperGlobal.money.ToString("F1");
 
         timer += Time.deltaTime;
         if (timer >= spawnInterval)

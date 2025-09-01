@@ -2,8 +2,22 @@ key,fr,en
 button_campaign,Campagne,Campaign
 button_tutorial,Tutoriel,Tutorial
 button_options,Options,Options
-button_exit,Quitter,Exit
 button_sound,Volume,Sound
 button_french,Français,French
 button_english,Anglais,English
+button_exit,Quitter,Exit
+button_confirm,Valider,Confirm
 button_close,Fermer,Close
+button_upgrade,Ameliorer,Upgrade
+text_quest,Quêtes,Quests
+text_upgrades,Ameliorations,Upgrades
+text_new_station,Nouvelle Station,New Station
+text_placeholder_station_name,Nom de la station...,Name of the station...
+text_new_line,Créer une Ligne,Create Line
+text_price_line,Prix de la création : 1000€, Price of creation : 1000$
+text_placeholder_line_name,Nom de la ligne...,Name of the Line...
+text_add_station,Ajouter une station,Add station
+text_stations,Stations,Stations
+text_add_train,Ajouter un train (2000 €),Add a train (2000 $)
+text_trains,Trains,Trains
+text_currency,€,$
